@@ -1,0 +1,105 @@
+site_name: ОТО и космология
+site_description: Учебник-хендбук по общей теории относительности и космологии
+site_author: Bogdan Rudenko
+docs_dir: docs
+copyright: © 2026 Bogdan Rudenko
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+  icon:
+    logo: material/orbit
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - docs/appendix/abbreviations.md
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/minkowski.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Главная:
+      - index.md
+      - Обозначения и соглашения: conventions.md
+  - I. Математический аппарат:
+      - part1-math/index.md
+      - 1. СТО на четырёхмерном языке: part1-math/01-special-relativity.md
+      - 2. Многообразия и тензоры: part1-math/02-manifolds-tensors.md
+      - 3. Связность и ковариантная производная: part1-math/03-connection.md
+      - 4. Кривизна: part1-math/04-curvature.md
+  - II. ОТО:
+      - part2-gr/index.md
+      - 5. Принцип эквивалентности и геодезические: part2-gr/05-equivalence.md
+      - 6. Уравнения Эйнштейна: part2-gr/06-einstein-equations.md
+      - 7. Решение Шварцшильда и классические тесты: part2-gr/07-schwarzschild.md
+      - 8. Чёрные дыры: part2-gr/08-black-holes.md
+      - 9. Гравитационные волны: part2-gr/09-gravitational-waves.md
+  - III. Космология FRW:
+      - part3-cosmology/index.md
+      - 10. Однородная изотропная Вселенная: part3-cosmology/10-frw.md
+      - 11. Уравнения Фридмана и модели: part3-cosmology/11-friedmann.md
+      - 12. Расстояния и наблюдения: part3-cosmology/12-distances.md
+      - 13. Термическая история: part3-cosmology/13-thermal-history.md
+      - 14. Первичный нуклеосинтез: part3-cosmology/14-bbn.md
+  - IV. Возмущения, CMB, инфляция:
+      - part4-perturbations/index.md
+      - 15. Инфляция: part4-perturbations/15-inflation.md
+      - 16. Линейная теория возмущений: part4-perturbations/16-perturbations.md
+      - 17. Реликтовое излучение: part4-perturbations/17-cmb.md
+      - 18. Крупномасштабная структура: part4-perturbations/18-lss.md
+  - Приложения:
+      - Глоссарий: appendix/glossary.md
+      - Литература: appendix/bibliography.md
+
+not_in_nav: |
+  appendix/abbreviations.md
