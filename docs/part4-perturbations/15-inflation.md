@@ -12,10 +12,12 @@
 
 !!! warning "Единицы в этой главе"
     Здесь мы полагаем \(\hbar = c = 1\) и используем **приведённую массу Планка**
+
     \begin{equation}
     M_{\rm Pl} \equiv \frac{1}{\sqrt{8\pi G}} = 2.435\times 10^{18}\ \text{ГэВ},
     \label{eq:mpl}
     \end{equation}
+
     так что уравнения Эйнштейна имеют вид \(G_{\mu\nu} = M_{\rm Pl}^{-2} T_{\mu\nu}\).
     Это отличается от соглашения остальной книги (\(G\) и \(\hbar\) явно), но так записана
     почти вся литература по инфляции. Масса Планка без приставки
@@ -43,7 +45,7 @@
 \end{equation}
 
 При \(w > -1/3\) (излучение, вещество) хаббловский радиус **растёт**, интеграл
-\eqref{eq:particle-horizon} набирается на поздних временах, и \(\chi_{\rm p} \sim (aH)^{-1}\).
+\(\eqref{eq:particle-horizon}\) набирается на поздних временах, и \(\chi_{\rm p} \sim (aH)^{-1}\).
 
 Применим это к реликтовому излучению. Сопутствующий горизонт в момент рекомбинации
 (\(z_* \approx 1090\)) составляет \(\chi_{\rm p}(t_*) \approx 280\) Мпк, а расстояние до
@@ -77,13 +79,14 @@
 ## 15.3. Решение: уменьшающийся хаббловский радиус
 
 Обе проблемы исчезают, если на раннем этапе сопутствующий хаббловский радиус
-**уменьшался**. Тогда \eqref{eq:flatness} динамически притягивается к нулю, а интеграл
-\eqref{eq:particle-horizon} набирает основной вклад на ранних временах: области, которые
+**уменьшался**. Тогда \(\eqref{eq:flatness}\) динамически притягивается к нулю, а интеграл
+\(\eqref{eq:particle-horizon}\) набирает основной вклад на ранних временах: области, которые
 сегодня кажутся причинно несвязанными, на самом деле были внутри общего горизонта до
 инфляции.
 
 !!! definition "Определение: инфляция"
     **Инфляция** — эпоха, в течение которой сопутствующий хаббловский радиус убывает:
+
     \begin{equation}
     \frac{\d}{\d t}\left(\frac{1}{aH}\right) < 0
     \quad\Longleftrightarrow\quad \ddot a > 0
@@ -135,11 +138,13 @@ H^2 = \frac{1}{3M_{\rm Pl}^2}\left[\frac12\dot\phi^2 + V\right], \qquad
 
 !!! definition "Определение: параметры медленного скатывания"
     Для потенциала \(V(\phi)\) определим
+
     \begin{equation}
     \epsilon_V = \frac{M_{\rm Pl}^2}{2}\left(\frac{V'}{V}\right)^2, \qquad
     \eta_V = M_{\rm Pl}^2\,\frac{V''}{V}.
     \label{eq:slow-roll-params}
     \end{equation}
+
     Режим **медленного скатывания**: \(\epsilon_V \ll 1\), \(|\eta_V| \ll 1\). Первое условие
     обеспечивает \(\dot\phi^2 \ll V\), второе — малость \(\ddot\phi\) (ускорение не
     разрушает режим).
@@ -209,20 +214,23 @@ v_k(\tau) = \frac{e^{-ik\tau}}{\sqrt{2k}}\left(1 - \frac{i}{k\tau}\right).
 \(\Delta^2_{\mathcal R} = k^3 P_{\mathcal R}/(2\pi^2)\). Подстановка даёт
 
 !!! theorem "Теорема: спектры инфляционных возмущений (первый порядок медленного скатывания)"
+
     \begin{equation}
     \Delta^2_{\mathcal R}(k) = \frac{1}{8\pi^2\varepsilon}\frac{H^2}{M_{\rm Pl}^2}\bigg|_{k = aH}
     = \frac{V}{24\pi^2 M_{\rm Pl}^4\,\epsilon_V}\bigg|_{k=aH},
     \label{eq:scalar-spectrum}
     \end{equation}
+
     \begin{equation}
     \Delta^2_{t}(k) = \frac{2}{\pi^2}\frac{H^2}{M_{\rm Pl}^2}\bigg|_{k=aH}.
     \label{eq:tensor-spectrum}
     \end{equation}
+
     Каждая величина вычисляется в момент **пересечения горизонта** \(k = aH\) данной модой.
 
 Тензорные возмущения \(h_{ij}\) (гравитационные волны, [глава 9](../part2-gr/09-gravitational-waves.md))
 ведут себя как два безмассовых скалярных поля с нормировкой \(M_{\rm Pl}h/2\); отсюда
-множитель в \eqref{eq:tensor-spectrum}. Физический смысл прост: флуктуации безмассового
+множитель в \(\eqref{eq:tensor-spectrum}\). Физический смысл прост: флуктуации безмассового
 поля в де Ситтере \(\delta\phi \sim H/(2\pi)\) на каждый е-фолд, а
 \(\mathcal R = H\delta\phi/\dot\phi\).
 
@@ -236,7 +244,7 @@ v_k(\tau) = \frac{e^{-ik\tau}}{\sqrt{2k}}\left(1 - \frac{i}{k\tau}\right).
 \end{equation}
 
 Поскольку \(\d\ln k = \d\ln(aH) \approx H\d t\), а \(H\) и \(\varepsilon\) медленно меняются,
-дифференцирование \eqref{eq:scalar-spectrum}–\eqref{eq:tensor-spectrum} даёт
+дифференцирование \(\eqref{eq:scalar-spectrum}\)–\(\eqref{eq:tensor-spectrum}\) даёт
 
 \begin{equation}
 n_s - 1 = 2\eta_V - 6\epsilon_V, \qquad n_t = -2\epsilon_V, \qquad r = 16\epsilon_V = -8n_t.
@@ -256,7 +264,7 @@ A_s = (2.10 \pm 0.03)\times10^{-9}, \qquad n_s = 0.9649 \pm 0.0042, \qquad r_{0.
 \label{eq:planck-inflation}
 \end{equation}
 
-Для мономиальных потенциалов \(V \propto \phi^p\) из \eqref{eq:efolds} \(\phi_*^2 \approx 2pN M_{\rm Pl}^2\), и
+Для мономиальных потенциалов \(V \propto \phi^p\) из \(\eqref{eq:efolds}\) \(\phi_*^2 \approx 2pN M_{\rm Pl}^2\), и
 
 \begin{equation}
 n_s - 1 \approx -\frac{p+2}{2N}, \qquad r \approx \frac{4p}{N}.
@@ -293,13 +301,13 @@ n_s \approx 1 - \frac{2}{N}, \qquad r \approx \frac{12}{N^2}.
       <option value="phi4">λφ⁴/4</option>
       <option value="staro" selected>Старобинский</option>
     </select>
-    <label for="inflation-N">\(N_*\) = <span id="inflation-N-val">55</span></label>
+    <label for="inflation-N"><span class="arithmatex">\(N_*\)</span> = <span id="inflation-N-val">55</span></label>
     <input type="range" id="inflation-N" min="40" max="70" step="1" value="55">
   </div>
   <div class="controls">
-    <span>\(\phi_*/M_{\rm Pl}\) = <span id="inflation-phi">–</span></span>
-    <span>\(n_s\) = <span id="inflation-ns">–</span></span>
-    <span>\(r\) = <span id="inflation-r">–</span></span>
+    <span><span class="arithmatex">\(\phi_*/M_{\rm Pl}\)</span> = <span id="inflation-phi">–</span></span>
+    <span><span class="arithmatex">\(n_s\)</span> = <span id="inflation-ns">–</span></span>
+    <span><span class="arithmatex">\(r\)</span> = <span id="inflation-r">–</span></span>
   </div>
 </div>
 
@@ -311,7 +319,7 @@ BICEP/Keck. Модели с плато (Старобинский, хиггсов
 
 ### Численный пример
 
-Код ниже решает уравнения \eqref{eq:slow-roll-params}, \eqref{eq:efolds} численно и
+Код ниже решает уравнения \(\eqref{eq:slow-roll-params}\), \(\eqref{eq:efolds}\) численно и
 воспроизводит точки интерактива.
 
 ```python
@@ -352,7 +360,7 @@ for name, (V, dV, d2V) in models.items():
 
 ## 15.7. Масштаб энергии инфляции
 
-Из \eqref{eq:scalar-spectrum} и \(r = 16\epsilon_V\) получаем \(V = \tfrac{3\pi^2}{2}A_s r\,M_{\rm Pl}^4\), т. е.
+Из \(\eqref{eq:scalar-spectrum}\) и \(r = 16\epsilon_V\) получаем \(V = \tfrac{3\pi^2}{2}A_s r\,M_{\rm Pl}^4\), т. е.
 
 \begin{equation}
 V_*^{1/4} \approx 1.0\times10^{16}\ \text{ГэВ}\left(\frac{r}{0.01}\right)^{1/4},
@@ -367,7 +375,7 @@ V_*^{1/4} \approx 1.0\times10^{16}\ \text{ГэВ}\left(\frac{r}{0.01}\right)^{1/
 ## Задачи
 
 ??? question "15.1. Ускорение и хаббловский радиус"
-    Докажите эквивалентность условий \eqref{eq:inflation-def}.
+    Докажите эквивалентность условий \(\eqref{eq:inflation-def}\).
 
     ??? success "Решение"
         \(\frac{\d}{\d t}(aH)^{-1} = \frac{\d}{\d t}\dot a^{-1} = -\ddot a/\dot a^2\), поэтому убывание
@@ -391,7 +399,7 @@ V_*^{1/4} \approx 1.0\times10^{16}\ \text{ГэВ}\left(\frac{r}{0.01}\right)^{1/
         \(N \gtrsim 60\). (Мы пренебрегли эпохой вещества, которая уменьшает оценку на несколько единиц.)
 
 ??? question "15.3. Мономиальные потенциалы"
-    Выведите формулы \eqref{eq:monomial} для \(V = \lambda\phi^p\), пренебрегая
+    Выведите формулы \(\eqref{eq:monomial}\) для \(V = \lambda\phi^p\), пренебрегая
     \(\phi_{\rm end}\) по сравнению с \(\phi_*\).
 
     ??? success "Решение"
@@ -405,7 +413,7 @@ V_*^{1/4} \approx 1.0\times10^{16}\ \text{ГэВ}\left(\frac{r}{0.01}\right)^{1/
     \(V = \tfrac12 m^2\phi^2\).
 
     ??? success "Решение"
-        Из \eqref{eq:scalar-spectrum}: \(\Delta^2_{\mathcal R} = \dfrac{m^2\phi^2/2}{24\pi^2M_{\rm Pl}^4}\cdot\dfrac{\phi^2}{2M_{\rm Pl}^2}
+        Из \(\eqref{eq:scalar-spectrum}\): \(\Delta^2_{\mathcal R} = \dfrac{m^2\phi^2/2}{24\pi^2M_{\rm Pl}^4}\cdot\dfrac{\phi^2}{2M_{\rm Pl}^2}
         = \dfrac{m^2\phi_*^4}{96\pi^2M_{\rm Pl}^6}\). При \(\phi_*^2 = 4NM_{\rm Pl}^2\):
         \(\Delta^2_{\mathcal R} = m^2N^2/(6\pi^2M_{\rm Pl}^2)\), откуда
         \(m = \pi\sqrt{6A_s}\,M_{\rm Pl}/N \approx 5.9\times10^{-6}M_{\rm Pl} \approx 1.4\times10^{13}\) ГэВ.
@@ -420,7 +428,7 @@ V_*^{1/4} \approx 1.0\times10^{16}\ \text{ГэВ}\left(\frac{r}{0.01}\right)^{1/
         Наблюдаемый уровень \(r \gtrsim 10^{-2}\) требует сверхпланковского пробега поля.
 
 ??? question "15.6. Модель Старобинского"
-    Для потенциала \eqref{eq:starobinsky} найдите \(N(\phi)\) точно и выведите
+    Для потенциала \(\eqref{eq:starobinsky}\) найдите \(N(\phi)\) точно и выведите
     \(n_s \approx 1 - 2/N\), \(r \approx 12/N^2\) при \(N \gg 1\).
 
     ??? success "Решение"

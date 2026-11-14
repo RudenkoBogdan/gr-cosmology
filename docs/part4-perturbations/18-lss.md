@@ -21,10 +21,12 @@
 
 !!! definition "Определение: спектр мощности"
     Для статистически однородного и изотропного случайного поля
+
     \begin{equation}
     \langle \delta_{\mathbf k}\,\delta^*_{\mathbf k'} \rangle = (2\pi)^3\,\delta_D(\mathbf k - \mathbf k')\,P(k).
     \label{eq:pk-def}
     \end{equation}
+
     Безразмерный спектр \(\Delta^2(k) = k^3 P(k)/(2\pi^2)\) — вклад в дисперсию \(\langle\delta^2\rangle\)
     от единичного интервала \(\ln k\).
 
@@ -59,11 +61,11 @@
 (глава 15) с множителем, зависящим только от \(k\) и \(a\):
 
 \begin{equation}
-\delta_{\mathbf k}(a) = \frac{2}{5}\,\frac{k^2}{\Omega_m H_0^2}\,\mathcal R_{\mathbf k}\,T(k)\,D(a),
+\delta_{\mathbf k}(a) = -\frac{2}{5}\,\frac{k^2}{\Omega_m H_0^2}\,\mathcal R_{\mathbf k}\,T(k)\,D(a),
 \label{eq:delta-lin}
 \end{equation}
 
-где \(D(a)\) — фактор роста из § 16.7 (нормированный как \(D = a\) в эпоху материи), а
+(минус — потому что избытку плотности соответствует яма \(\Phi < 0\), а \(\Phi = \tfrac35\mathcal R\)), где \(D(a)\) — фактор роста из § 16.7 (нормированный как \(D = a\) в эпоху материи), а
 **передаточная функция** \(T(k)\) нормирована условием \(T \to 1\) при \(k \to 0\). Отсюда
 
 \begin{equation}
@@ -93,6 +95,7 @@ k_{\rm eq} = a_{\rm eq}H(a_{\rm eq}) = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}},
 \(= 0.0155\,h\,\)Мпк\(^{-1}\).
 
 !!! theorem "Асимптотики передаточной функции"
+
     \begin{equation}
     T(k) \simeq
     \begin{cases}
@@ -107,9 +110,10 @@ k_{\rm eq} = a_{\rm eq}H(a_{\rm eq}) = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}},
     \end{cases}
     \label{eq:T-asympt}
     \end{equation}
+
     Спектр имеет максимум вблизи \(k \sim k_{\rm eq}\): положение пика измеряет \(\Omega_m h\).
 
-Множитель \(k^{-2}\) — это \(k^2\) из уравнения Пуассона в \eqref{eq:delta-lin}, скомпенсированный
+Множитель \(k^{-2}\) — это \(k^2\) из уравнения Пуассона в \(\eqref{eq:delta-lin}\), скомпенсированный
 затуханием \(\Phi \propto (k\eta_{\rm eq})^{-2}\) после входа под горизонт; логарифм —
 рост Мезароша.
 
@@ -147,7 +151,7 @@ L_0 = \ln(2e + 1.8q),\qquad C_0 = 14.2 + \frac{731}{1 + 62.5q}.
 \label{eq:eh}
 \end{equation}
 
-Эта форма точно воспроизводит логарифмическую асимптотику \eqref{eq:T-asympt}. В полной версии
+Эта форма точно воспроизводит логарифмическую асимптотику \(\eqref{eq:T-asympt}\). В полной версии
 Эйзенштейна–Ху добавляется барионный осциллирующий член (§ 18.4).
 
 !!! example "Где максимум спектра?"
@@ -160,7 +164,7 @@ L_0 = \ln(2e + 1.8q),\qquad C_0 = 14.2 + \frac{731}{1 + 62.5q}.
 
 ## 18.3. Нормировка: σ₈
 
-Амплитуду \eqref{eq:pk-lin} можно взять из CMB (\(A_s\)) или из наблюдений поздней
+Амплитуду \(\eqref{eq:pk-lin}\) можно взять из CMB (\(A_s\)) или из наблюдений поздней
 Вселенной. Исторически принята нормировка
 
 \begin{equation}
@@ -250,14 +254,14 @@ for R in [1, 8, 20, 50]:
 <div class="interactive" id="pk-demo">
   <canvas id="pk-canvas" width="560" height="360"></canvas>
   <div class="controls">
-    <label for="pk-omh">\(\Omega_m h\) = <span id="pk-omh-val">0.212</span></label>
+    <label for="pk-omh"><span class="arithmatex">\(\Omega_m h\)</span> = <span id="pk-omh-val">0.212</span></label>
     <input type="range" id="pk-omh" min="0.08" max="0.50" step="0.002" value="0.212">
-    <label for="pk-ns">\(n_s\) = <span id="pk-ns-val">0.965</span></label>
+    <label for="pk-ns"><span class="arithmatex">\(n_s\)</span> = <span id="pk-ns-val">0.965</span></label>
     <input type="range" id="pk-ns" min="0.85" max="1.10" step="0.005" value="0.965">
   </div>
   <div class="controls">
-    <span>\(k_{\rm peak}\) = <span id="pk-kpeak">–</span> \(h\,\)Мпк\(^{-1}\)</span>
-    <span>\(P_{\max}\) = <span id="pk-pmax">–</span> \((h^{-1}\text{Мпк})^3\)</span>
+    <span><span class="arithmatex">\(k_{\rm peak}\)</span> = <span id="pk-kpeak">–</span> <span class="arithmatex">\(h\,\text{Мпк}^{-1}\)</span></span>
+    <span><span class="arithmatex">\(P_{\max}\)</span> = <span id="pk-pmax">–</span> <span class="arithmatex">\((h^{-1}\text{Мпк})^3\)</span></span>
   </div>
 </div>
 
@@ -283,13 +287,15 @@ r_d = \int_{z_d}^\infty \frac{c_s(z)\,\d z}{H(z)},\qquad c_s = \frac{1}{\sqrt{3(
 
 !!! theorem "BAO в P(k) и ξ(r)"
     Барионная компонента передаточной функции приблизительно равна
+
     \begin{equation}
     T_b(k) \propto \frac{\sin(k r_d)}{k r_d}\;e^{-(k/k_{\rm Silk})^{1.4}},
     \label{eq:bao-T}
     \end{equation}
+
     поэтому \(P(k)\) содержит затухающие осцилляции с периодом \(\Delta k = 2\pi/r_d \approx 0.06\,h\,\)Мпк\(^{-1}\)
     и амплитудой \(\sim\Omega_b/\Omega_m\) (около 5–10%). В корреляционной функции
-    \eqref{eq:xi} они собираются в один **акустический пик** при \(r \approx r_d\).
+    \(\eqref{eq:xi}\) они собираются в один **акустический пик** при \(r \approx r_d\).
 
 BAO — **стандартная линейка**. Измеряя пик вдоль луча зрения и поперёк него, получаем
 
@@ -339,10 +345,12 @@ r = A(1 - \cos\theta),\qquad t = B(\theta - \sin\theta),\qquad A^3 = GMB^2.
     - в момент поворота (\(\theta = \pi\)): \(1 + \delta = 9\pi^2/16 \approx 5.55\),
       \(\delta_{\rm lin} = \tfrac{3}{20}(6\pi)^{2/3} \approx 1.062\);
     - в момент коллапса (\(\theta = 2\pi\)):
+
     \begin{equation}
     \delta_c \equiv \delta_{\rm lin}(\theta = 2\pi) = \frac{3}{20}\,(12\pi)^{2/3} \approx 1.686.
     \label{eq:deltac}
     \end{equation}
+
     В ΛCDM \(\delta_c\) слабо зависит от \(\Omega_m\): \(\delta_c \approx 1.686\,\Omega_m(z)^{0.0055}\).
 
 Реальное облако не схлопывается в точку: обмен энергией между частицами
@@ -388,6 +396,7 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
 Эфстатиу, Кайзер 1991). Дифференцируя, получаем число гало в единице объёма на единицу массы.
 
 !!! theorem "Функция масс Пресса–Шехтера"
+
     \begin{equation}
     \frac{\d n}{\d M} = \sqrt{\frac{2}{\pi}}\;\frac{\bar\rho_m}{M^2}\;\nu\,e^{-\nu^2/2}\;
     \left|\frac{\d\ln\sigma}{\d\ln M}\right|.
@@ -404,7 +413,7 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
 находятся в экспоненциальном хвосте, поэтому их численность экстремально чувствительна к
 \(\sigma_8\) и \(\Omega_m\) и служит одним из космологических тестов.
 
-Количественно формула \eqref{eq:ps} занижает число массивных гало примерно вдвое и
+Количественно формула \(\eqref{eq:ps}\) занижает число массивных гало примерно вдвое и
 завышает число мелких по сравнению с N-body-моделированием. Улучшенные варианты —
 эллипсоидальный коллапс Шета–Тормена (1999) и подгоночные функции Тинкера (2008), —
 но вся их структура (зависимость только от \(\nu\)) унаследована от Пресса–Шехтера.
@@ -412,7 +421,7 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
 ## Задачи
 
 ??? question "18.1. Асимптотики спектра"
-    Покажите, что для BBKS-аппроксимации \eqref{eq:bbks} \(T \to 1\) при \(q \to 0\) и
+    Покажите, что для BBKS-аппроксимации \(\eqref{eq:bbks}\) \(T \to 1\) при \(q \to 0\) и
     \(T \propto q^{-2}\ln q\) при \(q \to \infty\). Чему равен наклон \(\d\ln P/\d\ln k\) при
     \(k \gg k_{\rm eq}\) без учёта логарифма?
 
@@ -437,14 +446,14 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
         уменьшение ещё сильнее.)
 
 ??? question "18.3. Критическая плотность коллапса"
-    Разложите \eqref{eq:collapse} до второго порядка по \(\theta\) и покажите, что
+    Разложите \(\eqref{eq:collapse}\) до второго порядка по \(\theta\) и покажите, что
     \(\delta \approx \tfrac{3}{20}\theta^2\), а как функция времени \(\delta_{\rm lin} = \tfrac{3}{20}(6t/B)^{2/3}\).
     Получите \(\delta_c = 1.686\).
 
     ??? success "Решение"
         \(1-\cos\theta = \tfrac{\theta^2}{2}\left(1 - \tfrac{\theta^2}{12}\right)\),
         \(\theta - \sin\theta = \tfrac{\theta^3}{6}\left(1 - \tfrac{\theta^2}{20}\right)\).
-        Подставляя в \eqref{eq:delta-nl}:
+        Подставляя в \(\eqref{eq:delta-nl}\):
         \(1+\delta = \tfrac92\cdot\tfrac{\theta^6/36}{\theta^6/8}\cdot\left(1-\tfrac{\theta^2}{10}+\tfrac{\theta^2}{4}\right)
         = 1 + \tfrac{3}{20}\theta^2\). В главном порядке \(t \approx B\theta^3/6\), т. е.
         \(\theta^2 = (6t/B)^{2/3}\), и линейная мода растёт \(\propto t^{2/3} \propto a\), как и должно.
@@ -455,7 +464,7 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
     момент поворота, сжатие при вириализации, расширение фона от \(t_{\rm ta}\) до \(2t_{\rm ta}\).
 
     ??? success "Решение"
-        При \(\theta = \pi\) из \eqref{eq:delta-nl}: \(1+\delta = \tfrac92\pi^2/8 = 9\pi^2/16\).
+        При \(\theta = \pi\) из \(\eqref{eq:delta-nl}\): \(1+\delta = \tfrac92\pi^2/8 = 9\pi^2/16\).
         Вириализация: \(E = -GM^2\cdot\tfrac{3}{5}/r_{\rm ta}\) (в покое), а для вириального
         состояния \(E = U/2\), откуда \(r_{\rm vir} = r_{\rm ta}/2\): плотность растёт в \(2^3 = 8\) раз.
         Фон \(\bar\rho \propto t^{-2}\) за время от \(t_{\rm ta}\) до \(2t_{\rm ta}\) падает в 4 раза.
@@ -482,7 +491,7 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
     ??? success "Решение"
         \(D_M = r_d/\theta = 147/0.0750 \approx 1960\) Мпк. \(H = c\,\Delta z/r_d =
         299792\cdot0.043/147 \approx 88\) км/с/Мпк. В ΛCDM
-        \(H(0.5) = 67.4\sqrt{0.315\cdot3.375 + 0.685} \approx 67.4\cdot1.31 \approx 88.6\) км/с/Мпк,
+        \(H(0.5) = 67.4\sqrt{0.315\cdot3.375 + 0.685} \approx 67.4\cdot1.32 \approx 89\) км/с/Мпк,
         а \(D_M(0.5) \approx 1950\) Мпк (§ 18.4) — согласие в пределах точности данных. Так BAO
         по отдельности фиксирует \(D_M\) и \(H\) и тестирует модель.
 

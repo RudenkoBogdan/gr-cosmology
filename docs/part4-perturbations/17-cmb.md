@@ -42,10 +42,12 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
 
 !!! definition "Определение: угловой спектр мощности"
     Если флуктуации статистически изотропны,
+
     \begin{equation}
     \langle a_{\ell m}a^*_{\ell' m'}\rangle = C_\ell\,\delta_{\ell\ell'}\delta_{mm'}.
     \label{eq:Cl}
     \end{equation}
+
     Принято изображать \(\mathcal D_\ell \equiv \ell(\ell+1)C_\ell T_0^2/(2\pi)\) в мкК²; тогда
     дисперсия температуры \(\langle\Delta T^2\rangle = \sum_\ell (2\ell+1)C_\ell T_0^2/(4\pi) \approx \int \mathcal D_\ell\,\d\ln\ell\).
 
@@ -78,12 +80,15 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
 
 !!! theorem "Теорема (Сакс, Вольф, 1967)"
     На больших угловых масштабах
+
     \begin{equation}
     \Theta(\hat{\vb n}) = \frac13\Psi_* = \frac15\,\mathcal R,
     \label{eq:sachs-wolfe}
     \end{equation}
+
     т. е. горячие пятна соответствуют потенциальным **холмам**, а холодные — ямам.
     Для степенного спектра с \(n_s = 1\) угловой спектр плоский:
+
     \begin{equation}
     \frac{\ell(\ell+1)C_\ell}{2\pi} = \frac{A_s}{25}.
     \label{eq:sw-plateau}
@@ -101,7 +106,7 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
 
 \begin{equation}
 c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gamma}
-\approx 0.63\left(\frac{\Omega_bh^2}{0.0224}\right)\left(\frac{1091}{1+z}\right).
+\approx 0.62\left(\frac{\Omega_bh^2}{0.0224}\right)\left(\frac{1091}{1+z}\right).
 \label{eq:sound-speed}
 \end{equation}
 
@@ -114,12 +119,15 @@ c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gam
 \end{equation}
 
 !!! theorem "Решение при постоянных \(R\) и \(\Psi = \Phi\)"
+
     \begin{equation}
     \Theta_0 + (1+R)\Psi = \left[\Theta_0 + (1+R)\Psi\right]_{\rm init}\cos(kr_s),
     \qquad r_s(\tau) = \int_0^\tau c_s\,\d\tau',
     \label{eq:acoustic-solution}
     \end{equation}
+
     где \(r_s\) — **звуковой горизонт**. С начальным условием \(\Theta_0 = -\tfrac23\Psi\):
+
     \begin{equation}
     \left(\Theta_0 + \Psi\right)_* = \frac{\Psi}{3}\left[(1+3R)\cos(kr_{s*}) - 3R\right].
     \label{eq:effective-temp}
@@ -128,26 +136,31 @@ c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gam
 Отсюда — вся феноменология пиков:
 
 1. **Положения.** Экстремумы \(|\Theta_0 + \Psi|\) при \(k_n r_{s*} = n\pi\). Мода \(k\) проецируется
-   на \(\ell \approx k D_M(z_*)\), где \(D_M\) — сопутствующее расстояние до последнего рассеяния.
-   Пики стоят с шагом
-   \begin{equation}
-   \ell_A = \pi\,\frac{D_M(z_*)}{r_{s*}} = \frac{\pi}{\theta_*},
-   \qquad \ell_n \approx \ell_A\,(n - \varphi_n),\ \ \varphi_1 \approx 0.27,
-   \label{eq:lA}
-   \end{equation}
-   где фазовый сдвиг \(\varphi_n\) возникает из-за эволюции потенциалов и проекции.
-   Угол \(\theta_*\) — «стандартная линейка» на \(z \approx 1090\); Planck измерил
-   \(100\theta_* = 1.0411 \pm 0.0003\) — самое точное число в космологии.
+    на \(\ell \approx k D_M(z_*)\), где \(D_M\) — сопутствующее расстояние до последнего рассеяния.
+    Пики стоят с шагом
+
+    \begin{equation}
+    \ell_A = \pi\,\frac{D_M(z_*)}{r_{s*}} = \frac{\pi}{\theta_*},
+    \qquad \ell_n \approx \ell_A\,(n - \varphi_n),\ \ \varphi_1 \approx 0.27,
+    \label{eq:lA}
+    \end{equation}
+
+    где фазовый сдвиг \(\varphi_n\) возникает из-за эволюции потенциалов и проекции.
+    Угол \(\theta_*\) — «стандартная линейка» на \(z \approx 1090\); Planck измерил
+    \(100\theta_* = 1.0411 \pm 0.0003\) — самое точное число в космологии.
+
 2. **Нечётные/чётные пики.** Нечётные пики — сжатия в ямах (\(\cos = -1\)), амплитуда
-   \(\propto 1 + 6R\); чётные — разрежения (\(\cos = +1\)), амплитуда \(\propto 1\). Барионная
-   нагрузка сдвигает точку равновесия осциллятора и **усиливает нечётные пики** относительно
-   чётных. Отношение первого и второго пиков — чувствительная мера \(\Omega_bh^2\).
+    \(\propto 1 + 6R\); чётные — разрежения (\(\cos = +1\)), амплитуда \(\propto 1\). Барионная
+    нагрузка сдвигает точку равновесия осциллятора и **усиливает нечётные пики** относительно
+    чётных. Отношение первого и второго пиков — чувствительная мера \(\Omega_bh^2\).
+
 3. **Радиационный разгон.** Моды, вошедшие под горизонт в радиационную эпоху, видят
-   распадающиеся потенциалы (член \(\Phi''\) в \eqref{eq:acoustic}) и раскачиваются
-   резонансно. Чем меньше \(\Omega_mh^2\), тем позже равенство и тем сильнее подняты первые пики.
-   Третий пик относительно первых двух измеряет \(\Omega_mh^2\).
+    распадающиеся потенциалы (член \(\Phi''\) в \(\eqref{eq:acoustic}\)) и раскачиваются
+    резонансно. Чем меньше \(\Omega_mh^2\), тем позже равенство и тем сильнее подняты первые пики.
+    Третий пик относительно первых двух измеряет \(\Omega_mh^2\).
+
 4. **Доплеровский член** \(\propto \sin(kr_s)\) сдвинут по фазе на \(\pi/2\) и заполняет
-   провалы между пиками.
+    провалы между пиками.
 
 ### Затухание Силка
 
@@ -206,14 +219,14 @@ print(f"первый пик l_1 ~ l_A (1 - 0.267) = {np.pi/theta*(1-0.267):.0f}"
 
 ## 17.5. Зависимость спектра от параметров
 
-### Интерактив: игрушечный спектр \(C_\ell\)
+### Интерактив: игрушечный спектр C_ℓ
 
 !!! warning "Модель качественная"
     Кривая ниже — **не** решение уравнений Больцмана. Положения пиков вычисляются честно
-    по \eqref{eq:lA} (интегралы для \(r_{s*}\) и \(D_M\) при фиксированных \(h = 0.674\) и
+    по \(\eqref{eq:lA}\) (интегралы для \(r_{s*}\) и \(D_M\) при фиксированных \(h = 0.674\) и
     \(z_* = 1090\), плоская Вселенная), а форма — феноменологическая: квадрат
-    \eqref{eq:effective-temp} с ослабленной барионной модуляцией, доплеровский член,
-    множитель «радиационного разгона», зависящий от \(\ell/\ell_{\rm eq}\), гауссово
+    \(\eqref{eq:effective-temp}\) с ослабленной барионной модуляцией, доплеровский член,
+    множитель «радиационного разгона», зависящий от \(\ell/\ell_{\rm eq}\), экспоненциальное
     затухание Силка и сшивка с плато Сакса–Вольфа. Абсолютные высоты пиков, ИСВ-эффект,
     толщина поверхности последнего рассеяния и линзирование учтены лишь грубо или не
     учтены. Модель передаёт **направление** изменений, а не числа.
@@ -226,16 +239,16 @@ print(f"первый пик l_1 ~ l_A (1 - 0.267) = {np.pi/theta*(1-0.267):.0f}"
 <div class="interactive" id="cmb-demo">
   <canvas id="cmb-canvas" width="560" height="340"></canvas>
   <div class="controls">
-    <label for="cmb-ob">\(\Omega_bh^2\) = <span id="cmb-ob-val">0.0224</span></label>
+    <label for="cmb-ob"><span class="arithmatex">\(\Omega_bh^2\)</span> = <span id="cmb-ob-val">0.0224</span></label>
     <input type="range" id="cmb-ob" min="0.010" max="0.040" step="0.0005" value="0.02237">
-    <label for="cmb-om">\(\Omega_mh^2\) = <span id="cmb-om-val">0.142</span></label>
+    <label for="cmb-om"><span class="arithmatex">\(\Omega_mh^2\)</span> = <span id="cmb-om-val">0.142</span></label>
     <input type="range" id="cmb-om" min="0.08" max="0.25" step="0.002" value="0.1424">
   </div>
   <div class="controls">
-    <span>\(r_{s*}\) = <span id="cmb-rs">–</span> Мпк</span>
-    <span>\(\ell_A\) = <span id="cmb-la">–</span></span>
-    <span>\(\ell_1\) ≈ <span id="cmb-l1">–</span></span>
-    <span>\(R_*\) = <span id="cmb-R">–</span></span>
+    <span><span class="arithmatex">\(r_{s*}\)</span> = <span id="cmb-rs">–</span> Мпк</span>
+    <span><span class="arithmatex">\(\ell_A\)</span> = <span id="cmb-la">–</span></span>
+    <span><span class="arithmatex">\(\ell_1\)</span> ≈ <span id="cmb-l1">–</span></span>
+    <span><span class="arithmatex">\(R_*\)</span> = <span id="cmb-R">–</span></span>
   </div>
 </div>
 
@@ -280,7 +293,7 @@ print(f"первый пик l_1 ~ l_A (1 - 0.267) = {np.pi/theta*(1-0.267):.0f}"
         \(\approx T_0(1+v\cos\theta)\) в первом порядке по \(v\) (\(\theta\) отсчитывается от направления движения). Отсюда \(v = 3.36\times10^{-3}/2.7255 \approx 1.23\times10^{-3}\), т. е. \(\approx 370\) км/с.
 
 ??? question "17.2. Космическая дисперсия"
-    Выведите \eqref{eq:cosmic-variance} для гауссовых \(a_{\ell m}\) и найдите неопределённость
+    Выведите \(\eqref{eq:cosmic-variance}\) для гауссовых \(a_{\ell m}\) и найдите неопределённость
     квадруполя. Почему низкий квадруполь в данных WMAP/Planck не считается аномалией?
 
     ??? success "Решение"
@@ -291,7 +304,7 @@ print(f"первый пик l_1 ~ l_A (1 - 0.267) = {np.pi/theta*(1-0.267):.0f}"
 
 ??? question "17.3. Плато Сакса–Вольфа"
     Используя \(\Theta = \mathcal R/5\) и проекцию \(C_\ell = 4\pi\int\frac{\d k}{k}\,\frac{\Delta^2_{\mathcal R}}{25}\,j_\ell^2(kD_M)\),
-    выведите \eqref{eq:sw-plateau}. Указание: \(\int_0^\infty j_\ell^2(x)\,\d x/x = 1/[2\ell(\ell+1)]\).
+    выведите \(\eqref{eq:sw-plateau}\). Указание: \(\int_0^\infty j_\ell^2(x)\,\d x/x = 1/[2\ell(\ell+1)]\).
 
     ??? success "Решение"
         При \(\Delta^2_{\mathcal R} = A_s\) = const: \(C_\ell = \dfrac{4\pi A_s}{25}\cdot\dfrac{1}{2\ell(\ell+1)}\),
@@ -300,12 +313,12 @@ print(f"первый пик l_1 ~ l_A (1 - 0.267) = {np.pi/theta*(1-0.267):.0f}"
 
 ??? question "17.4. Барионная нагрузка"
     Найдите \(R_*\) для \(\Omega_bh^2 = 0.0224\) и отношение амплитуд \(|\Theta_0 + \Psi|\) в
-    первом сжатии и первом разрежении по \eqref{eq:effective-temp}. Почему наблюдаемое
+    первом сжатии и первом разрежении по \(\eqref{eq:effective-temp}\). Почему наблюдаемое
     отношение высот пиков (\(\approx 5700/2600\)) меньше?
 
     ??? success "Решение"
         \(\Omega_\gamma h^2 = 2.47\times10^{-5}\): \(R_* = \dfrac{3\cdot0.0224}{4\cdot2.47\times10^{-5}\cdot1091} \approx 0.62\).
-        Амплитуды \(\tfrac13(1+6R)|\Psi| \approx 1.58|\Psi|\) и \(\tfrac13|\Psi|\); отношение мощностей \(\approx 22\).
+        Амплитуды \(\tfrac13(1+6R)|\Psi| \approx 1.57|\Psi|\) и \(\tfrac13|\Psi|\); отношение мощностей \(\approx 22\).
         На деле оно гораздо меньше: доплеровский член заполняет провалы, \(R\) и \(\Psi\) меняются со временем
         (радиационный разгон сильнее действует на большие \(\ell\)), а проекция \(j_\ell\) и затухание Силка
         размывают пики. Качественно, однако, рост \(\Omega_bh^2\) действительно увеличивает отношение
