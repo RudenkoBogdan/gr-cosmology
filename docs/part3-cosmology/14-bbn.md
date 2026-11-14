@@ -26,7 +26,7 @@ n + \nu_e \leftrightarrow p + e^-, \qquad n + e^+ \leftrightarrow p + \bar\nu_e
 
 быстры, нейтроны и протоны находятся в химическом равновесии
 (\(\mu_n + \mu_\nu = \mu_p + \mu_e\), при малых лептонных асимметриях \(\mu_n\approx\mu_p\)).
-Из \eqref{eq:nonrel} главы 13 (с \(g_n = g_p\)):
+Из нерелятивистской формулы для \(n\) ([§13.2](13-thermal-history.md#132) с \(g_n = g_p\)):
 
 \begin{equation}
 \left(\frac{n_n}{n_p}\right)_{\rm eq} = e^{-Q/T}, \qquad Q = m_n - m_p = 1.293\ \text{МэВ}.
@@ -38,7 +38,7 @@ n + \nu_e \leftrightarrow p + e^-, \qquad n + e^+ \leftrightarrow p + \bar\nu_e
 
 ## 14.2. Закалка отношения n/p
 
-Темп реакций \eqref{eq:weak} при \(T\gg m_e\) определяется той же константой, что и
+Темп реакций \(\eqref{eq:weak}\) при \(T\gg m_e\) определяется той же константой, что и
 распад нейтрона, и приблизительно равен
 
 \begin{equation}
@@ -58,10 +58,12 @@ n + \nu_e \leftrightarrow p + e^-, \qquad n + e^+ \leftrightarrow p + \bar\nu_e
 
 !!! definition "Определение: доля нейтронов"
     \(X_n \equiv n_n/(n_n + n_p)\). Её эволюция описывается кинетическим уравнением
+
     \begin{equation}
     \frac{\d X_n}{\d t} = \Gamma_{n\to p}\left[(1-X_n)\,e^{-Q/T} - X_n\right] - \frac{X_n}{\tau_n},
     \label{eq:xn-ode}
     \end{equation}
+
     где первое слагаемое — слабые реакции с учётом детального баланса
     (\(\Gamma_{p\to n} = \Gamma_{n\to p}e^{-Q/T}\)), второе — свободный распад
     \(n\to p e^-\bar\nu_e\).
@@ -91,6 +93,7 @@ n + \nu_e \leftrightarrow p + e^-, \qquad n + e^+ \leftrightarrow p + \bar\nu_e
 !!! theorem "Утверждение: температура нуклеосинтеза"
     Из-за \(\eta\sim 10^{-9}\) дейтерий становится заметным (\(n_{\rm D}\sim n_n\)) не при
     \(T\sim B_{\rm D}\), а когда \(e^{B_{\rm D}/T}\) компенсирует \(\eta^{-1}\):
+
     \begin{equation}
     \frac{B_{\rm D}}{T_{\rm nuc}} \approx \ln\eta^{-1} + \frac32\ln\frac{m_p}{T_{\rm nuc}}
     \quad\Longrightarrow\quad T_{\rm nuc}\approx 0.07\text{–}0.08\ \text{МэВ},\qquad t_{\rm nuc}\approx 3\ \text{мин}.
@@ -109,6 +112,7 @@ n + \nu_e \leftrightarrow p + e^-, \qquad n + e^+ \leftrightarrow p + \bar\nu_e
 лёгкое ядро. Каждое ядро гелия содержит два нейтрона, так что массовая доля
 
 !!! theorem "Массовая доля гелия"
+
     \begin{equation}
     Y_p \equiv \frac{\rho_{\rm He}}{\rho_b} = \frac{4\,n_{\rm He}}{n_b} = 2X_n(t_{\rm nuc})
     = \frac{2\,(n/p)_{\rm nuc}}{1 + (n/p)_{\rm nuc}}.
@@ -160,7 +164,7 @@ Y_p\approx\frac{2/7}{1+1/7} = 0.25 .
     гало («плато Спайт»). Вероятнее всего, причина — астрофизическая (разрушение
     лития в атмосферах звёзд), но вопрос открыт.
 
-## 14.6. Ограничения на \(\eta\) и \(N_{\rm eff}\)
+## 14.6. Ограничения на η и N_eff
 
 BBN — исторически первое измерение плотности барионов, и оно показало, что
 \(\Omega_b\approx 0.05\) — много меньше полной плотности вещества \(\Omega_m\approx 0.3\).
@@ -173,7 +177,7 @@ BBN — исторически первое измерение плотност�
 
 ## 14.7. Численный пример: эволюция n/p
 
-Проинтегрируем \eqref{eq:xn-ode} с темпом \eqref{eq:lambda-np} и простой интерполяцией
+Проинтегрируем \(\eqref{eq:xn-ode}\) с темпом \(\eqref{eq:lambda-np}\) и простой интерполяцией
 \(g_*\) от 10.75 до 3.36 (подогрев фотонов при аннигиляции \(e^\pm\) для простоты
 не учитываем). Нуклеосинтез «включаем» при \(T_{\rm nuc} = 0.078\) МэВ.
 
@@ -249,11 +253,11 @@ print(f"Y_p ≈ 2 X_n = {2*Xn:.3f}")
         \(H = 1.66\sqrt{g_*}\,T^2/M_P\), \(M_P = 1.22\times10^{19}\) ГэВ.
         \(T_f^3 = 1.66\cdot3.28/(G_F^2M_P) = 5.44/(1.37\times10^{-10}\cdot1.22\times10^{19})\ \text{ГэВ}^3
         \approx 3.3\times10^{-9}\ \text{ГэВ}^3\), \(T_f\approx 1.5\) МэВ. Грубая оценка завышена;
-        точный темп \eqref{eq:lambda-np} даёт \(T_f\approx0.7\) МэВ (он содержит численный
+        точный темп \(\eqref{eq:lambda-np}\) даёт \(T_f\approx0.7\) МэВ (он содержит численный
         множитель, уменьшающий \(\Gamma\) при \(T\sim Q\)).
 
 ??? question "14.2. \(Y_p\) из n/p"
-    Выведите \eqref{eq:yp} и найдите \(Y_p\) при \((n/p)_{\rm nuc} = 1/6\) и \(1/8\).
+    Выведите \(\eqref{eq:yp}\) и найдите \(Y_p\) при \((n/p)_{\rm nuc} = 1/6\) и \(1/8\).
 
     ??? success "Решение"
         Все нейтроны в He: \(n_{\rm He} = n_n/2\), масса гелия \(\approx 4m_p n_{\rm He} = 2m_pn_n\),
@@ -268,7 +272,7 @@ print(f"Y_p ≈ 2 X_n = {2*Xn:.3f}")
         растёт примерно на \(0.013\): \(\approx 0.247\to 0.260\) — исключено наблюдениями.
 
 ??? question "14.4. Почему не дейтерий сразу?"
-    При какой температуре \(n_{\rm D}/n_p\) из \eqref{eq:deuterium-saha} достигает \(\sim 1\) при \(\eta = 6\times10^{-10}\)?
+    При какой температуре \(n_{\rm D}/n_p\) из \(\eqref{eq:deuterium-saha}\) достигает \(\sim 1\) при \(\eta = 6\times10^{-10}\)?
     Решите итерациями.
 
     ??? success "Решение"

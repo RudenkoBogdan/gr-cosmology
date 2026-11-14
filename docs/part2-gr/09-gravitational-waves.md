@@ -38,7 +38,7 @@ R_{\mu\nu\rho\sigma} = \frac12\left(\pd_\rho\pd_\nu h_{\mu\sigma} + \pd_\sigma\p
 ### Калибровочная свобода
 
 Бесконечно малая замена координат \(x^\mu \to x^\mu + \xi^\mu(x)\) с \(|\pd\xi| \sim |h|\)
-сохраняет вид \eqref{eq:linear-metric}, но меняет возмущение:
+сохраняет вид \(\eqref{eq:linear-metric}\), но меняет возмущение:
 
 \begin{equation}
 h_{\mu\nu} \to h_{\mu\nu} + \pd_\mu\xi_\nu + \pd_\nu\xi_\mu.
@@ -46,7 +46,7 @@ h_{\mu\nu} \to h_{\mu\nu} + \pd_\mu\xi_\nu + \pd_\nu\xi_\mu.
 \end{equation}
 
 Это аналог градиентного преобразования \(A_\mu \to A_\mu + \pd_\mu\lambda\) в электродинамике.
-Линеаризованный тензор Римана \eqref{eq:lin-riemann} калибровочно инвариантен (задача 9.1),
+Линеаризованный тензор Римана \(\eqref{eq:lin-riemann}\) калибровочно инвариантен (задача 9.1),
 поэтому физический смысл имеет только он, а не сами \(h_{\mu\nu}\).
 
 ### Уравнения поля
@@ -104,6 +104,7 @@ h_{0\mu} = 0, \qquad h^\mu{}_\mu = 0, \qquad \pd_i h_{ij} = 0.
 
 !!! definition "Определение: поляризации гравитационной волны"
     Для волны, распространяющейся вдоль оси \(z\), в TT-калибровке
+
     \begin{equation}
     h^{\rm TT}_{\mu\nu} =
     \begin{pmatrix}
@@ -115,6 +116,7 @@ h_{0\mu} = 0, \qquad h^\mu{}_\mu = 0, \qquad \pd_i h_{ij} = 0.
     \cos\left[\omega(t - z) + \varphi\right].
     \label{eq:polarizations}
     \end{equation}
+
     Амплитуды \(h_+\) и \(h_\times\) называют поляризациями «плюс» и «крест».
 
 При повороте на угол \(\psi\) вокруг оси \(z\) поляризации преобразуются как
@@ -182,7 +184,7 @@ L = \int\sqrt{g_{xx}}\,\d x \approx \left(1 + \frac12h_+\cos\omega t\right)L_0.
       <option value="cross">× (крест)</option>
       <option value="circ">круговая</option>
     </select>
-    <label for="gw-ring-h">\(h\) = <span id="gw-ring-h-val">0.30</span></label>
+    <label for="gw-ring-h"><span class="arithmatex">\(h\)</span> = <span id="gw-ring-h-val">0.30</span></label>
     <input type="range" id="gw-ring-h" min="0" max="0.6" step="0.01" value="0.3">
   </div>
 </div>
@@ -218,7 +220,7 @@ t_{00} = t_{0z} = \frac{1}{16\pi G}\left\langle\dot h_+^2 + \dot h_\times^2\righ
 
 ## 9.5. Квадрупольная формула
 
-Вернёмся к уравнению с источником \eqref{eq:lin-einstein}. Его решение — запаздывающий
+Вернёмся к уравнению с источником \(\eqref{eq:lin-einstein}\). Его решение — запаздывающий
 потенциал:
 
 \begin{equation}
@@ -247,19 +249,22 @@ t_{00} = t_{0z} = \frac{1}{16\pi G}\left\langle\dot h_+^2 + \dot h_\times^2\righ
 
 !!! theorem "Квадрупольная формула Эйнштейна"
     Вдали от медленного компактного источника
+
     \begin{equation}
     h^{\rm TT}_{ij}(t, \vb x) = \frac{2G}{r}\,\ddot Q^{\rm TT}_{ij}(t - r),
     \qquad Q_{ij} = I_{ij} - \frac13\delta_{ij}I_{kk},
     \label{eq:quadrupole-h}
     \end{equation}
+
     а полная излучаемая мощность равна
+
     \begin{equation}
     P = \frac{G}{5}\left\langle\dddot Q_{ij}\,\dddot Q_{ij}\right\rangle.
     \label{eq:quadrupole-P}
     \end{equation}
 
-Формула \eqref{eq:quadrupole-P} получается интегрированием потока \eqref{eq:isaacson} по
-сфере с помощью проектора \eqref{eq:tt-projector}. С восстановленными единицами
+Формула \(\eqref{eq:quadrupole-P}\) получается интегрированием потока \(\eqref{eq:isaacson}\) по
+сфере с помощью проектора \(\eqref{eq:tt-projector}\). С восстановленными единицами
 \(P = \frac{G}{5c^5}\langle\dddot Q_{ij}\dddot Q_{ij}\rangle\); множитель \(G/c^5 \approx 3\times10^{-53}\) Вт\(^{-1}\)
 объясняет, почему лабораторные источники безнадёжны (задача 9.4).
 
@@ -269,7 +274,7 @@ t_{00} = t_{0z} = \frac{1}{16\pi G}\left\langle\dot h_+^2 + \dot h_\times^2\righ
 \(\Omega^2 = GM/a^3\), \(M = m_1 + m_2\), \(\mu = m_1m_2/M\). В системе центра масс
 \(I_{xx} = \mu a^2\cos^2\Omega t\), \(I_{yy} = \mu a^2\sin^2\Omega t\), \(I_{xy} = \mu a^2\sin\Omega t\cos\Omega t\).
 Квадрупольный момент осциллирует с частотой \(2\Omega\): **частота волны вдвое больше
-орбитальной**, \(f = \Omega/\pi\). Подстановка в \eqref{eq:quadrupole-P}:
+орбитальной**, \(f = \Omega/\pi\). Подстановка в \(\eqref{eq:quadrupole-P}\):
 
 \begin{equation}
 P = \frac{32}{5}\,G\mu^2a^4\Omega^6 = \frac{32}{5}\,\frac{G^4\mu^2M^3}{a^5}.
@@ -309,7 +314,7 @@ h_\times = \frac{4}{r}(G\mathcal M)^{5/3}(\pi f)^{2/3}\cos\iota\,\sin\Phi(t),
 \label{eq:binary-h}
 \end{equation}
 
-где \(\Phi = 2\pi\int f\,\d t\). Измеряя \(f\) и \(\dot f\), из \eqref{eq:fdot} находят
+где \(\Phi = 2\pi\int f\,\d t\). Измеряя \(f\) и \(\dot f\), из \(\eqref{eq:fdot}\) находят
 \(\mathcal M\), а затем из амплитуды — расстояние \(r\): двойные системы являются
 «стандартными сиренами», что используется в космологии для независимого измерения \(H_0\)
 (см. [главу 12](../part3-cosmology/12-distances.md)).
@@ -325,11 +330,13 @@ h_\times = \frac{4}{r}(G\mathcal M)^{5/3}(\pi f)^{2/3}\cos\iota\,\sin\Phi(t),
 !!! example "Пример: пульсар Халса–Тейлора PSR B1913+16"
     Нейтронные звёзды с массами \(1.44\) и \(1.39\,M_\odot\) обращаются с периодом
     \(P_b = 7.75\) ч на эксцентричной (\(e = 0.617\)) орбите. Обобщение
-    \eqref{eq:binary-power} на эллиптические орбиты (Петерс и Мэтьюз, 1963) предсказывает
+    \(\eqref{eq:binary-power}\) на эллиптические орбиты (Петерс и Мэтьюз, 1963) предсказывает
+
     \[
     \dot P_b = -\frac{192\pi}{5}\left(\frac{2\pi G}{P_b}\right)^{5/3}\frac{m_1m_2}{M^{1/3}}
     \frac{1 + \frac{73}{24}e^2 + \frac{37}{96}e^4}{(1 - e^2)^{7/2}} \approx -2.40\times10^{-12},
     \]
+
     что совпадает с измерениями с точностью лучше \(0.3\%\) (после учёта
     галактического ускорения). Нобелевская премия 1993 г.
 
@@ -401,7 +408,7 @@ print(f"dPb/dt = {dPdt:.3e}")                    # dPb/dt = -2.403e-12
 ## Задачи
 
 ??? question "9.1. Калибровочная инвариантность Римана"
-    Покажите, что \eqref{eq:lin-riemann} не меняется при преобразовании \eqref{eq:gauge}.
+    Покажите, что \(\eqref{eq:lin-riemann}\) не меняется при преобразовании \(\eqref{eq:gauge}\).
 
     ??? success "Решение"
         Подставим \(\delta h_{\mu\sigma} = \pd_\mu\xi_\sigma + \pd_\sigma\xi_\mu\) и т. д. Изменение
@@ -424,7 +431,7 @@ print(f"dPb/dt = {dPdt:.3e}")                    # dPb/dt = -2.403e-12
         спиральности 2.
 
 ??? question "9.3. Тождество для \(\int T^{ij}\)"
-    Используя \(\pd_\mu T^{\mu\nu} = 0\), докажите \eqref{eq:virial}.
+    Используя \(\pd_\mu T^{\mu\nu} = 0\), докажите \(\eqref{eq:virial}\).
 
     ??? success "Решение"
         \(\pd_0T^{00} = -\pd_kT^{k0}\), \(\pd_0T^{0j} = -\pd_kT^{kj}\). Тогда
@@ -440,7 +447,7 @@ print(f"dPb/dt = {dPdt:.3e}")                    # dPb/dt = -2.403e-12
     ??? success "Решение"
         Момент инерции относительно центра \(\mu = ML^2/12\) играет роль \(\mu a^2\) в задаче о
         двойной системе: \(I_{xx} = \frac{ML^2}{12}\cos^2\omega t\) и т. д. По аналогии с
-        \eqref{eq:binary-power} \(P = \frac{32G}{5c^5}\left(\frac{ML^2}{12}\right)^2\omega^6
+        \(\eqref{eq:binary-power}\) \(P = \frac{32G}{5c^5}\left(\frac{ML^2}{12}\right)^2\omega^6
         = \frac{2G}{45c^5}M^2L^4\omega^6\). Численно \(P \approx 4\times10^{-29}\) Вт.
 
 ??? question "9.5. Двойная нейтронная звезда"
@@ -449,7 +456,7 @@ print(f"dPb/dt = {dPdt:.3e}")                    # dPb/dt = -2.403e-12
     (порядок величины)?
 
     ??? success "Решение"
-        \(\mathcal M = 1.4\cdot2^{-1/5}M_\odot \approx 1.22\,M_\odot\). Из \eqref{eq:tau-merger}
+        \(\mathcal M = 1.4\cdot2^{-1/5}M_\odot \approx 1.22\,M_\odot\). Из \(\eqref{eq:tau-merger}\)
         (с \(G\mathcal M/c^3 \approx 6.0\) мкс) \(\tau \approx 1000\) с \(\approx 17\) мин. Число циклов
         \(N = \int f\,\d t = \int_{f}^{\infty} \frac{f\,\d f}{\dot f}
         = \frac{(G\mathcal M)^{-5/3}f^{-5/3}}{32\pi^{8/3}} \approx 1.6\times10^4\).

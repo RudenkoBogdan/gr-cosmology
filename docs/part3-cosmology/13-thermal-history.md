@@ -56,14 +56,17 @@ P = \frac{g}{2\pi^2}\int_0^\infty f\,\frac{p^2}{3E}\,p^2\d p .
 
 !!! theorem "Предельные случаи (\(\mu \ll T\))"
     **Ультрарелятивистский** предел \(T \gg m\):
+
     \begin{equation}
     n = \frac{\zeta(3)}{\pi^2}\,g\,T^3 \times \begin{cases}1\\ 3/4\end{cases},\qquad
     \rho = \frac{\pi^2}{30}\,g\,T^4\times\begin{cases}1\\ 7/8\end{cases},\qquad P = \frac{\rho}{3},
     \label{eq:relativistic}
     \end{equation}
+
     (верхняя строка — бозоны, нижняя — фермионы).
 
     **Нерелятивистский** предел \(T \ll m\) (одинаков для обеих статистик):
+
     \begin{equation}
     n = g\left(\frac{mT}{2\pi}\right)^{3/2} e^{-(m-\mu)/T},\qquad
     \rho \approx m n,\qquad P = nT \ll \rho .
@@ -71,7 +74,7 @@ P = \frac{g}{2\pi^2}\int_0^\infty f\,\frac{p^2}{3E}\,p^2\d p .
     \end{equation}
 
 Множители \(3/4\) и \(7/8\) возникают из \(\int x^{k}\d x/(e^x+1) = (1-2^{-k})\int x^k\d x/(e^x-1)\).
-Главное следствие \eqref{eq:nonrel}: как только \(T\) падает ниже массы, равновесная
+Главное следствие \(\eqref{eq:nonrel}\): как только \(T\) падает ниже массы, равновесная
 концентрация частиц **экспоненциально подавлена** — пары аннигилируют.
 
 Для фотонов (\(g=2\)) получаем знакомые формулы чёрного тела. Сегодня
@@ -142,7 +145,7 @@ t \approx 2.42\,g_*^{-1/2}\left(\frac{1\ \text{МэВ}}{T}\right)^2\ \text{с}.
 которое не меняется после аннигиляции \(e^\pm\). Крошечность \(\eta\) — ключ ко всей
 термической истории: фотонов в миллиард раз больше, чем барионов.
 
-## 13.5. Закалка нейтрино и аннигиляция \(e^\pm\)
+## 13.5. Закалка нейтрино и аннигиляция e⁺e⁻
 
 Нейтрино взаимодействуют слабо: \(\sigma \sim G_F^2 T^2\), \(n\sim T^3\), откуда
 
@@ -157,7 +160,7 @@ t \approx 2.42\,g_*^{-1/2}\left(\frac{1\ \text{МэВ}}{T}\right)^2\ \text{с}.
     форму Ферми–Дирака с \(T_\nu \propto 1/a\).
 
 Вскоре, при \(T \sim m_e = 0.511\) МэВ, аннигилируют электрон-позитронные пары. Их
-энтропия достаётся только фотонам. Применим \eqref{eq:entropy} к фотон-электронной
+энтропия достаётся только фотонам. Применим \(\eqref{eq:entropy}\) к фотон-электронной
 плазме: до аннигиляции \(g_{*s} = 2 + \tfrac78\cdot4 = \tfrac{11}{2}\), после — \(2\). Так как
 \(T_\nu a = \text{const}\) всё это время,
 
@@ -183,7 +186,7 @@ N_{\rm eff}^{\rm SM} = 3.044.
 При \(T \sim 1\) эВ электроны и протоны объединяются в нейтральный водород,
 \(e^- + p \leftrightarrow \mathrm{H} + \gamma\). Пока реакция равновесна, химические
 потенциалы связаны соотношением \(\mu_e + \mu_p = \mu_{\rm H}\). Используя
-\eqref{eq:nonrel} для каждого вида, \(m_e + m_p - m_{\rm H} = B_{\rm H} = 13.6\) эВ и
+\(\eqref{eq:nonrel}\) для каждого вида, \(m_e + m_p - m_{\rm H} = B_{\rm H} = 13.6\) эВ и
 \(g_{\rm H} = 4\), \(g_e = g_p = 2\), получаем закон действующих масс:
 
 \begin{equation}
@@ -195,6 +198,7 @@ N_{\rm eff}^{\rm SM} = 3.044.
 даёт \(n_e = n_p\), \(n_{\rm H} = (1-X_e)n_b\), и с \(n_b = \eta n_\gamma\):
 
 !!! theorem "Уравнение Саха"
+
     \begin{equation}
     \frac{X_e^2}{1-X_e} = \frac{1}{\eta\, n_\gamma}\left(\frac{m_e T}{2\pi}\right)^{3/2}e^{-B_{\rm H}/T}
     = \frac{\sqrt\pi}{4\sqrt2\,\zeta(3)}\,\frac{1}{\eta}\left(\frac{m_e}{T}\right)^{3/2} e^{-B_{\rm H}/T}.
@@ -225,16 +229,16 @@ T_{\rm rec} \approx 0.32\ \text{эВ} \approx 3700\ \text{K},\qquad z_{\rm rec}\
 
 Ползунок меняет плотность барионов \(\Omega_b h^2\) (а с ней \(\eta\)). Чем больше барионов,
 тем раньше (при больших \(z\)) идёт рекомбинация, но зависимость лишь логарифмическая:
-изменение \(\Omega_b h^2\) в 10 раз сдвигает \(z_{\rm rec}\) всего на ~15%.
+изменение \(\Omega_b h^2\) в 10 раз сдвигает \(z_{\rm rec}\) всего на ~6%.
 Пунктир — значение Planck \(\Omega_b h^2 = 0.0224\).
 
 <div class="interactive" id="saha-demo">
   <canvas id="saha-canvas" width="520" height="360"></canvas>
   <div class="controls">
-    <label for="saha-ob">\(\Omega_b h^2\) = <span id="saha-ob-val">0.0224</span></label>
+    <label for="saha-ob"><span class="arithmatex">\(\Omega_b h^2\)</span> = <span id="saha-ob-val">0.0224</span></label>
     <input type="range" id="saha-ob" min="-2.5" max="-0.5" step="0.01" value="-1.65">
-    <span>\(\eta\) = <span id="saha-eta">6.1e-10</span></span>
-    <span>\(z_{\rm rec}\) = <span id="saha-zrec">1379</span></span>
+    <span><span class="arithmatex">\(\eta\)</span> = <span id="saha-eta">6.1e-10</span></span>
+    <span><span class="arithmatex">\(z_{\rm rec}\)</span> = <span id="saha-zrec">1379</span></span>
   </div>
 </div>
 
@@ -268,8 +272,8 @@ z_{\rm dec}\approx 1100,\quad T_{\rm dec}\approx 0.26\ \text{эВ}.
 
 ## 13.8. Численный пример
 
-Решим уравнение Саха \eqref{eq:saha} как квадратное уравнение относительно \(X_e\) и
-найдём \(z_{\rm rec}\); заодно оценим температуру закалки нейтрино из \eqref{eq:nu-dec}
+Решим уравнение Саха \(\eqref{eq:saha}\) как квадратное уравнение относительно \(X_e\) и
+найдём \(z_{\rm rec}\); заодно оценим температуру закалки нейтрино из \(\eqref{eq:nu-dec}\)
 (здесь \(H = 1.66\sqrt{g_*}\,T^2/M_P\) с полной массой Планка \(M_P = G^{-1/2}\)).
 
 ```python
@@ -327,7 +331,7 @@ print(f"T_nu/T_gamma = {(4/11)**(1/3):.4f},  T_nu0 = {2.7255*(4/11)**(1/3):.3f} 
 ## Задачи
 
 ??? question "13.1. Число фотонов"
-    Получите \(n_{\gamma,0}\approx 411\ \text{см}^{-3}\) из \eqref{eq:relativistic}, восстановив \(\hbar\), \(c\), \(k_B\).
+    Получите \(n_{\gamma,0}\approx 411\ \text{см}^{-3}\) из \(\eqref{eq:relativistic}\), восстановив \(\hbar\), \(c\), \(k_B\).
 
     ??? success "Решение"
         \(n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar c}\right)^3\).
@@ -337,7 +341,7 @@ print(f"T_nu/T_gamma = {(4/11)**(1/3):.4f},  T_nu0 = {2.7255*(4/11)**(1/3):.3f} 
 
 ??? question "13.2. \(g_*\) выше КХД-перехода"
     Найдите \(g_*\) при \(T \approx 1\) ГэВ (кварки \(u,d,s\), глюоны, \(\gamma\), \(e,\mu\), три \(\nu\);
-    \(\pi\)-мезоны уже конфайнмент не образуют).
+    выше КХД-перехода кварки и глюоны свободны, адронов (в том числе \(\pi\)-мезонов) нет).
 
     ??? success "Решение"
         Бозоны: \(\gamma\) 2 + глюоны 16 = 18. Фермионы: кварки \(3\cdot 2\cdot2\cdot3 = 36\)
@@ -345,7 +349,7 @@ print(f"T_nu/T_gamma = {(4/11)**(1/3):.4f},  T_nu0 = {2.7255*(4/11)**(1/3):.3f} 
         \(g_* = 18 + \tfrac78\cdot 50 = 61.75\).
 
 ??? question "13.3. Фактор \(4/11\)"
-    Выведите \eqref{eq:tnu} из сохранения энтропии и найдите \(g_*\) сегодня.
+    Выведите \(\eqref{eq:tnu}\) из сохранения энтропии и найдите \(g_*\) сегодня.
 
     ??? success "Решение"
         Для \(\gamma+e^\pm\): \(g_{*s}T^3a^3 = \)const, \(g_{*s}\) меняется с \(11/2\) на \(2\), поэтому

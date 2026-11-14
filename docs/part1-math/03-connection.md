@@ -28,6 +28,7 @@
 !!! definition "Определение: ковариантная производная"
     **Ковариантная производная** \(\nabla\) — отображение тензорных полей типа \((k,l)\)
     в поля типа \((k,l+1)\), которое
+
     1. линейно: \(\nabla(T+S) = \nabla T + \nabla S\);
     2. удовлетворяет правилу Лейбница: \(\nabla(T\otimes S) = (\nabla T)\otimes S + T\otimes(\nabla S)\);
     3. коммутирует со свёртками;
@@ -42,7 +43,7 @@
 \end{equation}
 
 Числа \(\Gamma^\nu_{\mu\lambda}\) — **коэффициенты связности**. Требование, чтобы
-\(\nabla_\mu V^\nu\) был тензором, вместе с \eqref{eq:partial-nontensor} фиксирует их
+\(\nabla_\mu V^\nu\) был тензором, вместе с \(\eqref{eq:partial-nontensor}\) фиксирует их
 (нетензорный!) закон преобразования:
 
 \begin{equation}
@@ -52,7 +53,7 @@
 \label{eq:gamma-transform}
 \end{equation}
 
-Неоднородный член в точности компенсирует лишнее слагаемое в \eqref{eq:partial-nontensor}.
+Неоднородный член в точности компенсирует лишнее слагаемое в \(\eqref{eq:partial-nontensor}\).
 Требование \(\nabla_\mu(\omega_\nu V^\nu) = \pd_\mu(\omega_\nu V^\nu)\) (свойства 3–4) даёт действие
 на 1-формы — с обратным знаком:
 
@@ -84,6 +85,7 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
     На многообразии с метрикой \(g_{\mu\nu}\) существует единственная связность, которая
     (а) не имеет кручения, \(\Gamma^\lambda_{\mu\nu} = \Gamma^\lambda_{\nu\mu}\), и
     (б) совместима с метрикой, \(\nabla_\rho g_{\mu\nu} = 0\). Её коэффициенты — **символы Кристоффеля**
+
     \begin{equation}
     \Gamma^\lambda_{\mu\nu} = \tfrac12 g^{\lambda\sigma}\left(\pd_\mu g_{\nu\sigma} + \pd_\nu g_{\mu\sigma} - \pd_\sigma g_{\mu\nu}\right).
     \label{eq:christoffel}
@@ -91,6 +93,7 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 
 ??? info "Доказательство"
     Распишем условие совместимости для трёх циклических перестановок индексов:
+
     \[
     \begin{aligned}
     \nabla_\rho g_{\mu\nu} &= \pd_\rho g_{\mu\nu} - \Gamma^\lambda_{\rho\mu}g_{\lambda\nu} - \Gamma^\lambda_{\rho\nu}g_{\mu\lambda} = 0,\\
@@ -98,9 +101,10 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
     \nabla_\nu g_{\rho\mu} &= \pd_\nu g_{\rho\mu} - \Gamma^\lambda_{\nu\rho}g_{\lambda\mu} - \Gamma^\lambda_{\nu\mu}g_{\rho\lambda} = 0.
     \end{aligned}
     \]
+
     Вычтем из первого второе и третье и воспользуемся симметрией \(\Gamma\):
     \(\pd_\rho g_{\mu\nu} - \pd_\mu g_{\nu\rho} - \pd_\nu g_{\rho\mu} + 2\Gamma^\lambda_{\mu\nu}g_{\lambda\rho} = 0\).
-    Умножая на \(\tfrac12 g^{\sigma\rho}\), получаем \eqref{eq:christoffel}. Единственность следует
+    Умножая на \(\tfrac12 g^{\sigma\rho}\), получаем \(\eqref{eq:christoffel}\). Единственность следует
     из того, что мы явно выразили \(\Gamma\) через \(g\).
 
 Полезные следствия совместимости с метрикой: подъём и опускание индексов коммутирует с \(\nabla\)
@@ -119,11 +123,13 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 
 !!! example "Пример: плоскость в полярных координатах"
     Для \(\d s^2 = \d r^2 + r^2\d\theta^2\) единственная ненулевая производная метрики —
-    \(\pd_r g_{\theta\theta} = 2r\). По \eqref{eq:christoffel}
+    \(\pd_r g_{\theta\theta} = 2r\). По \(\eqref{eq:christoffel}\)
+
     \[
     \Gamma^r_{\theta\theta} = -\tfrac12 g^{rr}\pd_r g_{\theta\theta} = -r, \qquad
     \Gamma^\theta_{r\theta} = \Gamma^\theta_{\theta r} = \tfrac12 g^{\theta\theta}\pd_r g_{\theta\theta} = \frac1r .
     \]
+
     Символы Кристоффеля отличны от нуля, хотя пространство плоское: в декартовых координатах
     все \(\Gamma = 0\). Связность — не тензор, и её можно занулить в точке подходящим выбором
     координат (локально инерциальные координаты из [гл. 2](02-manifolds-tensors.md)).
@@ -131,11 +137,13 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 
 !!! example "Пример: двумерная сфера"
     Для \(\d s^2 = a^2(\d\theta^2 + \sin^2\theta\,\d\phi^2)\):
+
     \begin{equation}
     \Gamma^\theta_{\phi\phi} = -\sin\theta\cos\theta, \qquad
     \Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot\theta ,
     \label{eq:sphere-christoffel}
     \end{equation}
+
     остальные равны нулю (радиус \(a\) выпадает).
 
 ## 3.4. Параллельный перенос
@@ -147,6 +155,7 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 !!! definition "Определение: параллельный перенос"
     Тензор \(T\) **параллельно переносится** вдоль кривой, если \(\frac{D T}{\d\lambda} = 0\).
     Для вектора:
+
     \begin{equation}
     \frac{\d V^\mu}{\d\lambda} + \Gamma^\mu_{\sigma\rho}\,\frac{\d x^\sigma}{\d\lambda}\,V^\rho = 0 .
     \label{eq:parallel-transport}
@@ -162,18 +171,22 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 (голономия) — прямое проявление кривизны, см. [гл. 4](04-curvature.md).
 
 !!! example "Пример: перенос вдоль широты сферы"
-    Возьмём кривую \(\theta = \theta_0\), \(\phi = \lambda\). Из \eqref{eq:parallel-transport} и
-    \eqref{eq:sphere-christoffel}
+    Возьмём кривую \(\theta = \theta_0\), \(\phi = \lambda\). Из \(\eqref{eq:parallel-transport}\) и
+    \(\eqref{eq:sphere-christoffel}\)
+
     \[
     \frac{\d V^\theta}{\d\phi} = \sin\theta_0\cos\theta_0\,V^\phi, \qquad
     \frac{\d V^\phi}{\d\phi} = -\cot\theta_0\,V^\theta .
     \]
+
     В ортонормированных компонентах \(V^{\hat\theta} = V^\theta\), \(V^{\hat\phi} = \sin\theta_0\,V^\phi\)
     это уравнения вращения с угловой частотой \(\cos\theta_0\):
+
     \begin{equation}
     V^{\hat\theta} = \cos(\phi\cos\theta_0), \qquad V^{\hat\phi} = -\sin(\phi\cos\theta_0)
     \label{eq:latitude-transport}
     \end{equation}
+
     для начального \(V = \hat e_\theta\). После полного оборота вектор повёрнут относительно
     исходного на угол \(2\pi\cos\theta_0\), что по модулю \(2\pi\) равно
     \(2\pi(1-\cos\theta_0)\) — **телесному углу** шапки, ограниченной широтой, т. е. её площади,
@@ -182,16 +195,16 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 ### Интерактив: голономия на сфере
 
 Выберите широту \(\theta_0\) (полярный угол) и протащите вектор вдоль параллели ползунком \(\phi\).
-Жёлтые стрелки — параллельно перенесённый вектор \eqref{eq:latitude-transport}, бледная стрелка
+Жёлтые стрелки — параллельно перенесённый вектор \(\eqref{eq:latitude-transport}\), бледная стрелка
 в начальной точке — исходный вектор. После полного оборота угол между ними равен
 \(2\pi(1-\cos\theta_0)\) (по модулю \(2\pi\)).
 
 <div class="interactive" id="transport-demo">
   <canvas id="transport-canvas" width="520" height="520"></canvas>
   <div class="controls">
-    <label for="transport-theta">\(\theta_0\) = <span id="transport-theta-val">60°</span></label>
+    <label for="transport-theta"><span class="arithmatex">\(\theta_0\)</span> = <span id="transport-theta-val">60°</span></label>
     <input type="range" id="transport-theta" min="5" max="90" step="1" value="60">
-    <label for="transport-phi">\(\phi\) = <span id="transport-phi-val">360°</span></label>
+    <label for="transport-phi"><span class="arithmatex">\(\phi\)</span> = <span id="transport-phi-val">360°</span></label>
     <input type="range" id="transport-phi" min="0" max="360" step="1" value="360">
     <span>поворот: <span id="transport-angle">180°</span></span>
   </div>
@@ -205,30 +218,32 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 !!! definition "Определение: геодезическая"
     Кривая \(x^\mu(\lambda)\) — **геодезическая**, если её касательный вектор параллельно
     переносится вдоль неё: \(\frac{D}{\d\lambda}\frac{\d x^\mu}{\d\lambda} = 0\), т. е.
+
     \begin{equation}
     \frac{\d^2 x^\mu}{\d\lambda^2} + \Gamma^\mu_{\rho\sigma}\frac{\d x^\rho}{\d\lambda}\frac{\d x^\sigma}{\d\lambda} = 0 .
     \label{eq:geodesic}
     \end{equation}
 
-Параметр \(\lambda\), в котором уравнение имеет вид \eqref{eq:geodesic}, называется **аффинным**;
+Параметр \(\lambda\), в котором уравнение имеет вид \(\eqref{eq:geodesic}\), называется **аффинным**;
 он определён с точностью до \(\lambda \to a\lambda + b\). Величина \(g_{\mu\nu}\dot x^\mu\dot x^\nu\)
 сохраняется вдоль геодезической, поэтому геодезические бывают времениподобными, изотропными и
 пространственноподобными по всей длине. Для времениподобных удобно взять \(\lambda = \tau\); тогда
-\(U^\mu = \d x^\mu/\d\tau\), \(U_\mu U^\mu = -1\), и \eqref{eq:geodesic} — это уравнение движения
+\(U^\mu = \d x^\mu/\d\tau\), \(U_\mu U^\mu = -1\), и \(\eqref{eq:geodesic}\) — это уравнение движения
 свободной частицы, \(U^\nu\nabla_\nu U^\mu = 0\) (обобщение \(\d U^\mu/\d\tau = 0\) из СТО).
 
 !!! theorem "Геодезические как экстремали"
     Времениподобные геодезические — экстремали функционала собственного времени
     \(\tau = \int\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,\d\lambda\). Эквивалентно (и удобнее),
-    уравнение \eqref{eq:geodesic} в аффинном параметре — уравнение Эйлера–Лагранжа для
+    уравнение \(\eqref{eq:geodesic}\) в аффинном параметре — уравнение Эйлера–Лагранжа для
+
     \begin{equation}
     L = \tfrac12 g_{\mu\nu}(x)\,\dot x^\mu \dot x^\nu .
     \label{eq:geodesic-lagrangian}
     \end{equation}
 
 Действительно, \(\frac{\d}{\d\lambda}(g_{\mu\nu}\dot x^\nu) - \frac12\pd_\mu g_{\nu\sigma}\dot x^\nu\dot x^\sigma = 0\)
-после раскрытия производной и умножения на \(g^{\lambda\mu}\) даёт \eqref{eq:geodesic} с символами
-\eqref{eq:christoffel}. На практике это самый быстрый способ найти \(\Gamma\): выписать уравнения
+после раскрытия производной и умножения на \(g^{\lambda\mu}\) даёт \(\eqref{eq:geodesic}\) с символами
+\(\eqref{eq:christoffel}\). На практике это самый быстрый способ найти \(\Gamma\): выписать уравнения
 Эйлера–Лагранжа для \(L\) и прочитать коэффициенты при \(\dot x\dot x\). В лоренцевой сигнатуре
 времениподобная геодезическая локально **максимизирует** собственное время — это «парадокс близнецов»
 на языке геометрии.
@@ -249,7 +264,7 @@ T^\lambda{}_{\mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu},
 
 ### Пример на Python: геодезические на сфере
 
-Проинтегрируем \eqref{eq:geodesic} на единичной сфере и убедимся, что геодезическая — большой круг:
+Проинтегрируем \(\eqref{eq:geodesic}\) на единичной сфере и убедимся, что геодезическая — большой круг:
 нормаль \(\vb n = \vb r\times\dot{\vb r}\) к плоскости кривой постоянна.
 
 ```python
@@ -311,6 +326,7 @@ print(f"{p.min():.8f} {p.max():.8f}")  # 0.84968810 0.84968810
 !!! definition "Определение: вектор Киллинга"
     Векторное поле \(K\) — **вектор Киллинга**, если поток вдоль него сохраняет метрику,
     \(\mathcal{L}_K g = 0\), т. е.
+
     \begin{equation}
     \nabla_\mu K_\nu + \nabla_\nu K_\mu = 0 .
     \label{eq:killing}
@@ -326,7 +342,7 @@ print(f"{p.min():.8f} {p.max():.8f}")  # 0.84968810 0.84968810
     \(p^\nu\nabla_\nu(K_\mu p^\mu) = p^\nu p^\mu\nabla_{(\nu}K_{\mu)} + K_\mu\,p^\nu\nabla_\nu p^\mu = 0.\)
 
 Для тензора энергии-импульса с \(\nabla_\mu T^{\mu\nu}=0\) ток \(J^\mu = T^{\mu\nu}K_\nu\) сохраняется,
-\(\nabla_\mu J^\mu = 0\), и, по \eqref{eq:divergence}, даёт сохраняющийся заряд. В
+\(\nabla_\mu J^\mu = 0\), и, по \(\eqref{eq:divergence}\), даёт сохраняющийся заряд. В
 пространстве Минковского 10 векторов Киллинга (4 трансляции, 3 поворота, 3 буста) отвечают
 сохранению энергии-импульса и углового момента. Это максимальное число для \(n=4\):
 \(n(n+1)/2 = 10\). Пространства с максимальной симметрией (сфера, de Sitter) важны в космологии.
@@ -337,13 +353,13 @@ print(f"{p.min():.8f} {p.max():.8f}")  # 0.84968810 0.84968810
 ## Задачи
 
 ??? question "3.1. Символы Кристоффеля сферы"
-    Выведите \eqref{eq:sphere-christoffel} из лагранжиана \eqref{eq:geodesic-lagrangian}.
+    Выведите \(\eqref{eq:sphere-christoffel}\) из лагранжиана \(\eqref{eq:geodesic-lagrangian}\).
 
     ??? success "Решение"
         \(L = \tfrac{a^2}{2}(\dot\theta^2 + \sin^2\theta\,\dot\phi^2)\). Уравнения Эйлера–Лагранжа:
         \(\ddot\theta - \sin\theta\cos\theta\,\dot\phi^2 = 0\) и
         \(\frac{\d}{\d\lambda}(\sin^2\theta\,\dot\phi) = 0 \Rightarrow \ddot\phi + 2\cot\theta\,\dot\theta\dot\phi = 0\).
-        Сравнивая с \eqref{eq:geodesic}: \(\Gamma^\theta_{\phi\phi} = -\sin\theta\cos\theta\),
+        Сравнивая с \(\eqref{eq:geodesic}\): \(\Gamma^\theta_{\phi\phi} = -\sin\theta\cos\theta\),
         \(2\Gamma^\phi_{\theta\phi} = 2\cot\theta\) (множитель 2 — от двух слагаемых \(\theta\phi\) и \(\phi\theta\)).
 
 ??? question "3.2. Совместимость с метрикой"
@@ -359,7 +375,7 @@ print(f"{p.min():.8f} {p.max():.8f}")  # 0.84968810 0.84968810
     выражение лапласиана в сферических координатах \(\mathbb{R}^3\).
 
     ??? success "Решение"
-        Из \eqref{eq:christoffel} \(\Gamma^\lambda_{\mu\lambda} = \tfrac12 g^{\lambda\sigma}\pd_\mu g_{\lambda\sigma}\)
+        Из \(\eqref{eq:christoffel}\) \(\Gamma^\lambda_{\mu\lambda} = \tfrac12 g^{\lambda\sigma}\pd_\mu g_{\lambda\sigma}\)
         (два других слагаемых сокращаются по симметрии), а \(\pd_\mu\ln|g| = g^{\lambda\sigma}\pd_\mu g_{\lambda\sigma}\)
         (формула Якоби). При \(\sqrt g = r^2\sin\theta\):
         \(\nabla^2 f = \frac{1}{r^2}\pd_r(r^2\pd_r f) + \frac{1}{r^2\sin\theta}\pd_\theta(\sin\theta\,\pd_\theta f) + \frac{1}{r^2\sin^2\theta}\pd_\phi^2 f\).
@@ -369,7 +385,7 @@ print(f"{p.min():.8f} {p.max():.8f}")  # 0.84968810 0.84968810
     векторы Киллинга на \(S^2\).
 
     ??? success "Решение"
-        Удобно использовать первую форму \eqref{eq:lie-metric}. Для \(\pd_\phi\) метрика не зависит
+        Удобно использовать первую форму \(\eqref{eq:lie-metric}\). Для \(\pd_\phi\) метрика не зависит
         от \(\phi\), \(\mathcal{L}_K g = 0\). Для \(K'\): компонента \(\theta\theta\):
         \(2g_{\theta\theta}\pd_\theta K'^\theta = 0\); \(\phi\phi\): \(K'^\theta\pd_\theta g_{\phi\phi} + 2g_{\phi\phi}\pd_\phi K'^\phi = 2\sin\theta\cos\theta\sin\phi - 2\sin^2\theta\cot\theta\sin\phi = 0\);
         \(\theta\phi\): \(g_{\theta\theta}\pd_\phi K'^\theta + g_{\phi\phi}\pd_\theta K'^\phi = \cos\phi - \sin^2\theta\,\cos\phi/\sin^2\theta = 0\)

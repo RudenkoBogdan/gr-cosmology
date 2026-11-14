@@ -41,6 +41,7 @@ t_0 - t_e = \int_0^z\frac{\d z'}{(1+z')H(z')} .
 \(2\pi S_k(\chi)\). Поэтому для поперечных измерений нужна величина
 
 !!! definition "Определение: поперечное сопутствующее расстояние"
+
     \begin{equation}
     d_M(z) = S_k(d_C) =
     \begin{cases}
@@ -70,6 +71,7 @@ d_L \equiv \sqrt{\frac{L}{4\pi F}} .
 гребнях волны, что и при выводе красного смещения в главе 10). Итого \(F = L/[4\pi d_M^2(1+z)^2]\):
 
 !!! theorem "Фотометрическое расстояние"
+
     \begin{equation}
     d_L(z) = (1+z)\,d_M(z).
     \label{eq:dL}
@@ -97,7 +99,7 @@ d_L = d_H\left[z + \frac{1 - q_0}{2}z^2 + \mathcal O(z^3)\right],
     (соотношение Филлипса); после калибровки разброс \(\sim0{,}15^m\) — это **стандартизуемые
     свечи**, видимые до \(z\sim2\). В 1998 г. группы High-z Supernova Search (Рисс, Шмидт) и
     Supernova Cosmology Project (Перлмуттер) обнаружили, что сверхновые на \(z\sim0{,}5\)
-    тусклее на \(\sim0{,}25^m\), чем в модели \(\Omega_m=1\) (и даже в пустой модели Милна),
+    тусклее, чем в модели \(\Omega_m=1\) (на \(\approx0{,}4^m\), см. задачу 12.3) и даже чем в пустой модели Милна (на \(\approx0{,}1^m\)),
     т. е. \(q_0<0\). Нобелевская премия 2011 г. Сегодня (Pantheon+, DES-SN) данные
     сверхновых дают \(\Omega_m\approx0{,}33\pm0{,}02\) для плоской ΛCDM.
 
@@ -120,15 +122,17 @@ d_A(z) = \frac{d_M(z)}{1+z} .
 \end{equation}
 
 !!! theorem "Соотношение взаимности Этерингтона"
+
     \begin{equation}
     d_L = (1+z)^2\,d_A .
     \label{eq:etherington}
     \end{equation}
+
     Оно справедливо в любой метрической теории, где фотоны движутся по изотропным
-    геодезическим и их число сохраняется; проверка \eqref{eq:etherington} тестирует, например,
+    геодезическим и их число сохраняется; проверка \(\eqref{eq:etherington}\) тестирует, например,
     поглощение света или конверсию фотонов в аксионы.
 
-Из \eqref{eq:etherington} следует, что поверхностная яркость \(F/\theta^2\propto (d_A/d_L)^2\)
+Из \(\eqref{eq:etherington}\) следует, что поверхностная яркость \(F/\theta^2\propto (d_A/d_L)^2\)
 падает как \((1+z)^{-4}\) — **тест Толмена**, подтверждающий реальность расширения.
 
 Удивительное свойство \(d_A\): оно **немонотонно**. При \(z\to0\) \(d_A\approx z\,d_H\) растёт,
@@ -147,16 +151,20 @@ d_A(z) = \frac{d_M(z)}{1+z} .
 !!! definition "Определение: горизонт частиц и горизонт событий"
     **Горизонт частиц** в момент \(t\) — сопутствующее расстояние, которое свет мог пройти с
     Большого взрыва:
+
     \begin{equation}
     \chi_{\rm p}(t) = \int_0^t\frac{\d t'}{a(t')} = \eta(t).
     \label{eq:particle-horizon}
     \end{equation}
+
     Объекты дальше \(\chi_{\rm p}\) мы не видим в принципе. **Горизонт событий** —
     сопутствующее расстояние, которое свет, испущенный в момент \(t\), пройдёт за всё будущее:
+
     \begin{equation}
     \chi_{\rm e}(t) = \int_t^{\infty}\frac{\d t'}{a(t')} .
     \label{eq:event-horizon}
     \end{equation}
+
     События за \(\chi_{\rm e}\) никогда не смогут на нас повлиять.
 
 Горизонт частиц конечен, если \(a\) растёт медленнее \(t\) при \(t\to0\) (\(a\propto t^{n}\), \(n<1\)) —
@@ -177,12 +185,12 @@ d_A(z) = \frac{d_M(z)}{1+z} .
 !!! example "Проблема горизонта"
     При \(z_*\approx1090\) сопутствующий горизонт частиц был \(\chi_{\rm p}(t_*)\approx 0{,}28\) Гпк,
     а расстояние до поверхности последнего рассеяния — \(13{,}9\) Гпк. Угловой размер
-    горизонта на небе \(\approx 0{,}28/13{,}9\) рад \(\approx 1{,}2^\circ\) (точнее, с учётом
-    \(d_A\), \(\sim1^\circ\)–\(2^\circ\)). Почему же реликтовое излучение одинаково с точностью \(10^{-5}\)
+    горизонта на небе \(\approx 0{,}28/13{,}9\) рад \(\approx 1{,}2^\circ\) (отношение сопутствующих размеров
+    совпадает с отношением собственных, так что множители \(1+z\) сокращаются). Почему же реликтовое излучение одинаково с точностью \(10^{-5}\)
     в направлениях, разделённых на \(180^\circ\), которые никогда не были причинно связаны?
     Стандартное решение — инфляция (часть IV).
 
-### Интерактив: расстояния как функции \(z\)
+### Интерактив: расстояния как функции z
 
 Ползунки задают \(\Omega_m\), \(\Omega_\Lambda\), \(h\); \(\Omega_r = 9\times10^{-5}\), а
 \(\Omega_k = 1 - \Omega_m - \Omega_\Lambda - \Omega_r\). Кривые: сопутствующее \(d_C\), фотометрическое
@@ -192,23 +200,23 @@ d_A(z) = \frac{d_M(z)}{1+z} .
 <div class="interactive" id="distances-demo">
   <canvas id="distances-canvas" width="560" height="380"></canvas>
   <div class="controls">
-    <label for="distances-om">\(\Omega_m\) = <span id="distances-om-val">0.31</span></label>
+    <label for="distances-om"><span class="arithmatex">\(\Omega_m\)</span> = <span id="distances-om-val">0.31</span></label>
     <input type="range" id="distances-om" min="0.01" max="2" step="0.01" value="0.31">
-    <label for="distances-ol">\(\Omega_\Lambda\) = <span id="distances-ol-val">0.69</span></label>
+    <label for="distances-ol"><span class="arithmatex">\(\Omega_\Lambda\)</span> = <span id="distances-ol-val">0.69</span></label>
     <input type="range" id="distances-ol" min="0" max="1.5" step="0.01" value="0.69">
-    <label for="distances-h">\(h\) = <span id="distances-h-val">0.68</span></label>
+    <label for="distances-h"><span class="arithmatex">\(h\)</span> = <span id="distances-h-val">0.68</span></label>
     <input type="range" id="distances-h" min="0.5" max="0.9" step="0.01" value="0.6766">
   </div>
   <div class="controls">
-    <span>\(\Omega_k\) = <span id="distances-ok">0</span></span>
-    <span>При \(z=1\): <span id="distances-z1">—</span></span>
-    <span>Максимум \(d_A\): <span id="distances-amax">—</span></span>
+    <span><span class="arithmatex">\(\Omega_k\)</span> = <span id="distances-ok">0</span></span>
+    <span>При <span class="arithmatex">\(z=1\)</span>: <span id="distances-z1">—</span></span>
+    <span>Максимум <span class="arithmatex">\(d_A\)</span>: <span id="distances-amax">—</span></span>
   </div>
 </div>
 
 ## 12.6. Численный пример
 
-Вычислим расстояния в плоской ΛCDM прямым интегрированием \eqref{eq:comoving} и сравним с
+Вычислим расстояния в плоской ΛCDM прямым интегрированием \(\eqref{eq:comoving}\) и сравним с
 `astropy`.
 
 ```python
@@ -217,7 +225,7 @@ from scipy.integrate import quad
 from astropy.cosmology import Planck18 as cosmo
 
 c = 299792.458                      # км/с
-H0, Om = 67.66, 0.30966
+H0, Om = 67.66, 0.30966              # Ω_m из astropy Planck18 (с массивными ν)
 OL = 1 - Om                         # плоская модель, излучением пренебрегаем
 d_H = c / H0                        # Мпк
 
@@ -233,7 +241,7 @@ for z in [0.1, 1.0, 3.0]:
 # z=3.0: d_C=   6514  d_L=  26056  d_A=  1629 Мпк
 
 # Сравнение с astropy (учитывает излучение и массивные нейтрино)
-print(cosmo.luminosity_distance(1.0), cosmo.angular_diameter_distance(1.0))
+print(f"{cosmo.luminosity_distance(1.0):.2f} {cosmo.angular_diameter_distance(1.0):.2f}")
 # 6791.27 Mpc 1697.82 Mpc
 
 # Максимум углового расстояния
@@ -260,7 +268,7 @@ print(f"mu(0.5) = {5*np.log10(dl*1e6/10):.2f}")             # mu(0.5) = 42.33
         \(-x^{-2} + \tfrac32x^{-5/2} = 0\Rightarrow x = 9/4\), т. е. \(z = 1{,}25\), \(d_{A,\max} = \tfrac{8}{27}d_H\).
 
 ??? question "12.2. Разложение \(d_L\)"
-    Выведите \eqref{eq:dL-taylor}, используя \(H(z) \approx H_0[1 + (1+q_0)z]\).
+    Выведите \(\eqref{eq:dL-taylor}\), используя \(H(z) \approx H_0[1 + (1+q_0)z]\).
 
     ??? success "Решение"
         \(\dot H = -H^2(1+q)\), \(\d z/\d t = -(1+z)H\), поэтому \(\d H/\d z|_0 = H_0(1+q_0)\).

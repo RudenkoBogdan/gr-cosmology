@@ -147,20 +147,24 @@
 !!! theorem "Теорема: локально инерциальные координаты"
     Для любой точки \(p\) многообразия с метрикой \(g_{\mu\nu}\) существуют координаты
     \(x^{\hat\mu}\), в которых
+
     \begin{equation}
     g_{\hat\mu\hat\nu}(p) = \eta_{\hat\mu\hat\nu}, \qquad
     \pd_{\hat\sigma}\, g_{\hat\mu\hat\nu}(p) = 0 .
     \label{eq:lic}
     \end{equation}
+
     Вторые производные метрики, вообще говоря, обратить в нуль нельзя.
 
 **Доказательство (подсчёт степеней свободы).** Разложим преобразование координат
 в ряд около \(p\):
+
 \[
 x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 + \frac12 \left.\frac{\pd^2 x^\mu}{\pd x^{\hat\mu_1}\pd x^{\hat\mu_2}}\right|_p x^{\hat\mu_1}x^{\hat\mu_2}
 + \frac16 \left.\frac{\pd^3 x^\mu}{\pd x^{\hat\mu_1}\pd x^{\hat\mu_2}\pd x^{\hat\mu_3}}\right|_p x^{\hat\mu_1}x^{\hat\mu_2}x^{\hat\mu_3} + \ldots
 \]
+
 Метрика преобразуется как \(g_{\hat\mu\hat\nu} = \frac{\pd x^\mu}{\pd x^{\hat\mu}}\frac{\pd x^\nu}{\pd x^{\hat\nu}} g_{\mu\nu}\).
 Сравним число условий и число свободных параметров в четырёх измерениях:
 
@@ -187,7 +191,7 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 \label{eq:geodesic-deviation}
 \end{equation}
 
-В ньютоновском пределе \(R^i{}_{0j0} \approx \pd_i\pd_j\Phi\), и \eqref{eq:geodesic-deviation}
+В ньютоновском пределе \(R^i{}_{0j0} \approx \pd_i\pd_j\Phi\), и \(\eqref{eq:geodesic-deviation}\)
 переходит в знакомое \(\ddot\xi^i = -(\pd_i\pd_j\Phi)\,\xi^j\) — приливное ускорение.
 
 ### Интерактив: приливная деформация
@@ -203,7 +207,7 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 <div class="interactive" id="tidal-demo">
   <canvas id="tidal-canvas" width="520" height="360"></canvas>
   <div class="controls">
-    <label for="tidal-s">\(s = GM\tau^2/r^3\) = <span id="tidal-s-val">0.20</span></label>
+    <label for="tidal-s"><span class="arithmatex">\(s = GM\tau^2/r^3\)</span> = <span id="tidal-s-val">0.20</span></label>
     <input type="range" id="tidal-s" min="0" max="0.5" step="0.01" value="0.2">
   </div>
 </div>
@@ -223,7 +227,7 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 \label{eq:proper-time}
 \end{equation}
 
-Варьируя \eqref{eq:proper-time} при фиксированных концах и выбирая затем
+Варьируя \(\eqref{eq:proper-time}\) при фиксированных концах и выбирая затем
 \(\lambda = \tau\), получаем (это стандартное упражнение, см. задачу 5.3):
 
 \begin{equation}
@@ -239,29 +243,29 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 \label{eq:geodesic-lagrangian}
 \end{equation}
 
-уравнения Эйлера — Лагранжа которого дают \eqref{eq:geodesic} сразу для аффинного
+уравнения Эйлера — Лагранжа которого дают \(\eqref{eq:geodesic}\) сразу для аффинного
 параметра и без квадратного корня. Этот приём — самый быстрый способ найти символы
 Кристоффеля конкретной метрики: выписать \(\mathcal L\), получить уравнения движения и
 прочитать \(\Gamma^\mu_{\rho\sigma}\) как коэффициенты при \(\dot x^\rho\dot x^\sigma\).
 
 !!! theorem "Свойства геодезических"
-    1. Уравнение \eqref{eq:geodesic} эквивалентно параллельному переносу касательного
+    1. Уравнение \(\eqref{eq:geodesic}\) эквивалентно параллельному переносу касательного
        вектора вдоль себя: \(U^\nu\nabla_\nu U^\mu = 0\).
     2. Величина \(g_{\mu\nu}\dot x^\mu\dot x^\nu\) постоянна вдоль геодезической, поэтому
        характер кривой (времениподобная, изотропная, пространственноподобная) не меняется.
-    3. Параметр, в котором уравнение имеет вид \eqref{eq:geodesic}, определён с точностью
+    3. Параметр, в котором уравнение имеет вид \(\eqref{eq:geodesic}\), определён с точностью
        до аффинного преобразования \(\lambda \to a\lambda + b\) («аффинный параметр»).
     4. Времениподобная геодезическая локально **максимизирует** собственное время
        (парадокс близнецов: путешественник, испытавший ускорение, моложе).
 
-Для света \(\d\tau = 0\), и \eqref{eq:proper-time} непригодно, но \eqref{eq:geodesic-lagrangian}
-работает: изотропные геодезические удовлетворяют \eqref{eq:geodesic} с аффинным
+Для света \(\d\tau = 0\), и \(\eqref{eq:proper-time}\) непригодно, но \(\eqref{eq:geodesic-lagrangian}\)
+работает: изотропные геодезические удовлетворяют \(\eqref{eq:geodesic}\) с аффинным
 параметром \(\lambda\) и связью \(g_{\mu\nu}\dot x^\mu\dot x^\nu = 0\). Нормировку \(\lambda\)
 выбирают так, чтобы \(p^\mu = \d x^\mu/\d\lambda\) был 4-импульсом фотона.
 
 ### Законы сохранения и векторы Киллинга
 
-Если метрика не зависит от координаты \(x^{\sigma_*}\), из \eqref{eq:geodesic-lagrangian}
+Если метрика не зависит от координаты \(x^{\sigma_*}\), из \(\eqref{eq:geodesic-lagrangian}\)
 сразу следует сохранение сопряжённого импульса \(p_{\sigma_*} = g_{\sigma_*\nu}\dot x^\nu\).
 Ковариантно: если \(K^\mu\) — **вектор Киллинга**,
 
@@ -285,10 +289,12 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 статично, \(\pd_0 g_{\mu\nu} = 0\); (3) поле слабое,
 \(g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}\), \(|h_{\mu\nu}| \ll 1\).
 
-Из (1) в \eqref{eq:geodesic} остаётся только \(\Gamma^\mu_{00}\):
+Из (1) в \(\eqref{eq:geodesic}\) остаётся только \(\Gamma^\mu_{00}\):
+
 \[
 \frac{\d^2 x^\mu}{\d\tau^2} + \Gamma^\mu_{00}\left(\frac{\d t}{\d\tau}\right)^2 = 0 .
 \]
+
 Из (2) и (3), в первом порядке по \(h\),
 
 \begin{equation}
@@ -336,7 +342,7 @@ U^\mu = \frac{K^\mu}{\sqrt{-K_\nu K^\nu}} = \frac{\delta^\mu_t}{\sqrt{-g_{tt}}} 
 
 Измеряемая им частота фотона с 4-импульсом \(p^\mu\) равна (см. главу 1)
 \(\omega = -p_\mu U^\mu = -p_t/\sqrt{-g_{tt}}\). Но \(-p_t = -K_\mu p^\mu\) сохраняется вдоль
-изотропной геодезической по \eqref{eq:killing-conservation}! Поэтому для излучателя (1)
+изотропной геодезической по \(\eqref{eq:killing-conservation}\)! Поэтому для излучателя (1)
 и приёмника (2)
 
 \begin{equation}
@@ -346,13 +352,13 @@ U^\mu = \frac{K^\mu}{\sqrt{-K_\nu K^\nu}} = \frac{\delta^\mu_t}{\sqrt{-g_{tt}}} 
 \end{equation}
 
 При \(\Phi_1 < \Phi_2\) (излучатель глубже) \(\omega_2 < \omega_1\) — красное смещение, в
-согласии с \eqref{eq:ep-redshift}. Формула \eqref{eq:static-redshift} точна и в сильном
+согласии с \(\eqref{eq:ep-redshift}\). Формула \(\eqref{eq:static-redshift}\) точна и в сильном
 поле; для шварцшильдовой метрики она даёт бесконечное красное смещение на горизонте.
 
 ## 5.9. Численный пример: часы GPS
 
 Спутники GPS обращаются на радиусе \(r \approx 26\,560\) км. Темп их часов относительно
-земных определяется гравитационным сдвигом \eqref{eq:static-redshift} и замедлением
+земных определяется гравитационным сдвигом \(\eqref{eq:static-redshift}\) и замедлением
 времени СТО. Для часов на орбите в слабом поле
 \(\d\tau/\d t \approx 1 + \Phi - v^2/2\) (задача 5.5).
 
@@ -403,16 +409,18 @@ print(f"ошибка дальности за сутки без поправки:
     ??? success "Решение"
         Вторые производные метрики: \(\frac{n(n+1)}{2}\cdot\frac{n(n+1)}{2}\).
         Третьи производные преобразования: \(n\cdot\frac{n(n+1)(n+2)}{6}\). Разность
+
         \[
         \frac{n^2(n+1)^2}{4} - \frac{n^2(n+1)(n+2)}{6} = \frac{n^2(n+1)}{12}\bigl(3(n+1) - 2(n+2)\bigr)
         = \frac{n^2(n^2-1)}{12}.
         \]
+
         При \(n=2\): 1 (гауссова кривизна), \(n=3\): 6 (Риман выражается через Риччи),
         \(n = 4\): 20.
 
 ??? question "5.3. Уравнение геодезической"
-    Выведите \eqref{eq:geodesic} из уравнений Эйлера — Лагранжа для
-    \eqref{eq:geodesic-lagrangian}.
+    Выведите \(\eqref{eq:geodesic}\) из уравнений Эйлера — Лагранжа для
+    \(\eqref{eq:geodesic-lagrangian}\).
 
     ??? success "Решение"
         \(\pd\mathcal L/\pd\dot x^\sigma = g_{\sigma\nu}\dot x^\nu\),
@@ -421,7 +429,7 @@ print(f"ошибка дальности за сутки без поправки:
         Симметризуя \(\pd_\rho g_{\sigma\nu}\dot x^\rho\dot x^\nu = \tfrac12(\pd_\rho g_{\sigma\nu} + \pd_\nu g_{\sigma\rho})\dot x^\rho\dot x^\nu\),
         получаем
         \(g_{\sigma\nu}\ddot x^\nu + \tfrac12(\pd_\rho g_{\sigma\nu} + \pd_\nu g_{\sigma\rho} - \pd_\sigma g_{\rho\nu})\dot x^\rho\dot x^\nu = 0\).
-        Умножая на \(g^{\mu\sigma}\), получаем \eqref{eq:geodesic}.
+        Умножая на \(g^{\mu\sigma}\), получаем \(\eqref{eq:geodesic}\).
 
 ??? question "5.4. Символы Кристоффеля сферы"
     С помощью лагранжиана \(\mathcal L = \tfrac12(\dot\theta^2 + \sin^2\theta\,\dot\phi^2)\)

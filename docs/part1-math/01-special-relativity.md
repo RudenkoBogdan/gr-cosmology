@@ -99,9 +99,9 @@ v_{12} = \tanh(\phi_1+\phi_2) = \frac{v_1 + v_2}{1 + v_1 v_2}.
 <div class="interactive" id="minkowski-demo">
   <canvas id="minkowski-canvas" width="520" height="520"></canvas>
   <div class="controls">
-    <label for="minkowski-v">\(v\) = <span id="minkowski-v-val">0.50</span></label>
+    <label for="minkowski-v"><span class="arithmatex">\(v\)</span> = <span id="minkowski-v-val">0.50</span></label>
     <input type="range" id="minkowski-v" min="-0.95" max="0.95" step="0.01" value="0.5">
-    <span>\(\gamma\) = <span id="minkowski-gamma">1.155</span></span>
+    <span><span class="arithmatex">\(\gamma\)</span> = <span id="minkowski-gamma">1.155</span></span>
   </div>
 </div>
 
@@ -147,7 +147,7 @@ V_\mu = \eta_{\mu\nu} V^\nu, \qquad \omega^\mu = \eta^{\mu\nu}\omega_\nu, \qquad
 
 В плоском пространстве с нашей сигнатурой это просто смена знака временной компоненты:
 \(V_0 = -V^0\), \(V_i = V^i\). Скалярное произведение \(A\cdot B = \eta_{\mu\nu}A^\mu B^\nu = A_\mu B^\mu\)
-лоренц-инвариантно в силу \eqref{eq:lorentz-condition}.
+лоренц-инвариантно в силу \(\eqref{eq:lorentz-condition}\).
 
 !!! definition "Определение: тензор типа \((k,l)\)"
     Тензор типа \((k,l)\) — полилинейное отображение \(k\) 1-форм и \(l\) векторов в числа.
@@ -178,7 +178,7 @@ U^\mu = \frac{\d x^\mu}{\d\tau} = \gamma\,(1,\ \vb v), \qquad U_\mu U^\mu = -1.
 \label{eq:four-velocity}
 \end{equation}
 
-Нормировка \(U\cdot U = -1\) — прямое следствие определения \eqref{eq:proper-time}.
+Нормировка \(U\cdot U = -1\) — прямое следствие определения \(\eqref{eq:proper-time}\).
 
 !!! example "Парадокс близнецов как геометрия"
     Между двумя событиями наибольшее собственное время имеет **прямая** (инерциальная)
@@ -228,10 +228,12 @@ T^{\mu\nu} = (\rho + p)\,U^\mu U^\nu + p\,\eta^{\mu\nu}.
 
 !!! theorem "Законы сохранения"
     Сохранение энергии и импульса изолированной системы выражается уравнением
+
     \begin{equation}
     \pd_\mu T^{\mu\nu} = 0.
     \label{eq:conservation}
     \end{equation}
+
     Для идеальной жидкости его временная компонента даёт уравнение непрерывности,
     пространственные — релятивистское уравнение Эйлера.
 
@@ -239,8 +241,8 @@ T^{\mu\nu} = (\rho + p)\,U^\mu U^\nu + p\,\eta^{\mu\nu}.
 
 ## 1.7. Численный пример
 
-Проверим условие \eqref{eq:lorentz-condition} и закон сложения скоростей
-\eqref{eq:velocity-addition} численно.
+Проверим условие \(\eqref{eq:lorentz-condition}\) и закон сложения скоростей
+\(\eqref{eq:velocity-addition}\) численно.
 
 ```python
 import numpy as np
@@ -263,31 +265,33 @@ print(np.allclose(L1.T @ eta @ L1, eta))           # True
 # 2) Композиция бустов — снова буст с v12 = (v1+v2)/(1+v1 v2)
 L12 = L2 @ L1
 v12 = -L12[0, 1] / L12[0, 0]
-print(v12, (0.6 + 0.7) / (1 + 0.6 * 0.7))           # 0.9155 0.9155
+print(v12, (0.6 + 0.7) / (1 + 0.6 * 0.7))           # 0.9154929577464788 0.9154929577464788
 
 # 3) 4-импульс протона с E = 7 ТэВ (LHC): γ и скорость
 m_p = 0.938272        # ГэВ
 E = 7000.0            # ГэВ
 gamma = E / m_p
-print(f"gamma = {gamma:.0f},  1 - v = {1 - np.sqrt(1 - 1/gamma**2):.2e}")
+print(f"gamma = {gamma:.0f},  1 - v = {1 - np.sqrt(1 - 1/gamma**2):.2e}")  # gamma = 7461,  1 - v = 8.98e-09
 ```
 
 ## Задачи
 
 ??? question "1.1. Инвариантность интервала"
-    Покажите прямой подстановкой, что буст \eqref{eq:boost} сохраняет \(-t^2 + x^2\).
+    Покажите прямой подстановкой, что буст \(\eqref{eq:boost}\) сохраняет \(-t^2 + x^2\).
 
     ??? success "Решение"
         \(t' = \gamma(t - vx)\), \(x' = \gamma(x - vt)\). Тогда
+
         \[
         -t'^2 + x'^2 = \gamma^2\left[-(t-vx)^2 + (x-vt)^2\right]
         = \gamma^2(1 - v^2)(-t^2 + x^2) = -t^2 + x^2.
         \]
+
         Перекрёстные члены \(\pm 2vtx\) сокращаются.
 
 ??? question "1.2. Сложение быстрот"
-    Перемножив две матрицы \eqref{eq:boost} с быстротами \(\phi_1\) и \(\phi_2\), покажите,
-    что результат — буст с быстротой \(\phi_1 + \phi_2\). Выведите \eqref{eq:velocity-addition}.
+    Перемножив две матрицы \(\eqref{eq:boost}\) с быстротами \(\phi_1\) и \(\phi_2\), покажите,
+    что результат — буст с быстротой \(\phi_1 + \phi_2\). Выведите \(\eqref{eq:velocity-addition}\).
 
     ??? success "Решение"
         В блоке \((t,x)\) произведение матриц
@@ -309,14 +313,16 @@ print(f"gamma = {gamma:.0f},  1 - v = {1 - np.sqrt(1 - 1/gamma**2):.2e}")
 
 ??? question "1.4. Доплер-эффект"
     Фотон с 4-импульсом \(p^\mu = E(1, \cos\theta, \sin\theta, 0)\) регистрирует наблюдатель,
-    движущийся со скоростью \(v\) вдоль оси \(x\). С помощью \eqref{eq:observed-energy}
+    движущийся со скоростью \(v\) вдоль оси \(x\). С помощью \(\eqref{eq:observed-energy}\)
     найдите измеряемую им энергию.
 
     ??? success "Решение"
         \(U_{\rm obs}^\mu = \gamma(1, v, 0, 0)\), \(p_\mu = E(-1, \cos\theta, \sin\theta, 0)\).
+
         \[
         E_{\rm obs} = -p_\mu U^\mu_{\rm obs} = \gamma E\,(1 - v\cos\theta).
         \]
+
         При \(\theta = 0\) (наблюдатель «убегает» от фотона)
         \(E_{\rm obs} = E\sqrt{\tfrac{1-v}{1+v}}\) — продольный эффект Доплера;
         при \(\theta = \pi/2\) остаётся чисто релятивистский поперечный эффект \(E_{\rm obs} = \gamma E\).

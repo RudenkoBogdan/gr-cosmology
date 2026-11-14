@@ -49,10 +49,12 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 Подставляя в \(G^\mu{}_\nu + \Lambda\delta^\mu_\nu = 8\pi G\,T^\mu{}_\nu\), получаем:
 
 !!! theorem "Уравнения Фридмана"
+
     \begin{equation}
     H^2 \equiv \left(\frac{\dot a}{a}\right)^2 = \frac{8\pi G}{3}\rho - \frac{k}{a^2} + \frac{\Lambda}{3},
     \label{eq:friedmann1}
     \end{equation}
+
     \begin{equation}
     \frac{\ddot a}{a} = -\frac{4\pi G}{3}\left(\rho + 3p\right) + \frac{\Lambda}{3}.
     \label{eq:friedmann2}
@@ -60,7 +62,7 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 
 Первое уравнение — связь (\(00\)-компонента не содержит вторых производных), второе
 (уравнение Райчаудхури для FLRW) получено комбинацией \(ii\)- и \(00\)-компонент.
-Обратите внимание: в \eqref{eq:friedmann2} источником гравитации служит \(\rho + 3p\),
+Обратите внимание: в \(\eqref{eq:friedmann2}\) источником гравитации служит \(\rho + 3p\),
 а не только \(\rho\). Давление гравитирует; среда с \(p < -\rho/3\) вызывает
 **ускоренное** расширение.
 
@@ -68,13 +70,13 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
     Рассмотрим однородный пылевой шар радиуса \(R(t) = a(t)\chi\). Пробная частица на
     его поверхности имеет энергию \(\tfrac12\dot R^2 - GM/R = E\), \(M = \tfrac{4\pi}{3}\rho R^3\).
     Деля на \(\tfrac12 R^2\), получаем \(H^2 = \tfrac{8\pi G}{3}\rho + 2E/(a\chi)^2\), т. е.
-    \eqref{eq:friedmann1} с \(k = -2E/\chi^2\): кривизна играет роль полной энергии. Однако
-    вклад давления в \eqref{eq:friedmann2} и геометрический смысл \(k\) — чисто
+    \(\eqref{eq:friedmann1}\) с \(k = -2E/\chi^2\): кривизна играет роль полной энергии. Однако
+    вклад давления в \(\eqref{eq:friedmann2}\) и геометрический смысл \(k\) — чисто
     релятивистские эффекты.
 
 ## 11.2. Уравнение непрерывности и уравнения состояния
 
-Закон сохранения \(\nabla_\mu T^{\mu}{}_0 = 0\) с символами \eqref{eq:christoffel} даёт
+Закон сохранения \(\nabla_\mu T^{\mu}{}_0 = 0\) с символами \(\eqref{eq:christoffel}\) даёт
 
 \begin{equation}
 \dot\rho + 3H\left(\rho + p\right) = 0 .
@@ -82,11 +84,11 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 \end{equation}
 
 Это первое начало термодинамики \(\d(\rho a^3) = -p\,\d(a^3)\) для сопутствующего объёма.
-Уравнения \eqref{eq:friedmann1}, \eqref{eq:friedmann2}, \eqref{eq:continuity} не независимы:
+Уравнения \(\eqref{eq:friedmann1}\), \(\eqref{eq:friedmann2}\), \(\eqref{eq:continuity}\) не независимы:
 дифференцируя первое по времени и используя третье, получаем второе (тождество Бьянки).
 
 Для замыкания системы нужно **уравнение состояния**. В космологии обычно \(p = w\rho\),
-\(w = \mathrm{const}\). Тогда \eqref{eq:continuity} интегрируется:
+\(w = \mathrm{const}\). Тогда \(\eqref{eq:continuity}\) интегрируется:
 
 \begin{equation}
 \rho \propto a^{-3(1+w)} .
@@ -98,14 +100,14 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 | Нерелятивистское вещество (барионы, тёмная материя) | \(0\) | \(a^{-3}\) | число частиц сохраняется, объём \(\propto a^3\) |
 | Излучение (фотоны, безмассовые нейтрино) | \(1/3\) | \(a^{-4}\) | плюс красное смещение каждого кванта \(\propto 1/a\) |
 | Космологическая постоянная / энергия вакуума | \(-1\) | \(a^0\) | \(T_{\mu\nu} = -\rho_\Lambda g_{\mu\nu}\) |
-| «Кривизна» (формально) | \(-1/3\) | \(a^{-2}\) | член \(-k/a^2\) в \eqref{eq:friedmann1} |
+| «Кривизна» (формально) | \(-1/3\) | \(a^{-2}\) | член \(-k/a^2\) в \(\eqref{eq:friedmann1}\) |
 
 Космологическую постоянную удобно перенести в правую часть как жидкость с
 \(\rho_\Lambda = \Lambda/(8\pi G)\), \(p_\Lambda = -\rho_\Lambda\). Далее так и будем делать.
 
 ## 11.3. Параметры плотности
 
-При \(k=0\) уравнение \eqref{eq:friedmann1} связывает \(H\) и полную плотность.
+При \(k=0\) уравнение \(\eqref{eq:friedmann1}\) связывает \(H\) и полную плотность.
 Определим **критическую плотность** и параметры плотности:
 
 \begin{equation}
@@ -115,7 +117,7 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 \label{eq:omegas}
 \end{equation}
 
-Тогда \eqref{eq:friedmann1} принимает вид «правила сумм»
+Тогда \(\eqref{eq:friedmann1}\) принимает вид «правила сумм»
 
 \begin{equation}
 \sum_i \Omega_i + \Omega_k = 1 ,
@@ -126,7 +128,7 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 (замкнутая Вселенная), \(\Omega_{\rm tot} < 1 \Leftrightarrow k < 0\). Сегодняшний
 радиус кривизны \(R_0 = d_H/\sqrt{|\Omega_{k}|}\), \(d_H = 1/H_0\).
 
-Используя \eqref{eq:rho-of-a}, запишем уравнение Фридмана через сегодняшние параметры
+Используя \(\eqref{eq:rho-of-a}\), запишем уравнение Фридмана через сегодняшние параметры
 (индекс 0 у \(\Omega\) далее опускаем):
 
 \begin{equation}
@@ -146,7 +148,7 @@ E^2(a) = \frac{\Omega_r}{a^4} + \frac{\Omega_m}{a^3} + \frac{\Omega_k}{a^2} + \O
 | \(\Omega_k\) | \(0{,}0007 \pm 0{,}0019\) |
 | \(\Omega_r = \Omega_\gamma(1 + 0{,}2271\,N_{\rm eff})\) | \(\approx 9{,}0\times10^{-5}\) |
 
-С помощью \(a(t)\) из \eqref{eq:E-of-a} возраст Вселенной и время, соответствующее
+С помощью \(a(t)\) из \(\eqref{eq:E-of-a}\) возраст Вселенной и время, соответствующее
 красному смещению \(z\), выражаются интегралами:
 
 \begin{equation}
@@ -157,7 +159,7 @@ t(a) = \int_0^a\frac{\d a'}{a' H(a')} = \frac{1}{H_0}\int_0^a\frac{\d a'}{a'E(a'
 
 Параметр замедления:
 \(q_0 = -\ddot a/(aH^2)|_0 = \Omega_r + \tfrac12\Omega_m - \Omega_\Lambda\)
-(из \eqref{eq:friedmann2}, задача 11.3).
+(из \(\eqref{eq:friedmann2}\), задача 11.3).
 
 ## 11.4. Однокомпонентные модели
 
@@ -243,22 +245,22 @@ t_0 = \frac{2}{3H_0\sqrt{\Omega_\Lambda}}\,\mathrm{arsinh}\sqrt{\frac{\Omega_\La
 Меняйте сегодняшние параметры плотности; \(\Omega_k = 1 - \Omega_m - \Omega_\Lambda - \Omega_r\)
 подстраивается автоматически, \(h = 0{,}6766\). Программа интегрирует уравнение
 \(\ddot a = H_0^2\left(-\Omega_r a^{-3} - \tfrac12\Omega_m a^{-2} + \Omega_\Lambda a\right)\)
-(следствие \eqref{eq:friedmann2}) методом Рунге–Кутты из точки \(a=1\), \(\dot a = H_0\) назад и
+(следствие \(\eqref{eq:friedmann2}\)) методом Рунге–Кутты из точки \(a=1\), \(\dot a = H_0\) назад и
 вперёд во времени. Широкая бледная кривая — модель Planck 2018, жёлтая точка — «сейчас».
 
 <div class="interactive" id="friedmann-demo">
   <canvas id="friedmann-canvas" width="560" height="380"></canvas>
   <div class="controls">
-    <label for="friedmann-om">\(\Omega_m\) = <span id="friedmann-om-val">0.31</span></label>
+    <label for="friedmann-om"><span class="arithmatex">\(\Omega_m\)</span> = <span id="friedmann-om-val">0.31</span></label>
     <input type="range" id="friedmann-om" min="0" max="3" step="0.01" value="0.31">
-    <label for="friedmann-ol">\(\Omega_\Lambda\) = <span id="friedmann-ol-val">0.69</span></label>
+    <label for="friedmann-ol"><span class="arithmatex">\(\Omega_\Lambda\)</span> = <span id="friedmann-ol-val">0.69</span></label>
     <input type="range" id="friedmann-ol" min="-1" max="2" step="0.01" value="0.69">
-    <label for="friedmann-or">\(\Omega_r\) = <span id="friedmann-or-val">0.000</span></label>
+    <label for="friedmann-or"><span class="arithmatex">\(\Omega_r\)</span> = <span id="friedmann-or-val">0.000</span></label>
     <input type="range" id="friedmann-or" min="0" max="0.3" step="0.001" value="0">
   </div>
   <div class="controls">
-    <span>\(\Omega_k\) = <span id="friedmann-ok">0</span></span>
-    <span>\(q_0\) = <span id="friedmann-q0">0</span></span>
+    <span><span class="arithmatex">\(\Omega_k\)</span> = <span id="friedmann-ok">0</span></span>
+    <span><span class="arithmatex">\(q_0\)</span> = <span id="friedmann-q0">0</span></span>
     <span>Возраст: <span id="friedmann-age">—</span></span>
     <span>Будущее: <span id="friedmann-fate">—</span></span>
   </div>
@@ -299,8 +301,8 @@ print(f"q0 = {q0:.3f}")                        # q0 = -0.533
 ## Задачи
 
 ??? question "11.1. Тензор Риччи FLRW"
-    Используя \eqref{eq:christoffel}, вычислите \(R_{00}\) для метрики FLRW и проверьте
-    \eqref{eq:ricci}.
+    Используя \(\eqref{eq:christoffel}\), вычислите \(R_{00}\) для метрики FLRW и проверьте
+    \(\eqref{eq:ricci}\).
 
     ??? success "Решение"
         \(R_{00} = \pd_\lambda\Gamma^\lambda_{00} - \pd_0\Gamma^\lambda_{\lambda0}
@@ -310,10 +312,10 @@ print(f"q0 = {q0:.3f}")                        # q0 = -0.533
         \(R_{00} = -3\,\frac{\d}{\d t}\frac{\dot a}{a} - 3\frac{\dot a^2}{a^2} = -3\frac{\ddot a}{a}\).
 
 ??? question "11.2. Уравнение непрерывности"
-    Выведите \eqref{eq:friedmann2} из \eqref{eq:friedmann1} и \eqref{eq:continuity}.
+    Выведите \(\eqref{eq:friedmann2}\) из \(\eqref{eq:friedmann1}\) и \(\eqref{eq:continuity}\).
 
     ??? success "Решение"
-        Умножим \eqref{eq:friedmann1} на \(a^2\): \(\dot a^2 = \tfrac{8\pi G}{3}\rho a^2 - k + \tfrac\Lambda3a^2\).
+        Умножим \(\eqref{eq:friedmann1}\) на \(a^2\): \(\dot a^2 = \tfrac{8\pi G}{3}\rho a^2 - k + \tfrac\Lambda3a^2\).
         Дифференцируем: \(2\dot a\ddot a = \tfrac{8\pi G}{3}(\dot\rho a^2 + 2\rho a\dot a) + \tfrac{2\Lambda}{3}a\dot a\).
         Подставим \(\dot\rho = -3(\dot a/a)(\rho+p)\): скобка равна \(a\dot a(-\rho - 3p)\).
         Деля на \(2a\dot a\), получаем \(\ddot a/a = -\tfrac{4\pi G}{3}(\rho+3p) + \tfrac\Lambda3\).
@@ -323,13 +325,13 @@ print(f"q0 = {q0:.3f}")                        # q0 = -0.533
     \(q_0 = \Omega_r + \tfrac12\Omega_m - \Omega_\Lambda\). Каков знак \(q_0\) для Planck 2018?
 
     ??? success "Решение"
-        Делим \eqref{eq:friedmann2} на \(H^2\) и учитываем \(8\pi G\rho_i/(3H^2) = \Omega_i\):
+        Делим \(\eqref{eq:friedmann2}\) на \(H^2\) и учитываем \(8\pi G\rho_i/(3H^2) = \Omega_i\):
         \(-q = -\tfrac12\sum_i\Omega_i(1+3w_i)\). Для \(w = 1/3, 0, -1\) коэффициенты \(1, \tfrac12, -1\).
         Planck: \(q_0 \approx 0{,}156 - 0{,}689 = -0{,}53 < 0\) — ускорение.
 
 ??? question "11.4. Точное решение ΛCDM"
     Решите \(\dot a^2 = H_0^2(\Omega_m/a + \Omega_\Lambda a^2)\) подстановкой \(a^{3/2} = A\sinh u\)
-    и получите \eqref{eq:lcdm-exact}.
+    и получите \(\eqref{eq:lcdm-exact}\).
 
     ??? success "Решение"
         Перепишем: \(a^{1/2}\dot a = H_0\sqrt{\Omega_m + \Omega_\Lambda a^3}\), т. е.
@@ -343,7 +345,7 @@ print(f"q0 = {q0:.3f}")                        # q0 = -0.533
     Покажите, что оно неустойчиво.
 
     ??? success "Решение"
-        Из \eqref{eq:friedmann2}: \(\Lambda = 4\pi G\rho\). Из \eqref{eq:friedmann1}:
+        Из \(\eqref{eq:friedmann2}\): \(\Lambda = 4\pi G\rho\). Из \(\eqref{eq:friedmann1}\):
         \(k/a^2 = \tfrac{8\pi G}{3}\rho + \tfrac\Lambda3 = 4\pi G\rho = \Lambda > 0\), т. е. \(k=+1\), \(a = 1/\sqrt\Lambda\).
         Если \(a\) чуть увеличить, \(\rho\propto a^{-3}\) падает, член \(-\tfrac{4\pi G}{3}\rho\) в \(\ddot a/a\)
         уменьшается по модулю и \(\ddot a > 0\) — расширение ускоряется; при уменьшении — коллапс.
@@ -363,4 +365,4 @@ print(f"q0 = {q0:.3f}")                        # q0 = -0.533
 Мы умеем вычислять \(a(t)\) для любого набора \(\Omega_i\). Но как измерить эти параметры?
 Наблюдаем мы не \(a(t)\), а потоки, угловые размеры и красные смещения. В
 [главе 12](12-distances.md) мы определим космологические расстояния и покажем, как
-сверхновые Ia и стандартные линейки превращают \eqref{eq:E-of-a} в наблюдаемые величины.
+сверхновые Ia и стандартные линейки превращают \(\eqref{eq:E-of-a}\) в наблюдаемые величины.

@@ -30,13 +30,14 @@
 где \(T^\lambda{}_{\mu\nu}\) — кручение (в ОТО равно нулю), а
 
 !!! definition "Определение: тензор Римана"
+
     \begin{equation}
     R^\rho{}_{\sigma\mu\nu} = \pd_\mu \Gamma^\rho_{\nu\sigma} - \pd_\nu \Gamma^\rho_{\mu\sigma}
      + \Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}.
     \label{eq:riemann}
     \end{equation}
 
-Левая часть \eqref{eq:commutator} — тензор при любом \(V\), значит, и \(R^\rho{}_{\sigma\mu\nu}\) —
+Левая часть \(\eqref{eq:commutator}\) — тензор при любом \(V\), значит, и \(R^\rho{}_{\sigma\mu\nu}\) —
 тензор типа \((1,3)\), хотя построен из нетензорных \(\Gamma\). Это соглашение MTW/Кэрролла
 (см. [Обозначения](../conventions.md)); у сферы в нём положительная скалярная кривизна.
 На 1-формах и тензорах общего вида
@@ -100,10 +101,12 @@ R_{\rho\sigma\mu\nu} = -R_{\sigma\rho\mu\nu} = -R_{\rho\sigma\nu\mu} = R_{\mu\nu
 
 !!! theorem "Число независимых компонент"
     В \(n\) измерениях тензор Римана имеет
+
     \begin{equation}
     N(n) = \frac{n^2(n^2-1)}{12}
     \label{eq:riemann-count}
     \end{equation}
+
     независимых компонент: \(N(2) = 1\), \(N(3) = 6\), \(N(4) = 20\).
 
 ??? info "Подсчёт"
@@ -114,7 +117,7 @@ R_{\rho\sigma\mu\nu} = -R_{\sigma\rho\mu\nu} = -R_{\rho\sigma\nu\mu} = R_{\mu\nu
     \(\tfrac{m(m+1)}{2} - \binom n4 = \frac{n^2(n^2-1)}{12}\). Для \(n = 4\) это 20 — именно столько
     вторых производных метрики нельзя устранить выбором координат (гл. 2).
 
-Дифференцируя \eqref{eq:riemann-rnc} ещё раз, получаем **второе (дифференциальное) тождество Бьянки**:
+Дифференцируя \(\eqref{eq:riemann-rnc}\) ещё раз, получаем **второе (дифференциальное) тождество Бьянки**:
 
 \begin{equation}
 \nabla_\lambda R_{\rho\sigma\mu\nu} + \nabla_\mu R_{\rho\sigma\nu\lambda} + \nabla_\nu R_{\rho\sigma\lambda\mu} = 0,
@@ -131,8 +134,8 @@ R_{\mu\nu} = R^\lambda{}_{\mu\lambda\nu},
 \label{eq:ricci}
 \end{equation}
 
-симметричный в силу \eqref{eq:riemann-symmetries}. Его след — **скалярная кривизна**
-\(R = g^{\mu\nu}R_{\mu\nu}\). Свёртка второго тождества Бьянки \eqref{eq:bianchi} дважды
+симметричный в силу \(\eqref{eq:riemann-symmetries}\). Его след — **скалярная кривизна**
+\(R = g^{\mu\nu}R_{\mu\nu}\). Свёртка второго тождества Бьянки \(\eqref{eq:bianchi}\) дважды
 (сначала по \(\rho\mu\), затем по \(\sigma\nu\)) даёт \(\nabla^\mu R_{\rho\mu} = \tfrac12\nabla_\rho R\),
 то есть
 
@@ -182,7 +185,7 @@ R_{\rho\sigma\mu\nu} = K\left(g_{\rho\mu}g_{\sigma\nu} - g_{\rho\nu}g_{\sigma\mu
 сечения вселенной Фридмана — трёхмерные пространства максимальной симметрии с \(K = k/a^2\),
 \(k \in \{-1, 0, +1\}\) (см. [гл. 10](../part3-cosmology/10-frw.md)).
 
-В двух измерениях Риман имеет одну компоненту, и формула \eqref{eq:max-symmetric} верна **всегда**,
+В двух измерениях Риман имеет одну компоненту, и формула \(\eqref{eq:max-symmetric}\) верна **всегда**,
 но с \(K(x)\), зависящей от точки: это **гауссова кривизна**, \(R = 2K\). Великая теорема Гаусса
 (Theorema egregium): \(K\) — внутренняя характеристика поверхности, определяемая только метрикой,
 хотя классически она вводилась как произведение главных кривизн \(1/(R_1R_2)\) вложенной поверхности.
@@ -193,7 +196,8 @@ R_{\rho\sigma\mu\nu} = K\left(g_{\rho\mu}g_{\sigma\nu} - g_{\rho\nu}g_{\sigma\mu
 !!! example "Пример: сфера радиуса \(a\)"
     Метрика \(\d s^2 = a^2(\d\theta^2 + \sin^2\theta\,\d\phi^2)\), ненулевые символы
     \(\Gamma^\theta_{\phi\phi} = -\sin\theta\cos\theta\), \(\Gamma^\phi_{\theta\phi} = \cot\theta\) (гл. 3).
-    По \eqref{eq:riemann}
+    По \(\eqref{eq:riemann}\)
+
     \[
     \begin{aligned}
     R^\theta{}_{\phi\theta\phi} &= \pd_\theta\Gamma^\theta_{\phi\phi} - \pd_\phi\Gamma^\theta_{\theta\phi}
@@ -201,19 +205,22 @@ R_{\rho\sigma\mu\nu} = K\left(g_{\rho\mu}g_{\sigma\nu} - g_{\rho\nu}g_{\sigma\mu
     &= (\sin^2\theta - \cos^2\theta) - 0 + 0 - (-\sin\theta\cos\theta)\cot\theta = \sin^2\theta .
     \end{aligned}
     \]
-    Опуская индекс: \(R_{\theta\phi\theta\phi} = a^2\sin^2\theta\). Сравнение с \eqref{eq:max-symmetric}:
+
+    Опуская индекс: \(R_{\theta\phi\theta\phi} = a^2\sin^2\theta\). Сравнение с \(\eqref{eq:max-symmetric}\):
     \(K(g_{\theta\theta}g_{\phi\phi} - 0) = K a^4\sin^2\theta\), откуда
+
     \begin{equation}
     K = \frac{1}{a^2}, \qquad R_{\mu\nu} = \frac{1}{a^2}\,g_{\mu\nu}, \qquad R = \frac{2}{a^2} > 0 .
     \label{eq:sphere-curvature}
     \end{equation}
+
     Полная кривизна \(\int K\,\d A = 4\pi\) не зависит от радиуса — частный случай теоремы
     Гаусса–Бонне \(\int K\,\d A = 2\pi\chi\) с эйлеровой характеристикой сферы \(\chi = 2\).
 
 ### Пример на Python: символьное вычисление кривизны
 
 Следующая функция вычисляет \(\Gamma\), Риман, Риччи и \(R\) для произвольной метрики строго в
-соглашениях [гл. 3](03-connection.md) и \eqref{eq:riemann}, \eqref{eq:ricci}. Проверим её на сфере и
+соглашениях [гл. 3](03-connection.md) и \(\eqref{eq:riemann}\), \(\eqref{eq:ricci}\). Проверим её на сфере и
 на пространственной метрике Фридмана с \(k=+1\), записанной как \(a^2[\d\chi^2 + \sin^2\chi\,\d\Omega^2]\).
 
 ```python
@@ -258,9 +265,10 @@ print(sp.simplify(Ric3 - 2*g3/a**2), Rs3)
 координатные векторы, \([T, S] = 0\), т. е. \(T^\nu\nabla_\nu S^\mu = S^\nu\nabla_\nu T^\mu\).
 Относительная скорость \(V^\mu = T^\nu\nabla_\nu S^\mu\), относительное ускорение
 \(A^\mu = T^\nu\nabla_\nu V^\mu\). Используя \([T,S]=0\), уравнение геодезической \(T^\nu\nabla_\nu T^\mu = 0\)
-и \eqref{eq:commutator}, получаем
+и \(\eqref{eq:commutator}\), получаем
 
 !!! theorem "Уравнение отклонения геодезических (Якоби)"
+
     \begin{equation}
     A^\mu = \frac{D^2 S^\mu}{\d\tau^2} = R^\mu{}_{\nu\rho\sigma}\,T^\nu T^\rho S^\sigma .
     \label{eq:geodesic-deviation}
@@ -276,17 +284,19 @@ print(sp.simplify(Ric3 - 2*g3/a**2), Rs3)
 
 В плоском пространстве \(A^\mu = 0\) и прямые расходятся линейно. В искривлённом — нет: на сфере
 меридианы, параллельные на экваторе, сходятся к полюсу. Для единичного касательного вектора
-на 2-сфере \eqref{eq:geodesic-deviation} с \eqref{eq:max-symmetric} даёт для поперечного отклонения
+на 2-сфере \(\eqref{eq:geodesic-deviation}\) с \(\eqref{eq:max-symmetric}\) даёт для поперечного отклонения
 \(\ddot\xi = -K\xi\), т. е. \(\xi \propto \sin(s/a)\): именно так расстояние между меридианами
 \(a\sin\theta\,\Delta\phi\) зависит от пройденной дуги \(s = a\theta\).
 
 !!! example "Пример: ньютоновы приливные силы"
     В слабом статическом поле (гл. 3) для медленных частиц \(T^\mu \approx (1, 0,0,0)\), и по
-    \eqref{eq:riemann} \(R^i{}_{0j0} \approx \pd_j\Gamma^i_{00} = \pd_i\pd_j\Phi\). Тогда
+    \(\eqref{eq:riemann}\) \(R^i{}_{0j0} \approx \pd_j\Gamma^i_{00} = \pd_i\pd_j\Phi\). Тогда
+
     \begin{equation}
     \frac{\d^2 S^i}{\d t^2} = R^i{}_{00j}S^j = -R^i{}_{0j0}S^j = -\frac{\pd^2\Phi}{\pd x^i\pd x^j}\,S^j ,
     \label{eq:tidal}
     \end{equation}
+
     — ньютоново выражение для приливного ускорения (разность ускорений \(-\nabla\Phi\) в соседних точках).
     Для точечной массы \(\Phi = -GM/r\) вдоль радиуса \(\ddot S = +\tfrac{2GM}{r^3}S\) (растяжение),
     поперёк \(\ddot S = -\tfrac{GM}{r^3}S\) (сжатие). След \(\pd_i\pd_i\Phi = 4\pi G\rho\) — это
@@ -316,10 +326,10 @@ print(sp.simplify(Ric3 - 2*g3/a**2), Rs3)
         в 2D не содержат динамики: они требуют \(T_{\mu\nu} = 0\) (при \(\Lambda = 0\)).
 
 ??? question "4.3. Свёрнутое тождество Бьянки"
-    Выведите \(\nabla^\mu G_{\mu\nu} = 0\) из \eqref{eq:bianchi}.
+    Выведите \(\nabla^\mu G_{\mu\nu} = 0\) из \(\eqref{eq:bianchi}\).
 
     ??? success "Решение"
-        Свернём \eqref{eq:bianchi} с \(g^{\rho\mu}\):
+        Свернём \(\eqref{eq:bianchi}\) с \(g^{\rho\mu}\):
         \(\nabla_\lambda R_{\sigma\nu} + \nabla^\rho R_{\rho\sigma\nu\lambda} - \nabla_\nu R_{\sigma\lambda} = 0\)
         (используя \(g^{\rho\mu}R_{\rho\sigma\lambda\mu} = -R_{\sigma\lambda}\)).
         Свернём с \(g^{\sigma\nu}\): \(\nabla_\lambda R - \nabla^\rho R_{\rho\lambda} - \nabla^\sigma R_{\sigma\lambda} = 0\),
@@ -336,7 +346,7 @@ print(sp.simplify(Ric3 - 2*g3/a**2), Rs3)
         плоскость Лобачевского постоянной отрицательной кривизны.
 
 ??? question "4.5. Приливы от Луны"
-    Оцените с помощью \eqref{eq:tidal} отношение приливного ускорения на поверхности Земли от Луны
+    Оцените с помощью \(\eqref{eq:tidal}\) отношение приливного ускорения на поверхности Земли от Луны
     и от Солнца. (\(M_\odot/M_{\rm L} \approx 2.7\times10^7\), \(r_\odot/r_{\rm L} \approx 390\).)
 
     ??? success "Решение"
@@ -347,10 +357,10 @@ print(sp.simplify(Ric3 - 2*g3/a**2), Rs3)
 
 ??? question "4.6. Отклонение геодезических на сфере"
     Покажите, что на сфере радиуса \(a\) для единичного \(T\) и \(S \perp T\), \(|S| = \xi\),
-    уравнение \eqref{eq:geodesic-deviation} даёт \(\ddot\xi = -\xi/a^2\).
+    уравнение \(\eqref{eq:geodesic-deviation}\) даёт \(\ddot\xi = -\xi/a^2\).
 
     ??? success "Решение"
-        С \eqref{eq:max-symmetric}: \(A_\mu = K(T_\mu (T\cdot S) - S_\mu (T\cdot T)) = -K S_\mu\), так как
+        С \(\eqref{eq:max-symmetric}\): \(A_\mu = K(T_\mu (T\cdot S) - S_\mu (T\cdot T)) = -K S_\mu\), так как
         \(T\cdot S = 0\), \(T\cdot T = 1\). Значит \(\ddot\xi = -\xi/a^2\), \(\xi = \xi_0 \sin(s/a)\):
         геодезические, вышедшие из одной точки (полюса), снова сходятся через \(s = \pi a\) (в антиподе).
 

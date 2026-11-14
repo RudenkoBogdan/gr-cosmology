@@ -20,10 +20,12 @@
 !!! definition "Идеальная жидкость"
     Идеальная жидкость с плотностью энергии \(\rho\) и давлением \(p\) в собственной системе
     отсчёта, движущаяся с 4-скоростью \(U^\mu\), имеет
+
     \begin{equation}
     T_{\mu\nu} = (\rho + p)\,U_\mu U_\nu + p\, g_{\mu\nu} .
     \label{eq:perfect-fluid}
     \end{equation}
+
     В системе покоя (в локально инерциальных координатах) \(T_{\mu\nu} = \mathrm{diag}(\rho, p, p, p)\).
 
 Частные случаи: **пыль** (\(p = 0\)), **излучение** (\(p = \rho/3\), след \(T = 0\)),
@@ -47,13 +49,13 @@ T_{\mu\nu}^{(\phi)} = \nabla_\mu\phi\nabla_\nu\phi - g_{\mu\nu}\left(\frac12 g^{
 \end{equation}
 
 !!! warning "Это не глобальный закон сохранения"
-    В искривлённом пространстве \eqref{eq:conservation} не превращается в интегральный
+    В искривлённом пространстве \(\eqref{eq:conservation}\) не превращается в интегральный
     закон: \(\nabla_\mu T^{\mu\nu} = \frac{1}{\sqrt{-g}}\pd_\mu(\sqrt{-g}T^{\mu\nu}) + \Gamma^\nu_{\mu\lambda}T^{\mu\lambda}\),
     и второе слагаемое описывает обмен энергией-импульсом с гравитационным полем.
     Глобальная энергия определена только при наличии вектора Киллинга или на асимптотике
     плоского пространства.
 
-Для пыли \eqref{eq:conservation} даёт сохранение числа частиц и уравнение геодезической
+Для пыли \(\eqref{eq:conservation}\) даёт сохранение числа частиц и уравнение геодезической
 \(U^\mu\nabla_\mu U^\nu = 0\): **движение материи следует из уравнений поля**. Для
 идеальной жидкости проекция на \(U_\nu\) даёт закон сохранения энергии
 \(U^\mu\nabla_\mu\rho + (\rho + p)\nabla_\mu U^\mu = 0\), а проекция на ортогональное
@@ -69,7 +71,7 @@ T_{\mu\nu}^{(\phi)} = \nabla_\mu\phi\nabla_\nu\phi - g_{\mu\nu}\left(\frac12 g^{
 1. симметричным тензором ранга (0,2);
 2. построенным из метрики и её производных не выше второго порядка, линейно по вторым;
 3. бездивергентным, \(\nabla^\mu \mathcal{G}_{\mu\nu} = 0\), — иначе противоречие с
-   \eqref{eq:conservation}.
+   \(\eqref{eq:conservation}\).
 
 Из вторых производных метрики тензорно строится только тензор Римана
 ([глава 4](../part1-math/04-curvature.md)). Свёртки дают \(R_{\mu\nu}\) и \(R g_{\mu\nu}\).
@@ -95,6 +97,7 @@ G_{\mu\nu} = R_{\mu\nu} - \frac12 R\, g_{\mu\nu}, \qquad \nabla^\mu G_{\mu\nu} =
 производным). Итак, \(G_{\mu\nu} = \kappa T_{\mu\nu}\), а в 6.5 мы найдём \(\kappa = 8\pi G\).
 
 !!! theorem "Уравнения Эйнштейна"
+
     \begin{equation}
     R_{\mu\nu} - \frac12 R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu}
     \qquad \left(\text{с } c:\ \frac{8\pi G}{c^4}\,T_{\mu\nu}\right).
@@ -102,11 +105,11 @@ G_{\mu\nu} = R_{\mu\nu} - \frac12 R\, g_{\mu\nu}, \qquad \nabla^\mu G_{\mu\nu} =
     \end{equation}
 
 Это 10 нелинейных уравнений в частных производных второго порядка для 10 компонент
-\(g_{\mu\nu}\). Однако четыре тождества Бьянки \eqref{eq:einstein-tensor} делают
+\(g_{\mu\nu}\). Однако четыре тождества Бьянки \(\eqref{eq:einstein-tensor}\) делают
 независимыми лишь 6 из них — ровно столько, сколько нужно: четыре компоненты метрики
 отражают свободу выбора координат (калибровочная инвариантность ОТО).
 
-Свернув \eqref{eq:efe} с \(g^{\mu\nu}\) (в четырёх измерениях \(g^{\mu\nu}g_{\mu\nu} = 4\)),
+Свернув \(\eqref{eq:efe}\) с \(g^{\mu\nu}\) (в четырёх измерениях \(g^{\mu\nu}g_{\mu\nu} = 4\)),
 получаем \(-R = 8\pi G\,T\). Подставляя обратно, приходим к эквивалентной форме
 **с обращённым следом**:
 
@@ -148,28 +151,35 @@ S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
 Нужны три факта.
 
 1. **Вариация детерминанта.** Из \(\delta\ln\det M = \mathrm{tr}(M^{-1}\delta M)\) и
-   \(g^{\mu\nu}\delta g_{\mu\nu} = -g_{\mu\nu}\delta g^{\mu\nu}\):
-   \begin{equation}
-   \delta\sqrt{-g} = -\frac12\sqrt{-g}\,g_{\mu\nu}\,\delta g^{\mu\nu} .
-   \label{eq:delta-det}
-   \end{equation}
+    \(g^{\mu\nu}\delta g_{\mu\nu} = -g_{\mu\nu}\delta g^{\mu\nu}\):
+
+    \begin{equation}
+    \delta\sqrt{-g} = -\frac12\sqrt{-g}\,g_{\mu\nu}\,\delta g^{\mu\nu} .
+    \label{eq:delta-det}
+    \end{equation}
+
 2. **Тождество Палатини.** Разность связностей — тензор, и в локально инерциальной
-   системе легко проверить, что
-   \begin{equation}
-   \delta R_{\mu\nu} = \nabla_\lambda\,\delta\Gamma^\lambda_{\mu\nu} - \nabla_\nu\,\delta\Gamma^\lambda_{\mu\lambda} .
-   \label{eq:palatini}
-   \end{equation}
-   Поэтому \(\sqrt{-g}\,g^{\mu\nu}\delta R_{\mu\nu} = \sqrt{-g}\,\nabla_\lambda V^\lambda\) — полная
-   производная, не дающая вклада в уравнения (при надлежащем граничном члене
-   Гиббонса — Хокинга).
+    системе легко проверить, что
+
+    \begin{equation}
+    \delta R_{\mu\nu} = \nabla_\lambda\,\delta\Gamma^\lambda_{\mu\nu} - \nabla_\nu\,\delta\Gamma^\lambda_{\mu\lambda} .
+    \label{eq:palatini}
+    \end{equation}
+
+    Поэтому \(\sqrt{-g}\,g^{\mu\nu}\delta R_{\mu\nu} = \sqrt{-g}\,\nabla_\lambda V^\lambda\) — полная
+    производная, не дающая вклада в уравнения (при надлежащем граничном члене
+    Гиббонса — Хокинга).
+
 3. **Определение ТЭИ.** Для материи
-   \begin{equation}
-   T_{\mu\nu} = -\frac{2}{\sqrt{-g}}\,\frac{\delta S_M}{\delta g^{\mu\nu}} .
-   \label{eq:tei-def}
-   \end{equation}
-   Для скалярного поля с \(S_M = -\int\sqrt{-g}\,\bigl(\tfrac12 g^{\mu\nu}\pd_\mu\phi\pd_\nu\phi + V\bigr)\d^4x\)
-   это даёт \eqref{eq:tei-fields}; в плоском пространстве определение совпадает с
-   каноническим (симметризованным) ТЭИ.
+
+    \begin{equation}
+    T_{\mu\nu} = -\frac{2}{\sqrt{-g}}\,\frac{\delta S_M}{\delta g^{\mu\nu}} .
+    \label{eq:tei-def}
+    \end{equation}
+
+    Для скалярного поля с \(S_M = -\int\sqrt{-g}\,\bigl(\tfrac12 g^{\mu\nu}\pd_\mu\phi\pd_\nu\phi + V\bigr)\d^4x\)
+    это даёт \(\eqref{eq:tei-fields}\); в плоском пространстве определение совпадает с
+    каноническим (симметризованным) ТЭИ.
 
 Собирая всё, получаем
 
@@ -177,9 +187,9 @@ S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
 \delta S = \int \sqrt{-g}\,\delta g^{\mu\nu}\left[\frac{1}{16\pi G}\left(R_{\mu\nu} - \frac12 R\, g_{\mu\nu}\right) - \frac12 T_{\mu\nu}\right]\d^4x = 0,
 \]
 
-то есть в точности \eqref{eq:efe}. Нормировка \(1/(16\pi G)\) выбрана так, чтобы
+то есть в точности \(\eqref{eq:efe}\). Нормировка \(1/(16\pi G)\) выбрана так, чтобы
 воспроизвести ньютоновский предел. Бездивергентность \(G_{\mu\nu}\) теперь следует из
-диффеоморфной инвариантности действия, а \eqref{eq:conservation} — из уравнений движения
+диффеоморфной инвариантности действия, а \(\eqref{eq:conservation}\) — из уравнений движения
 материи: тождество Бьянки и закон сохранения — проявления одной и той же симметрии.
 
 ## 6.4. Космологическая постоянная
@@ -192,7 +202,7 @@ G_{\mu\nu} + \Lambda\, g_{\mu\nu} = 8\pi G\,T_{\mu\nu} ,
 \label{eq:efe-lambda}
 \end{equation}
 
-что соответствует замене \(R \to R - 2\Lambda\) в \eqref{eq:hilbert-action}. Эйнштейн ввёл
+что соответствует замене \(R \to R - 2\Lambda\) в \(\eqref{eq:hilbert-action}\). Эйнштейн ввёл
 \(\Lambda > 0\) в 1917 г., чтобы получить статическую Вселенную, а после открытия
 расширения назвал это «величайшей ошибкой». В 1998 г. по наблюдениям сверхновых Ia
 было обнаружено ускоренное расширение, и \(\Lambda\) (или нечто её имитирующее)
@@ -270,7 +280,7 @@ R_{00} \approx \pd_i\Gamma^i_{00} = \pd_i\left(-\frac12\pd_i h_{00}\right) = \na
     - **Доминантное (DEC):** WEC и вектор \(-T^\mu{}_\nu t^\nu\) непространственноподобен — энергия не течёт быстрее света.
     - **Сильное (SEC):** \(\left(T_{\mu\nu} - \frac12 T g_{\mu\nu}\right)t^\mu t^\nu \ge 0\).
 
-Для идеальной жидкости \eqref{eq:perfect-fluid} условия принимают вид
+Для идеальной жидкости \(\eqref{eq:perfect-fluid}\) условия принимают вид
 
 | Условие | Ограничение на \(\rho,\ p\) |
 |---|---|
@@ -279,7 +289,7 @@ R_{00} \approx \pd_i\Gamma^i_{00} = \pd_i\left(-\frac12\pd_i h_{00}\right) = \na
 | DEC | \(\rho \ge \lvert p\rvert\) |
 | SEC | \(\rho + p \ge 0,\ \rho + 3p \ge 0\) |
 
-По \eqref{eq:efe-trace-reversed} SEC эквивалентно \(R_{\mu\nu}t^\mu t^\nu \ge 0\), т.е.
+По \(\eqref{eq:efe-trace-reversed}\) SEC эквивалентно \(R_{\mu\nu}t^\mu t^\nu \ge 0\), т.е.
 притяжению близких времениподобных геодезических (уравнение Райчаудхури). Именно SEC
 используется в теоремах Хокинга — Пенроуза о сингулярностях, а NEC — в теореме о
 неубывании площади горизонта ([глава 8](08-black-holes.md)).
@@ -300,9 +310,9 @@ R_{00} \approx \pd_i\Gamma^i_{00} = \pd_i\left(-\frac12\pd_i h_{00}\right) = \na
 <div class="interactive" id="ec-demo">
   <canvas id="ec-canvas" width="480" height="480"></canvas>
   <div class="controls">
-    <label for="ec-rho">\(\rho\) = <span id="ec-rho-val">1.00</span></label>
+    <label for="ec-rho"><span class="arithmatex">\(\rho\)</span> = <span id="ec-rho-val">1.00</span></label>
     <input type="range" id="ec-rho" min="-1.4" max="1.4" step="0.02" value="1">
-    <label for="ec-p">\(p\) = <span id="ec-p-val">-0.50</span></label>
+    <label for="ec-p"><span class="arithmatex">\(p\)</span> = <span id="ec-p-val">-0.50</span></label>
     <input type="range" id="ec-p" min="-1.4" max="1.4" step="0.02" value="-0.5">
   </div>
   <div class="controls"><span id="ec-status"></span></div>
@@ -366,12 +376,12 @@ print(sp.simplify(Gt2[0, 0] * sp.exp(-2 * A)))
     Чему равен \(R\) в \(n\) измерениях для вакуума с \(\Lambda\)?
 
     ??? success "Решение"
-        Из \eqref{eq:efe-lambda}: \(-R + 4\Lambda = 8\pi G T\). (а) \(T = -\rho + 3p = 0\), \(R = 0\).
+        Из \(\eqref{eq:efe-lambda}\): \(-R + 4\Lambda = 8\pi G T\). (а) \(T = -\rho + 3p = 0\), \(R = 0\).
         (б) \(T = -\rho\), \(R = 8\pi G\rho\). (в) \(R = 4\Lambda\).
         В \(n\) измерениях \(g^{\mu\nu}g_{\mu\nu} = n\): \((1 - n/2)R + n\Lambda = 0\), \(R = \frac{2n}{n-2}\Lambda\).
 
 ??? question "6.2. Бесследовость поля Максвелла"
-    Покажите, что \(T^{\rm (EM)}_{\mu\nu}\) из \eqref{eq:tei-fields} бесследов в четырёх
+    Покажите, что \(T^{\rm (EM)}_{\mu\nu}\) из \(\eqref{eq:tei-fields}\) бесследов в четырёх
     измерениях, и найдите \(T_{00}\) в локально инерциальной системе.
 
     ??? success "Решение"
@@ -403,7 +413,7 @@ print(sp.simplify(Gt2[0, 0] * sp.exp(-2 * A)))
 
 ??? question "6.5. Скалярное поле и SEC"
     Для однородного скалярного поля \(\phi(t)\) в локально инерциальной системе найдите
-    \(\rho\) и \(p\) из \eqref{eq:tei-fields}. При каком условии нарушается SEC?
+    \(\rho\) и \(p\) из \(\eqref{eq:tei-fields}\). При каком условии нарушается SEC?
 
     ??? success "Решение"
         \(\nabla_\mu\phi = (\dot\phi, 0,0,0)\), \(g^{\lambda\sigma}\pd_\lambda\phi\pd_\sigma\phi = -\dot\phi^2\).
@@ -413,7 +423,7 @@ print(sp.simplify(Gt2[0, 0] * sp.exp(-2 * A)))
         в инфляции.
 
 ??? question "6.6. Тождество Бьянки"
-    Выведите \eqref{eq:bianchi} из тождества Бьянки
+    Выведите \(\eqref{eq:bianchi}\) из тождества Бьянки
     \(\nabla_{[\lambda}R_{\rho\sigma]\mu\nu} = 0\) и проверьте \(\nabla^\mu G_{\mu\nu} = 0\).
 
     ??? success "Решение"
