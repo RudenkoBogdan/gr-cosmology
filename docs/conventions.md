@@ -20,6 +20,7 @@
 \[
 \Gamma^\lambda_{\mu\nu} = \tfrac12 g^{\lambda\sigma}\left(\pd_\mu g_{\nu\sigma} + \pd_\nu g_{\mu\sigma} - \pd_\sigma g_{\mu\nu}\right),
 \]
+
 \[
 R^\rho{}_{\sigma\mu\nu} = \pd_\mu \Gamma^\rho_{\nu\sigma} - \pd_\nu \Gamma^\rho_{\mu\sigma}
  + \Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma},
@@ -27,6 +28,7 @@ R^\rho{}_{\sigma\mu\nu} = \pd_\mu \Gamma^\rho_{\nu\sigma} - \pd_\nu \Gamma^\rho_
 \]
 
 Уравнения Эйнштейна:
+
 \[
 G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G\, T_{\mu\nu}.
 \]
