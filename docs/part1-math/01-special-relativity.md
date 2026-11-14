@@ -88,6 +88,54 @@ v_{12} = \tanh(\phi_1+\phi_2) = \frac{v_1 + v_2}{1 + v_1 v_2}.
 \label{eq:velocity-addition}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Связь быстроты и скорости.** Начало штрихованной системы \(x' = 0\) движется
+    по закону \(x = vt\). Из \(\eqref{eq:boost}\): \(x' = -t\sinh\phi + x\cosh\phi = 0\), откуда
+
+    \[
+    v = \frac{x}{t} = \frac{\sinh\phi}{\cosh\phi} = \tanh\phi,
+    \qquad
+    \cosh\phi = \frac{1}{\sqrt{1-\tanh^2\phi}} = \gamma,
+    \qquad
+    \sinh\phi = \gamma v.
+    \]
+
+    **Шаг 2. Композиция бустов.** Рассмотрим только блок \((t,x)\). Перемножаем матрицы:
+
+    \[
+    \begin{pmatrix}\cosh\phi_2 & -\sinh\phi_2\\ -\sinh\phi_2 & \cosh\phi_2\end{pmatrix}
+    \begin{pmatrix}\cosh\phi_1 & -\sinh\phi_1\\ -\sinh\phi_1 & \cosh\phi_1\end{pmatrix}
+    =
+    \begin{pmatrix}
+    \cosh\phi_2\cosh\phi_1 + \sinh\phi_2\sinh\phi_1 & -(\cosh\phi_2\sinh\phi_1 + \sinh\phi_2\cosh\phi_1)\\
+    -(\sinh\phi_2\cosh\phi_1 + \cosh\phi_2\sinh\phi_1) & \sinh\phi_2\sinh\phi_1 + \cosh\phi_2\cosh\phi_1
+    \end{pmatrix}.
+    \]
+
+    **Шаг 3. Формулы сложения.** Используем
+    \(\cosh(a+b) = \cosh a\cosh b + \sinh a\sinh b\) и
+    \(\sinh(a+b) = \sinh a\cosh b + \cosh a\sinh b\):
+
+    \[
+    \Lambda(\phi_2)\Lambda(\phi_1) =
+    \begin{pmatrix}\cosh(\phi_1+\phi_2) & -\sinh(\phi_1+\phi_2)\\ -\sinh(\phi_1+\phi_2) & \cosh(\phi_1+\phi_2)\end{pmatrix}
+    = \Lambda(\phi_1+\phi_2).
+    \]
+
+    **Шаг 4. Итоговая скорость.** По шагу 1 \(v_{12} = \tanh(\phi_1+\phi_2)\). Делим числитель
+    и знаменатель на \(\cosh\phi_1\cosh\phi_2\):
+
+    \[
+    v_{12} = \frac{\sinh\phi_1\cosh\phi_2 + \cosh\phi_1\sinh\phi_2}{\cosh\phi_1\cosh\phi_2 + \sinh\phi_1\sinh\phi_2}
+    = \frac{\tanh\phi_1 + \tanh\phi_2}{1 + \tanh\phi_1\tanh\phi_2}
+    = \frac{v_1 + v_2}{1 + v_1 v_2}.
+    \]
+
+    **Проверка.** При \(v_1 = v_2 = 0.9\) получаем \(v_{12} = 1.8/1.81 \approx 0.9945 < 1\);
+    при \(v_2 = 1\) (свет) \(v_{12} = (v_1+1)/(1+v_1) = 1\) — скорость света одинакова в
+    обеих системах.
+
 ### Интерактив: диаграмма Минковского
 
 Подвигайте ползунок скорости. Серые линии — оси покоящейся системы \((t,x)\),
