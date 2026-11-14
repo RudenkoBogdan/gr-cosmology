@@ -44,6 +44,24 @@
 \label{eq:comoving-hubble}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Замена переменной в \(\eqref{eq:particle-horizon}\).** \(\d t=\d a/\dot a=\d a/(aH)\), поэтому \(\d t/a=\d a/(a^2H)=\d\ln a/(aH)\).
+
+    **Шаг 2. Степенной закон.** При \(a\propto t^q\), \(q=\tfrac{2}{3(1+w)}\): \(H=\dot a/a=q/t\), и
+
+    \[
+    aH\propto t^q\cdot t^{-1}=t^{q-1}\quad\Longrightarrow\quad(aH)^{-1}\propto t^{1-q}.
+    \]
+
+    **Шаг 3. Переходим к \(a\).** \(t\propto a^{1/q}\), поэтому \((aH)^{-1}\propto a^{(1-q)/q}\), и
+
+    \[
+    \frac{1-q}{q}=\frac1q-1=\frac{3(1+w)}{2}-1=\frac{1+3w}{2}.
+    \]
+
+    **Проверка.** Излучение \(w=\tfrac13\): \((aH)^{-1}\propto a\); вещество \(w=0\): \(\propto a^{1/2}\); \(w=-1\) (де Ситтер): \(\propto a^{-1}\) — убывает.
+
 При \(w > -1/3\) (излучение, вещество) хаббловский радиус **растёт**, интеграл
 \(\eqref{eq:particle-horizon}\) набирается на поздних временах, и \(\chi_{\rm p} \sim (aH)^{-1}\).
 
@@ -76,6 +94,22 @@
 \(\lesssim 10^{-60}\) на планковском масштабе. Плоская Вселенная — неустойчивая
 неподвижная точка, и её нужно было «настроить» с фантастической точностью.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Фридман с кривизной.** \(H^2=\dfrac{\rho}{3M_{\rm Pl}^2}-\dfrac{k}{a^2}\). Делим на \(H^2\) и вводим \(\Omega=\rho/\rho_{\rm cr}\), \(\rho_{\rm cr}=3M_{\rm Pl}^2H^2\):
+
+    \[
+    1=\Omega-\frac{k}{a^2H^2}\quad\Longrightarrow\quad\Omega-1=\frac{k}{(aH)^2}.
+    \]
+
+    **Шаг 2. Рост.** По \(\eqref{eq:comoving-hubble}\) \((aH)^{-2}\propto a^{1+3w}\): излучение (\(w=\tfrac13\)) — \(a^2\), вещество (\(w=0\)) — \(a\).
+
+    **Шаг 3. Оценка назад до нуклеосинтеза.** От сегодня до равенства (\(a_{\rm eq}\approx3\times10^{-4}\)) в эпоху вещества \(|\Omega-1|\) уменьшается в \(a_{\rm eq}^{-1}\approx3\times10^{3}\) раз; от равенства до \(T\sim1\) МэВ (\(a\sim T_0/T\approx2\times10^{-10}\)) в эпоху излучения — в \((3\times10^{-4}/2\times10^{-10})^2\approx2\times10^{12}\) раз:
+
+    \[
+    |\Omega-1|_{\rm BBN}\lesssim\frac{2\times10^{-3}}{3\times10^3\cdot2\times10^{12}}\sim3\times10^{-19}\sim10^{-18}.
+    \]
+
 ## 15.3. Решение: уменьшающийся хаббловский радиус
 
 Обе проблемы исчезают, если на раннем этапе сопутствующий хаббловский радиус
@@ -94,6 +128,18 @@
     \quad\Longleftrightarrow\quad w < -\frac13.
     \label{eq:inflation-def}
     \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1.** \(aH=\dot a\), поэтому
+
+    \[
+    \frac{\d}{\d t}\left(\frac{1}{\dot a}\right)=-\frac{\ddot a}{\dot a^2}<0\quad\Longleftrightarrow\quad\ddot a>0.
+    \]
+
+    **Шаг 2. Через \(\varepsilon\).** \(\dot H=\ddot a/a-\dot a^2/a^2\Rightarrow\ddot a/a=\dot H+H^2=H^2(1-\varepsilon)\). Значит \(\ddot a>0\Leftrightarrow\varepsilon<1\).
+
+    **Шаг 3. Через \(w\).** Второе уравнение Фридмана \(\ddot a/a=-(\rho+3p)/(6M_{\rm Pl}^2)=-\rho(1+3w)/(6M_{\rm Pl}^2)\). При \(\rho>0\): \(\ddot a>0\Leftrightarrow1+3w<0\Leftrightarrow w<-\tfrac13\).
 
 Длительность инфляции измеряют числом **е-фолдов** \(N = \ln(a_{\rm end}/a)\). Чтобы
 сегодняшний хаббловский масштаб \(H_0^{-1}\) был внутри горизонта в начале инфляции,
@@ -123,6 +169,28 @@ S = \int \d^4x\,\sqrt{-g}\left[\frac{M_{\rm Pl}^2}{2}R - \frac12 g^{\mu\nu}\pd_\
 \label{eq:rho-p-phi}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Тензор энергии-импульса.** \(T_{\mu\nu}=-\dfrac{2}{\sqrt{-g}}\dfrac{\delta S_\phi}{\delta g^{\mu\nu}}\), \(S_\phi=\int\d^4x\sqrt{-g}\,\mathcal L\), \(\mathcal L=-\tfrac12g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi-V\). Используя \(\delta\sqrt{-g}=-\tfrac12\sqrt{-g}\,g_{\mu\nu}\delta g^{\mu\nu}\):
+
+    \[
+    \delta(\sqrt{-g}\,\mathcal L)=\sqrt{-g}\left[-\frac12\pd_\mu\phi\pd_\nu\phi-\frac12g_{\mu\nu}\mathcal L\right]\delta g^{\mu\nu}
+    \;\Longrightarrow\;
+    T_{\mu\nu}=\pd_\mu\phi\pd_\nu\phi-g_{\mu\nu}\left[\frac12g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi+V\right].
+    \]
+
+    **Шаг 2. Однородное поле в FRW.** \(g_{00}=-1\), \(g_{ij}=a^2\delta_{ij}\), \(\pd_i\phi=0\): \(g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi=g^{00}\dot\phi^2=-\dot\phi^2\).
+
+    **Шаг 3. Компоненты.**
+
+    \[
+    \rho=T_{00}=\dot\phi^2-(-1)\left[-\frac12\dot\phi^2+V\right]=\frac12\dot\phi^2+V,
+    \qquad
+    T_{ij}=-a^2\delta_{ij}\left[-\frac12\dot\phi^2+V\right]=a^2\delta_{ij}\left(\frac12\dot\phi^2-V\right).
+    \]
+
+    Сравнивая с \(T_{ij}=p\,g_{ij}=p\,a^2\delta_{ij}\), получаем \(p=\tfrac12\dot\phi^2-V\).
+
 Если потенциальная энергия доминирует, \(p_\phi \approx -\rho_\phi\), т. е. \(w \approx -1\).
 Уравнения движения — уравнение Фридмана и уравнение Клейна–Гордона:
 
@@ -132,9 +200,37 @@ H^2 = \frac{1}{3M_{\rm Pl}^2}\left[\frac12\dot\phi^2 + V\right], \qquad
 \label{eq:inflaton-eom}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Уравнение поля.** Варьируя \(\eqref{eq:inflaton-action}\) по \(\phi\): \(\pd_\mu(\sqrt{-g}\,g^{\mu\nu}\pd_\nu\phi)-\sqrt{-g}\,V'=0\), т.е. \(\Box\phi=V'\).
+
+    **Шаг 2. Даламбертиан в FRW.** \(\sqrt{-g}=a^3\), для \(\phi(t)\) выживает только \(\mu=\nu=0\), \(g^{00}=-1\):
+
+    \[
+    \Box\phi=\frac{1}{a^3}\pd_t\!\left(a^3\cdot(-1)\cdot\dot\phi\right)=-\frac{1}{a^3}\left(3a^2\dot a\,\dot\phi+a^3\ddot\phi\right)=-\left(\ddot\phi+3H\dot\phi\right).
+    \]
+
+    **Шаг 3.** \(-(\ddot\phi+3H\dot\phi)=V'\Rightarrow\ddot\phi+3H\dot\phi+V'=0\). Уравнение Фридмана — \(H^2=\rho/(3M_{\rm Pl}^2)\) с \(\rho_\phi\) из \(\eqref{eq:rho-p-phi}\).
+
 Член \(3H\dot\phi\) играет роль трения («хаббловское трение»). Из них следует
 \(\dot H = -\dot\phi^2/(2M_{\rm Pl}^2)\), поэтому \(\varepsilon = \dot\phi^2/(2M_{\rm Pl}^2H^2)\):
 инфляция идёт, пока кинетическая энергия мала.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Дифференцируем уравнение Фридмана** из \(\eqref{eq:inflaton-eom}\) по \(t\) (\(\dot V=V'\dot\phi\)):
+
+    \[
+    2H\dot H=\frac{1}{3M_{\rm Pl}^2}\left(\dot\phi\ddot\phi+V'\dot\phi\right)=\frac{\dot\phi}{3M_{\rm Pl}^2}\left(\ddot\phi+V'\right).
+    \]
+
+    **Шаг 2. Подставляем уравнение поля** \(\ddot\phi+V'=-3H\dot\phi\):
+
+    \[
+    2H\dot H=\frac{\dot\phi}{3M_{\rm Pl}^2}(-3H\dot\phi)=-\frac{H\dot\phi^2}{M_{\rm Pl}^2}\quad\Longrightarrow\quad\dot H=-\frac{\dot\phi^2}{2M_{\rm Pl}^2}.
+    \]
+
+    **Шаг 3.** \(\varepsilon=-\dot H/H^2=\dot\phi^2/(2M_{\rm Pl}^2H^2)\). С уравнением Фридмана \(3M_{\rm Pl}^2H^2=\rho\): \(\varepsilon=\tfrac32\dot\phi^2/\rho=\tfrac32(1+w)\) — при \(\dot\phi^2\ll V\) \(\varepsilon\ll1\).
 
 !!! definition "Определение: параметры медленного скатывания"
     Для потенциала \(V(\phi)\) определим
@@ -158,6 +254,19 @@ H^2 \approx \frac{V}{3M_{\rm Pl}^2}, \qquad 3H\dot\phi \approx -V', \qquad
 \label{eq:slow-roll-eqs}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1.** Отбрасывая \(\dot\phi^2\) и \(\ddot\phi\): \(H^2=V/(3M_{\rm Pl}^2)\) и \(\dot\phi=-V'/(3H)\).
+
+    **Шаг 2.** Подставляем в \(\varepsilon=\dot\phi^2/(2M_{\rm Pl}^2H^2)\):
+
+    \[
+    \varepsilon=\frac{V'^2}{9H^2}\cdot\frac{1}{2M_{\rm Pl}^2H^2}=\frac{V'^2}{18M_{\rm Pl}^2H^4}
+    =\frac{V'^2}{18M_{\rm Pl}^2}\cdot\frac{9M_{\rm Pl}^4}{V^2}=\frac{M_{\rm Pl}^2}{2}\left(\frac{V'}{V}\right)^2=\epsilon_V .
+    \]
+
+    **Проверка самосогласованности.** \(\tfrac12\dot\phi^2/V=\tfrac{V'^2}{18H^2V}=\tfrac{M_{\rm Pl}^2}{6}\tfrac{V'^2}{V^2}=\tfrac{\epsilon_V}{3}\ll1\) — отбрасывание оправдано.
+
 Инфляция заканчивается при \(\epsilon_V(\phi_{\rm end}) \simeq 1\). Число е-фолдов между
 моментом, когда поле равно \(\phi\), и концом инфляции:
 
@@ -167,6 +276,18 @@ N(\phi) = \int_t^{t_{\rm end}} H\,\d t = \int_{\phi_{\rm end}}^{\phi}\frac{H}{|\
 \label{eq:efolds}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1.** \(N=\ln(a_{\rm end}/a)=\int_t^{t_{\rm end}}H\,\d t\). Меняем переменную: \(\d t=\d\phi/\dot\phi\). Поле катится вниз к \(\phi_{\rm end}\), и при обращении пределов знак компенсируется модулем: \(\int_t^{t_{\rm end}}H\d t=\int_{\phi_{\rm end}}^{\phi}H/|\dot\phi|\,\d\phi\).
+
+    **Шаг 2.** С \(|\dot\phi|=|V'|/(3H)\):
+
+    \[
+    \frac{H}{|\dot\phi|}=\frac{3H^2}{|V'|}=\frac{3}{|V'|}\cdot\frac{V}{3M_{\rm Pl}^2}=\frac{1}{M_{\rm Pl}^2}\frac{V}{|V'|}.
+    \]
+
+    (в записи \(\eqref{eq:efolds}\) считается \(V'>0\) при \(\phi>\phi_{\rm end}\)).
+
 !!! example "Пример: хаотическая инфляция \(V = \tfrac12 m^2\phi^2\)"
     \(\epsilon_V = \eta_V = 2M_{\rm Pl}^2/\phi^2\). Инфляция кончается при
     \(\phi_{\rm end} = \sqrt2\,M_{\rm Pl}\), а
@@ -174,6 +295,20 @@ N(\phi) = \int_t^{t_{\rm end}} H\,\d t = \int_{\phi_{\rm end}}^{\phi}\frac{H}{|\
     \(\phi_* \approx 15.6\,M_{\rm Pl}\): поле проходит **сверхпланковское** расстояние.
     Это характерно для всех моделей с заметной амплитудой гравитационных волн
     (граница Лайта, задача 15.5).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Производные.** \(V=\tfrac12m^2\phi^2\), \(V'=m^2\phi\), \(V''=m^2\): \(V'/V=2/\phi\), \(V''/V=2/\phi^2\).
+
+    **Шаг 2. Параметры.** \(\epsilon_V=\tfrac{M_{\rm Pl}^2}{2}\cdot\tfrac{4}{\phi^2}=\tfrac{2M_{\rm Pl}^2}{\phi^2}\), \(\eta_V=M_{\rm Pl}^2\cdot\tfrac{2}{\phi^2}\) — совпадают. \(\epsilon_V=1\Rightarrow\phi_{\rm end}^2=2M_{\rm Pl}^2\).
+
+    **Шаг 3. Е-фолды.** \(V/V'=\phi/2\):
+
+    \[
+    N=\frac{1}{M_{\rm Pl}^2}\int_{\phi_{\rm end}}^{\phi}\frac{\phi'}{2}\,\d\phi'=\frac{\phi^2-\phi_{\rm end}^2}{4M_{\rm Pl}^2}.
+    \]
+
+    **Шаг 4. Числа.** \(N=60\): \(\phi_*^2=4\cdot60\,M_{\rm Pl}^2+2M_{\rm Pl}^2=242\,M_{\rm Pl}^2\), \(\phi_*=15.56\,M_{\rm Pl}\).
 
 После окончания инфляции поле осциллирует около минимума и распадается на частицы
 Стандартной модели — это **разогрев** (reheating), с которого начинается горячий
@@ -208,6 +343,27 @@ v_k(\tau) = \frac{e^{-ik\tau}}{\sqrt{2k}}\left(1 - \frac{i}{k\tau}\right).
 \label{eq:bunch-davies}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Де Ситтер в конформном времени.** \(\d\tau=\d t/a=e^{-Ht}\d t\) (при \(a=e^{Ht}\)) \(\Rightarrow\tau=-e^{-Ht}/H=-1/(aH)\), т.е. \(a=-1/(H\tau)\).
+
+    **Шаг 2. \(z''/z\).** При почти постоянном \(\varepsilon\) \(z\propto a\). Штрих — \(\d/\d\tau\):
+
+    \[
+    a'=\frac{1}{H\tau^2},\qquad a''=-\frac{2}{H\tau^3},\qquad\frac{z''}{z}=\frac{a''}{a}=\frac{-2/(H\tau^3)}{-1/(H\tau)}=\frac{2}{\tau^2}.
+    \]
+
+    **Шаг 3. Проверяем решение.** \(v=\tfrac{1}{\sqrt{2k}}e^{-ik\tau}\left(1-\tfrac{i}{k\tau}\right)\). Дифференцируем:
+
+    \[
+    \sqrt{2k}\,v'=e^{-ik\tau}\left(-ik-\frac{1}{\tau}+\frac{i}{k\tau^2}\right),\qquad
+    \sqrt{2k}\,v''=e^{-ik\tau}\left(-k^2+\frac{ik}{\tau}+\frac{2}{\tau^2}-\frac{2i}{k\tau^3}\right).
+    \]
+
+    С другой стороны \(\left(k^2-\tfrac{2}{\tau^2}\right)\sqrt{2k}\,v=e^{-ik\tau}\left(k^2-\tfrac{ik}{\tau}-\tfrac{2}{\tau^2}+\tfrac{2i}{k\tau^3}\right)\). Сумма равна нулю — \(\eqref{eq:mukhanov-sasaki}\) выполнено.
+
+    **Шаг 4. Пределы.** \(|k\tau|\gg1\): \(v\to e^{-ik\tau}/\sqrt{2k}\) — положительно-частотная мода Минковского. \(|k\tau|\ll1\): доминирует \(-i/(k\tau)\), \(|v_k|\to1/(\sqrt{2k}\,k|\tau|)\).
+
 После выхода за горизонт (\(|k\tau| \ll 1\)) \(|v_k| \to 1/(\sqrt{2k}\,k|\tau|)\), а
 \(\mathcal R_k = v_k/z\) **замораживается**. Определим безразмерный спектр мощности через
 \(\langle \mathcal R_{\vb k}\mathcal R_{\vb k'}^*\rangle = (2\pi)^3\delta^3(\vb k - \vb k')\,P_{\mathcal R}(k)\),
@@ -228,11 +384,49 @@ v_k(\tau) = \frac{e^{-ik\tau}}{\sqrt{2k}}\left(1 - \frac{i}{k\tau}\right).
 
     Каждая величина вычисляется в момент **пересечения горизонта** \(k = aH\) данной модой.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Амплитуда после выхода.** \(|\tau|=1/(aH)\), значит \(|v_k|^2=\dfrac{a^2H^2}{2k^3}\). Делим на \(z^2=2\varepsilon a^2M_{\rm Pl}^2\):
+
+    \[
+    |\mathcal R_k|^2=\frac{|v_k|^2}{z^2}=\frac{a^2H^2}{2k^3}\cdot\frac{1}{2\varepsilon a^2M_{\rm Pl}^2}=\frac{H^2}{4\varepsilon M_{\rm Pl}^2k^3}.
+    \]
+
+    Множитель \(a^2\) сократился — \(\mathcal R_k\) действительно постоянна.
+
+    **Шаг 2. Спектр.** \(P_{\mathcal R}=|\mathcal R_k|^2\) (нормировка \(\langle\mathcal R_{\vb k}\mathcal R^*_{\vb k'}\rangle\) выше), поэтому
+
+    \[
+    \Delta^2_{\mathcal R}=\frac{k^3}{2\pi^2}\cdot\frac{H^2}{4\varepsilon M_{\rm Pl}^2k^3}=\frac{1}{8\pi^2\varepsilon}\frac{H^2}{M_{\rm Pl}^2}.
+    \]
+
+    Так как \(\mathcal R\) заморожена, значение берём в момент \(k=aH\).
+
+    **Шаг 3. Через потенциал.** \(H^2=V/(3M_{\rm Pl}^2)\), \(\varepsilon=\epsilon_V\):
+
+    \[
+    \Delta^2_{\mathcal R}=\frac{1}{8\pi^2\epsilon_V}\cdot\frac{V}{3M_{\rm Pl}^4}=\frac{V}{24\pi^2M_{\rm Pl}^4\epsilon_V}.
+    \]
+
 Тензорные возмущения \(h_{ij}\) (гравитационные волны, [глава 9](../part2-gr/09-gravitational-waves.md))
 ведут себя как два безмассовых скалярных поля с нормировкой \(M_{\rm Pl}h/2\); отсюда
 множитель в \(\eqref{eq:tensor-spectrum}\). Физический смысл прост: флуктуации безмассового
 поля в де Ситтере \(\delta\phi \sim H/(2\pi)\) на каждый е-фолд, а
 \(\mathcal R = H\delta\phi/\dot\phi\).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Каноническая переменная.** Для каждой поляризации \(h_\lambda\) (\(\lambda=+,\times\)) переменная \(v=aM_{\rm Pl}h_\lambda/2\) подчиняется \(\eqref{eq:mukhanov-sasaki}\) с \(z\to a\), а \(a''/a=2/\tau^2\) — то же решение \(\eqref{eq:bunch-davies}\).
+
+    **Шаг 2. Амплитуда.** \(|h_\lambda|^2=\dfrac{4}{M_{\rm Pl}^2}\dfrac{|v|^2}{a^2}=\dfrac{4}{M_{\rm Pl}^2}\cdot\dfrac{H^2}{2k^3}=\dfrac{2H^2}{M_{\rm Pl}^2k^3}\).
+
+    **Шаг 3. Сумма по двум поляризациям** и переход к безразмерному спектру:
+
+    \[
+    \Delta_t^2=\frac{k^3}{2\pi^2}\cdot2\cdot\frac{2H^2}{M_{\rm Pl}^2k^3}=\frac{2}{\pi^2}\frac{H^2}{M_{\rm Pl}^2}.
+    \]
+
+    **Шаг 4. Эвристика для скаляров.** \(\Delta_{\delta\phi}^2=(H/2\pi)^2\), \(\mathcal R=H\delta\phi/\dot\phi\): \(\Delta^2_{\mathcal R}=\tfrac{H^2}{\dot\phi^2}\tfrac{H^2}{4\pi^2}\), и с \(\dot\phi^2=2\varepsilon M_{\rm Pl}^2H^2\) это \(\tfrac{H^2}{8\pi^2\varepsilon M_{\rm Pl}^2}\) — совпадает с \(\eqref{eq:scalar-spectrum}\).
 
 Параметризуют спектры степенными законами около опорного масштаба
 \(k_* = 0.05\) Мпк\(^{-1}\):
@@ -250,6 +444,28 @@ v_k(\tau) = \frac{e^{-ik\tau}}{\sqrt{2k}}\left(1 - \frac{i}{k\tau}\right).
 n_s - 1 = 2\eta_V - 6\epsilon_V, \qquad n_t = -2\epsilon_V, \qquad r = 16\epsilon_V = -8n_t.
 \label{eq:ns-r}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Логарифмы спектров.** \(\ln\Delta^2_{\mathcal R}=\ln H^2-\ln\varepsilon+\text{const}\), \(\ln\Delta^2_t=\ln H^2+\text{const}\); \(\d\ln k\approx H\,\d t\equiv\d N_k\).
+
+    **Шаг 2. Производная \(H\).** \(\dfrac{\d\ln H^2}{H\d t}=\dfrac{2\dot H}{H^2}=-2\varepsilon\). Отсюда сразу \(n_t=\d\ln\Delta^2_t/\d\ln k=-2\epsilon_V\).
+
+    **Шаг 3. Производная \(\epsilon_V\).** \(\dfrac{\d\epsilon_V}{\d\phi}=M_{\rm Pl}^2\dfrac{V'}{V}\left(\dfrac{V''}{V}-\dfrac{V'^2}{V^2}\right)\), а \(\dfrac{\dot\phi}{H}=-\dfrac{V'}{3H^2}=-M_{\rm Pl}^2\dfrac{V'}{V}\):
+
+    \[
+    \frac{\dot\epsilon_V}{H}=-M_{\rm Pl}^4\left(\frac{V'}{V}\right)^2\frac{V''}{V}+M_{\rm Pl}^4\left(\frac{V'}{V}\right)^4
+    =-2\epsilon_V\eta_V+4\epsilon_V^2
+    \quad\Longrightarrow\quad\frac{\d\ln\epsilon_V}{\d\ln k}=-2\eta_V+4\epsilon_V .
+    \]
+
+    **Шаг 4. Сборка.**
+
+    \[
+    n_s-1=\frac{\d\ln\Delta^2_{\mathcal R}}{\d\ln k}=-2\epsilon_V-(-2\eta_V+4\epsilon_V)=2\eta_V-6\epsilon_V .
+    \]
+
+    **Шаг 5. Отношение.** \(r=\dfrac{\Delta^2_t}{\Delta^2_{\mathcal R}}=\dfrac{2H^2/(\pi^2M_{\rm Pl}^2)}{H^2/(8\pi^2\epsilon_VM_{\rm Pl}^2)}=16\epsilon_V=-8n_t\).
 
 Последнее равенство — **условие согласованности** однополевой инфляции. Масштабно-инвариантный
 спектр Харрисона–Зельдовича \(n_s = 1\) соответствует точному де Ситтеру; малое
@@ -271,6 +487,33 @@ n_s - 1 \approx -\frac{p+2}{2N}, \qquad r \approx \frac{4p}{N}.
 \label{eq:monomial}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Производные.** \(V=\lambda\phi^p\): \(V'/V=p/\phi\), \(V''/V=p(p-1)/\phi^2\).
+
+    **Шаг 2. Е-фолды.** \(V/V'=\phi/p\):
+
+    \[
+    N=\frac{1}{M_{\rm Pl}^2}\int_{\phi_{\rm end}}^{\phi_*}\frac{\phi}{p}\,\d\phi=\frac{\phi_*^2-\phi_{\rm end}^2}{2pM_{\rm Pl}^2}\approx\frac{\phi_*^2}{2pM_{\rm Pl}^2}
+    \]
+
+    (\(\phi_{\rm end}^2=p^2M_{\rm Pl}^2/2\ll\phi_*^2\) при \(N\gg p\)), т.е. \(\phi_*^2=2pNM_{\rm Pl}^2\).
+
+    **Шаг 3. Параметры.**
+
+    \[
+    \epsilon_V=\frac{M_{\rm Pl}^2}{2}\frac{p^2}{\phi_*^2}=\frac{p}{4N},\qquad
+    \eta_V=\frac{p(p-1)M_{\rm Pl}^2}{\phi_*^2}=\frac{p-1}{2N}.
+    \]
+
+    **Шаг 4. Подставляем в \(\eqref{eq:ns-r}\).**
+
+    \[
+    n_s-1=\frac{p-1}{N}-\frac{6p}{4N}=\frac{2p-2-3p}{2N}=-\frac{p+2}{2N},\qquad r=16\cdot\frac{p}{4N}=\frac{4p}{N}.
+    \]
+
+    **Проверка.** \(p=2\), \(N=60\): \(n_s=0.967\), \(r=0.133\) — как в интерактиве.
+
 Модель **Старобинского** (\(R + R^2/(6M^2)\)-гравитация, в эйнштейновской системе отсчёта
 эквивалентная скалярному полю) имеет плато:
 
@@ -279,6 +522,36 @@ V(\phi) = V_0\left(1 - e^{-\sqrt{2/3}\,\phi/M_{\rm Pl}}\right)^2, \qquad
 n_s \approx 1 - \frac{2}{N}, \qquad r \approx \frac{12}{N^2}.
 \label{eq:starobinsky}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Переменная.** \(x\equiv\sqrt{2/3}\,\phi/M_{\rm Pl}\), на плато \(e^{-x}\ll1\). Производные (\(\d x/\d\phi=\sqrt{2/3}/M_{\rm Pl}\)):
+
+    \[
+    V'=V_0\cdot2(1-e^{-x})e^{-x}\frac{\sqrt{2/3}}{M_{\rm Pl}},\qquad
+    V''=V_0\cdot\frac{2}{3M_{\rm Pl}^2}\cdot2\left(2e^{-2x}-e^{-x}\right).
+    \]
+
+    **Шаг 2. Главный порядок по \(e^{-x}\).** \(V\approx V_0\):
+
+    \[
+    \epsilon_V\approx\frac{M_{\rm Pl}^2}{2}\cdot\frac{4\cdot\frac23e^{-2x}}{M_{\rm Pl}^2}=\frac43e^{-2x},\qquad
+    \eta_V\approx-\frac43e^{-x}.
+    \]
+
+    **Шаг 3. Е-фолды.** \(V/V'\approx\dfrac{M_{\rm Pl}e^{x}}{2\sqrt{2/3}}\), \(\d\phi=\sqrt{3/2}\,M_{\rm Pl}\d x\):
+
+    \[
+    N\approx\frac{1}{M_{\rm Pl}^2}\int\frac{M_{\rm Pl}e^x}{2\sqrt{2/3}}\sqrt{\tfrac32}M_{\rm Pl}\,\d x=\frac34e^{x_*}\quad\Longrightarrow\quad e^{-x_*}=\frac{3}{4N}.
+    \]
+
+    **Шаг 4. Ответ.** \(\eta_V=-\tfrac43\cdot\tfrac{3}{4N}=-\tfrac1N\), \(\epsilon_V=\tfrac43\cdot\tfrac{9}{16N^2}=\tfrac{3}{4N^2}\):
+
+    \[
+    n_s-1=-\frac2N-\frac{9}{2N^2}\approx-\frac2N,\qquad r=16\cdot\frac{3}{4N^2}=\frac{12}{N^2}.
+    \]
+
+    **Проверка.** \(N=55\): \(n_s\approx0.964\), \(r\approx0.004\).
 
 Тот же результат даёт инфляция на поле Хиггса с неминимальной связью с кривизной.
 

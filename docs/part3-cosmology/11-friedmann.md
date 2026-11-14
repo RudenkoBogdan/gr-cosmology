@@ -38,6 +38,55 @@ R = 6\left(\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right).
 \label{eq:ricci}
 \end{equation}
 
+??? calc "Вычисления"
+
+    \(R_{00}\) вычислено в задаче 11.1; здесь расписаны \(R_{ij}\) и \(R\).
+
+    **Шаг 1. Определение.** По conventions \(R_{ij} = R^\lambda{}_{i\lambda j}\):
+
+    \[
+    R_{ij} = \pd_\lambda\Gamma^\lambda_{ji} - \pd_j\Gamma^\lambda_{\lambda i}
+    + \Gamma^\lambda_{\lambda\sigma}\Gamma^\sigma_{ji} - \Gamma^\lambda_{j\sigma}\Gamma^\sigma_{\lambda i}.
+    \]
+
+    Разделим индексы суммирования на \(0\) и пространственные; чисто трёхмерные слагаемые
+    (все индексы латинские) в сумме дают \({}^{(3)}\!R_{ij} = 2k\gamma_{ij}\).
+
+    **Шаг 2. Первое слагаемое.** \(\lambda = 0\): \(\pd_0\Gamma^0_{ij} = \pd_t(a\dot a)\gamma_{ij} = (\dot a^2 + a\ddot a)\gamma_{ij}\).
+
+    **Шаг 3. Второе слагаемое.** \(\Gamma^\lambda_{\lambda i} = \Gamma^0_{0i} + \Gamma^k_{ki}\), но \(\Gamma^0_{0i} = 0\):
+    остаётся только трёхмерная часть.
+
+    **Шаг 4. Третье слагаемое.** \(\sigma = 0\): \(\Gamma^\lambda_{\lambda 0}\Gamma^0_{ij} = \left(3\frac{\dot a}{a}\right)a\dot a\,\gamma_{ij} = 3\dot a^2\gamma_{ij}\)
+    (\(\Gamma^\lambda_{\lambda0} = \Gamma^k_{k0} = \delta^k_k\,\dot a/a\)). При \(\sigma = k\) \(\Gamma^0_{0k}=0\) — только 3D-часть.
+
+    **Шаг 5. Четвёртое слагаемое.** Смешанные комбинации:
+
+    \[
+    \begin{aligned}
+    \lambda=0,\ \sigma=k:&\quad \Gamma^0_{jk}\Gamma^k_{0i} = a\dot a\,\gamma_{jk}\,\frac{\dot a}{a}\delta^k_i = \dot a^2\gamma_{ij},\\
+    \lambda=k,\ \sigma=0:&\quad \Gamma^k_{j0}\Gamma^0_{ki} = \frac{\dot a}{a}\delta^k_j\,a\dot a\,\gamma_{ki} = \dot a^2\gamma_{ij},
+    \end{aligned}
+    \]
+
+    а \(\lambda=\sigma=0\) даёт \(\Gamma^0_{j0}\Gamma^0_{0i} = 0\). Итого \(2\dot a^2\gamma_{ij}\) со знаком минус.
+
+    **Шаг 6. Сумма.**
+
+    \[
+    R_{ij} = \left(\dot a^2 + a\ddot a + 3\dot a^2 - 2\dot a^2\right)\gamma_{ij} + 2k\gamma_{ij}
+    = \left(a\ddot a + 2\dot a^2 + 2k\right)\gamma_{ij}.
+    \]
+
+    **Шаг 7. Скаляр.** \(g^{00} = -1\), \(g^{ij} = a^{-2}\gamma^{ij}\), \(\gamma^{ij}\gamma_{ij} = 3\):
+
+    \[
+    R = g^{00}R_{00} + g^{ij}R_{ij} = 3\frac{\ddot a}{a} + \frac{3}{a^2}\left(a\ddot a + 2\dot a^2 + 2k\right)
+    = 6\left(\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right).
+    \]
+
+    **Проверка.** Метрика Милна (\(k=-1\), \(a=t\)) плоская: \(R = 6(0 + 1/t^2 - 1/t^2) = 0\).
+
 Отсюда смешанные компоненты тензора Эйнштейна:
 
 \begin{equation}
@@ -45,6 +94,27 @@ G^0{}_0 = -3\left(\frac{\dot a^2}{a^2} + \frac{k}{a^2}\right), \qquad
 G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right)\delta^i_j .
 \label{eq:einstein-tensor}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Поднимаем индекс.** \(R^0{}_0 = g^{00}R_{00} = 3\ddot a/a\);
+    \(R^i{}_j = g^{ik}R_{kj} = a^{-2}\gamma^{ik}\gamma_{kj}(a\ddot a + 2\dot a^2 + 2k)
+    = \left(\frac{\ddot a}{a} + 2\frac{\dot a^2}{a^2} + 2\frac{k}{a^2}\right)\delta^i_j\).
+
+    **Шаг 2. Половина скаляра.** Из \(\eqref{eq:ricci}\):
+    \(\tfrac12R = 3\frac{\ddot a}{a} + 3\frac{\dot a^2}{a^2} + 3\frac{k}{a^2}\).
+
+    **Шаг 3. \(G^\mu{}_\nu = R^\mu{}_\nu - \tfrac12R\,\delta^\mu_\nu\).**
+
+    \[
+    \begin{aligned}
+    G^0{}_0 &= 3\frac{\ddot a}{a} - 3\frac{\ddot a}{a} - 3\frac{\dot a^2}{a^2} - 3\frac{k}{a^2} = -3\left(\frac{\dot a^2}{a^2} + \frac{k}{a^2}\right),\\
+    G^i{}_j &= \left[(1-3)\frac{\ddot a}{a} + (2-3)\frac{\dot a^2}{a^2} + (2-3)\frac{k}{a^2}\right]\delta^i_j
+    = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right)\delta^i_j .
+    \end{aligned}
+    \]
+
+    Вторые производные в \(G^0{}_0\) сократились — поэтому \(00\)-уравнение является связью.
 
 Подставляя в \(G^\mu{}_\nu + \Lambda\delta^\mu_\nu = 8\pi G\,T^\mu{}_\nu\), получаем:
 
@@ -66,6 +136,32 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 а не только \(\rho\). Давление гравитирует; среда с \(p < -\rho/3\) вызывает
 **ускоренное** расширение.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Компонента \(00\).** \(T^0{}_0 = -\rho\), \(\delta^0_0 = 1\):
+
+    \[
+    -3\left(\frac{\dot a^2}{a^2} + \frac{k}{a^2}\right) + \Lambda = -8\pi G\rho
+    \quad\Longrightarrow\quad
+    H^2 = \frac{8\pi G}{3}\rho - \frac{k}{a^2} + \frac{\Lambda}{3}.
+    \]
+
+    **Шаг 2. Компонента \(ij\).** \(T^i{}_j = p\,\delta^i_j\); сокращаем \(\delta^i_j\):
+
+    \[
+    -2\frac{\ddot a}{a} - \left(\frac{\dot a^2}{a^2} + \frac{k}{a^2}\right) + \Lambda = 8\pi G p .
+    \]
+
+    **Шаг 3. Исключаем \(H^2 + k/a^2\)** с помощью шага 1: \(\frac{\dot a^2}{a^2} + \frac{k}{a^2} = \frac{8\pi G}{3}\rho + \frac{\Lambda}{3}\):
+
+    \[
+    -2\frac{\ddot a}{a} - \frac{8\pi G}{3}\rho - \frac\Lambda3 + \Lambda = 8\pi Gp
+    \quad\Longrightarrow\quad
+    \frac{\ddot a}{a} = -\frac{4\pi G}{3}\left(\rho + 3p\right) + \frac{\Lambda}{3}.
+    \]
+
+    **Проверка.** Де Ситтер (\(\rho=p=0\), \(k=0\)): \(H^2 = \Lambda/3\) и \(\ddot a/a = \Lambda/3 = H^2\) — согласуется с \(a\propto e^{Ht}\).
+
 !!! example "Ньютоновская аналогия"
     Рассмотрим однородный пылевой шар радиуса \(R(t) = a(t)\chi\). Пробная частица на
     его поверхности имеет энергию \(\tfrac12\dot R^2 - GM/R = E\), \(M = \tfrac{4\pi}{3}\rho R^3\).
@@ -83,6 +179,31 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 \label{eq:continuity}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Дивергенция смешанного тензора.**
+
+    \[
+    \nabla_\mu T^\mu{}_0 = \pd_\mu T^\mu{}_0 + \Gamma^\mu_{\mu\lambda}T^\lambda{}_0 - \Gamma^\lambda_{\mu0}T^\mu{}_\lambda .
+    \]
+
+    **Шаг 2. Первый член.** \(T^i{}_0 = 0\), поэтому \(\pd_\mu T^\mu{}_0 = \pd_0T^0{}_0 = -\dot\rho\).
+
+    **Шаг 3. Второй член.** Ненулевое только \(\lambda = 0\):
+    \(\Gamma^\mu_{\mu0}T^0{}_0 = \left(\Gamma^0_{00} + \Gamma^i_{i0}\right)(-\rho) = 3\frac{\dot a}{a}(-\rho) = -3H\rho\).
+
+    **Шаг 4. Третий член.** \(T^\mu{}_\lambda\) диагонален, \(\mu=\lambda\):
+    \(\Gamma^0_{00}T^0{}_0 + \sum_i\Gamma^i_{i0}T^i{}_i = 0 + 3H\,p\).
+
+    **Шаг 5. Сборка.**
+
+    \[
+    -\dot\rho - 3H\rho - 3Hp = 0 \quad\Longleftrightarrow\quad \dot\rho + 3H(\rho+p) = 0 .
+    \]
+
+    **Проверка (первое начало).** \(\frac{\d}{\d t}(\rho a^3) = \dot\rho a^3 + 3\rho a^2\dot a\), а
+    \(-p\frac{\d}{\d t}a^3 = -3pa^2\dot a\). Приравнивая и деля на \(a^3\), получаем то же уравнение.
+
 Это первое начало термодинамики \(\d(\rho a^3) = -p\,\d(a^3)\) для сопутствующего объёма.
 Уравнения \(\eqref{eq:friedmann1}\), \(\eqref{eq:friedmann2}\), \(\eqref{eq:continuity}\) не независимы:
 дифференцируя первое по времени и используя третье, получаем второе (тождество Бьянки).
@@ -94,6 +215,22 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 \rho \propto a^{-3(1+w)} .
 \label{eq:rho-of-a}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Подставляем \(p = w\rho\).** \(\dot\rho = -3\frac{\dot a}{a}(1+w)\rho\).
+
+    **Шаг 2. Разделяем переменные.** Делим на \(\rho\) и замечаем \(\dot a\,\d t = \d a\):
+
+    \[
+    \frac{\d\rho}{\rho} = -3(1+w)\frac{\d a}{a}
+    \quad\Longrightarrow\quad
+    \ln\rho = -3(1+w)\ln a + \mathrm{const}
+    \quad\Longrightarrow\quad
+    \rho = \rho_0\,a^{-3(1+w)} .
+    \]
+
+    **Проверка.** \(w=0\): \(a^{-3}\); \(w=1/3\): \(a^{-3\cdot4/3} = a^{-4}\); \(w=-1\): \(a^0\) — строки таблицы.
 
 | Компонента | \(w\) | \(\rho(a)\) | Физика |
 |---|---|---|---|
@@ -124,6 +261,20 @@ G^i{}_j = -\left(2\frac{\ddot a}{a} + \frac{\dot a^2}{a^2} + \frac{k}{a^2}\right
 \label{eq:sum-rule}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1.** Включаем Λ в \(\rho = \sum_i\rho_i\) и делим \(\eqref{eq:friedmann1}\) на \(H^2\):
+
+    \[
+    1 = \sum_i\frac{8\pi G\rho_i}{3H^2} - \frac{k}{a^2H^2} = \sum_i\frac{\rho_i}{\rho_{\rm cr}} + \Omega_k = \sum_i\Omega_i + \Omega_k .
+    \]
+
+    **Шаг 2. Знак кривизны.** \(\Omega_k = 1 - \Omega_{\rm tot}\), а \(\Omega_k\) и \(k\) противоположны по знаку.
+    Значит \(\Omega_{\rm tot}>1 \Rightarrow \Omega_k<0 \Rightarrow k>0\).
+
+    **Шаг 3. Радиус кривизны.** Сегодня \(a=1\): \(\Omega_k = -k/H_0^2\), и \(|k| = 1/R_0^2\) даёт
+    \(|\Omega_k| = 1/(R_0H_0)^2\), т. е. \(R_0 = (1/H_0)/\sqrt{|\Omega_k|} = d_H/\sqrt{|\Omega_k|}\).
+
 а знак кривизны определяется полной плотностью: \(\Omega_{\rm tot} > 1 \Leftrightarrow k > 0\)
 (замкнутая Вселенная), \(\Omega_{\rm tot} < 1 \Leftrightarrow k < 0\). Сегодняшний
 радиус кривизны \(R_0 = d_H/\sqrt{|\Omega_{k}|}\), \(d_H = 1/H_0\).
@@ -136,6 +287,23 @@ H^2(a) = H_0^2\,E^2(a), \qquad
 E^2(a) = \frac{\Omega_r}{a^4} + \frac{\Omega_m}{a^3} + \frac{\Omega_k}{a^2} + \Omega_\Lambda .
 \label{eq:E-of-a}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Плотности через сегодняшние.** По \(\eqref{eq:rho-of-a}\) \(\rho_r = \rho_{r0}a^{-4}\),
+    \(\rho_m = \rho_{m0}a^{-3}\), \(\rho_\Lambda = \mathrm{const}\).
+
+    **Шаг 2. Сегодняшние параметры.** По \(\eqref{eq:omegas}\) при \(a=1\), \(H=H_0\):
+    \(\tfrac{8\pi G}{3}\rho_{i0} = H_0^2\Omega_i\) и \(-k = H_0^2\Omega_k\).
+
+    **Шаг 3. Подстановка в \(\eqref{eq:friedmann1}\).**
+
+    \[
+    H^2 = \frac{8\pi G}{3}\left(\rho_{r0}a^{-4} + \rho_{m0}a^{-3} + \rho_\Lambda\right) - \frac{k}{a^2}
+    = H_0^2\left(\frac{\Omega_r}{a^4} + \frac{\Omega_m}{a^3} + \frac{\Omega_k}{a^2} + \Omega_\Lambda\right).
+    \]
+
+    **Проверка.** При \(a=1\) \(E^2 = \Omega_r+\Omega_m+\Omega_k+\Omega_\Lambda = 1\) по \(\eqref{eq:sum-rule}\).
 
 Это центральная формула фоновой космологии. Значения Planck 2018 (+BAO):
 
@@ -172,6 +340,27 @@ t_0 = \frac{2}{3(1+w)}\,\frac{1}{H_0}.
 \label{eq:power-law}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Уравнение для \(\dot a\).** При \(k=0\), \(\Lambda=0\) и одной компоненте
+    \(\dot a^2 = \tfrac{8\pi G}{3}\rho_0\,a^{2-3(1+w)}\). Показатель \(2 - 3 - 3w = -(1+3w)\), поэтому
+    \(\dot a = C\,a^{-(1+3w)/2}\), \(C = H_0\) (при \(a=1\) \(\dot a = H_0\)).
+
+    **Шаг 2. Разделение переменных.** \(a^{(1+3w)/2}\d a = C\,\d t\). Интегрируем с условием \(a(0) = 0\)
+    (показатель \(\tfrac{1+3w}{2}+1 = \tfrac{3(1+w)}{2} > 0\) при \(w>-1\)):
+
+    \[
+    \frac{2}{3(1+w)}\,a^{3(1+w)/2} = C\,t
+    \quad\Longrightarrow\quad
+    a \propto t^{2/(3(1+w))}.
+    \]
+
+    **Шаг 3. Параметр Хаббла.** Для \(a\propto t^n\): \(H = \dot a/a = n/t\), \(n = \tfrac{2}{3(1+w)}\).
+
+    **Шаг 4. Возраст.** \(H_0 = n/t_0\Rightarrow t_0 = n/H_0\); нормировка \(a(t_0)=1\) даёт \(a = (t/t_0)^n\).
+
+    **Проверка.** \(w=0\): \(n = 2/3\); \(w = 1/3\): \(n = 2/(3\cdot\tfrac43) = 1/2\).
+
 !!! example "Три классические модели"
     - **Пыль, \(w=0\)** (модель Эйнштейна–де Ситтера): \(a\propto t^{2/3}\), \(t_0 = \tfrac23 H_0^{-1} \approx 9{,}6\) млрд лет
       при \(h=0{,}677\) — меньше возраста старейших звёзд (\(\gtrsim 12\) млрд лет). Это была
@@ -196,6 +385,41 @@ H_0 t = \frac{\Omega_m}{2(\Omega_m - 1)^{3/2}}\left(\theta - \sin\theta\right),
 \label{eq:closed-dust}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Уравнение.** \(\Omega_\Lambda=\Omega_r=0\), \(\Omega_k = 1 - \Omega_m\). Из \(\eqref{eq:E-of-a}\), умножая на \(a^2\):
+
+    \[
+    \dot a^2 = H_0^2\left[\frac{\Omega_m}{a} - (\Omega_m - 1)\right].
+    \]
+
+    **Шаг 2. Подстановка.** Пусть \(A = \frac{\Omega_m}{2(\Omega_m-1)}\), \(a = A(1-\cos\theta)\). Тогда \(\Omega_m = 2A(\Omega_m-1)\) и
+
+    \[
+    \frac{\Omega_m}{a} - (\Omega_m-1) = (\Omega_m-1)\left[\frac{2}{1-\cos\theta} - 1\right]
+    = (\Omega_m-1)\,\frac{1+\cos\theta}{1-\cos\theta}.
+    \]
+
+    **Шаг 3. Левая часть.** \(\dot a = A\sin\theta\,\dot\theta\), \(\dot a^2 = A^2(1-\cos\theta)(1+\cos\theta)\,\dot\theta^2\).
+    Приравниваем и сокращаем \((1+\cos\theta)\):
+
+    \[
+    A^2(1-\cos\theta)^2\dot\theta^2 = H_0^2(\Omega_m-1)
+    \quad\Longrightarrow\quad
+    \d t = \frac{A(1-\cos\theta)}{H_0\sqrt{\Omega_m-1}}\,\d\theta .
+    \]
+
+    **Шаг 4. Интегрирование** от \(\theta=0\) (\(a=0\), \(t=0\)):
+
+    \[
+    H_0t = \frac{A}{\sqrt{\Omega_m-1}}(\theta - \sin\theta) = \frac{\Omega_m}{2(\Omega_m-1)^{3/2}}(\theta-\sin\theta).
+    \]
+
+    **Шаг 5. Характерные точки.** \(\theta=\pi\): \(a_{\max} = 2A = \Omega_m/(\Omega_m-1)\) (совпадает с корнем \(\dot a = 0\) из шага 1).
+    \(\theta = 2\pi\): \(H_0t_{\rm crunch} = 2\pi A/\sqrt{\Omega_m-1} = \pi\Omega_m/(\Omega_m-1)^{3/2}\).
+
+    **Проверка.** При \(\theta\ll1\): \(a\approx A\theta^2/2\), \(H_0t\approx A\theta^3/(6\sqrt{\Omega_m-1})\), т. е. \(a\propto t^{2/3}\) — ранняя эпоха пыли.
+
 — циклоида: расширение до \(a_{\max} = \Omega_m/(\Omega_m-1)\) при \(\theta=\pi\) и Большое
 сжатие при \(\theta = 2\pi\), \(t_{\rm crunch} = \pi\Omega_m/[H_0(\Omega_m-1)^{3/2}]\). Для \(\Omega_m<1\)
 \(\cos\to\cosh\), \(\sin\to\sinh\), и расширение вечно. Без Λ **геометрия определяет судьбу**:
@@ -216,6 +440,25 @@ a_{m\Lambda} = \left(\frac{\Omega_m}{\Omega_\Lambda}\right)^{1/3} \approx 0{,}77
 
 Ускорение началось чуть раньше равенства вещества и Λ: \(\ddot a = 0\) при
 \(\Omega_m/(2a^3) = \Omega_\Lambda\), т. е. \(z_{\rm acc} = (2\Omega_\Lambda/\Omega_m)^{1/3} - 1 \approx 0{,}64\).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Равенство излучения и вещества.** \(\Omega_r a^{-4} = \Omega_m a^{-3}\Rightarrow a_{\rm eq} = \Omega_r/\Omega_m = 9{,}0\times10^{-5}/0{,}3111 = 2{,}9\times10^{-4}\),
+    \(z_{\rm eq} = 1/a_{\rm eq} - 1\approx 3450\).
+
+    **Шаг 2. Равенство вещества и Λ.** \(\Omega_m a^{-3} = \Omega_\Lambda\Rightarrow a_{m\Lambda} = (0{,}3111/0{,}6889)^{1/3} = 0{,}4516^{1/3} = 0{,}767\), \(z = 0{,}30\).
+
+    **Шаг 3. Ускорение.** Делим \(\eqref{eq:friedmann2}\) (Λ как жидкость) на \(H_0^2\) и используем \(\tfrac{4\pi G}{3}\rho_i = \tfrac12H_0^2\Omega_i a^{-3(1+w_i)}\):
+
+    \[
+    \frac{\ddot a}{a} = -\frac{H_0^2}{2}\sum_i(1+3w_i)\,\Omega_i\,a^{-3(1+w_i)}
+    = H_0^2\left(-\frac{\Omega_r}{a^4} - \frac{\Omega_m}{2a^3} + \Omega_\Lambda\right).
+    \]
+
+    (Умножение на \(a\) даёт уравнение, используемое в интерактиве ниже.)
+
+    **Шаг 4. Момент \(\ddot a = 0\).** Без излучения: \(\Omega_m/(2a^3) = \Omega_\Lambda\Rightarrow 1+z_{\rm acc} = 1/a = (2\Omega_\Lambda/\Omega_m)^{1/3} = 4{,}429^{1/3} = 1{,}642\),
+    \(z_{\rm acc}\approx0{,}64\) — больше \(z_{m\Lambda}\), из-за множителя \(\tfrac12\) перед \(\Omega_m\).
 
 Пренебрегая излучением (ошибка в возрасте \(\sim 0{,}05\%\): излучение доминировало лишь первые \(\sim 5\times10^4\) лет), плоскую модель «пыль + Λ»
 можно решить точно (задача 11.4):

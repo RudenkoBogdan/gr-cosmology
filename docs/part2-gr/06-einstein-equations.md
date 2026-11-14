@@ -32,6 +32,20 @@
 **энергия вакуума** (\(p = -\rho\), \(T_{\mu\nu} = -\rho\,g_{\mu\nu}\)). В космологии удобно
 уравнение состояния \(p = w\rho\).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Система покоя.** \(U^\mu = (1,0,0,0)\), \(U_\mu = \eta_{\mu\nu}U^\nu = (-1,0,0,0)\). Из \(\eqref{eq:perfect-fluid}\):
+
+    \[
+    T_{00} = (\rho+p)(-1)^2 + p\,\eta_{00} = \rho + p - p = \rho, \qquad
+    T_{0i} = 0, \qquad T_{ij} = p\,\delta_{ij} .
+    \]
+
+    **Шаг 2. След.** \(T = g^{\mu\nu}T_{\mu\nu} = (\rho+p)U^\mu U_\mu + p\,\delta^\mu_\mu = -(\rho+p) + 4p = 3p - \rho\).
+
+    **Шаг 3. Частные случаи.** Излучение: \(T = 3\cdot\tfrac\rho3 - \rho = 0\). Вакуум: \(p = -\rho\) убивает первый член,
+    \(T_{\mu\nu} = -\rho\,g_{\mu\nu}\) — одинаково в любой системе отсчёта.
+
 Другие важные примеры:
 
 \begin{equation}
@@ -55,11 +69,64 @@ T_{\mu\nu}^{(\phi)} = \nabla_\mu\phi\nabla_\nu\phi - g_{\mu\nu}\left(\frac12 g^{
     Глобальная энергия определена только при наличии вектора Киллинга или на асимптотике
     плоского пространства.
 
+    ??? calc "Вычисления"
+
+        **Шаг 1. Определение.** \(\nabla_\mu T^{\mu\nu} = \pd_\mu T^{\mu\nu} + \Gamma^\mu_{\mu\lambda}T^{\lambda\nu} + \Gamma^\nu_{\mu\lambda}T^{\mu\lambda}\)
+        (по \(+\Gamma\) на каждый верхний индекс).
+
+        **Шаг 2. Свёртка символов.**
+        \(\Gamma^\mu_{\mu\lambda} = \tfrac12 g^{\mu\sigma}(\pd_\mu g_{\lambda\sigma} + \pd_\lambda g_{\mu\sigma} - \pd_\sigma g_{\mu\lambda})\).
+        Первый и третий члены сокращаются: после переименования \(\mu\leftrightarrow\sigma\) в третьем
+        \(g^{\mu\sigma}\pd_\sigma g_{\mu\lambda} = g^{\sigma\mu}\pd_\mu g_{\sigma\lambda}\) — то же, что первый. Остаётся
+
+        \[
+        \Gamma^\mu_{\mu\lambda} = \tfrac12 g^{\mu\sigma}\pd_\lambda g_{\mu\sigma} = \tfrac12\pd_\lambda\ln|g| = \pd_\lambda\ln\sqrt{-g},
+        \]
+
+        по формуле Якоби \(\pd\ln\det M = \mathrm{tr}(M^{-1}\pd M)\).
+
+        **Шаг 3. Сборка.**
+
+        \[
+        \pd_\mu T^{\mu\nu} + \frac{\pd_\lambda\sqrt{-g}}{\sqrt{-g}}T^{\lambda\nu} = \frac{1}{\sqrt{-g}}\pd_\mu\bigl(\sqrt{-g}\,T^{\mu\nu}\bigr),
+        \]
+
+        откуда формула в тексте. Первый член — дивергенция, интегрируемая по теореме Гаусса; член
+        \(\Gamma^\nu_{\mu\lambda}T^{\mu\lambda}\) — нет (у \(T\) два индекса, а не один).
+
 Для пыли \(\eqref{eq:conservation}\) даёт сохранение числа частиц и уравнение геодезической
 \(U^\mu\nabla_\mu U^\nu = 0\): **движение материи следует из уравнений поля**. Для
 идеальной жидкости проекция на \(U_\nu\) даёт закон сохранения энергии
 \(U^\mu\nabla_\mu\rho + (\rho + p)\nabla_\mu U^\mu = 0\), а проекция на ортогональное
 к \(U\) подпространство — релятивистское уравнение Эйлера.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Дивергенция.** Из \(T^{\mu\nu} = (\rho+p)U^\mu U^\nu + p\,g^{\mu\nu}\) и \(\nabla g = 0\):
+
+    \[
+    \nabla_\mu T^{\mu\nu} = U^\nu\nabla_\mu\bigl((\rho+p)U^\mu\bigr) + (\rho+p)\,U^\mu\nabla_\mu U^\nu + g^{\mu\nu}\nabla_\mu p .
+    \]
+
+    **Шаг 2. Полезное тождество.** \(U_\nu U^\nu = -1\) ⇒ \(0 = \nabla_\mu(U_\nu U^\nu) = 2U_\nu\nabla_\mu U^\nu\).
+
+    **Шаг 3. Проекция на \(U_\nu\).** \(U_\nu U^\nu = -1\), второй член зануляется по Шагу 2:
+
+    \[
+    -\nabla_\mu\bigl((\rho+p)U^\mu\bigr) + U^\mu\nabla_\mu p = -U^\mu\nabla_\mu\rho - U^\mu\nabla_\mu p - (\rho+p)\nabla_\mu U^\mu + U^\mu\nabla_\mu p = 0,
+    \]
+
+    т. е. \(U^\mu\nabla_\mu\rho + (\rho+p)\nabla_\mu U^\mu = 0\).
+
+    **Шаг 4. Ортогональная проекция.** \(h^\sigma{}_\nu = \delta^\sigma_\nu + U^\sigma U_\nu\) (\(h^\sigma{}_\nu U^\nu = 0\)). Первый член
+    уничтожается, второй не меняется (он уже ортогонален \(U\) по Шагу 2):
+
+    \[
+    (\rho+p)\,U^\mu\nabla_\mu U^\sigma = -\left(g^{\sigma\mu} + U^\sigma U^\mu\right)\nabla_\mu p .
+    \]
+
+    **Шаг 5. Пыль** (\(p = 0\)): Шаг 4 даёт \(U^\mu\nabla_\mu U^\sigma = 0\) — геодезическая; Шаг 3 —
+    \(\nabla_\mu(\rho U^\mu) = 0\), сохранение числа частиц (\(\rho = mn\)).
 
 ## 6.2. Эвристический вывод
 
@@ -92,6 +159,18 @@ G_{\mu\nu} = R_{\mu\nu} - \frac12 R\, g_{\mu\nu}, \qquad \nabla^\mu G_{\mu\nu} =
 \label{eq:einstein-tensor}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Почему \(R_{\mu\nu} = \kappa T_{\mu\nu}\) не годится.** Берём дивергенцию и применяем \(\eqref{eq:conservation}\) и \(\eqref{eq:bianchi}\):
+    \(\kappa\nabla^\mu T_{\mu\nu} = \nabla^\mu R_{\mu\nu} = \tfrac12\nabla_\nu R\), т. е. \(\nabla_\nu R = 0\).
+    След уравнения: \(R = g^{\mu\nu}R_{\mu\nu} = \kappa T\). Значит, \(\nabla_\nu T = 0\).
+
+    **Шаг 2. Дивергенция \(G_{\mu\nu}\).** Метрика выносится из-под \(\nabla\):
+
+    \[
+    \nabla^\mu G_{\mu\nu} = \nabla^\mu R_{\mu\nu} - \tfrac12 g_{\mu\nu}\nabla^\mu R = \tfrac12\nabla_\nu R - \tfrac12\nabla_\nu R = 0 .
+    \]
+
 Теорема Лавлока (1971) утверждает, что в четырёх измерениях \(G_{\mu\nu}\) и \(g_{\mu\nu}\) —
 единственные тензоры, удовлетворяющие условиям 1–3 (без требования линейности по вторым
 производным). Итак, \(G_{\mu\nu} = \kappa T_{\mu\nu}\), а в 6.5 мы найдём \(\kappa = 8\pi G\).
@@ -117,6 +196,18 @@ G_{\mu\nu} = R_{\mu\nu} - \frac12 R\, g_{\mu\nu}, \qquad \nabla^\mu G_{\mu\nu} =
 R_{\mu\nu} = 8\pi G\left(T_{\mu\nu} - \frac12 T\,g_{\mu\nu}\right).
 \label{eq:efe-trace-reversed}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. След.** Умножаем \(\eqref{eq:efe}\) на \(g^{\mu\nu}\): \(g^{\mu\nu}R_{\mu\nu} = R\), \(g^{\mu\nu}g_{\mu\nu} = 4\), \(g^{\mu\nu}T_{\mu\nu} = T\):
+
+    \[
+    R - \tfrac12 R\cdot 4 = -R = 8\pi G\,T \quad\Longrightarrow\quad R = -8\pi G\,T .
+    \]
+
+    **Шаг 2. Подстановка.** \(R_{\mu\nu} = 8\pi G\,T_{\mu\nu} + \tfrac12 R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu} - 4\pi G\,T g_{\mu\nu}\) — это \(\eqref{eq:efe-trace-reversed}\).
+
+    **Проверка.** След правой части: \(8\pi G(T - \tfrac12 T\cdot4) = -8\pi G T = R\). В вакууме \(T_{\mu\nu} = 0\) ⇒ \(T = 0\) ⇒ \(R_{\mu\nu} = 0\).
 
 В вакууме \(T_{\mu\nu} = 0\), и уравнения сводятся к
 
@@ -158,6 +249,25 @@ S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
     \label{eq:delta-det}
     \end{equation}
 
+    ??? calc "Вычисления"
+
+        **Шаг 1. Вариация логарифма детерминанта.** \(\delta\ln|g| = \mathrm{tr}(g^{-1}\delta g) = g^{\mu\nu}\delta g_{\mu\nu}\),
+        т. е. \(\delta g = g\,g^{\mu\nu}\delta g_{\mu\nu}\).
+
+        **Шаг 2. Связь \(\delta g_{\mu\nu}\) и \(\delta g^{\mu\nu}\).** Варьируем \(g^{\mu\lambda}g_{\lambda\nu} = \delta^\mu_\nu\):
+        \(\delta g^{\mu\lambda}g_{\lambda\nu} + g^{\mu\lambda}\delta g_{\lambda\nu} = 0\). Свёртка по \(\mu = \nu\):
+        \(g^{\mu\nu}\delta g_{\mu\nu} = -g_{\mu\nu}\delta g^{\mu\nu}\).
+
+        **Шаг 3. Корень.** \(-g = (\sqrt{-g})^2 > 0\):
+
+        \[
+        \delta\sqrt{-g} = \frac{-\delta g}{2\sqrt{-g}} = \frac{-g}{2\sqrt{-g}}\,g^{\mu\nu}\delta g_{\mu\nu}
+        = \frac12\sqrt{-g}\,g^{\mu\nu}\delta g_{\mu\nu} = -\frac12\sqrt{-g}\,g_{\mu\nu}\delta g^{\mu\nu} .
+        \]
+
+        **Проверка.** Масштабирование \(g_{\mu\nu}\to(1+\epsilon)g_{\mu\nu}\) в 4D: \(\sqrt{-g}\to(1+\epsilon)^2\sqrt{-g}\approx(1+2\epsilon)\sqrt{-g}\);
+        формула: \(\tfrac12\sqrt{-g}\,g^{\mu\nu}\epsilon g_{\mu\nu} = 2\epsilon\sqrt{-g}\). Совпадает.
+
 2. **Тождество Палатини.** Разность связностей — тензор, и в локально инерциальной
     системе легко проверить, что
 
@@ -170,6 +280,30 @@ S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
     производная, не дающая вклада в уравнения (при надлежащем граничном члене
     Гиббонса — Хокинга).
 
+    ??? calc "Вычисления"
+
+        **Шаг 1. Риччи через \(\Gamma\).** Сворачиваем формулу Римана из conventions по \(R_{\mu\nu} = R^\lambda{}_{\mu\lambda\nu}\):
+
+        \[
+        R_{\mu\nu} = \pd_\lambda\Gamma^\lambda_{\nu\mu} - \pd_\nu\Gamma^\lambda_{\lambda\mu} + \Gamma^\lambda_{\lambda\sigma}\Gamma^\sigma_{\nu\mu} - \Gamma^\lambda_{\nu\sigma}\Gamma^\sigma_{\lambda\mu} .
+        \]
+
+        **Шаг 2. Варьируем в точке \(p\), где \(\Gamma(p) = 0\).** Члены \(\Gamma\,\delta\Gamma\) в \(p\) исчезают:
+        \(\delta R_{\mu\nu} = \pd_\lambda\delta\Gamma^\lambda_{\nu\mu} - \pd_\nu\delta\Gamma^\lambda_{\lambda\mu}\).
+
+        **Шаг 3. Ковариантизация.** \(\delta\Gamma\) — разность двух связностей, т. е. тензор; в \(p\) \(\nabla = \pd\),
+        поэтому \(\delta R_{\mu\nu} = \nabla_\lambda\delta\Gamma^\lambda_{\mu\nu} - \nabla_\nu\delta\Gamma^\lambda_{\mu\lambda}\) (\(\Gamma\) симметричны по нижним индексам).
+        Обе стороны — тензоры, равные в одной системе координат, значит, и во всех.
+
+        **Шаг 4. Полная дивергенция.** Метрика проходит через \(\nabla\):
+
+        \[
+        g^{\mu\nu}\delta R_{\mu\nu} = \nabla_\lambda\bigl(g^{\mu\nu}\delta\Gamma^\lambda_{\mu\nu}\bigr) - \nabla_\nu\bigl(g^{\mu\nu}\delta\Gamma^\lambda_{\mu\lambda}\bigr)
+        = \nabla_\lambda V^\lambda,\qquad V^\lambda = g^{\mu\nu}\delta\Gamma^\lambda_{\mu\nu} - g^{\mu\lambda}\delta\Gamma^\sigma_{\mu\sigma} .
+        \]
+
+        С формулой \(\Gamma^\mu_{\mu\lambda} = \pd_\lambda\ln\sqrt{-g}\): \(\sqrt{-g}\,\nabla_\lambda V^\lambda = \pd_\lambda(\sqrt{-g}\,V^\lambda)\) — по теореме Гаусса уходит на границу.
+
 3. **Определение ТЭИ.** Для материи
 
     \begin{equation}
@@ -181,6 +315,28 @@ S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
     это даёт \(\eqref{eq:tei-fields}\); в плоском пространстве определение совпадает с
     каноническим (симметризованным) ТЭИ.
 
+    ??? calc "Вычисления"
+
+        **Шаг 1. Зависимость от \(g^{\mu\nu}\).** Лагранжиан \(-\sqrt{-g}\bigl(\tfrac12 g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi + V\bigr)\)
+        зависит от \(g^{\mu\nu}\) явно (через \(g^{\alpha\beta}\)) и через \(\sqrt{-g}\); производных метрики нет.
+
+        **Шаг 2. Вариация.** С \(\eqref{eq:delta-det}\):
+
+        \[
+        \frac{\delta S_M}{\delta g^{\mu\nu}} = -\sqrt{-g}\,\frac12\pd_\mu\phi\pd_\nu\phi
+        + \frac12\sqrt{-g}\,g_{\mu\nu}\left(\tfrac12 g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi + V\right).
+        \]
+
+        **Шаг 3. Умножаем на \(-2/\sqrt{-g}\).**
+
+        \[
+        T_{\mu\nu} = \pd_\mu\phi\pd_\nu\phi - g_{\mu\nu}\left(\tfrac12 g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi + V\right),
+        \]
+
+        что совпадает с \(\eqref{eq:tei-fields}\) (для скаляра \(\nabla_\mu\phi = \pd_\mu\phi\)).
+
+        **Проверка.** Однородное поле в покое: \(T_{00} = \tfrac12\dot\phi^2 + V\) — положительная энергия при \(V\ge0\).
+
 Собирая всё, получаем
 
 \[
@@ -191,6 +347,20 @@ S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
 воспроизвести ньютоновский предел. Бездивергентность \(G_{\mu\nu}\) теперь следует из
 диффеоморфной инвариантности действия, а \(\eqref{eq:conservation}\) — из уравнений движения
 материи: тождество Бьянки и закон сохранения — проявления одной и той же симметрии.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Гравитационная часть.** Подставляем \(\eqref{eq:delta-det}\) и \(\eqref{eq:palatini}\) в разложение \(\delta(\sqrt{-g}R)\):
+
+    \[
+    \delta(\sqrt{-g}R) = \sqrt{-g}\,R_{\mu\nu}\delta g^{\mu\nu} - \frac12\sqrt{-g}\,R\,g_{\mu\nu}\delta g^{\mu\nu} + \pd_\lambda(\sqrt{-g}V^\lambda)
+    = \sqrt{-g}\,G_{\mu\nu}\delta g^{\mu\nu} + \text{(граница)} .
+    \]
+
+    **Шаг 2. Материя.** Обращая \(\eqref{eq:tei-def}\): \(\delta S_M = \int\frac{\delta S_M}{\delta g^{\mu\nu}}\delta g^{\mu\nu}\d^4x = -\frac12\int\sqrt{-g}\,T_{\mu\nu}\delta g^{\mu\nu}\d^4x\).
+
+    **Шаг 3. Сумма** даёт выражение в тексте; так как \(\delta g^{\mu\nu}\) произвольна, скобка равна нулю:
+    \(\frac{1}{16\pi G}G_{\mu\nu} = \frac12 T_{\mu\nu}\), т. е. \(G_{\mu\nu} = 8\pi G\,T_{\mu\nu}\).
 
 ## 6.4. Космологическая постоянная
 
@@ -215,6 +385,18 @@ G_{\mu\nu} + \Lambda\, g_{\mu\nu} = 8\pi G\,T_{\mu\nu} ,
 T^{\rm (vac)}_{\mu\nu} = -\rho_{\rm vac}\,g_{\mu\nu}, \qquad \rho_{\rm vac} = \frac{\Lambda}{8\pi G}.
 \label{eq:vacuum-energy}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Перенос.** \(G_{\mu\nu} = 8\pi G\,T_{\mu\nu} - \Lambda g_{\mu\nu} = 8\pi G\left(T_{\mu\nu} + T^{\rm (vac)}_{\mu\nu}\right)\),
+    где \(T^{\rm (vac)}_{\mu\nu} = -\frac{\Lambda}{8\pi G}g_{\mu\nu}\).
+
+    **Шаг 2. Сравнение с жидкостью.** \(\eqref{eq:perfect-fluid}\) при \(p = -\rho\): \((\rho - \rho)U_\mu U_\nu - \rho\,g_{\mu\nu} = -\rho\,g_{\mu\nu}\),
+    откуда \(\rho_{\rm vac} = \Lambda/(8\pi G)\), \(p_{\rm vac} = -\rho_{\rm vac}\).
+
+    **Шаг 3. Действие.** Добавка \(-2\Lambda\sqrt{-g}\) варьируется по \(\eqref{eq:delta-det}\):
+    \(\delta(-2\Lambda\sqrt{-g}) = \Lambda\sqrt{-g}\,g_{\mu\nu}\delta g^{\mu\nu}\), и в скобке \(\delta S\) появляется
+    \(\frac{1}{16\pi G}(G_{\mu\nu} + \Lambda g_{\mu\nu})\) — это \(\eqref{eq:efe-lambda}\).
 
 Лоренц-инвариантность требует, чтобы ТЭИ вакуума был пропорционален \(\eta_{\mu\nu}\),
 так что любая энергия нулевых колебаний квантовых полей гравитирует как \(\Lambda\).
@@ -250,11 +432,44 @@ R_{00} \approx \pd_i\Gamma^i_{00} = \pd_i\left(-\frac12\pd_i h_{00}\right) = \na
 \label{eq:kappa}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Правая часть.** \(g_{00} \approx -1\), \(g^{00}\approx-1\); у пыли в покое отлична от нуля только \(T_{00} = \rho\):
+    \(T = g^{00}T_{00} = -\rho\), и
+
+    \[
+    T_{00} - \tfrac12 T g_{00} = \rho - \tfrac12(-\rho)(-1) = \tfrac12\rho .
+    \]
+
+    **Шаг 2. Левая часть.** По формуле Римана с \(\sigma = \nu = 0\):
+    \(R_{00} = R^\lambda{}_{0\lambda0} = \pd_\lambda\Gamma^\lambda_{00} - \pd_0\Gamma^\lambda_{\lambda0} + O(h^2)\).
+    Второй член и \(\lambda = 0\) в первом содержат \(\pd_0\) — нуль. Остаётся \(\pd_i\Gamma^i_{00}\).
+
+    **Шаг 3. Подстановка.** \(\Gamma^i_{00} = -\tfrac12\pd_i h_{00} = -\tfrac12\pd_i(-2\Phi) = \pd_i\Phi\), откуда
+    \(R_{00} = \pd_i\pd_i\Phi = \nabla^2\Phi\).
+
+    **Шаг 4. Сравнение.** \(\nabla^2\Phi = \tfrac\kappa2\rho\) и \(\nabla^2\Phi = 4\pi G\rho\) ⇒ \(\kappa = 8\pi G\).
+
+    **Проверка (размерность).** С \(c\): \(\kappa = 8\pi G/c^4\); \([G_{\mu\nu}] = \text{м}^{-2}\), \([T_{\mu\nu}] = \text{Дж/м}^3\),
+    \([G/c^4] = \text{м}/\text{Дж}\) — сходится.
+
 !!! example "Активная гравитационная масса и давление"
     Для статической идеальной жидкости с давлением аналогичный расчёт даёт
     \(R_{00} = 4\pi G(\rho + 3p)\): в ОТО гравитирует не только энергия, но и давление.
     Для излучения \(\rho + 3p = 2\rho\), для вакуумной энергии \(\rho + 3p = -2\rho < 0\) —
     космологическая постоянная **отталкивает**. Это и есть причина ускоренного расширения.
+
+    ??? calc "Вычисления"
+
+        **Шаг 1.** В покое \(T_{00} = \rho\), \(T = 3p - \rho\), \(g_{00}\approx -1\):
+
+        \[
+        T_{00} - \tfrac12 T g_{00} = \rho + \tfrac12(3p - \rho) = \tfrac12(\rho + 3p) .
+        \]
+
+        **Шаг 2.** По \(\eqref{eq:efe-trace-reversed}\) \(R_{00} = 8\pi G\cdot\tfrac12(\rho+3p) = 4\pi G(\rho+3p)\), т. е. \(\nabla^2\Phi = 4\pi G(\rho + 3p)\).
+
+        **Шаг 3.** Излучение \(p = \rho/3\): \(\rho + \rho = 2\rho\). Вакуум \(p = -\rho\): \(\rho - 3\rho = -2\rho\).
 
 Полный слабополевой анализ (с \(g_{ij}\)) даёт метрику вне медленно движущихся источников
 
@@ -293,6 +508,33 @@ R_{00} \approx \pd_i\Gamma^i_{00} = \pd_i\left(-\frac12\pd_i h_{00}\right) = \na
 притяжению близких времениподобных геодезических (уравнение Райчаудхури). Именно SEC
 используется в теоремах Хокинга — Пенроуза о сингулярностях, а NEC — в теореме о
 неубывании площади горизонта ([глава 8](08-black-holes.md)).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Параметризация.** В системе покоя жидкости любой единичный времениподобный вектор —
+    \(t^\mu = \gamma(1, v\vb n)\), \(\gamma = (1-v^2)^{-1/2}\ge1\); тогда \(U\cdot t = -\gamma\), \(t\cdot t = -1\). Изотропный: \(\ell^\mu = (1,\vb n)\), \(U\cdot\ell = -1\), \(\ell\cdot\ell = 0\).
+
+    **Шаг 2. WEC и NEC.**
+
+    \[
+    T_{\mu\nu}t^\mu t^\nu = (\rho+p)\gamma^2 - p, \qquad T_{\mu\nu}\ell^\mu\ell^\nu = \rho + p .
+    \]
+
+    Неотрицательность при всех \(\gamma\): \(\gamma = 1\) даёт \(\rho\ge0\), \(\gamma\to\infty\) — \(\rho+p\ge0\) (при этих двух условиях
+    выражение возрастает по \(\gamma^2\) и всегда \(\ge\rho\)).
+
+    **Шаг 3. SEC.** \(T = 3p - \rho\), \(g_{\mu\nu}t^\mu t^\nu = -1\):
+
+    \[
+    \left(T_{\mu\nu} - \tfrac12 T g_{\mu\nu}\right)t^\mu t^\nu = (\rho+p)\gamma^2 - p + \tfrac12(3p-\rho) = (\rho+p)\gamma^2 + \tfrac12(p - \rho) .
+    \]
+
+    \(\gamma = 1\): \(\tfrac12(\rho + 3p)\ge0\); \(\gamma\to\infty\): \(\rho + p\ge0\).
+
+    **Шаг 4. DEC.** \(T^\mu{}_\nu = \mathrm{diag}(-\rho, p, p, p)\), \(-T^\mu{}_\nu t^\nu = \gamma(\rho,\,-p\,v\vb n)\). Непространственноподобие:
+    \(-\rho^2 + p^2v^2 \le 0\) для всех \(v<1\) ⇔ \(|p|\le|\rho|\); вместе с \(\rho\ge0\) (WEC): \(\rho\ge|p|\).
+
+    **Шаг 5. SEC и Риччи.** По \(\eqref{eq:efe-trace-reversed}\) \(R_{\mu\nu}t^\mu t^\nu = 8\pi G(T_{\mu\nu} - \tfrac12 T g_{\mu\nu})t^\mu t^\nu\), так что знаки совпадают.
 
 Обратите внимание: SEC не следует из WEC, и наоборот. Космологическая постоянная
 (\(w = -1\)) удовлетворяет NEC, WEC и DEC, но **нарушает** SEC; так же ведёт себя

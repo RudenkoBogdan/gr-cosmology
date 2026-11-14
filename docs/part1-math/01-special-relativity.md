@@ -78,6 +78,47 @@
 \label{eq:boost}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Проверка условия \(\eqref{eq:lorentz-condition}\) для буста.** В блоке \((t,x)\)
+    матрица \(\Lambda\) симметрична, поэтому \(\Lambda^{\mathsf T} = \Lambda\). Сначала умножаем
+    \(\eta\Lambda\) (это меняет знак первой строки):
+
+    \[
+    \eta\Lambda =
+    \begin{pmatrix}-1 & 0\\ 0 & 1\end{pmatrix}
+    \begin{pmatrix}\cosh\phi & -\sinh\phi\\ -\sinh\phi & \cosh\phi\end{pmatrix}
+    =
+    \begin{pmatrix}-\cosh\phi & \sinh\phi\\ -\sinh\phi & \cosh\phi\end{pmatrix}.
+    \]
+
+    **Шаг 2. Умножение слева на \(\Lambda^{\mathsf T}\).**
+
+    \[
+    \Lambda^{\mathsf T}\eta\Lambda =
+    \begin{pmatrix}\cosh\phi & -\sinh\phi\\ -\sinh\phi & \cosh\phi\end{pmatrix}
+    \begin{pmatrix}-\cosh\phi & \sinh\phi\\ -\sinh\phi & \cosh\phi\end{pmatrix}
+    =
+    \begin{pmatrix}-\cosh^2\phi + \sinh^2\phi & \cosh\phi\sinh\phi - \sinh\phi\cosh\phi\\
+    \sinh\phi\cosh\phi - \cosh\phi\sinh\phi & -\sinh^2\phi + \cosh^2\phi\end{pmatrix}.
+    \]
+
+    **Шаг 3. Тождество \(\cosh^2\phi - \sinh^2\phi = 1\).** Недиагональные элементы равны нулю,
+    диагональные равны \(-1\) и \(+1\), т. е. \(\Lambda^{\mathsf T}\eta\Lambda = \eta\). Блок \((y,z)\)
+    единичный и тривиально сохраняет \(\mathrm{diag}(1,1)\).
+
+    **Шаг 4. Переход к \(\gamma\) и \(v\).** При \(v = \tanh\phi\):
+
+    \[
+    \cosh\phi = \frac{1}{\sqrt{1-\tanh^2\phi}} = \frac{1}{\sqrt{1-v^2}} = \gamma,
+    \qquad
+    \sinh\phi = \tanh\phi\cosh\phi = \gamma v,
+    \]
+
+    что даёт вторую форму матрицы в \(\eqref{eq:boost}\).
+
+    **Проверка.** При \(\phi = 0\) получаем \(\Lambda = 1\), \(\gamma = 1\); \(\gamma^2 - \gamma^2v^2 = \gamma^2(1-v^2) = 1\).
+
 Буст — это «гиперболический поворот»: \(\cosh^2\phi - \sinh^2\phi = 1\) играет роль
 \(\cos^2\theta + \sin^2\theta = 1\). Быстроты при последовательных бустах вдоль одной
 оси складываются, \(\phi_{12} = \phi_1 + \phi_2\), откуда сразу следует релятивистский
@@ -197,6 +238,29 @@ V_\mu = \eta_{\mu\nu} V^\nu, \qquad \omega^\mu = \eta^{\mu\nu}\omega_\nu, \qquad
 \(V_0 = -V^0\), \(V_i = V^i\). Скалярное произведение \(A\cdot B = \eta_{\mu\nu}A^\mu B^\nu = A_\mu B^\mu\)
 лоренц-инвариантно в силу \(\eqref{eq:lorentz-condition}\).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Компоненты в новой системе.** По \(\eqref{eq:vector-transform}\)
+    \(A^{\mu'} = \Lambda^{\mu'}{}_\rho A^\rho\), \(B^{\nu'} = \Lambda^{\nu'}{}_\sigma B^\sigma\).
+
+    **Шаг 2. Подстановка в скалярное произведение.** Метрика \(\eta_{\mu'\nu'}\) имеет те же
+    численные компоненты во всех инерциальных системах:
+
+    \[
+    A'\cdot B' = \eta_{\mu'\nu'}A^{\mu'}B^{\nu'}
+    = \eta_{\mu'\nu'}\Lambda^{\mu'}{}_\rho\Lambda^{\nu'}{}_\sigma\,A^\rho B^\sigma .
+    \]
+
+    **Шаг 3. Применяем \(\eqref{eq:lorentz-condition}\).** Комбинация
+    \(\Lambda^{\mu'}{}_\rho\Lambda^{\nu'}{}_\sigma\eta_{\mu'\nu'}\) равна \(\eta_{\rho\sigma}\):
+
+    \[
+    A'\cdot B' = \eta_{\rho\sigma}A^\rho B^\sigma = A\cdot B .
+    \]
+
+    **Шаг 4. Запись через опущенный индекс.** \(\eta_{\mu\nu}A^\mu B^\nu = (\eta_{\mu\nu}A^\mu)B^\nu = A_\nu B^\nu\);
+    покомпонентно \(A_\mu B^\mu = -A^0B^0 + A^1B^1 + A^2B^2 + A^3B^3\), так как \(A_0 = \eta_{00}A^0 = -A^0\).
+
 !!! definition "Определение: тензор типа \((k,l)\)"
     Тензор типа \((k,l)\) — полилинейное отображение \(k\) 1-форм и \(l\) векторов в числа.
     Его компоненты \(T^{\mu_1\ldots\mu_k}{}_{\nu_1\ldots\nu_l}\) преобразуются с одной матрицей
@@ -219,6 +283,30 @@ V_\mu = \eta_{\mu\nu} V^\nu, \qquad \omega^\mu = \eta^{\mu\nu}\omega_\nu, \qquad
 где частица имеет скорость \(\vb v\), \(\d\tau = \d t\sqrt{1-v^2} = \d t/\gamma\) —
 замедление времени.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Выбор параметра.** В \(\eqref{eq:proper-time}\) возьмём \(\lambda = t\), тогда
+    \(x^\mu(t) = (t,\ \vb x(t))\) и
+
+    \[
+    \frac{\d x^\mu}{\d t} = (1,\ v^1,\ v^2,\ v^3), \qquad v^i = \frac{\d x^i}{\d t}.
+    \]
+
+    **Шаг 2. Свёртка с метрикой.** С \(\eta = \mathrm{diag}(-1,1,1,1)\):
+
+    \[
+    \eta_{\mu\nu}\frac{\d x^\mu}{\d t}\frac{\d x^\nu}{\d t} = -1\cdot 1^2 + (v^1)^2 + (v^2)^2 + (v^3)^2 = -(1 - v^2).
+    \]
+
+    **Шаг 3. Подстановка под корень.**
+
+    \[
+    \d\tau = \sqrt{-\big(-(1-v^2)\big)}\,\d t = \sqrt{1-v^2}\,\d t = \frac{\d t}{\gamma}.
+    \]
+
+    **Проверка.** Для покоящихся часов \(v = 0\), \(\d\tau = \d t\); при \(v \to 1\) \(\d\tau \to 0\):
+    вдоль светового луча собственное время не идёт.
+
 **4-скорость** — касательный вектор, параметризованный собственным временем:
 
 \begin{equation}
@@ -227,6 +315,30 @@ U^\mu = \frac{\d x^\mu}{\d\tau} = \gamma\,(1,\ \vb v), \qquad U_\mu U^\mu = -1.
 \end{equation}
 
 Нормировка \(U\cdot U = -1\) — прямое следствие определения \(\eqref{eq:proper-time}\).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Компоненты \(U^\mu\).** По цепному правилу и результату \(\d t/\d\tau = \gamma\):
+
+    \[
+    U^0 = \frac{\d t}{\d\tau} = \gamma, \qquad
+    U^i = \frac{\d x^i}{\d t}\frac{\d t}{\d\tau} = \gamma v^i .
+    \]
+
+    **Шаг 2. Нормировка напрямую.**
+
+    \[
+    U_\mu U^\mu = -(U^0)^2 + \sum_i (U^i)^2 = -\gamma^2 + \gamma^2 v^2 = -\gamma^2(1-v^2) = -1 .
+    \]
+
+    **Шаг 3. Нормировка из определения \(\tau\).** Возьмём в \(\eqref{eq:proper-time}\) параметр
+    \(\lambda = \tau\). Тогда \(\d\tau/\d\tau = 1\) означает, что подынтегральное выражение равно единице:
+
+    \[
+    \sqrt{-\eta_{\mu\nu}\frac{\d x^\mu}{\d\tau}\frac{\d x^\nu}{\d\tau}} = 1
+    \quad\Longrightarrow\quad
+    \eta_{\mu\nu}U^\mu U^\nu = -1 .
+    \]
 
 !!! example "Парадокс близнецов как геометрия"
     Между двумя событиями наибольшее собственное время имеет **прямая** (инерциальная)
@@ -245,6 +357,27 @@ p_\mu p^\mu = -m^2 \quad\Longleftrightarrow\quad E^2 = \vb p^2 + m^2.
 \label{eq:mass-shell}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Квадрат 4-импульса.** Так как \(m\) — скаляр, а \(U_\mu U^\mu = -1\) по \(\eqref{eq:four-velocity}\):
+
+    \[
+    p_\mu p^\mu = m^2\,U_\mu U^\mu = -m^2 .
+    \]
+
+    **Шаг 2. Покомпонентная запись.** С \(p^\mu = (E, \vb p)\) и \(p_0 = -E\):
+
+    \[
+    p_\mu p^\mu = -E^2 + \vb p^2 = -m^2
+    \quad\Longrightarrow\quad
+    E^2 = \vb p^2 + m^2 .
+    \]
+
+    **Шаг 3. Проверка через \(\gamma\).** \(E^2 - \vb p^2 = \gamma^2m^2 - \gamma^2m^2v^2 = \gamma^2m^2(1-v^2) = m^2\).
+
+    **Проверка.** При \(v \ll 1\): \(E = \sqrt{m^2 + \vb p^2} \approx m + \vb p^2/(2m)\) — энергия
+    покоя плюс ньютонова кинетическая энергия.
+
 Для безмассовых частиц \(p^\mu p_\mu = 0\) и \(E = |\vb p|\). Энергию частицы, измеренную
 наблюдателем с 4-скоростью \(U^\mu_{\rm obs}\), можно записать инвариантно:
 
@@ -252,6 +385,27 @@ p_\mu p^\mu = -m^2 \quad\Longleftrightarrow\quad E^2 = \vb p^2 + m^2.
 E_{\rm obs} = -p_\mu U^\mu_{\rm obs}.
 \label{eq:observed-energy}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Система покоя наблюдателя.** Правая часть \(\eqref{eq:observed-energy}\) — скаляр,
+    поэтому её можно вычислять в любой системе. В собственной системе наблюдателя
+    \(U^\mu_{\rm obs} = (1, 0, 0, 0)\).
+
+    **Шаг 2. Опускаем индекс у импульса.** \(p_\mu = \eta_{\mu\nu}p^\nu = (-E, \vb p)\), где \(E\) —
+    энергия в этой системе.
+
+    **Шаг 3. Свёртка.** Выживает только \(\mu = 0\):
+
+    \[
+    -p_\mu U^\mu_{\rm obs} = -\big(p_0\cdot 1 + p_i\cdot 0\big) = -(-E) = E .
+    \]
+
+    Итак, \(-p_\mu U^\mu_{\rm obs}\) — это энергия, которую наблюдатель измеряет в своей системе покоя,
+    и в силу инвариантности формула верна в любой системе.
+
+    **Проверка.** Для частицы, покоящейся относительно наблюдателя, \(p^\mu = mU^\mu_{\rm obs}\) и
+    \(E_{\rm obs} = -m\,U_\mu U^\mu = m\).
 
 Эта формула станет основным инструментом при выводе гравитационного и космологического
 красного смещения.
@@ -274,6 +428,27 @@ T^{\mu\nu} = (\rho + p)\,U^\mu U^\nu + p\,\eta^{\mu\nu}.
 В системе покоя \(T^{\mu\nu} = \mathrm{diag}(\rho, p, p, p)\). Пыль: \(p=0\); излучение: \(p = \rho/3\).
 Именно эти модели станут источниками в уравнениях Фридмана (часть III).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Данные в системе покоя.** \(U^\mu = (1,0,0,0)\), \(\eta^{\mu\nu} = \mathrm{diag}(-1,1,1,1)\).
+
+    **Шаг 2. Компонента \(00\).** \(U^0U^0 = 1\), \(\eta^{00} = -1\):
+
+    \[
+    T^{00} = (\rho+p)\cdot 1 + p\cdot(-1) = \rho .
+    \]
+
+    **Шаг 3. Компоненты \(0i\).** \(U^0U^i = 0\), \(\eta^{0i} = 0\), поэтому \(T^{0i} = 0\).
+
+    **Шаг 4. Компоненты \(ij\).** \(U^iU^j = 0\), \(\eta^{ij} = \delta^{ij}\):
+
+    \[
+    T^{ij} = p\,\delta^{ij} .
+    \]
+
+    **Проверка.** След \(T^\mu{}_\mu = \eta_{\mu\nu}T^{\mu\nu} = -\rho + 3p\) — скаляр; для излучения
+    \(p = \rho/3\) он равен нулю, как и должно быть для безмассового (конформного) вещества.
+
 !!! theorem "Законы сохранения"
     Сохранение энергии и импульса изолированной системы выражается уравнением
 
@@ -286,6 +461,45 @@ T^{\mu\nu} = (\rho + p)\,U^\mu U^\nu + p\,\eta^{\mu\nu}.
     пространственные — релятивистское уравнение Эйлера.
 
 В ОТО частная производная заменится ковариантной: \(\nabla_\mu T^{\mu\nu} = 0\).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Дифференцируем \(\eqref{eq:perfect-fluid}\).** Так как \(\eta^{\mu\nu}\) постоянна,
+    \(\pd_\mu(p\,\eta^{\mu\nu}) = \pd^\nu p\), и по правилу Лейбница
+
+    \[
+    \pd_\mu T^{\mu\nu} = \pd_\mu\big[(\rho+p)U^\mu\big]U^\nu + (\rho+p)\,U^\mu\pd_\mu U^\nu + \pd^\nu p = 0 .
+    \]
+
+    **Шаг 2. Полезное тождество.** Дифференцируя \(U_\nu U^\nu = -1\): \(2U_\nu\pd_\mu U^\nu = 0\).
+
+    **Шаг 3. Проекция на \(U_\nu\) (временная компонента).** Свернём с \(U_\nu\), используя
+    \(U_\nu U^\nu = -1\), шаг 2 и \(U_\nu\pd^\nu p = U^\nu\pd_\nu p\):
+
+    \[
+    -\pd_\mu\big[(\rho+p)U^\mu\big] + 0 + U^\mu\pd_\mu p = 0 .
+    \]
+
+    Раскрывая \(\pd_\mu[(\rho+p)U^\mu] = U^\mu\pd_\mu\rho + U^\mu\pd_\mu p + (\rho+p)\pd_\mu U^\mu\),
+    члены \(U^\mu\pd_\mu p\) сокращаются:
+
+    \[
+    U^\mu\pd_\mu\rho + (\rho+p)\,\pd_\mu U^\mu = 0 \qquad\text{(уравнение непрерывности)}.
+    \]
+
+    **Шаг 4. Ортогональная проекция.** Подействуем проектором \(P^\sigma{}_\nu = \delta^\sigma_\nu + U^\sigma U_\nu\),
+    для которого \(P^\sigma{}_\nu U^\nu = U^\sigma - U^\sigma = 0\). Первое слагаемое шага 1 исчезает,
+    во втором \(P^\sigma{}_\nu\pd_\mu U^\nu = \pd_\mu U^\sigma\) (шаг 2), в третьем
+    \(P^\sigma{}_\nu\pd^\nu p = \pd^\sigma p + U^\sigma U^\nu\pd_\nu p\):
+
+    \[
+    (\rho+p)\,U^\mu\pd_\mu U^\sigma = -\big(\pd^\sigma p + U^\sigma U^\nu\pd_\nu p\big)
+    \qquad\text{(уравнение Эйлера)}.
+    \]
+
+    **Проверка.** При \(v \ll 1\), \(p \ll \rho\): \(U^\mu \approx (1, \vb v)\), \(U^\mu\pd_\mu \approx \pd_t + \vb v\cdot\nabla\),
+    и пространственная часть даёт \(\rho(\pd_t + \vb v\cdot\nabla)\vb v = -\nabla p\), а шаг 3 —
+    \(\pd_t\rho + \nabla\cdot(\rho\vb v) = 0\).
 
 ## 1.7. Численный пример
 

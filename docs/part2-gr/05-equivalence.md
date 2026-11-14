@@ -97,6 +97,26 @@
 \(g\): поднимаясь, свет **краснеет**. Так как \(gh = \Delta\Phi\), в общем виде
 \(\Delta\omega/\omega = -\Delta\Phi\) (с размерностями: \(-\Delta\Phi/c^2\)).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Время полёта.** Испускание — в момент \(t = 0\), когда ракета мгновенно покоится в
+    инерциальной системе. Свет проходит длину \(h\) за \(\Delta t = h\) (поправки от смещения носа
+    за это время имеют порядок \(gh^2\) и дают сдвиг второго порядка \(\sim (gh)^2\)).
+
+    **Шаг 2. Скорость приёмника.** За \(\Delta t\) нос набирает скорость \(\Delta v = g\,\Delta t = gh \ll 1\),
+    направленную от источника.
+
+    **Шаг 3. Эффект Доплера.** Для приёмника, удаляющегося со скоростью \(v\),
+    \(\omega = \omega_0\sqrt{\dfrac{1-v}{1+v}}\). Разлагая в первом порядке по \(v\):
+
+    \[
+    \omega \approx \omega_0(1 - v) \quad\Longrightarrow\quad \frac{\Delta\omega}{\omega_0} = \frac{\omega - \omega_0}{\omega_0} = -v = -gh .
+    \]
+
+    **Шаг 4. Потенциал.** В однородном поле \(\Phi = gz\), поэтому \(gh = \Phi(h) - \Phi(0) = \Delta\Phi\).
+
+    **Проверка (размерность).** С \(c\): \(\Delta t = h/c\), \(v/c = gh/c^2\) — безразмерно, как и должно быть.
+
 !!! example "Опыт Паунда — Ребки (1960)"
     В башне Гарвардского университета \(h = 22{,}5\) м. Ожидаемый сдвиг
     \(gh/c^2 = 9{,}8\cdot 22{,}5/(3\cdot10^8)^2 \approx 2{,}5\cdot 10^{-15}\).
@@ -174,6 +194,24 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 | 1: \(\pd g\) | \(10\times 4 = 40\) | \(4\times 10 = 40\) | 0 — всё можно обнулить |
 | 2: \(\pd\pd g\) | \(10\times10 = 100\) | \(4\times 20 = 80\) | 20 нельзя устранить |
 
+
+??? calc "Вычисления"
+
+    **Шаг 1. Компоненты метрики.** Симметричная матрица \(4\times4\): \(\tfrac{4\cdot5}{2} = 10\) компонент.
+    Каждая первая производная \(\pd_\sigma g_{\mu\nu}\) — 10 компонент на 4 направления \(\sigma\): \(40\).
+    Вторые производные \(\pd_\sigma\pd_\lambda g_{\mu\nu}\) симметричны по \(\sigma\lambda\): \(10\times10 = 100\).
+
+    **Шаг 2. Параметры преобразования.** Матрица \(\pd x^\mu/\pd x^{\hat\mu}\): \(4\times4 = 16\).
+    \(\pd^2x^\mu/\pd x^{\hat\mu_1}\pd x^{\hat\mu_2}\) симметрично по двум нижним: \(4\times10 = 40\).
+    Третьи производные симметричны по трём индексам; число симметричных наборов из 3 индексов,
+    принимающих 4 значения, равно \(\binom{4+2}{3} = 20\), всего \(4\times20 = 80\).
+
+    **Шаг 3. Баланс.** Порядок 0: \(16 - 10 = 6\) параметров остаются свободными (размерность группы
+    Лоренца: 3 поворота + 3 буста). Порядок 1: \(40 = 40\) — уравнений столько же, сколько неизвестных,
+    все \(\pd g\) обнуляются. Порядок 2: \(100 - 80 = 20\) комбинаций остаются.
+
+    **Проверка.** \(N(4) = \dfrac{4^2(4^2-1)}{12} = \dfrac{16\cdot15}{12} = 20\) — число компонент Римана.
+
 Шесть «лишних» параметров нулевого порядка — это лоренцевы повороты и бусты,
 сохраняющие \(\eta\). Двадцать неустранимых комбинаций вторых производных — ровно
 число независимых компонент тензора Римана в четырёх измерениях
@@ -194,6 +232,26 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 В ньютоновском пределе \(R^i{}_{0j0} \approx \pd_i\pd_j\Phi\), и \(\eqref{eq:geodesic-deviation}\)
 переходит в знакомое \(\ddot\xi^i = -(\pd_i\pd_j\Phi)\,\xi^j\) — приливное ускорение.
 
+??? calc "Вычисления"
+
+    **Шаг 1.** Для медленного наблюдателя \(U^\mu \approx (1,0,0,0)\), \(\tau\approx t\). В
+    \(\eqref{eq:geodesic-deviation}\) для \(\mu = i\) выживает только \(\nu = \rho = 0\):
+    \(\ddot\xi^i = R^i{}_{00\sigma}\xi^\sigma\).
+
+    **Шаг 2.** \(R^i{}_{000} = 0\) по антисимметрии в последней паре, а \(R^i{}_{00j} = -R^i{}_{0j0}\).
+
+    **Шаг 3. Компонента Римана.** \(R^i{}_{0j0} = \pd_j\Gamma^i_{00} - \pd_0\Gamma^i_{j0} + \Gamma\Gamma\). Статика
+    убирает \(\pd_0\), \(\Gamma\Gamma = O(\Phi^2)\), а \(\Gamma^i_{00} = \pd_i\Phi\) (раздел 5.7). Итого
+
+    \[
+    R^i{}_{0j0} \approx \pd_j\pd_i\Phi
+    \quad\Longrightarrow\quad
+    \ddot\xi^i = -R^i{}_{0j0}\xi^j = -(\pd_i\pd_j\Phi)\,\xi^j .
+    \]
+
+    **Проверка.** Это первый член разложения разности ньютоновских ускорений
+    \(-\pd_i\Phi(x+\xi) + \pd_i\Phi(x) = -\pd_j\pd_i\Phi\,\xi^j + O(\xi^2)\).
+
 ### Интерактив: приливная деформация
 
 Кольцо пробных частиц свободно падает на массу \(M\) (слева). В сопутствующей
@@ -203,6 +261,29 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 \(s = (GM/r^3)\,\tau^2\); смещения \(\delta x = s\,x\), \(\delta y = -\tfrac12 s\,y\) (в первом порядке).
 Площадь кольца в этом порядке растёт: в пустоте \(R_{00}=0\) сохраняется *объём* трёхмерного
 шара, а сжатие идёт по двум поперечным направлениям.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Вторые производные.** \(\Phi = -GM/r\), \(\Phi'(r) = GM/r^2\), \(\Phi''(r) = -2GM/r^3\) — радиальная.
+    Поперёк: \(\pd_i\pd_j\Phi = GM(\delta_{ij}/r^3 - 3x_ix_j/r^5)\); при \(x_\perp = 0\) это \(GM/r^3\).
+
+    **Шаг 2. Уравнения движения.** Ось \(x\) — на массу:
+
+    \[
+    \ddot x = -\Phi''\,x = +\frac{2GM}{r^3}\,x, \qquad \ddot y = -\frac{GM}{r^3}\,y .
+    \]
+
+    **Шаг 3. Интегрирование.** Частицы стартуют из покоя (\(\dot x = \dot y = 0\)); в первом порядке правую часть
+    можно считать постоянной:
+
+    \[
+    x(\tau) = x_0\left(1 + \frac{GM\tau^2}{r^3}\right) = x_0(1 + s), \qquad
+    y(\tau) = y_0\left(1 - \frac12\frac{GM\tau^2}{r^3}\right) = y_0\left(1 - \tfrac12 s\right).
+    \]
+
+    **Шаг 4. Площадь и объём.** Площадь кольца: \((1+s)(1-\tfrac12 s) = 1 + \tfrac12 s + O(s^2)\) — растёт.
+    Объём шара (два поперечных направления): \((1+s)(1-\tfrac12 s)^2 = 1 + s - s + O(s^2) = 1\) — сохраняется,
+    что отражает \(R_{00} = 0\): след \(\pd_i\pd_i\Phi = -2GM/r^3 + 2\cdot GM/r^3 = 0\).
 
 <div class="interactive" id="tidal-demo">
   <canvas id="tidal-canvas" width="520" height="360"></canvas>
@@ -248,6 +329,41 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 Кристоффеля конкретной метрики: выписать \(\mathcal L\), получить уравнения движения и
 прочитать \(\Gamma^\mu_{\rho\sigma}\) как коэффициенты при \(\dot x^\rho\dot x^\sigma\).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Лагранжиан с корнем.** \(L = \sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\). Производные:
+
+    \[
+    \frac{\pd L}{\pd\dot x^\sigma} = -\frac{g_{\sigma\nu}\dot x^\nu}{L}, \qquad
+    \frac{\pd L}{\pd x^\sigma} = -\frac{\pd_\sigma g_{\rho\nu}\,\dot x^\rho\dot x^\nu}{2L}.
+    \]
+
+    **Шаг 2. Уравнение Эйлера — Лагранжа** \(\frac{\d}{\d\lambda}\frac{\pd L}{\pd\dot x^\sigma} - \frac{\pd L}{\pd x^\sigma} = 0\).
+    Выбираем после варьирования \(\lambda = \tau\); тогда \(L = \d\tau/\d\lambda = 1\) и умножение на \(-1\) даёт
+
+    \[
+    \frac{\d}{\d\tau}\left(g_{\sigma\nu}\dot x^\nu\right) - \frac12\pd_\sigma g_{\rho\nu}\,\dot x^\rho\dot x^\nu = 0 .
+    \]
+
+    Ровно это же уравнение дают уравнения Эйлера — Лагранжа для \(\mathcal L\) из \(\eqref{eq:geodesic-lagrangian}\)
+    (там \(\pd\mathcal L/\pd\dot x^\sigma = g_{\sigma\nu}\dot x^\nu\), \(\pd\mathcal L/\pd x^\sigma = \tfrac12\pd_\sigma g_{\rho\nu}\dot x^\rho\dot x^\nu\)) — без всякого выбора параметра.
+
+    **Шаг 3. Производная по цепному правилу.** \(\frac{\d}{\d\tau}g_{\sigma\nu} = \pd_\rho g_{\sigma\nu}\dot x^\rho\):
+
+    \[
+    g_{\sigma\nu}\ddot x^\nu + \pd_\rho g_{\sigma\nu}\dot x^\rho\dot x^\nu - \frac12\pd_\sigma g_{\rho\nu}\dot x^\rho\dot x^\nu = 0 .
+    \]
+
+    **Шаг 4. Симметризация.** Так как \(\dot x^\rho\dot x^\nu\) симметрично,
+    \(\pd_\rho g_{\sigma\nu}\dot x^\rho\dot x^\nu = \tfrac12(\pd_\rho g_{\sigma\nu} + \pd_\nu g_{\sigma\rho})\dot x^\rho\dot x^\nu\):
+
+    \[
+    g_{\sigma\nu}\ddot x^\nu + \frac12\left(\pd_\rho g_{\nu\sigma} + \pd_\nu g_{\rho\sigma} - \pd_\sigma g_{\rho\nu}\right)\dot x^\rho\dot x^\nu = 0 .
+    \]
+
+    **Шаг 5. Поднимаем индекс.** Умножаем на \(g^{\mu\sigma}\), \(g^{\mu\sigma}g_{\sigma\nu} = \delta^\mu_\nu\); скобка с
+    \(\tfrac12 g^{\mu\sigma}\) — это \(\Gamma^\mu_{\rho\nu}\) из conventions. Получаем \(\eqref{eq:geodesic}\).
+
 !!! theorem "Свойства геодезических"
     1. Уравнение \(\eqref{eq:geodesic}\) эквивалентно параллельному переносу касательного
        вектора вдоль себя: \(U^\nu\nabla_\nu U^\mu = 0\).
@@ -257,6 +373,34 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
        до аффинного преобразования \(\lambda \to a\lambda + b\) («аффинный параметр»).
     4. Времениподобная геодезическая локально **максимизирует** собственное время
        (парадокс близнецов: путешественник, испытавший ускорение, моложе).
+
+??? calc "Вычисления"
+
+    **Свойство 1.** Вдоль кривой \(U^\nu\pd_\nu U^\mu = \d U^\mu/\d\lambda\), поэтому
+
+    \[
+    U^\nu\nabla_\nu U^\mu = U^\nu\pd_\nu U^\mu + \Gamma^\mu_{\nu\sigma}U^\nu U^\sigma
+    = \frac{\d^2x^\mu}{\d\lambda^2} + \Gamma^\mu_{\nu\sigma}\frac{\d x^\nu}{\d\lambda}\frac{\d x^\sigma}{\d\lambda} ,
+    \]
+
+    и равенство нулю — в точности \(\eqref{eq:geodesic}\).
+
+    **Свойство 2.** На скаляре \(\d/\d\lambda = U^\rho\nabla_\rho\). Используя \(\nabla g = 0\) и Лейбница:
+
+    \[
+    \frac{\d}{\d\lambda}(g_{\mu\nu}U^\mu U^\nu) = g_{\mu\nu}(U^\rho\nabla_\rho U^\mu)U^\nu + g_{\mu\nu}U^\mu(U^\rho\nabla_\rho U^\nu)
+    = 2g_{\mu\nu}U^\nu\,U^\rho\nabla_\rho U^\mu = 0 .
+    \]
+
+    **Свойство 3.** Пусть \(\lambda = f(\lambda')\). Тогда \(\d x/\d\lambda' = f'\,\d x/\d\lambda\),
+    \(\d^2x/\d\lambda'^2 = f'^2\,\d^2x/\d\lambda^2 + f''\,\d x/\d\lambda\). Подставляя,
+
+    \[
+    \frac{\d^2x^\mu}{\d\lambda'^2} + \Gamma^\mu_{\rho\sigma}\frac{\d x^\rho}{\d\lambda'}\frac{\d x^\sigma}{\d\lambda'}
+    = f'^2\cdot 0 + f''\,\frac{\d x^\mu}{\d\lambda} ,
+    \]
+
+    что равно нулю при всех \(\lambda\) лишь при \(f'' = 0\), т. е. \(f = a\lambda' + b\).
 
 Для света \(\d\tau = 0\), и \(\eqref{eq:proper-time}\) непригодно, но \(\eqref{eq:geodesic-lagrangian}\)
 работает: изотропные геодезические удовлетворяют \(\eqref{eq:geodesic}\) с аффинным
@@ -281,6 +425,23 @@ x^\mu = \left.\frac{\pd x^\mu}{\pd x^{\hat\mu}}\right|_p x^{\hat\mu}
 второе — уравнением геодезической. Для статической метрики \(K = \pd_t\) даёт сохранение
 энергии \(E = -K_\mu p^\mu = -p_t\); для сферически-симметричной \(R = \pd_\phi\) — момента
 импульса \(L = p_\phi\). Эти интегралы мы используем в [главе 7](07-schwarzschild.md).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Производная вдоль кривой.** \(K_\mu U^\mu\) — скаляр, и \(\frac{\d}{\d\lambda} = U^\nu\nabla_\nu\). По Лейбницу
+
+    \[
+    U^\nu\nabla_\nu(K_\mu U^\mu) = U^\nu U^\mu\,\nabla_\nu K_\mu + K_\mu\,U^\nu\nabla_\nu U^\mu .
+    \]
+
+    **Шаг 2. Первое слагаемое.** Уравнение Киллинга \(\nabla_\nu K_\mu + \nabla_\mu K_\nu = 0\) значит, что \(A_{\nu\mu}\equiv\nabla_\nu K_\mu\)
+    антисимметричен. Переименовывая немые \(\nu\leftrightarrow\mu\):
+    \(U^\nu U^\mu A_{\nu\mu} = U^\mu U^\nu A_{\mu\nu} = -U^\nu U^\mu A_{\nu\mu}\), значит оно равно нулю.
+
+    **Шаг 3. Второе слагаемое** равно нулю по уравнению геодезической \(U^\nu\nabla_\nu U^\mu = 0\).
+
+    **Шаг 4. Энергия.** Для \(K = \pd_t\): \(K^\mu = \delta^\mu_t\), \(K_\mu = g_{\mu\nu}K^\nu = g_{\mu t}\), поэтому
+    \(K_\mu p^\mu = g_{t\nu}p^\nu = p_t\) и \(E = -p_t\). В плоском пространстве \(p_t = \eta_{tt}p^t = -p^t\), т. е. \(E = p^t\) — обычная энергия.
 
 ## 5.7. Ньютоновский предел
 
@@ -318,6 +479,32 @@ g_{00} = -(1 + 2\Phi) \qquad \bigl(\text{с } c:\ g_{00} = -(1 + 2\Phi/c^2)\bigr
 \label{eq:g00-newton}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Медленность.** В \(\eqref{eq:geodesic}\) сумма \(\Gamma^\mu_{\rho\sigma}\dot x^\rho\dot x^\sigma\) содержит члены
+    \(\Gamma^\mu_{00}(\dot t)^2\), \(2\Gamma^\mu_{0i}\dot t\dot x^i\), \(\Gamma^\mu_{ij}\dot x^i\dot x^j\); при \(\dot x^i\ll\dot t\) главный — первый.
+
+    **Шаг 2. \(\Gamma^\mu_{00}\).** Из conventions при \(\nu = \rho = 0\) (переобозначив немой индекс):
+    \(\Gamma^\mu_{00} = \tfrac12 g^{\mu\lambda}(\pd_0 g_{0\lambda} + \pd_0 g_{0\lambda} - \pd_\lambda g_{00})\).
+    Статичность: \(\pd_0 g = 0\). Слабое поле: \(g^{\mu\lambda} = \eta^{\mu\lambda} + O(h)\), \(\pd_\lambda g_{00} = \pd_\lambda h_{00}\),
+    так что в первом порядке
+
+    \[
+    \Gamma^\mu_{00} = -\tfrac12\eta^{\mu\lambda}\pd_\lambda h_{00} .
+    \]
+
+    **Шаг 3. Компоненты.** \(\mu = 0\): \(\eta^{00}\pd_0 h_{00} = 0\), т. е. \(\d^2t/\d\tau^2 = 0\) и \(\dot t = \mathrm{const}\).
+    \(\mu = i\): \(\eta^{ij} = \delta^{ij}\), \(\Gamma^i_{00} = -\tfrac12\pd_i h_{00}\).
+
+    **Шаг 4. Переход к \(t\).** \(\frac{\d x^i}{\d\tau} = \dot t\,\frac{\d x^i}{\d t}\) и, так как \(\dot t\) постоянно,
+    \(\frac{\d^2x^i}{\d\tau^2} = \dot t^2\frac{\d^2x^i}{\d t^2}\). Уравнение
+    \(\dot t^2\,\frac{\d^2x^i}{\d t^2} - \tfrac12\pd_i h_{00}\,\dot t^2 = 0\) после деления на \(\dot t^2\) даёт \(\eqref{eq:newton-from-geodesic}\).
+
+    **Шаг 5. Отождествление.** \(\tfrac12\pd_i h_{00} = -\pd_i\Phi\) при \(h_{00} = -2\Phi\) (константа фиксируется
+    условием \(h\to0\) на бесконечности); тогда \(g_{00} = \eta_{00} + h_{00} = -1 - 2\Phi\).
+
+    **Проверка (размерность).** \(\Phi\) имеет размерность \(\text{м}^2/\text{с}^2\), \(g_{00}\) безразмерна, отсюда \(2\Phi/c^2\).
+
 !!! example "Насколько слабо поле?"
     Безразмерный потенциал \(|\Phi|/c^2 = GM/(rc^2)\):
     на поверхности Земли \(7\cdot10^{-10}\), Солнца \(2\cdot10^{-6}\), белого карлика
@@ -354,6 +541,27 @@ U^\mu = \frac{K^\mu}{\sqrt{-K_\nu K^\nu}} = \frac{\delta^\mu_t}{\sqrt{-g_{tt}}} 
 При \(\Phi_1 < \Phi_2\) (излучатель глубже) \(\omega_2 < \omega_1\) — красное смещение, в
 согласии с \(\eqref{eq:ep-redshift}\). Формула \(\eqref{eq:static-redshift}\) точна и в сильном
 поле; для шварцшильдовой метрики она даёт бесконечное красное смещение на горизонте.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Нормировка.** \(K^\mu = \delta^\mu_t\), \(K_\nu K^\nu = g_{tt}K^tK^t = g_{tt} < 0\). Тогда
+    \(U^\mu = \delta^\mu_t/\sqrt{-g_{tt}}\) и \(U_\mu U^\mu = g_{tt}/(-g_{tt}) = -1\).
+
+    **Шаг 2. Частота.** \(\omega = -p_\mu U^\mu = -p_t\,U^t = -p_t/\sqrt{-g_{tt}}\).
+
+    **Шаг 3. Отношение.** \(-p_t\) одинаково в точках 1 и 2, поэтому
+
+    \[
+    \frac{\omega_2}{\omega_1} = \frac{-p_t/\sqrt{-g_{tt}(x_2)}}{-p_t/\sqrt{-g_{tt}(x_1)}} = \sqrt{\frac{-g_{tt}(x_1)}{-g_{tt}(x_2)}} = \sqrt{\frac{g_{tt}(x_1)}{g_{tt}(x_2)}} .
+    \]
+
+    **Шаг 4. Слабое поле.** \(g_{tt} = -(1+2\Phi)\):
+
+    \[
+    \sqrt{\frac{1+2\Phi_1}{1+2\Phi_2}} \approx (1+\Phi_1)(1-\Phi_2) \approx 1 + \Phi_1 - \Phi_2 .
+    \]
+
+    **Проверка.** Для башни \(\Phi_2 - \Phi_1 = gh\): \(\Delta\omega/\omega = -gh\), как в \(\eqref{eq:ep-redshift}\).
 
 ## 5.9. Численный пример: часы GPS
 

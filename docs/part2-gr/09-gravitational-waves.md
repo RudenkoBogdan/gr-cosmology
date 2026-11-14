@@ -29,21 +29,87 @@ g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}, \qquad |h_{\mu\nu}| \ll 1.
 \label{eq:lin-christoffel}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Обратная метрика.** Проверим \(g^{\mu\nu} = \eta^{\mu\nu} - h^{\mu\nu}\):
+    \((\eta_{\mu\nu} + h_{\mu\nu})(\eta^{\nu\lambda} - h^{\nu\lambda}) = \delta_\mu^\lambda + h_\mu{}^\lambda - h_\mu{}^\lambda + O(h^2) = \delta_\mu^\lambda + O(h^2)\).
+
+    **Шаг 2. Производные метрики.** \(\pd_\mu g_{\nu\sigma} = \pd_\mu h_{\nu\sigma}\), так как \(\eta\) постоянна; это уже первый порядок.
+
+    **Шаг 3. Подстановка в определение \(\Gamma\).**
+
+    \[
+    \Gamma^\lambda_{\mu\nu} = \frac12\left(\eta^{\lambda\sigma} - h^{\lambda\sigma}\right)\left(\pd_\mu h_{\nu\sigma} + \pd_\nu h_{\mu\sigma} - \pd_\sigma h_{\mu\nu}\right).
+    \]
+
+    Произведение \(h^{\lambda\sigma}\pd h\) — второго порядка, отбрасываем; остаётся \(\eqref{eq:lin-christoffel}\).
+
 \begin{equation}
 R_{\mu\nu\rho\sigma} = \frac12\left(\pd_\rho\pd_\nu h_{\mu\sigma} + \pd_\sigma\pd_\mu h_{\nu\rho}
 - \pd_\sigma\pd_\nu h_{\mu\rho} - \pd_\rho\pd_\mu h_{\nu\sigma}\right).
 \label{eq:lin-riemann}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Отбрасываем \(\Gamma\Gamma\).** В \(R^\rho{}_{\sigma\mu\nu} = \pd_\mu\Gamma^\rho_{\nu\sigma} - \pd_\nu\Gamma^\rho_{\mu\sigma} + \Gamma\Gamma - \Gamma\Gamma\)
+    квадратичные члены имеют порядок \(h^2\). Опускаем индекс с \(\eta_{\rho\lambda}\) (ошибка — тоже \(O(h^2)\)):
+
+    \[
+    R_{\rho\sigma\mu\nu} = \pd_\mu\Gamma_{\rho\nu\sigma} - \pd_\nu\Gamma_{\rho\mu\sigma},
+    \qquad
+    \Gamma_{\rho\nu\sigma} \equiv \eta_{\rho\lambda}\Gamma^\lambda_{\nu\sigma} = \frac12\left(\pd_\nu h_{\sigma\rho} + \pd_\sigma h_{\nu\rho} - \pd_\rho h_{\nu\sigma}\right).
+    \]
+
+    **Шаг 2. Раскрываем.**
+
+    \[
+    \begin{aligned}
+    R_{\rho\sigma\mu\nu} &= \frac12\left(\pd_\mu\pd_\nu h_{\sigma\rho} + \pd_\mu\pd_\sigma h_{\nu\rho} - \pd_\mu\pd_\rho h_{\nu\sigma}
+    - \pd_\nu\pd_\mu h_{\sigma\rho} - \pd_\nu\pd_\sigma h_{\mu\rho} + \pd_\nu\pd_\rho h_{\mu\sigma}\right)\\
+    &= \frac12\left(\pd_\mu\pd_\sigma h_{\nu\rho} - \pd_\mu\pd_\rho h_{\nu\sigma} - \pd_\nu\pd_\sigma h_{\mu\rho} + \pd_\nu\pd_\rho h_{\mu\sigma}\right)
+    \end{aligned}
+    \]
+
+    (первый и четвёртый члены сократились — производные коммутируют).
+
+    **Шаг 3. Переименование** \((\rho,\sigma,\mu,\nu) \to (\mu,\nu,\rho,\sigma)\):
+
+    \[
+    R_{\mu\nu\rho\sigma} = \frac12\left(\pd_\rho\pd_\nu h_{\sigma\mu} - \pd_\rho\pd_\mu h_{\sigma\nu} - \pd_\sigma\pd_\nu h_{\rho\mu} + \pd_\sigma\pd_\mu h_{\rho\nu}\right),
+    \]
+
+    что совпадает с \(\eqref{eq:lin-riemann}\) с учётом симметрии \(h_{\mu\nu} = h_{\nu\mu}\).
+
+    **Проверка.** Антисимметрия по \(\rho \leftrightarrow \sigma\): первый член переходит в \(-\)третий, второй — в \(-\)четвёртый. ✓
+
 ### Калибровочная свобода
 
-Бесконечно малая замена координат \(x^\mu \to x^\mu + \xi^\mu(x)\) с \(|\pd\xi| \sim |h|\)
+Бесконечно малая замена координат \(x^\mu \to x^\mu - \xi^\mu(x)\) с \(|\pd\xi| \sim |h|\)
 сохраняет вид \(\eqref{eq:linear-metric}\), но меняет возмущение:
 
 \begin{equation}
 h_{\mu\nu} \to h_{\mu\nu} + \pd_\mu\xi_\nu + \pd_\nu\xi_\mu.
 \label{eq:gauge}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Закон преобразования.** Для \(x'^\mu = x^\mu - \xi^\mu\): \(\frac{\pd x^\alpha}{\pd x'^\mu} = \delta^\alpha_\mu + \pd_\mu\xi^\alpha + O(\xi^2)\), и
+
+    \[
+    g'_{\mu\nu}(x') = \frac{\pd x^\alpha}{\pd x'^\mu}\frac{\pd x^\beta}{\pd x'^\nu}g_{\alpha\beta}(x)
+    = g_{\mu\nu}(x) + \pd_\mu\xi^\alpha\,\eta_{\alpha\nu} + \pd_\nu\xi^\beta\,\eta_{\mu\beta} + O(h\xi, \xi^2).
+    \]
+
+    **Шаг 2. Та же точка многообразия против того же значения координат.** \(g'_{\mu\nu}(x) = g'_{\mu\nu}(x') - \xi^\lambda\pd_\lambda g'_{\mu\nu}\);
+    поправка \(\xi\pd h\) — второго порядка. Поэтому, сравнивая функции при одном аргументе,
+    \(h'_{\mu\nu} = h_{\mu\nu} + \pd_\mu\xi_\nu + \pd_\nu\xi_\mu\), то есть \(\eqref{eq:gauge}\).
+
+    **Замечание о знаке.** При замене \(x \to x + \xi\) знак перед \(\pd\xi\) был бы противоположным;
+    так как \(\xi^\mu\) произвольно, класс калибровочно эквивалентных \(h_{\mu\nu}\) от этого не зависит.
+
+    **Проверка.** \(h_{\mu\nu} = 0\) при \(\xi^\mu = \omega^\mu{}_\nu x^\nu\) с \(\omega_{\mu\nu} = -\omega_{\nu\mu}\) (лоренцев поворот) остаётся нулём: \(\pd_\mu\xi_\nu + \pd_\nu\xi_\mu = \omega_{\nu\mu} + \omega_{\mu\nu} = 0\). ✓
 
 Это аналог градиентного преобразования \(A_\mu \to A_\mu + \pd_\mu\lambda\) в электродинамике.
 Линеаризованный тензор Римана \(\eqref{eq:lin-riemann}\) калибровочно инвариантен (задача 9.1),
@@ -74,10 +140,53 @@ h_{\mu\nu} \to h_{\mu\nu} + \pd_\mu\xi_\nu + \pd_\nu\xi_\mu.
 \label{eq:lin-einstein}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. След \(\bar h\).** \(\bar h = \eta^{\mu\nu}\bar h_{\mu\nu} = h - \frac12\cdot4\cdot h = -h\) (\(\eta^{\mu\nu}\eta_{\mu\nu} = 4\)). Обратно: \(h_{\mu\nu} = \bar h_{\mu\nu} - \frac12\eta_{\mu\nu}\bar h\).
+
+    **Шаг 2. Тензор Риччи.** Сворачиваем \(\eqref{eq:lin-riemann}\): \(R_{\nu\sigma} = \eta^{\mu\rho}R_{\mu\nu\rho\sigma}\):
+
+    \[
+    R_{\nu\sigma} = \frac12\left(\pd^\mu\pd_\nu h_{\mu\sigma} + \pd_\sigma\pd^\rho h_{\nu\rho} - \pd_\sigma\pd_\nu h - \Box h_{\nu\sigma}\right).
+    \]
+
+    Здесь \(\eta^{\mu\rho}h_{\mu\rho} = h\), \(\eta^{\mu\rho}\pd_\rho\pd_\mu = \Box\).
+
+    **Шаг 3. Калибровка Лоренца.** \(\pd^\mu h_{\mu\sigma} = \pd^\mu\bar h_{\mu\sigma} - \frac12\pd_\sigma\bar h = -\frac12\pd_\sigma\bar h\). Также \(h = -\bar h\). Подставляем:
+
+    \[
+    R_{\nu\sigma} = \frac12\left(-\frac12\pd_\nu\pd_\sigma\bar h - \frac12\pd_\sigma\pd_\nu\bar h + \pd_\sigma\pd_\nu\bar h - \Box h_{\nu\sigma}\right) = -\frac12\Box h_{\nu\sigma}.
+    \]
+
+    **Шаг 4. Скаляр и тензор Эйнштейна.** \(R = \eta^{\nu\sigma}R_{\nu\sigma} = -\frac12\Box h = \frac12\Box\bar h\). Тогда
+
+    \[
+    G_{\mu\nu} = R_{\mu\nu} - \frac12\eta_{\mu\nu}R = -\frac12\Box\left(h_{\mu\nu} + \frac12\eta_{\mu\nu}\bar h\right) = -\frac12\Box\bar h_{\mu\nu},
+    \]
+
+    поскольку \(h_{\mu\nu} + \frac12\eta_{\mu\nu}\bar h = \bar h_{\mu\nu}\) по шагу 1.
+
+    **Шаг 5.** \(G_{\mu\nu} = 8\pi G\,T_{\mu\nu}\) ⇒ \(-\frac12\Box\bar h_{\mu\nu} = 8\pi G\,T_{\mu\nu}\) ⇒ \(\Box\bar h_{\mu\nu} = -16\pi G\,T_{\mu\nu}\).
+
 Это десять неоднородных волновых уравнений. Для статического нерелятивистского источника
 \(T_{00} = \rho\) получаем \(\nabla^2\bar h_{00} = -16\pi G\rho\), т. е. \(\bar h_{00} = -4\Phi\)
 и \(h_{00} = -2\Phi\), \(h_{ij} = -2\Phi\,\delta_{ij}\) — ньютонов предел из
 [главы 6](06-einstein-equations.md). Нестационарные решения описывают излучение.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Статика.** \(\Box = -\pd_t^2 + \nabla^2 \to \nabla^2\). Компонента \(00\): \(\nabla^2\bar h_{00} = -16\pi G\rho\). Сравнивая с уравнением Пуассона
+    \(\nabla^2\Phi = 4\pi G\rho\): \(\bar h_{00} = -4\Phi\). Остальные компоненты \(T_{0i}, T_{ij}\) малы (\(\sim\rho v, \rho v^2\)), \(\bar h_{0i} \approx \bar h_{ij} \approx 0\).
+
+    **Шаг 2. След.** \(\bar h = \eta^{00}\bar h_{00} = -(-4\Phi) = 4\Phi\).
+
+    **Шаг 3. Обращаем след.** \(h_{\mu\nu} = \bar h_{\mu\nu} - \frac12\eta_{\mu\nu}\bar h\):
+
+    \[
+    h_{00} = -4\Phi - \frac12(-1)(4\Phi) = -2\Phi, \qquad h_{ij} = 0 - \frac12\delta_{ij}\cdot4\Phi = -2\Phi\,\delta_{ij}.
+    \]
+
+    **Проверка.** \(g_{00} = -(1 + 2\Phi)\) — правильный ньютонов предел. ✓
 
 ## 9.2. Плоские волны и калибровка TT
 
@@ -124,6 +233,30 @@ h_{0\mu} = 0, \qquad h^\mu{}_\mu = 0, \qquad \pd_i h_{ij} = 0.
 поворот на \(45^\circ\) переводит \(+\) в \(\times\). (Электромагнитная волна имеет спиральность
 1: её поляризации переходят друг в друга при повороте на \(90^\circ\).)
 
+??? calc "Вычисления"
+
+    **Шаг 1. Поворот.** При повороте осей на \(\psi\) вокруг \(z\) компоненты в плоскости \(xy\) преобразуются как \(h'_{ij} = R_{ik}R_{jl}h_{kl}\),
+    \(R = \begin{pmatrix}c & s\\ -s & c\end{pmatrix}\), \(c = \cos\psi\), \(s = \sin\psi\), \(h = \begin{pmatrix}h_+ & h_\times\\ h_\times & -h_+\end{pmatrix}\).
+
+    **Шаг 2. Компоненты.**
+
+    \[
+    \begin{aligned}
+    h'_+ = h'_{xx} &= c^2h_+ + 2cs\,h_\times - s^2h_+ = \cos2\psi\,h_+ + \sin2\psi\,h_\times,\\
+    h'_\times = h'_{xy} &= -cs\,h_+ + c^2h_\times - s^2h_\times - sc\,h_+ = -\sin2\psi\,h_+ + \cos2\psi\,h_\times .
+    \end{aligned}
+    \]
+
+    **Шаг 3. Комплексная комбинация.**
+
+    \[
+    h'_+ + ih'_\times = h_+(\cos2\psi - i\sin2\psi) + h_\times(\sin2\psi + i\cos2\psi) = e^{-2i\psi}(h_+ + ih_\times),
+    \]
+
+    так как \(\sin2\psi + i\cos2\psi = i e^{-2i\psi}\). Комплексно сопряжённое даёт \(h_+ - ih_\times \to e^{+2i\psi}(h_+ - ih_\times)\).
+
+    **Проверка.** \(\psi = 45^\circ\): \(h'_+ = h_\times\), \(h'_\times = -h_+\) — плюс переходит в крест. ✓
+
 Для волны, пришедшей с произвольного направления \(\hat n\), TT-часть выделяется проектором
 \(P_{ij} = \delta_{ij} - n_in_j\):
 
@@ -144,6 +277,20 @@ L = \int\sqrt{g_{xx}}\,\d x \approx \left(1 + \frac12h_+\cos\omega t\right)L_0.
 \label{eq:proper-length}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1.** На оси \(x\) (\(z = 0\), \(\varphi = 0\)) \(g_{xx} = 1 + h_+\cos\omega t\); частицы покоятся в координатах, интервал \(\Delta x = L_0\).
+
+    **Шаг 2. Разложение корня.** \(\sqrt{1 + \varepsilon} = 1 + \frac12\varepsilon + O(\varepsilon^2)\):
+
+    \[
+    L = \int_0^{L_0}\sqrt{1 + h_+\cos\omega t}\,\d x \approx \left(1 + \frac12h_+\cos\omega t\right)L_0 .
+    \]
+
+    (Для \(L_0 \ll \lambda\) зависимостью \(h\) от \(x\) вдоль плеча пренебрегаем.)
+
+    **Проверка.** \(\Delta L/L_0 = \frac12h_+\cos\omega t\) — относительная деформация вдвое меньше амплитуды метрики. ✓
+
 Инвариантно то же описывает уравнение **девиации геодезических**
 \(\d^2S^\mu/\d\tau^2 = -R^\mu{}_{\nu\rho\sigma}U^\nu S^\rho U^\sigma\). С \(U^\mu = (1,0,0,0)\) и
 \(R_{i0j0} = -\tfrac12\pd_t^2h^{\rm TT}_{ij}\) получаем в локальной инерциальной системе
@@ -162,6 +309,28 @@ L = \int\sqrt{g_{xx}}\,\d x \approx \left(1 + \frac12h_+\cos\omega t\right)L_0.
 \end{aligned}
 \label{eq:ring}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Компонента Римана.** Из \(\eqref{eq:lin-riemann}\) при \((\mu,\nu,\rho,\sigma) = (i,0,j,0)\):
+
+    \[
+    R_{i0j0} = \frac12\left(\pd_j\pd_0h_{0i} + \pd_0\pd_ih_{0j} - \pd_0\pd_0h_{ij} - \pd_j\pd_ih_{00}\right) = -\frac12\pd_t^2h^{\rm TT}_{ij},
+    \]
+
+    так как в TT-калибровке \(h_{0\mu} = 0\).
+
+    **Шаг 2. Уравнение девиации.** С \(U^\mu = (1,0,0,0)\) свёртка оставляет \(\nu = \sigma = 0\):
+    \(\frac{\d^2S^i}{\d t^2} = -R^i{}_{0j0}S^j = -R_{i0j0}S^j\) (подъём пространственного индекса с \(\eta^{ii} = +1\)) \(= \frac12\ddot h^{\rm TT}_{ij}S^j\).
+
+    **Шаг 3. Решение.** Пишем \(S^i = S_0^i + \delta S^i\), \(\delta S \sim hS_0\). В первом порядке справа можно взять \(S^j \to S_0^j\):
+    \(\delta\ddot S^i = \frac12\ddot h_{ij}S_0^j\), откуда \(\delta S^i = \frac12h_{ij}S_0^j\) (без секулярных членов, если частицы исходно покоились).
+
+    **Шаг 4. Поляризации.** Для \(+\): \(h_{xx} = -h_{yy} = h_+\cos\omega t\):
+    \(\delta x = \frac12h_+x_0\cos\omega t\), \(\delta y = -\frac12h_+y_0\cos\omega t\). Для \(\times\): \(h_{xy} = h_{yx} = h_\times\cos\omega t\):
+    \(\delta x = \frac12h_\times y_0\cos\omega t\), \(\delta y = \frac12h_\times x_0\cos\omega t\).
+
+    **Проверка.** Изменение площади \(\propto \delta^{ij}\pd(\delta S^i)/\pd S_0^j = \frac12h_{ii} = 0\) — следствие бесследовости. ✓
 
 Кольцо сжимается вдоль одной оси и растягивается вдоль перпендикулярной, площадь в
 первом порядке сохраняется. Деформация происходит только в поперечной к \(\hat z\)
@@ -205,9 +374,22 @@ t_{\mu\nu} = \frac{1}{32\pi G}\left\langle\pd_\mu h^{\rm TT}_{ij}\,\pd_\nu h^{\r
 Для волны вдоль \(z\) плотность энергии и поток равны
 
 \begin{equation}
-t_{00} = t_{0z} = \frac{1}{16\pi G}\left\langle\dot h_+^2 + \dot h_\times^2\right\rangle.
+t_{00} = t^{0z} = \frac{1}{16\pi G}\left\langle\dot h_+^2 + \dot h_\times^2\right\rangle.
 \label{eq:gw-flux}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Свёртка.** Из \(\eqref{eq:polarizations}\): \(h_{ij}h_{ij} = h_{xx}^2 + h_{yy}^2 + 2h_{xy}^2 = 2h_+^2 + 2h_\times^2\) (с учётом временной зависимости).
+    Аналогично \(\pd_0h_{ij}\,\pd_0h_{ij} = 2(\dot h_+^2 + \dot h_\times^2)\).
+
+    **Шаг 2. Плотность энергии.** \(t_{00} = \frac{1}{32\pi G}\cdot2\langle\dot h_+^2 + \dot h_\times^2\rangle = \frac{1}{16\pi G}\langle\dot h_+^2 + \dot h_\times^2\rangle\).
+
+    **Шаг 3. Поток.** Волна зависит от \(t - z\), поэтому \(\pd_zh_{ij} = -\pd_th_{ij}\) и \(t_{0z} = -t_{00}\) (нижние индексы). Поток энергии вдоль \(+z\) —
+    это компонента с верхними индексами \(t^{0z} = \eta^{00}\eta^{zz}t_{0z} = -t_{0z} = t_{00}\): энергия переносится со скоростью света.
+
+    **Проверка (пример GW150914).** Для \(h = h_0\cos2\pi ft\): \(\langle\dot h^2\rangle = \frac12(2\pi fh_0)^2\), откуда
+    \(F = \frac{c^3}{32\pi G}(2\pi fh_0)^2 = \frac{4{,}04\cdot10^{35}}{100{,}5}\cdot(1{,}26\cdot10^{-18})^2 \approx 6\cdot10^{-3}\) Вт/м². ✓
 
 !!! example "Пример: поток от GW150914"
     Для \(h \sim 10^{-21}\) и \(f \sim 200\) Гц с восстановленными единицами
@@ -281,6 +463,28 @@ P = \frac{32}{5}\,G\mu^2a^4\Omega^6 = \frac{32}{5}\,\frac{G^4\mu^2M^3}{a^5}.
 \label{eq:binary-power}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Компоненты \(I_{ij}\) через \(2\Omega t\).** Используем \(\cos^2x = \frac12(1 + \cos2x)\), \(\sin^2x = \frac12(1 - \cos2x)\), \(\sin x\cos x = \frac12\sin2x\):
+
+    \[
+    I_{xx} = \frac{\mu a^2}{2}(1 + \cos2\Omega t), \quad I_{yy} = \frac{\mu a^2}{2}(1 - \cos2\Omega t), \quad I_{xy} = \frac{\mu a^2}{2}\sin2\Omega t .
+    \]
+
+    След \(I_{kk} = \mu a^2\) постоянен, поэтому \(\dddot Q_{ij} = \dddot I_{ij}\).
+
+    **Шаг 2. Третьи производные.** \(\frac{\d^3}{\d t^3}\cos2\Omega t = 8\Omega^3\sin2\Omega t\), \(\frac{\d^3}{\d t^3}\sin2\Omega t = -8\Omega^3\cos2\Omega t\):
+
+    \[
+    \dddot I_{xx} = 4\mu a^2\Omega^3\sin2\Omega t = -\dddot I_{yy}, \qquad \dddot I_{xy} = -4\mu a^2\Omega^3\cos2\Omega t .
+    \]
+
+    **Шаг 3. Свёртка.** \(\dddot Q_{ij}\dddot Q_{ij} = \dddot I_{xx}^2 + \dddot I_{yy}^2 + 2\dddot I_{xy}^2 = 16\mu^2a^4\Omega^6\left(2\sin^2 + 2\cos^2\right) = 32\mu^2a^4\Omega^6\) — не зависит от времени.
+
+    **Шаг 4.** \(P = \frac G5\cdot32\mu^2a^4\Omega^6\). С \(\Omega^6 = G^3M^3/a^6\): \(P = \frac{32}{5}\frac{G^4\mu^2M^3}{a^5}\).
+
+    **Проверка.** С \(c\): \(P = \frac{32}{5}\frac{c^5}{G}\left(\frac{G\mu}{c^2a}\right)^2\left(\frac{GM}{c^2a}\right)^3\) — произведение безразмерных множителей на \(c^5/G\), т.е. мощность. ✓
+
 ### Чирп
 
 Энергия орбиты \(E = -GM\mu/(2a)\). Потеря энергии \(\dot E = -P\) приводит к сближению
@@ -299,12 +503,47 @@ P = \frac{32}{5}\,G\mu^2a^4\Omega^6 = \frac{32}{5}\,\frac{G^4\mu^2M^3}{a^5}.
 \label{eq:fdot}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Скорость сближения.** \(E = -\frac{GM\mu}{2a}\), \(\dot E = \frac{GM\mu}{2a^2}\dot a = -P\):
+
+    \[
+    \dot a = -\frac{2a^2}{GM\mu}\cdot\frac{32}{5}\frac{G^4\mu^2M^3}{a^5} = -\frac{64}{5}\frac{G^3\mu M^2}{a^3}.
+    \]
+
+    **Шаг 2. Связь \(a\) и \(f\).** \(f = \Omega/\pi\) и \(\Omega^2 = GM/a^3\): \(a = (GM)^{1/3}(\pi f)^{-2/3}\). Логарифмическое дифференцирование: \(\frac{\dot f}{f} = -\frac32\frac{\dot a}{a}\).
+
+    **Шаг 3. Подстановка.**
+
+    \[
+    \frac{\dot f}{f} = \frac32\cdot\frac{64}{5}\frac{G^3\mu M^2}{a^4} = \frac{96}{5}\,G^3\mu M^2\,(GM)^{-4/3}(\pi f)^{8/3}
+    = \frac{96}{5}\,G^{5/3}\mu M^{2/3}\,\pi^{8/3}f^{8/3}.
+    \]
+
+    **Шаг 4. Чирп-масса.** Из \(\eqref{eq:chirp-mass}\): \(\mathcal M^{5/3} = \mu M^{2/3}\). Умножая на \(f\), получаем \(\eqref{eq:fdot}\).
+
+    **Проверка.** Размерность: \((G\mathcal M)^{5/3}\) — время\(^{5/3}\), \(f^{11/3}\) — время\(^{-11/3}\); итого время\(^{-2}\), как у \(\dot f\). ✓
+
 и, интегрируя, время до слияния от момента, когда частота равна \(f\):
 
 \begin{equation}
 \tau = \frac{5}{256}\,(G\mathcal M)^{-5/3}(\pi f)^{-8/3}.
 \label{eq:tau-merger}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Разделяем переменные.** Обозначим \(K = \frac{96}{5}\pi^{8/3}(G\mathcal M)^{5/3}\); \(\d t = \frac{\d f}{Kf^{11/3}}\).
+
+    **Шаг 2. Интегрируем** от текущей частоты \(f\) до \(\infty\) (слияние в квадрупольном приближении):
+
+    \[
+    \tau = \frac1K\int_f^\infty f'^{-11/3}\,\d f' = \frac1K\cdot\frac38f^{-8/3} = \frac{3\cdot5}{8\cdot96}\pi^{-8/3}(G\mathcal M)^{-5/3}f^{-8/3}.
+    \]
+
+    **Шаг 3.** \(\frac{15}{768} = \frac{5}{256}\), и \(\pi^{-8/3}f^{-8/3} = (\pi f)^{-8/3}\) — это \(\eqref{eq:tau-merger}\).
+
+    **Проверка.** Обращая: \(f = \frac1\pi\left(\frac{5}{256\tau}\right)^{3/8}(G\mathcal M)^{-5/8}\) — ровно функция `f_gw` в численном примере ниже. ✓
 
 Амплитуды поляризаций для системы, наклонённой под углом \(\iota\) к лучу зрения:
 
@@ -313,6 +552,21 @@ h_+ = \frac{4}{r}(G\mathcal M)^{5/3}(\pi f)^{2/3}\,\frac{1 + \cos^2\iota}{2}\cos
 h_\times = \frac{4}{r}(G\mathcal M)^{5/3}(\pi f)^{2/3}\cos\iota\,\sin\Phi(t),
 \label{eq:binary-h}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Проверка амплитуды при \(\iota = 0\).** Наблюдатель на оси \(z\): TT-часть — это \(xy\)-блок, \(h_{xx} = \frac{2G}{r}\ddot Q_{xx}\).
+    Из шага 1 вывода \(\eqref{eq:binary-power}\): \(\ddot Q_{xx} = -2\mu a^2\Omega^2\cos2\Omega t\), так что амплитуда \(h_+\) равна \(\frac{4G\mu a^2\Omega^2}{r}\).
+
+    **Выражаем через \(f\).** \(a^2\Omega^2 = (GM)^{2/3}\Omega^{2/3}\) (из \(a^3 = GM/\Omega^2\)), \(\Omega = \pi f\):
+
+    \[
+    \frac{4G\mu}{r}(GM)^{2/3}(\pi f)^{2/3} = \frac4r\,G^{5/3}\mu M^{2/3}(\pi f)^{2/3} = \frac4r(G\mathcal M)^{5/3}(\pi f)^{2/3},
+    \]
+
+    что совпадает с \(\eqref{eq:binary-h}\) при \(\frac{1 + \cos^2 0}{2} = 1\). Аналогично \(\ddot Q_{xy} = -2\mu a^2\Omega^2\sin2\Omega t\) даёт \(h_\times\) с \(\cos\iota = 1\).
+
+    **Частота на ISCO.** \(\Omega^2 = \frac{GM}{(6GM)^3}\) ⇒ \(\Omega = \frac{1}{6^{3/2}GM}\), \(f_{\rm ISCO} = \frac{\Omega}{\pi} = \frac{1}{6^{3/2}\pi GM}\).
 
 где \(\Phi = 2\pi\int f\,\d t\). Измеряя \(f\) и \(\dot f\), из \(\eqref{eq:fdot}\) находят
 \(\mathcal M\), а затем из амплитуды — расстояние \(r\): двойные системы являются

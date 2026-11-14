@@ -45,6 +45,62 @@
 \label{eq:christoffel}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Лагранжиан геодезических.** Для метрики \(\eqref{eq:spherical-ansatz}\) со статическими \(\alpha(r)\), \(\beta(r)\) берём
+    \(\mathcal L = g_{\mu\nu}\dot x^\mu\dot x^\nu\) (точка — \(\d/\d\lambda\)):
+
+    \[
+    \mathcal L = -e^{2\alpha}\dot t^2 + e^{2\beta}\dot r^2 + r^2\dot\theta^2 + r^2\sin^2\theta\,\dot\phi^2 .
+    \]
+
+    Уравнения Эйлера–Лагранжа \(\frac{\d}{\d\lambda}\frac{\pd\mathcal L}{\pd\dot x^\mu} - \frac{\pd\mathcal L}{\pd x^\mu} = 0\),
+    приведённые к виду \(\ddot x^\mu + \Gamma^\mu_{\alpha\beta}\dot x^\alpha\dot x^\beta = 0\), дают символы Кристоффеля.
+    Перекрёстный член \(2\Gamma^\mu_{\alpha\beta}\dot x^\alpha\dot x^\beta\) (\(\alpha\ne\beta\)) входит с множителем 2 из-за симметрии.
+
+    **Шаг 2. Уравнение для \(t\).** \(\pd\mathcal L/\pd t = 0\), поэтому
+    \(\frac{\d}{\d\lambda}\left(-2e^{2\alpha}\dot t\right) = -2e^{2\alpha}\left(\ddot t + 2\alpha'\dot r\,\dot t\right) = 0\)
+    (использовали \(\frac{\d}{\d\lambda}e^{2\alpha} = 2\alpha'\dot r\,e^{2\alpha}\)). Отсюда
+
+    \[
+    \ddot t + 2\alpha'\,\dot t\,\dot r = 0
+    \quad\Longrightarrow\quad
+    \Gamma^t_{tr} = \Gamma^t_{rt} = \alpha' .
+    \]
+
+    **Шаг 3. Уравнение для \(r\).**
+
+    \[
+    \begin{aligned}
+    &\frac{\d}{\d\lambda}\left(2e^{2\beta}\dot r\right) = 2e^{2\beta}\left(\ddot r + 2\beta'\dot r^2\right),\\
+    &\frac{\pd\mathcal L}{\pd r} = -2\alpha' e^{2\alpha}\dot t^2 + 2\beta' e^{2\beta}\dot r^2 + 2r\dot\theta^2 + 2r\sin^2\theta\,\dot\phi^2 .
+    \end{aligned}
+    \]
+
+    Вычитаем и делим на \(2e^{2\beta}\):
+
+    \[
+    \ddot r + \alpha' e^{2(\alpha-\beta)}\dot t^2 + \beta'\dot r^2 - r e^{-2\beta}\dot\theta^2 - r e^{-2\beta}\sin^2\theta\,\dot\phi^2 = 0,
+    \]
+
+    откуда читаем \(\Gamma^r_{tt} = \alpha' e^{2(\alpha-\beta)}\), \(\Gamma^r_{rr} = \beta'\), \(\Gamma^r_{\theta\theta} = -re^{-2\beta}\),
+    \(\Gamma^r_{\phi\phi} = -re^{-2\beta}\sin^2\theta\).
+
+    **Шаг 4. Угловые уравнения.** Для \(\theta\): \(\frac{\d}{\d\lambda}(2r^2\dot\theta) - 2r^2\sin\theta\cos\theta\,\dot\phi^2 = 0\);
+    для \(\phi\) (\(\pd\mathcal L/\pd\phi = 0\)): \(\frac{\d}{\d\lambda}(2r^2\sin^2\theta\,\dot\phi) = 0\). Раскрывая производные и деля на
+    \(2r^2\) и \(2r^2\sin^2\theta\):
+
+    \[
+    \ddot\theta + \frac{2}{r}\dot r\dot\theta - \sin\theta\cos\theta\,\dot\phi^2 = 0,
+    \qquad
+    \ddot\phi + \frac{2}{r}\dot r\dot\phi + 2\cot\theta\,\dot\theta\dot\phi = 0 .
+    \]
+
+    Значит, \(\Gamma^\theta_{r\theta} = \Gamma^\phi_{r\phi} = 1/r\), \(\Gamma^\theta_{\phi\phi} = -\sin\theta\cos\theta\), \(\Gamma^\phi_{\theta\phi} = \cot\theta\).
+
+    **Проверка.** При \(\alpha = \beta = 0\) остаются символы плоского пространства в сферических координатах
+    (\(\Gamma^r_{\theta\theta} = -r\) и т.д.). Размерности: \(\Gamma\) имеет размерность \(1/\text{длина}\) в радиальных компонентах.
+
 Подставляя их в формулу для тензора Риччи ([глава 4](../part1-math/04-curvature.md)),
 получаем
 
@@ -57,6 +113,52 @@ R_{\theta\theta} &= e^{-2\beta}\left[r(\beta' - \alpha') - 1\right] + 1,
 \end{aligned}
 \label{eq:ricci}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Формула.** Из определения \(R_{\mu\nu} = R^\lambda{}_{\mu\lambda\nu}\) (соглашения книги):
+
+    \[
+    R_{\mu\nu} = \pd_\lambda\Gamma^\lambda_{\nu\mu} - \pd_\nu\Gamma^\lambda_{\lambda\mu}
+    + \Gamma^\lambda_{\lambda\sigma}\Gamma^\sigma_{\nu\mu} - \Gamma^\lambda_{\nu\sigma}\Gamma^\sigma_{\lambda\mu}.
+    \]
+
+    Понадобятся следы \(\Gamma^\lambda_{\lambda r} = \Gamma^t_{tr} + \Gamma^r_{rr} + \Gamma^\theta_{\theta r} + \Gamma^\phi_{\phi r} = \alpha' + \beta' + \frac2r\),
+    \(\Gamma^\lambda_{\lambda\theta} = \Gamma^\phi_{\phi\theta} = \cot\theta\), \(\Gamma^\lambda_{\lambda t} = 0\).
+
+    **Шаг 2. \(R_{tt}\).** Второе слагаемое нуль (нет зависимости от \(t\)). Первое: \(\pd_r\Gamma^r_{tt} = (\alpha'' + 2\alpha'^2 - 2\alpha'\beta')e^{2(\alpha-\beta)}\).
+    Третье: \(\Gamma^\lambda_{\lambda r}\Gamma^r_{tt} = (\alpha'+\beta'+\frac2r)\alpha' e^{2(\alpha-\beta)}\). Четвёртое: ненулевые пары
+    \((\lambda,\sigma) = (t,r)\) и \((r,t)\): \(\Gamma^t_{tr}\Gamma^r_{tt} + \Gamma^r_{tt}\Gamma^t_{rt} = 2\alpha'^2e^{2(\alpha-\beta)}\). Итого
+
+    \[
+    R_{tt} = e^{2(\alpha-\beta)}\left[\alpha'' + 2\alpha'^2 - 2\alpha'\beta' + \alpha'^2 + \alpha'\beta' + \frac2r\alpha' - 2\alpha'^2\right]
+    = e^{2(\alpha-\beta)}\left[\alpha'' + \alpha'^2 - \alpha'\beta' + \frac2r\alpha'\right].
+    \]
+
+    **Шаг 3. \(R_{rr}\).** \(\pd_\lambda\Gamma^\lambda_{rr} = \beta''\); \(\pd_r\Gamma^\lambda_{\lambda r} = \alpha'' + \beta'' - \frac{2}{r^2}\);
+    \(\Gamma^\lambda_{\lambda r}\Gamma^r_{rr} = (\alpha'+\beta'+\frac2r)\beta'\);
+    \(\Gamma^\lambda_{r\sigma}\Gamma^\sigma_{\lambda r} = (\Gamma^t_{rt})^2 + (\Gamma^r_{rr})^2 + (\Gamma^\theta_{r\theta})^2 + (\Gamma^\phi_{r\phi})^2 = \alpha'^2 + \beta'^2 + \frac{2}{r^2}\):
+
+    \[
+    R_{rr} = \beta'' - \alpha'' - \beta'' + \frac{2}{r^2} + \alpha'\beta' + \beta'^2 + \frac2r\beta' - \alpha'^2 - \beta'^2 - \frac{2}{r^2}
+    = -\alpha'' - \alpha'^2 + \alpha'\beta' + \frac2r\beta' .
+    \]
+
+    **Шаг 4. \(R_{\theta\theta}\).** \(\pd_r\Gamma^r_{\theta\theta} = -e^{-2\beta} + 2r\beta'e^{-2\beta}\);
+    \(-\pd_\theta\Gamma^\lambda_{\lambda\theta} = -\pd_\theta\cot\theta = \frac{1}{\sin^2\theta}\);
+    \(\Gamma^\lambda_{\lambda r}\Gamma^r_{\theta\theta} = -(\alpha'+\beta'+\frac2r)re^{-2\beta}\) (член с \(\Gamma^\theta_{\theta\theta} = 0\) пропадает);
+    \(\Gamma^\lambda_{\theta\sigma}\Gamma^\sigma_{\lambda\theta} = \Gamma^r_{\theta\theta}\Gamma^\theta_{r\theta} + \Gamma^\theta_{\theta r}\Gamma^r_{\theta\theta} + (\Gamma^\phi_{\theta\phi})^2 = -2e^{-2\beta} + \cot^2\theta\). Складываем:
+
+    \[
+    \begin{aligned}
+    R_{\theta\theta} &= -e^{-2\beta} + 2r\beta'e^{-2\beta} + \frac{1}{\sin^2\theta} - r(\alpha'+\beta')e^{-2\beta} - 2e^{-2\beta} + 2e^{-2\beta} - \cot^2\theta\\
+    &= e^{-2\beta}\left[r(\beta' - \alpha') - 1\right] + 1,
+    \end{aligned}
+    \]
+
+    где использовано \(\frac{1}{\sin^2\theta} - \cot^2\theta = 1\). Аналогично \(R_{\phi\phi} = \sin^2\theta\,R_{\theta\theta}\), а недиагональные компоненты равны нулю.
+
+    **Проверка.** При \(\alpha = \beta = 0\) все компоненты обращаются в нуль — плоское пространство.
 
 Решаем вакуумные уравнения \(R_{\mu\nu} = 0\) [(гл. 6)](06-einstein-equations.md).
 
@@ -78,6 +180,41 @@ e^{2\alpha} = 1 - \frac{R_s}{r},
 
 **Шаг 3.** При \(r \to \infty\) должно быть \(g_{tt} \to -(1 + 2\Phi)\) с \(\Phi = -GM/r\)
 [(гл. 5)](05-equivalence.md). Значит, \(R_s = 2GM\) — **радиус Шварцшильда**.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Исключаем \(\alpha''\).** Умножим \(R_{tt}\) из \(\eqref{eq:ricci}\) на \(e^{2(\beta-\alpha)}\) и прибавим \(R_{rr}\):
+
+    \[
+    \left[\alpha'' + \alpha'^2 - \alpha'\beta' + \frac2r\alpha'\right] + \left[-\alpha'' - \alpha'^2 + \alpha'\beta' + \frac2r\beta'\right]
+    = \frac2r(\alpha' + \beta') = 0 .
+    \]
+
+    Значит, \((\alpha + \beta)' = 0\), \(\alpha + \beta = C\). Замена \(t = e^{-C}\tilde t\) даёт \(e^{2\alpha}\d t^2 = e^{2(\alpha - C)}\d\tilde t^2\), т.е. сдвигает \(\alpha \to \alpha - C\); после неё \(\alpha = -\beta\).
+
+    **Шаг 2. Уравнение \(R_{\theta\theta} = 0\).** Подставляем \(\beta = -\alpha\), \(e^{-2\beta} = e^{2\alpha}\):
+
+    \[
+    e^{2\alpha}\left[r(-\alpha' - \alpha') - 1\right] + 1 = 0
+    \quad\Longleftrightarrow\quad
+    e^{2\alpha}\left(2r\alpha' + 1\right) = 1 .
+    \]
+
+    Левая часть — полная производная: \(\frac{\d}{\d r}(re^{2\alpha}) = e^{2\alpha} + r\cdot 2\alpha' e^{2\alpha}\). Интегрируем:
+    \(re^{2\alpha} = r - R_s\), т.е. \(e^{2\alpha} = 1 - R_s/r\).
+
+    **Шаг 3. Проверка \(R_{tt} = R_{rr} = 0\).** При \(\beta = -\alpha\) обе скобки сводятся к одной комбинации:
+    \(R_{rr} = -\left(\alpha'' + 2\alpha'^2 + \frac2r\alpha'\right)\), \(R_{tt} = e^{4\alpha}\left(\alpha'' + 2\alpha'^2 + \frac2r\alpha'\right)\).
+    Пусть \(f = e^{2\alpha}\); тогда \(f' = 2\alpha' f\), \(f'' = (2\alpha'' + 4\alpha'^2)f\), и
+
+    \[
+    \alpha'' + 2\alpha'^2 + \frac2r\alpha' = \frac{1}{2f}\left(f'' + \frac{2}{r}f'\right)
+    = \frac{1}{2f}\left(-\frac{2R_s}{r^3} + \frac2r\cdot\frac{R_s}{r^2}\right) = 0 .
+    \]
+
+    **Шаг 4. Ньютонов предел.** \(g_{tt} = -e^{2\alpha} = -(1 - R_s/r)\). Сравнивая с \(-(1 + 2\Phi) = -(1 - 2GM/r)\), получаем \(R_s/r = 2GM/r\), т.е. \(R_s = 2GM\).
+
+    **Проверка.** Размерность: \(GM\) при \(c = 1\) — длина, \(R_s/r\) безразмерно. С \(c\): \(R_s = 2GM/c^2\).
 
 !!! theorem "Метрика Шварцшильда"
 
@@ -160,6 +297,35 @@ V(r) = \frac12\epsilon - \epsilon\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{
 \label{eq:radial}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Нормировка.** При \(\theta = \pi/2\), \(\dot\theta = 0\) условие \(g_{\mu\nu}\dot x^\mu\dot x^\nu = -\epsilon\) для \(\eqref{eq:schwarzschild}\):
+
+    \[
+    -\left(1 - \frac{2GM}{r}\right)\dot t^2 + \left(1 - \frac{2GM}{r}\right)^{-1}\dot r^2 + r^2\dot\phi^2 = -\epsilon .
+    \]
+
+    **Шаг 2. Подстановка интегралов.** Из \(\eqref{eq:integrals}\): \(\dot t = E/(1 - 2GM/r)\), \(\dot\phi = L/r^2\):
+
+    \[
+    -\frac{E^2}{1 - 2GM/r} + \frac{\dot r^2}{1 - 2GM/r} + \frac{L^2}{r^2} = -\epsilon .
+    \]
+
+    **Шаг 3. Умножаем на \((1 - 2GM/r)\) и делим на 2:**
+
+    \[
+    \frac12\dot r^2 + \frac12\left(1 - \frac{2GM}{r}\right)\left(\epsilon + \frac{L^2}{r^2}\right) = \frac12E^2 .
+    \]
+
+    **Шаг 4. Раскрываем скобки:**
+
+    \[
+    V = \frac12\left(\epsilon + \frac{L^2}{r^2} - \frac{2GM\epsilon}{r} - \frac{2GML^2}{r^3}\right)
+    = \frac12\epsilon - \epsilon\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} .
+    \]
+
+    **Проверка.** При \(G \to 0\) (нет поля) \(\dot r^2 + L^2/r^2 = E^2 - \epsilon\) — прямолинейное движение в плоском пространстве.
+
 Задача свелась к одномерному движению в потенциале \(V\). Первые три слагаемых
 совпадают с ньютоновскими (плюс константа \(\epsilon/2\)); последнее — поправка ОТО. При
 малых \(r\) она доминирует и превращает центробежный барьер в провал: в ОТО частица
@@ -173,6 +339,35 @@ V(r) = \frac12\epsilon - \epsilon\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{
 r_\pm = \frac{L^2 \pm \sqrt{L^4 - 12\,\epsilon\, G^2M^2L^2}}{2\epsilon\, GM} .
 \label{eq:circular}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Производная потенциала.** Из \(\eqref{eq:radial}\):
+
+    \[
+    V'(r) = \frac{\epsilon GM}{r^2} - \frac{L^2}{r^3} + \frac{3GML^2}{r^4} = 0 .
+    \]
+
+    Умножаем на \(r^4\): \(\epsilon GMr^2 - L^2r + 3GML^2 = 0\) — квадратное уравнение относительно \(r\).
+
+    **Шаг 2. Корни.** По формуле \(r = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\) с \(a = \epsilon GM\), \(b = -L^2\), \(c = 3GML^2\):
+    \(b^2 - 4ac = L^4 - 12\epsilon G^2M^2L^2\), что и даёт \(r_\pm\).
+
+    **Шаг 3. Пределы при \(L \to \infty\) (\(\epsilon = 1\)).** \(\sqrt{L^4 - 12G^2M^2L^2} = L^2\sqrt{1 - 12G^2M^2/L^2} \approx L^2 - 6G^2M^2\). Тогда
+
+    \[
+    r_+ \approx \frac{2L^2 - 6G^2M^2}{2GM} \approx \frac{L^2}{GM},
+    \qquad
+    r_- \approx \frac{6G^2M^2}{2GM} = 3GM .
+    \]
+
+    **Шаг 4. ISCO.** Корни сливаются, когда дискриминант нуль: \(L^4 = 12G^2M^2L^2\), \(L^2 = 12G^2M^2\). Тогда
+    \(r = \frac{L^2}{2GM} = \frac{12G^2M^2}{2GM} = 6GM\). При меньших \(L\) дискриминант отрицателен — круговых орбит нет.
+
+    **Шаг 5. Свет (\(\epsilon = 0\)).** Уравнение становится линейным: \(-L^2r + 3GML^2 = 0\), т.е. \(r = 3GM\).
+    Так как \(V = \frac{L^2}{2r^2}(1 - 2GM/r) \to 0\) при \(r \to \infty\) и \(\to -\infty\) при \(r \to 0\), это максимум — орбита неустойчива.
+
+    **Проверка.** \(r_+ r_- = c/a = 3L^2\) и \(r_+ + r_- = L^2/(GM)\) — теорема Виета; при \(L^2 = 12G^2M^2\) оба корня равны \(6GM\): сумма \(12GM\), произведение \(36G^2M^2\). ✓
 
 !!! theorem "Круговые орбиты в поле Шварцшильда"
     - **Массивные частицы.** При \(L > \sqrt{12}\,GM\) есть устойчивая орбита \(r_+\) (минимум \(V\))
@@ -193,6 +388,21 @@ r_\pm = \frac{L^2 \pm \sqrt{L^4 - 12\,\epsilon\, G^2M^2L^2}}{2\epsilon\, GM} .
 \(1 - \sqrt{8/9} \approx 5{,}7\%\) энергии покоя — на порядок больше, чем при термоядерном
 синтезе (0,7%). Внутренний край диска на ISCO — наблюдаемая величина в рентгеновской
 спектроскопии.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Энергия на круговой орбите.** На круговой орбите \(\dot r = 0\), поэтому \(E^2 = 2V = \tilde V(r)\),
+    \(\tilde V = \left(1 - \frac{2GM}{r}\right)\left(1 + \frac{L^2}{r^2}\right)\).
+
+    **Шаг 2. Подстановка ISCO.** \(r = 6GM\), \(L^2 = 12G^2M^2\):
+
+    \[
+    1 - \frac{2GM}{6GM} = \frac23, \qquad 1 + \frac{12G^2M^2}{36G^2M^2} = \frac43,
+    \qquad E^2 = \frac23\cdot\frac43 = \frac89 .
+    \]
+
+    **Шаг 3. Эффективность.** Частица начинает с \(E = 1\) (покой на бесконечности), на ISCO имеет \(E = \sqrt{8/9} = \frac{2\sqrt2}{3} \approx 0{,}9428\).
+    Излучённая доля энергии покоя: \(1 - 0{,}9428 \approx 0{,}057\).
 
 ### Интерактив: эффективный потенциал
 
@@ -234,6 +444,35 @@ r_\pm = \frac{L^2 \pm \sqrt{L^4 - 12\,\epsilon\, G^2M^2L^2}}{2\epsilon\, GM} .
 \label{eq:orbit}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Замена переменных.** С \(u = 1/r\) и \(\dot\phi = L/r^2 = Lu^2\):
+
+    \[
+    \frac{\d r}{\d\lambda} = \frac{\d r}{\d\phi}\dot\phi = -\frac{1}{u^2}\frac{\d u}{\d\phi}\cdot Lu^2 = -L\frac{\d u}{\d\phi}.
+    \]
+
+    **Шаг 2. Подстановка в \(\eqref{eq:radial}\)** (\(\epsilon = 1\), \(u' \equiv \d u/\d\phi\)):
+
+    \[
+    \frac12L^2u'^2 + \frac12 - GMu + \frac{L^2u^2}{2} - GML^2u^3 = \frac12E^2 .
+    \]
+
+    **Шаг 3. Дифференцируем по \(\phi\):**
+
+    \[
+    L^2u'u'' - GMu' + L^2uu' - 3GML^2u^2u' = 0 .
+    \]
+
+    **Шаг 4. Делим на \(L^2u'\)** (для некруговой орбиты \(u' \ne 0\)):
+
+    \[
+    u'' + u = \frac{GM}{L^2} + 3GMu^2 .
+    \]
+
+    **Проверка.** Без последнего члена \(u = \frac{GM}{L^2}(1 + e\cos\phi)\): \(u'' + u = \frac{GM}{L^2}\) — уравнение Бине для ньютоновой коники.
+    Поправка \(3GMu^2\) относительно \(u\) имеет порядок \(GM/r\) — безразмерна.
+
 Без последнего члена решение — коника \(u_0 = \frac{GM}{L^2}(1 + e\cos\phi)\). Поправка
 мала: \(3GMu^2 / (GM/L^2) = 3L^2u^2 \sim 3GM/r \sim 10^{-7}\) для Меркурия. Подставим
 \(u = u_0 + u_1\) и оставим в \(3GMu^2\) только \(u_0\):
@@ -259,6 +498,38 @@ u \approx \frac{GM}{L^2}\left[1 + e\cos\phi + e\,\frac{3G^2M^2}{L^2}\phi\sin\phi
 \delta\phi = \frac{6\pi G M}{a(1 - e^2)} \qquad \left(\text{с } c:\ \frac{6\pi GM}{c^2 a(1-e^2)}\right).
 \label{eq:perihelion}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Правая часть для \(u_1\).** Подставим \(u = u_0 + u_1\) в \(\eqref{eq:orbit}\): \(u_0'' + u_0 = GM/L^2\) сокращается, остаётся
+    \(u_1'' + u_1 = 3GM u_0^2\) (с точностью до первого порядка). С \(u_0^2 = \frac{G^2M^2}{L^4}(1 + e\cos\phi)^2\) и
+    \(\cos^2\phi = \frac12(1 + \cos 2\phi)\):
+
+    \[
+    u_1'' + u_1 = \frac{3G^3M^3}{L^4}\left[\left(1 + \frac{e^2}{2}\right) + 2e\cos\phi + \frac{e^2}{2}\cos2\phi\right].
+    \]
+
+    **Шаг 2. Частные решения.** Для постоянной \(A\): \(u_1 = A\). Для \(B\cos2\phi\): \(u_1 = -\frac{B}{3}\cos2\phi\) (так как \((-4 + 1)\cdot(-\tfrac B3) = B\)).
+    Для резонансного \(C\cos\phi\) пробуем \(u_1 = k\phi\sin\phi\): \(u_1'' = 2k\cos\phi - k\phi\sin\phi\), откуда \(u_1'' + u_1 = 2k\cos\phi\), \(k = C/2\).
+    При \(C = \frac{6G^3M^3e}{L^4}\):
+
+    \[
+    u_1^{\rm рез} = \frac{3G^3M^3}{L^4}\,e\,\phi\sin\phi = \frac{GM}{L^2}\cdot e\,\delta\,\phi\sin\phi, \qquad \delta = \frac{3G^2M^2}{L^2}.
+    \]
+
+    **Шаг 3. Сворачиваем в косинус.** При \(\delta\phi \ll 1\): \(\cos\bigl((1-\delta)\phi\bigr) = \cos\phi\cos\delta\phi + \sin\phi\sin\delta\phi \approx \cos\phi + \delta\phi\sin\phi\).
+    Поэтому \(1 + e\cos\phi + e\delta\phi\sin\phi \approx 1 + e\cos\bigl((1-\delta)\phi\bigr)\).
+
+    **Шаг 4. Сдвиг перигелия.** Максимум \(u\) (перигелий) повторяется, когда \((1-\delta)\phi\) растёт на \(2\pi\):
+    \(\Delta\phi = \frac{2\pi}{1 - \delta} \approx 2\pi(1 + \delta)\). Сдвиг за оборот \(2\pi\delta = \frac{6\pi G^2M^2}{L^2}\).
+
+    **Шаг 5. Через элементы орбиты.** Для ньютонова эллипса фокальный параметр \(p = L^2/(GM) = a(1 - e^2)\), т.е. \(L^2 = GMa(1 - e^2)\):
+
+    \[
+    \delta\phi = \frac{6\pi G^2M^2}{GMa(1-e^2)} = \frac{6\pi GM}{a(1-e^2)} .
+    \]
+
+    **Проверка.** \(GM/a\) безразмерно (\(c = 1\)); для Меркурия \(6\pi\cdot1477/(5{,}79\cdot10^{10}\cdot0{,}9577) \approx 5{,}02\cdot10^{-7}\). ✓
 
 !!! example "Меркурий"
     \(a = 5{,}79\cdot10^{10}\) м, \(e = 0{,}2056\), \(GM_\odot/c^2 = 1477\) м: \(\delta\phi = 5{,}02\cdot10^{-7}\) рад
@@ -293,6 +564,34 @@ u = \frac{\sin\phi}{b} + \frac{3GM}{2b^2}\left(1 + \frac13\cos 2\phi\right).
 \label{eq:deflection}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Уравнение орбиты фотона.** При \(\epsilon = 0\) из \(\eqref{eq:radial}\) с \(\d r/\d\lambda = -L u'\):
+    \(\frac12L^2u'^2 + \frac{L^2u^2}{2} - GML^2u^3 = \frac12E^2\). Дифференцируя по \(\phi\) и деля на \(L^2u'\), получаем \(\eqref{eq:light-orbit}\).
+
+    **Шаг 2. Нулевое приближение.** \(u_0 = \sin\phi/b\) удовлетворяет \(u_0'' + u_0 = 0\), а первый интеграл даёт
+    \(u_0'^2 + u_0^2 = \frac{1}{b^2} = \frac{E^2}{L^2}\), т.е. \(b = L/E\).
+
+    **Шаг 3. Первый порядок.** \(3GMu_0^2 = \frac{3GM}{b^2}\sin^2\phi = \frac{3GM}{2b^2}(1 - \cos2\phi)\). Частные решения:
+    для константы — та же константа; для \(-\frac{3GM}{2b^2}\cos2\phi\) — \(k\cos2\phi\) с \((-4+1)k = -\frac{3GM}{2b^2}\), \(k = \frac{GM}{2b^2}\):
+
+    \[
+    u_1 = \frac{3GM}{2b^2} + \frac{GM}{2b^2}\cos2\phi = \frac{3GM}{2b^2}\left(1 + \frac13\cos2\phi\right).
+    \]
+
+    **Шаг 4. Асимптоты.** При \(\phi = -\delta\), \(\delta \ll 1\): \(\sin\phi \approx -\delta\), \(\cos2\phi \approx 1\). Условие \(u = 0\):
+
+    \[
+    -\frac{\delta}{b} + \frac{3GM}{2b^2}\cdot\frac43 = 0
+    \quad\Longrightarrow\quad
+    \delta = \frac{2GM}{b}.
+    \]
+
+    По симметрии \(\phi \to \pi - \phi\) вторая асимптота при \(\phi = \pi + \delta\). Прямая без отклонения прошла бы от \(0\) до \(\pi\),
+    поэтому угол отклонения \(\Delta\phi = 2\delta = 4GM/b\).
+
+    **Проверка.** Для Солнца \(4\cdot1477/6{,}96\cdot10^8 = 8{,}49\cdot10^{-6}\) рад \(= 1{,}75''\). ✓
+
 Для луча, касающегося края Солнца, \(\Delta\phi = 1{,}75''\). «Ньютоновский» расчёт
 (частица со скоростью \(c\)) даёт вдвое меньше, \(2GM/b\): вторая половина обусловлена
 кривизной пространства \(g_{rr}\). Экспедиции Эддингтона 1919 г. подтвердили значение
@@ -313,6 +612,26 @@ u = \frac{\sin\phi}{b} + \frac{3GM}{2b^2}\left(1 + \frac13\cos 2\phi\right).
 \Delta t = 2GM\int\frac{\d x}{\sqrt{x^2 + b^2}} \approx 2GM\ln\frac{4 r_1 r_2}{b^2}.
 \label{eq:shapiro}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Скорость света в слабом поле.** \(\d s^2 = 0\): \((1+2\Phi)\d t^2 = (1-2\Phi)\d\ell^2\), откуда
+    \(\d t = \sqrt{\frac{1-2\Phi}{1+2\Phi}}\,\d\ell \approx (1 - 2\Phi)\,\d\ell\) в первом порядке по \(\Phi\).
+
+    **Шаг 2. Избыточное время.** С \(\Phi = -GM/r\) и \(r = \sqrt{x^2 + b^2}\) вдоль прямой \(y = b\):
+    \(\d t = \d x + \frac{2GM}{\sqrt{x^2 + b^2}}\,\d x\). Первое слагаемое — время в плоском пространстве, второе — задержка:
+
+    \[
+    \Delta t = 2GM\int_{-x_1}^{x_2}\frac{\d x}{\sqrt{x^2+b^2}} = 2GM\left[\operatorname{arsinh}\frac{x_2}{b} + \operatorname{arsinh}\frac{x_1}{b}\right].
+    \]
+
+    **Шаг 3. Асимптотика.** \(\operatorname{arsinh} y = \ln\left(y + \sqrt{y^2+1}\right) \approx \ln 2y\) при \(y \gg 1\); и \(x_{1,2} \approx r_{1,2}\) при \(r_{1,2} \gg b\):
+
+    \[
+    \Delta t \approx 2GM\left[\ln\frac{2r_2}{b} + \ln\frac{2r_1}{b}\right] = 2GM\ln\frac{4r_1r_2}{b^2}.
+    \]
+
+    **Проверка.** С \(c\): \(\Delta t = \frac{2GM}{c^3}\ln\frac{4r_1r_2}{b^2}\); для Солнца \(2GM_\odot/c^3 \approx 9{,}85\) мкс, туда-обратно — \(19{,}7\) мкс на единицу логарифма. ✓
 
 Для радиолокации планеты (туда и обратно) задержка удваивается:
 \(\Delta t_{\rm rt} = 4GM\ln(4r_1r_2/b^2)\), где \(4GM_\odot/c^3 = 19{,}7\) мкс. Для Венеры или

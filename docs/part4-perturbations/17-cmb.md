@@ -27,6 +27,24 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
 ограничивают энерговыделение при \(z \lesssim 2\times10^6\) — после этого фотоны не успевают
 термализоваться.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Плотность числа фотонов.** Для бозонов с двумя поляризациями
+
+    \[
+    n_\gamma = 2\int\frac{\d^3p}{(2\pi\hbar)^3}\frac{1}{e^{pc/k_BT}-1}
+    = \frac{1}{\pi^2}\left(\frac{k_BT}{\hbar c}\right)^3\int_0^\infty\frac{x^2\,\d x}{e^x-1}
+    = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT}{\hbar c}\right)^3,
+    \]
+
+    где \(\d^3p = 4\pi p^2\d p\), \(x = pc/k_BT\) и \(\int_0^\infty x^2\d x/(e^x-1) = \Gamma(3)\zeta(3) = 2\zeta(3)\).
+
+    **Шаг 2. Числа.** \(k_BT_0 = 8.617\times10^{-5}\ \text{эВ/К}\cdot2.7255\ \text{К} = 2.349\times10^{-4}\) эВ; \(\hbar c = 1.9733\times10^{-5}\) эВ·см; отношение \(11.90\ \text{см}^{-1}\), его куб \(1686\ \text{см}^{-3}\).
+
+    **Шаг 3. Итог.** \(2\zeta(3)/\pi^2 = 2\cdot1.2021/9.8696 = 0.2436\), \(n_\gamma = 0.2436\cdot1686 \approx 411\ \text{см}^{-3}\).
+
+    **Проверка.** \(n_\gamma \propto T^3 \propto a^{-3}\) — число фотонов в сопутствующем объёме сохраняется.
+
 ## 17.2. Мультипольное разложение и статистика
 
 Флуктуацию температуры в направлении \(\hat{\vb n}\) разложим по сферическим функциям:
@@ -51,6 +69,24 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
     Принято изображать \(\mathcal D_\ell \equiv \ell(\ell+1)C_\ell T_0^2/(2\pi)\) в мкК²; тогда
     дисперсия температуры \(\langle\Delta T^2\rangle = \sum_\ell (2\ell+1)C_\ell T_0^2/(4\pi) \approx \int \mathcal D_\ell\,\d\ln\ell\).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Дисперсия в точке.** Из \(\eqref{eq:alm}\) и \(\eqref{eq:Cl}\):
+
+    \[
+    \langle\Theta^2(\hat{\vb n})\rangle = \sum_{\ell m}\sum_{\ell'm'}\langle a_{\ell m}a^*_{\ell'm'}\rangle Y_{\ell m}(\hat{\vb n})Y^*_{\ell'm'}(\hat{\vb n})
+    = \sum_\ell C_\ell\sum_{m=-\ell}^{\ell}|Y_{\ell m}(\hat{\vb n})|^2.
+    \]
+
+    **Шаг 2. Теорема сложения.** \(\sum_m|Y_{\ell m}(\hat{\vb n})|^2 = \dfrac{2\ell+1}{4\pi}\), поэтому \(\langle\Delta T^2\rangle = T_0^2\langle\Theta^2\rangle = \sum_\ell(2\ell+1)C_\ell T_0^2/(4\pi)\).
+
+    **Шаг 3. Через \(\mathcal D_\ell\).** \(C_\ell T_0^2 = 2\pi\mathcal D_\ell/[\ell(\ell+1)]\):
+
+    \[
+    \frac{(2\ell+1)C_\ell T_0^2}{4\pi} = \frac{2\ell+1}{2\ell(\ell+1)}\,\mathcal D_\ell \approx \frac{\mathcal D_\ell}{\ell}\quad(\ell\gg1),
+    \qquad \sum_\ell\frac{\mathcal D_\ell}{\ell} \approx \int\mathcal D_\ell\,\frac{\d\ell}{\ell} = \int\mathcal D_\ell\,\d\ln\ell.
+    \]
+
 У нас одно небо, и на каждый \(\ell\) приходится лишь \(2\ell+1\) независимых \(a_{\ell m}\).
 Для гауссовых флуктуаций это даёт неустранимую **космическую дисперсию**
 
@@ -58,6 +94,28 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
 \frac{\Delta C_\ell}{C_\ell} = \sqrt{\frac{2}{2\ell+1}}.
 \label{eq:cosmic-variance}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Независимые вещественные величины.** Из вещественности \(\Theta\): \(a_{\ell,-m} = (-1)^ma^*_{\ell m}\). Независимы \(a_{\ell0}\) (вещественное, дисперсия \(C_\ell\)) и \(\mathrm{Re}\,a_{\ell m}\), \(\mathrm{Im}\,a_{\ell m}\) при \(m > 0\) (дисперсия \(C_\ell/2\) каждая): всего \(1 + 2\ell\) гауссовых величин.
+
+    **Шаг 2. Оценка.**
+
+    \[
+    \hat C_\ell = \frac{1}{2\ell+1}\sum_m|a_{\ell m}|^2 = \frac{1}{2\ell+1}\left[a_{\ell0}^2 + 2\sum_{m>0}\left((\mathrm{Re}\,a_{\ell m})^2 + (\mathrm{Im}\,a_{\ell m})^2\right)\right].
+    \]
+
+    **Шаг 3. Дисперсии слагаемых.** Для гауссовой \(x\) с дисперсией \(s^2\): \(\mathrm{Var}(x^2) = 3s^4 - s^4 = 2s^4\). Отсюда \(\mathrm{Var}(a_{\ell0}^2) = 2C_\ell^2\), \(\mathrm{Var}(2(\mathrm{Re}\,a)^2) = 4\cdot2(C_\ell/2)^2 = 2C_\ell^2\) — каждое из \(2\ell+1\) слагаемых даёт \(2C_\ell^2\).
+
+    **Шаг 4. Сумма.**
+
+    \[
+    \mathrm{Var}\,\hat C_\ell = \frac{(2\ell+1)\cdot2C_\ell^2}{(2\ell+1)^2} = \frac{2C_\ell^2}{2\ell+1}
+    \quad\Longrightarrow\quad
+    \frac{\Delta C_\ell}{C_\ell} = \sqrt{\frac{2}{2\ell+1}}.
+    \]
+
+    **Проверка.** \(\langle\hat C_\ell\rangle = [C_\ell + 2\ell\cdot2\cdot C_\ell/2]/(2\ell+1) = C_\ell\) — оценка несмещённая.
 
 ## 17.3. Эффект Сакса–Вольфа
 
@@ -99,6 +157,44 @@ n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 41
 (распад потенциалов в эпоху Λ) и начала подъёма к первому пику. Измерение плато COBE/DMR
 (1992) впервые зафиксировало амплитуду первичных возмущений.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Контраст вещества на сверхгоризонтных масштабах.** Из \(00\)-уравнения при \(k \to 0\), \(\Phi' = 0\) (см. § 16.4): \(3\mathcal H^2\Psi = -\tfrac32\mathcal H^2\delta\), т. е. в эпоху вещества \(\delta_m = -2\Psi\).
+
+    **Шаг 2. Адиабатичность.** \(\delta_\gamma/(1+\tfrac13) = \delta_m\) ⇒ \(\delta_\gamma = \tfrac43\delta_m = -\tfrac83\Psi\); так как \(\delta_\gamma = 4\Theta_0\) (\(\rho_\gamma \propto T^4\)): \(\Theta_0 = -\tfrac23\Psi\).
+
+    **Шаг 3. Эффект СВ.** На больших масштабах доплеровский член мал, а ИСВ отбрасываем:
+
+    \[
+    \Theta = \Theta_0 + \Psi = -\tfrac23\Psi + \Psi = \tfrac13\Psi_*,
+    \qquad \Psi_* = \tfrac35\mathcal R \;\Rightarrow\; \Theta = \tfrac13\cdot\tfrac35\mathcal R = \tfrac15\mathcal R.
+    \]
+
+    **Шаг 4. Проекция на сферу.** Используем \(e^{i\vb k\cdot\vb x} = 4\pi\sum_{\ell m}i^\ell j_\ell(kx)Y^*_{\ell m}(\hat{\vb k})Y_{\ell m}(\hat{\vb x})\) с \(\vb x = D_M\hat{\vb n}\):
+
+    \[
+    a_{\ell m} = 4\pi i^\ell\int\frac{\d^3k}{(2\pi)^3}\,\frac{\mathcal R_{\vb k}}{5}\,j_\ell(kD_M)\,Y^*_{\ell m}(\hat{\vb k}).
+    \]
+
+    **Шаг 5. Корреляция.** \(\langle\mathcal R_{\vb k}\mathcal R^*_{\vb k'}\rangle = (2\pi)^3\delta_D(\vb k - \vb k')P_{\mathcal R}(k)\); интеграл по углам \(\int\d\Omega_k\,Y^*_{\ell m}Y_{\ell'm'} = \delta_{\ell\ell'}\delta_{mm'}\):
+
+    \[
+    C_\ell = \frac{16\pi^2}{(2\pi)^3}\int k^2\d k\,\frac{P_{\mathcal R}}{25}\,j_\ell^2(kD_M)
+    = 4\pi\int\frac{\d k}{k}\,\frac{\Delta^2_{\mathcal R}}{25}\,j_\ell^2(kD_M),
+    \]
+
+    где \(\Delta^2_{\mathcal R} = k^3P_{\mathcal R}/(2\pi^2)\) (множитель \(16\pi^2\cdot2\pi^2/(8\pi^3) = 4\pi\)).
+
+    **Шаг 6. Плато.** При \(n_s = 1\) \(\Delta^2_{\mathcal R} = A_s\); с \(x = kD_M\) и \(\int_0^\infty j_\ell^2(x)\,\d x/x = 1/[2\ell(\ell+1)]\):
+
+    \[
+    C_\ell = \frac{4\pi A_s}{25}\cdot\frac{1}{2\ell(\ell+1)}
+    \quad\Longrightarrow\quad
+    \frac{\ell(\ell+1)C_\ell}{2\pi} = \frac{A_s}{25}.
+    \]
+
+    **Шаг 7. Число.** \(T_0^2A_s/25 = (2.7255\times10^6\ \text{мкК})^2\cdot2.1\times10^{-9}/25 \approx 7.43\times10^{12}\cdot8.4\times10^{-11} \approx 620\) мкК².
+
 ## 17.4. Акустические колебания
 
 До рекомбинации фотоны и барионы связаны томсоновским рассеянием в одну жидкость с
@@ -109,6 +205,26 @@ c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gam
 \approx 0.62\left(\frac{\Omega_bh^2}{0.0224}\right)\left(\frac{1091}{1+z}\right).
 \label{eq:sound-speed}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Определение.** Для адиабатических возмущений \(c_s^2 = \delta p/\delta\rho\). Давление создают только фотоны: \(\delta p = \tfrac13\delta\rho_\gamma\); инерцию — фотоны и барионы: \(\delta\rho = \delta\rho_\gamma + \delta\rho_b\).
+
+    **Шаг 2. Адиабатичность.** \(\delta_b = \tfrac34\delta_\gamma\) ⇒ \(\delta\rho_b = \tfrac34\dfrac{\bar\rho_b}{\bar\rho_\gamma}\delta\rho_\gamma = R\,\delta\rho_\gamma\).
+
+    **Шаг 3. Итог.**
+
+    \[
+    c_s^2 = \frac{\tfrac13\delta\rho_\gamma}{(1+R)\delta\rho_\gamma} = \frac{1}{3(1+R)}.
+    \]
+
+    **Шаг 4. Численное значение \(R\).** \(\bar\rho_b/\bar\rho_\gamma = (\Omega_bh^2/\Omega_\gamma h^2)\,a\), \(a = 1/(1+z)\), \(\Omega_\gamma h^2 = 2.47\times10^{-5}\):
+
+    \[
+    R = \frac{3\cdot0.0224}{4\cdot2.47\times10^{-5}\cdot1091} = \frac{0.0672}{0.1078} \approx 0.62.
+    \]
+
+    **Проверка.** \(R \to 0\): \(c_s = 1/\sqrt3\) — чистый фотонный газ; \(R \to\infty\): \(c_s \to 0\).
 
 В приближении сильной связи из уравнения Больцмана для фотонов и уравнения Эйлера для
 барионов получается уравнение вынужденного осциллятора:
@@ -133,6 +249,34 @@ c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gam
     \label{eq:effective-temp}
     \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Упрощение уравнения.** При \(R =\) const и \(\Phi = \Psi =\) const правая часть \(\eqref{eq:acoustic}\) равна \(-\tfrac{k^2}{3}(1+R)\Psi\) (производная \([(1+R)\Phi']'\) исчезает); делим на \(1+R\):
+
+    \[
+    \Theta_0'' + \frac{k^2}{3(1+R)}\Theta_0 = -\frac{k^2}{3}\Psi.
+    \]
+
+    **Шаг 2. Сдвиг равновесия.** Для \(X = \Theta_0 + (1+R)\Psi\) имеем \(X'' = \Theta_0''\), и \(\tfrac{k^2}{3(1+R)}X = \tfrac{k^2}{3(1+R)}\Theta_0 + \tfrac{k^2}{3}\Psi\):
+
+    \[
+    X'' + k^2c_s^2X = 0,\qquad c_s^2 = \frac{1}{3(1+R)}.
+    \]
+
+    **Шаг 3. Решение.** \(X = X_{\rm init}\cos(kc_s\tau) + \tfrac{X'_{\rm init}}{kc_s}\sin(kc_s\tau)\). Для адиабатической моды \(X'_{\rm init} = 0\); при постоянном \(c_s\) \(kc_s\tau = kr_s\) — это \(\eqref{eq:acoustic-solution}\).
+
+    **Шаг 4. Начальное условие.** \(\Theta_0 = -\tfrac23\Psi\): \(X_{\rm init} = \left(-\tfrac23 + 1 + R\right)\Psi = \tfrac{1+3R}{3}\Psi\).
+
+    **Шаг 5. Эффективная температура.**
+
+    \[
+    \Theta_0 + \Psi = X - R\Psi = \frac{1+3R}{3}\Psi\cos(kr_s) - R\Psi = \frac{\Psi}{3}\left[(1+3R)\cos(kr_s) - 3R\right].
+    \]
+
+    **Шаг 6. Экстремумы.** \(\cos = -1\) (сжатие): \(\tfrac{\Psi}{3}(-1-3R-3R) = -\tfrac{\Psi}{3}(1+6R)\). \(\cos = +1\) (разрежение): \(\tfrac{\Psi}{3}(1 + 3R - 3R) = \tfrac{\Psi}{3}\). При \(R_* \approx 0.62\): \(1 + 6R \approx 4.7\).
+
+    **Проверка.** \(R = 0\), \(\cos = 1\): \(\Theta_0 + \Psi = \Psi/3\) — совпадает с СВ \(\eqref{eq:sachs-wolfe}\).
+
 Отсюда — вся феноменология пиков:
 
 1. **Положения.** Экстремумы \(|\Theta_0 + \Psi|\) при \(k_n r_{s*} = n\pi\). Мода \(k\) проецируется
@@ -148,6 +292,18 @@ c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gam
     где фазовый сдвиг \(\varphi_n\) возникает из-за эволюции потенциалов и проекции.
     Угол \(\theta_*\) — «стандартная линейка» на \(z \approx 1090\); Planck измерил
     \(100\theta_* = 1.0411 \pm 0.0003\) — самое точное число в космологии.
+
+    ??? calc "Вычисления"
+
+        **Шаг 1. Экстремумы по \(k\).** \(|\cos(kr_{s*})| = 1\) при \(k_nr_{s*} = n\pi\), т. е. \(k_n = n\pi/r_{s*}\).
+
+        **Шаг 2. Проекция.** Мода с волновым числом \(k\) на расстоянии \(D_M\) видна под углом \(\sim 1/(kD_M)\), т. е. \(\ell \approx kD_M\):
+
+        \[
+        \ell_n \approx k_nD_M = n\pi\frac{D_M}{r_{s*}} = n\,\ell_A,\qquad \ell_A = \frac{\pi}{r_{s*}/D_M} = \frac{\pi}{\theta_*}.
+        \]
+
+        **Шаг 3. Числа.** \(100\theta_* = 1.0411\) ⇒ \(\ell_A = \pi/0.010411 \approx 302\); с \(\varphi_1 \approx 0.27\): \(\ell_1 \approx 302\cdot0.73 \approx 220\).
 
 2. **Нечётные/чётные пики.** Нечётные пики — сжатия в ямах (\(\cos = -1\)), амплитуда
     \(\propto 1 + 6R\); чётные — разрежения (\(\cos = +1\)), амплитуда \(\propto 1\). Барионная
@@ -177,6 +333,20 @@ c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gam
 Для Planck \(\ell_D = k_DD_M \approx 1300\text{–}1400\): начиная с \(\ell \sim 1000\) спектр
 экспоненциально падает. Кроме того, поверхность последнего рассеяния имеет толщину
 \(\Delta z \approx 80\), что дополнительно усредняет мелкие масштабы.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Случайное блуждание.** За время \(\d\tau\) фотон делает \(\d N = \d\tau/\lambda_{\rm C}\) шагов длины \(\lambda_{\rm C}\); квадраты смещений складываются:
+
+    \[
+    \lambda_D^2 \sim \int\lambda_{\rm C}^2\,\d N = \int_0^{\tau_*}\lambda_{\rm C}\,\d\tau = \int_0^{\tau_*}\frac{\d\tau}{n_e\sigma_Ta}.
+    \]
+
+    **Шаг 2. Сравнение с \(\eqref{eq:silk}\).** Точный расчёт (вязкость и теплопроводность в уравнениях для \(\Theta_0\), \(\Theta_1\), \(\Theta_2\)) даёт тот же интеграл с множителем \(\tfrac{1}{6(1+R)}\left[\tfrac{R^2}{1+R} + \tfrac{16}{15}\right]\). При \(R \to 0\): \(\tfrac16\cdot\tfrac{16}{15} = \tfrac{8}{45}\), т. е. \(k_D^{-2} = \tfrac{8}{45}\int\lambda_{\rm C}\,\d\tau\).
+
+    **Шаг 3. Оценка.** \(\lambda_{\rm C} \propto a^2\) растёт, и интеграл набирается к концу; тогда \(k_D^{-1} \sim \sqrt{\lambda_{\rm C}\tau_*}\) — среднее геометрическое длины пробега и горизонта.
+
+    **Проверка.** Размерность: \([\d\tau/(n_e\sigma_Ta)] = \) длина\(^2\), как и \(k_D^{-2}\).
 
 ### Численный пример
 

@@ -48,6 +48,30 @@ K \equiv R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma} = \frac{48\,G^2M^2}{r^6}.
 \(t\) того же падения расходится логарифмически: \(t\) — время удалённого наблюдателя,
 и он никогда не «видит» пересечения горизонта.
 
+??? calc "Вычисления"
+
+    **Шаг 1. Радиальное уравнение.** Из главы 7: \(\left(\frac{\d r}{\d\tau}\right)^2 = E^2 - \left(1 - \frac{2GM}{r}\right)\left(1 + \frac{L^2}{r^2}\right)\).
+    Для радиального падения \(L = 0\), с покоя на бесконечности \(E = 1\):
+
+    \[
+    \left(\frac{\d r}{\d\tau}\right)^2 = 1 - 1 + \frac{2GM}{r} = \frac{2GM}{r},
+    \qquad \frac{\d r}{\d\tau} = -\sqrt{\frac{2GM}{r}}
+    \]
+
+    (знак минус — падение).
+
+    **Шаг 2. Разделяем переменные и интегрируем** от \(r_0\) до \(r < r_0\):
+
+    \[
+    \tau = -\int_{r_0}^{r}\sqrt{\frac{r'}{2GM}}\,\d r' = \frac{1}{\sqrt{2GM}}\cdot\frac23\left(r_0^{3/2} - r^{3/2}\right).
+    \]
+
+    **Шаг 3. Координатное время.** Для сравнения: \(\frac{\d t}{\d r} = \frac{\dot t}{\dot r} = -\frac{1}{1 - 2GM/r}\sqrt{\frac{r}{2GM}}\). Вблизи \(r = 2GM\)
+    подынтегральное выражение \(\approx -\frac{2GM}{r - 2GM}\), и \(t \approx -2GM\ln(r - 2GM) \to \infty\) — логарифмическая расходимость.
+
+    **Проверка.** Подынтегральное выражение в шаге 2 конечно при \(r = 2GM\); время от горизонта до \(r = 0\):
+    \(\tau = \frac{2}{3\sqrt{2GM}}(2GM)^{3/2} = \frac43GM\). Размерность: длина (= время при \(c = 1\)). ✓
+
 ## 8.2. Координаты Эддингтона–Финкельштейна
 
 Рассмотрим радиальные изотропные кривые (\(\d s^2 = 0\), \(\d\theta = \d\phi = 0\)):
@@ -81,6 +105,33 @@ r_* = r + 2GM\ln\left|\frac{r}{2GM} - 1\right|, \qquad
 метрика регулярна на горизонте, и координаты \((v, r, \theta, \phi)\) продолжают
 пространство-время в область \(0 < r < 2GM\).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Производная черепашьей координаты.** \(\frac{\d}{\d r}\left[2GM\ln\left|\frac{r}{2GM} - 1\right|\right] = \frac{2GM}{r - 2GM}\), поэтому
+
+    \[
+    \frac{\d r_*}{\d r} = 1 + \frac{2GM}{r - 2GM} = \frac{r}{r - 2GM} = \left(1 - \frac{2GM}{r}\right)^{-1}.
+    \]
+
+    Тогда \(\eqref{eq:null-schw}\) принимает вид \(\d t = \pm\d r_*\), т.е. \(t = \pm r_* + \text{const}\).
+
+    **Шаг 2. Замена \(t = v - r_*\).** Обозначим \(f = 1 - 2GM/r\). Тогда \(\d t = \d v - \d r/f\) и
+
+    \[
+    \begin{aligned}
+    -f\,\d t^2 + \frac{\d r^2}{f}
+    &= -f\left(\d v^2 - \frac{2\,\d v\,\d r}{f} + \frac{\d r^2}{f^2}\right) + \frac{\d r^2}{f}\\
+    &= -f\,\d v^2 + 2\,\d v\,\d r - \frac{\d r^2}{f} + \frac{\d r^2}{f} = -f\,\d v^2 + 2\,\d v\,\d r .
+    \end{aligned}
+    \]
+
+    Сингулярный член \(\d r^2/f\) сократился — это и есть \(\eqref{eq:ief}\).
+
+    **Шаг 3. Определитель.** Метрика блочно-диагональна: блок \((v,r)\) равен \(\begin{pmatrix}-f & 1\\ 1 & 0\end{pmatrix}\) с определителем \(-1\),
+    угловой блок — \(\mathrm{diag}(r^2, r^2\sin^2\theta)\). Итого \(\det g = -1\cdot r^4\sin^2\theta\).
+
+    **Проверка.** При \(M = 0\): \(\d s^2 = -\d v^2 + 2\,\d v\,\d r + \ldots\) с \(v = t + r\) — это \(-\d t^2 + \d r^2\). ✓
+
 Радиальные изотропные кривые в \(\eqref{eq:ief}\):
 
 \begin{equation}
@@ -88,6 +139,16 @@ r_* = r + 2GM\ln\left|\frac{r}{2GM} - 1\right|, \qquad
 \frac{\d r}{\d v} = \frac12\left(1 - \frac{2GM}{r}\right) \quad\text{(«выходящие»)}.
 \label{eq:null-ief}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1.** При \(\d\theta = \d\phi = 0\) условие \(\d s^2 = 0\) для \(\eqref{eq:ief}\):
+    \(-\left(1 - \frac{2GM}{r}\right)\d v^2 + 2\,\d v\,\d r = \d v\left[-\left(1 - \frac{2GM}{r}\right)\d v + 2\,\d r\right] = 0\).
+
+    **Шаг 2.** Произведение нуль, если обращается в нуль один из множителей: либо \(\d v = 0\) (входящий луч), либо
+    \(2\,\d r = \left(1 - \frac{2GM}{r}\right)\d v\), т.е. \(\frac{\d r}{\d v} = \frac12\left(1 - \frac{2GM}{r}\right)\).
+
+    **Проверка.** При \(r \to \infty\) \(\d r/\d v \to 1/2\): с \(v = t + r\) имеем \(\d v = 2\,\d t\) для выходящего луча \(r = t\), т.е. \(\d r/\d t = 1\). ✓
 
 При \(r > 2GM\) «выходящие» лучи действительно уходят на бесконечность; при \(r = 2GM\)
 они стоят на месте; при \(r < 2GM\) имеем \(\d r/\d v < 0\) — **оба** луча светового конуса
@@ -160,6 +221,40 @@ T^2 - R^2 = \left(1 - \frac{r}{2GM}\right)e^{r/2GM}.
 \label{eq:kruskal-r}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Связь с \(u, v\).** Из \(\eqref{eq:tortoise}\) при \(r > 2GM\): \(e^{r_*/2GM} = e^{r/2GM}\left(\frac{r}{2GM} - 1\right)\).
+    Складывая и вычитая строки \(\eqref{eq:kruskal-def}\) (\(\cosh x \pm \sinh x = e^{\pm x}\)):
+
+    \[
+    R + T = \left(\tfrac{r}{2GM} - 1\right)^{1/2}e^{r/4GM}e^{t/4GM} = e^{(r_* + t)/4GM} = e^{v/4GM},
+    \qquad
+    R - T = e^{(r_* - t)/4GM} = e^{-u/4GM}.
+    \]
+
+    **Шаг 2. Соотношение \(\eqref{eq:kruskal-r}\).** \(R^2 - T^2 = (R+T)(R-T) = e^{r_*/2GM} = \left(\frac{r}{2GM} - 1\right)e^{r/2GM}\), т.е.
+    \(T^2 - R^2 = \left(1 - \frac{r}{2GM}\right)e^{r/2GM}\).
+
+    **Шаг 3. Дифференциалы.** \(\d(R+T) = \frac{R+T}{4GM}\d v\), \(\d(R-T) = -\frac{R-T}{4GM}\d u\). Поэтому
+
+    \[
+    -\d T^2 + \d R^2 = \d(R+T)\,\d(R-T) = -\frac{R^2 - T^2}{16G^2M^2}\,\d u\,\d v .
+    \]
+
+    **Шаг 4. Метрика Шварцшильда в \(u, v\).** Так как \(\d t^2 - \d r_*^2 = \d u\,\d v\) и \(\d r = f\,\d r_*\) (\(f = 1 - 2GM/r\)):
+    \(-f\,\d t^2 + f^{-1}\d r^2 = -f(\d t^2 - \d r_*^2) = -f\,\d u\,\d v\).
+
+    **Шаг 5. Выражаем \(\d u\,\d v\) через \(\d T, \d R\)** из шага 3 и подставляем \(R^2 - T^2 = \frac{r - 2GM}{2GM}e^{r/2GM}\):
+
+    \[
+    -f\,\d u\,\d v = \frac{r - 2GM}{r}\cdot\frac{16G^2M^2}{R^2 - T^2}\left(-\d T^2 + \d R^2\right)
+    = \frac{r - 2GM}{r}\cdot\frac{32G^3M^3\,e^{-r/2GM}}{r - 2GM}\left(-\d T^2 + \d R^2\right).
+    \]
+
+    Множитель \(r - 2GM\) сокращается, остаётся \(\frac{32G^3M^3}{r}e^{-r/2GM}\) — регулярный при \(r = 2GM\). Это \(\eqref{eq:kruskal}\).
+
+    **Проверка.** Размерность: \(G^3M^3/r\) — длина\(^2\), \(T, R\) безразмерны; \(\d s^2\) имеет размерность длины\(^2\). ✓
+
 Метрика \(\eqref{eq:kruskal}\) конформно плоская в плоскости \((T,R)\): радиальные лучи — это
 прямые \(T = \pm R + \mathrm{const}\) под \(45^\circ\), как в СТО. Свойства:
 
@@ -204,6 +299,23 @@ U = \arctan u, \quad V = \arctan v, \qquad -\frac{\pi}{2} < U \le V < \frac{\pi}
 \d s^2 = \frac{1}{4\cos^2U\cos^2V}\left[-4\,\d U\,\d V + \sin^2(V - U)\,\d\Omega^2\right].
 \label{eq:penrose-metric}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Метрика Минковского в \(u, v\).** \(u = t - r\), \(v = t + r\): \(\d u\,\d v = \d t^2 - \d r^2\), так что \(-\d t^2 + \d r^2 = -\d u\,\d v\).
+
+    **Шаг 2. Дифференциалы.** Из \(u = \tan U\), \(v = \tan V\): \(\d u = \frac{\d U}{\cos^2U}\), \(\d v = \frac{\d V}{\cos^2V}\), и
+    \(-\d u\,\d v = \frac{-4\,\d U\,\d V}{4\cos^2U\cos^2V}\).
+
+    **Шаг 3. Радиус.** \(r = \frac{v - u}{2} = \frac12(\tan V - \tan U) = \frac{\sin V\cos U - \cos V\sin U}{2\cos U\cos V} = \frac{\sin(V - U)}{2\cos U\cos V}\), откуда
+
+    \[
+    r^2\,\d\Omega^2 = \frac{\sin^2(V - U)}{4\cos^2U\cos^2V}\,\d\Omega^2 .
+    \]
+
+    **Шаг 4.** Складывая шаги 2 и 3 и вынося общий множитель \(\frac{1}{4\cos^2U\cos^2V}\), получаем \(\eqref{eq:penrose-metric}\).
+
+    **Проверка.** Условие \(r \ge 0\) ⇔ \(v \ge u\) ⇔ \(V \ge U\), а \(\arctan\) отображает \((-\infty, \infty)\) в \((-\pi/2, \pi/2)\) — отсюда пределы в \(\eqref{eq:penrose-mink}\). ✓
 
 С точностью до конформного множителя в квадратных скобках стоит метрика, в которой
 радиальные изотропные лучи по-прежнему идут под \(45^\circ\) в плоскости
@@ -293,6 +405,17 @@ r_E(\theta) = GM + \sqrt{G^2M^2 - a^2\cos^2\theta} \;\ge\; r_+.
 \label{eq:ergosphere}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Горизонты.** \(g_{rr} = \rho^2/\Delta\) расходится при \(\Delta = r^2 - 2GMr + a^2 = 0\); корни квадратного уравнения
+    \(r_\pm = GM \pm \sqrt{G^2M^2 - a^2}\) вещественны лишь при \(a \le GM\).
+
+    **Шаг 2. Знак \(g_{tt}\).** \(g_{tt} = -\left(1 - \frac{2GMr}{\rho^2}\right) > 0\) ⇔ \(\rho^2 < 2GMr\) ⇔ \(r^2 - 2GMr + a^2\cos^2\theta < 0\).
+    Корни: \(r = GM \pm \sqrt{G^2M^2 - a^2\cos^2\theta}\); внешний — \(r_E(\theta)\).
+
+    **Шаг 3. Сравнение с \(r_+\).** Так как \(a^2\cos^2\theta \le a^2\), то \(\sqrt{G^2M^2 - a^2\cos^2\theta} \ge \sqrt{G^2M^2 - a^2}\) и \(r_E \ge r_+\).
+    Равенство при \(\cos^2\theta = 1\) (полюса); на экваторе \(\cos\theta = 0\) и \(r_E = 2GM\).
+
 Область \(r_+ < r < r_E\) называется **эргосферой**. Она касается горизонта на полюсах и
 максимально выступает на экваторе, где \(r_E = 2GM\). Внутри эргосферы ни один наблюдатель
 не может покоиться относительно далёких звёзд: условие \(u^\mu \propto \pd_t\) требует
@@ -311,6 +434,27 @@ r_E(\theta) = GM + \sqrt{G^2M^2 - a^2\cos^2\theta} \;\ge\; r_+.
 \Omega_H = \frac{a}{r_+^2 + a^2}.
 \label{eq:omega-h}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Нулевой момент.** ZAMO имеет \(L = p_\phi = g_{\phi\mu}u^\mu = g_{t\phi}u^t + g_{\phi\phi}u^\phi = 0\). Отсюда
+    \(\omega = \frac{u^\phi}{u^t} = -\frac{g_{t\phi}}{g_{\phi\phi}}\).
+
+    **Шаг 2. Компоненты из \(\eqref{eq:kerr}\).** Перекрёстный член \(-\frac{4GMar\sin^2\theta}{\rho^2}\d t\,\d\phi = 2g_{t\phi}\,\d t\,\d\phi\), т.е.
+    \(g_{t\phi} = -\frac{2GMar\sin^2\theta}{\rho^2}\); \(g_{\phi\phi} = \frac{\sin^2\theta}{\rho^2}\left[(r^2+a^2)^2 - a^2\Delta\sin^2\theta\right]\). Множители \(\sin^2\theta/\rho^2\) сокращаются:
+
+    \[
+    \omega = \frac{2GMar}{(r^2 + a^2)^2 - a^2\Delta\sin^2\theta}.
+    \]
+
+    **Шаг 3. На горизонте** \(\Delta = 0\), зависимость от \(\theta\) пропадает: \(\Omega_H = \frac{2GMar_+}{(r_+^2 + a^2)^2}\). Из \(\Delta(r_+) = 0\) следует
+    \(r_+^2 + a^2 = 2GMr_+\); заменяя один множитель в знаменателе:
+
+    \[
+    \Omega_H = \frac{2GMar_+}{2GMr_+\,(r_+^2 + a^2)} = \frac{a}{r_+^2 + a^2}.
+    \]
+
+    **Проверка.** При \(a = 0\) \(\Omega_H = 0\); при \(r \to \infty\) \(\omega \approx 2GMa/r^3 = 2GJ/r^3\) — эффект Лензе–Тирринга. ✓
 
 ### Процесс Пенроуза
 
@@ -340,6 +484,23 @@ M^2 = M_{\rm irr}^2 + \frac{J^2}{4G^2M_{\rm irr}^2},
 
 и максимальная энергия, извлекаемая из вращения, равна \(M - M_{\rm irr}\); для
 экстремальной дыры это \(1 - 1/\sqrt2 \approx 29\%\) массы.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Площадь через \(r_+\).** \(A = 4\pi(r_+^2 + a^2) = 4\pi\cdot2GMr_+ = 8\pi GMr_+\) (так как \(\Delta(r_+) = 0\)). Отсюда
+
+    \[
+    M_{\rm irr}^2 = \frac{A}{16\pi G^2} = \frac{Mr_+}{2G}.
+    \]
+
+    **Шаг 2. Разность квадратов.** \(M^2 - M_{\rm irr}^2 = \frac{M(2GM - r_+)}{2G} = \frac{Mr_-}{2G}\), поскольку \(r_+ + r_- = 2GM\).
+
+    **Шаг 3. Произведение.** \(4G^2M_{\rm irr}^2\left(M^2 - M_{\rm irr}^2\right) = 4G^2\cdot\frac{Mr_+}{2G}\cdot\frac{Mr_-}{2G} = M^2r_+r_- = M^2a^2 = J^2\)
+    (по Виету \(r_+r_- = a^2\)). Делим на \(4G^2M_{\rm irr}^2\) — получаем \(\eqref{eq:irreducible}\).
+
+    **Шаг 4. Экстремальная дыра.** \(a = GM\), \(r_+ = GM\): \(M_{\rm irr}^2 = M^2/2\), \(M_{\rm irr} = M/\sqrt2\), извлекаемая доля \(1 - 1/\sqrt2 \approx 0{,}293\).
+
+    **Проверка.** При \(a = 0\): \(r_+ = 2GM\), \(M_{\rm irr}^2 = M^2\). ✓
 
 ### Теорема об отсутствии волос
 
@@ -372,6 +533,33 @@ M^2 = M_{\rm irr}^2 + \frac{J^2}{4G^2M_{\rm irr}^2},
 \d M = \frac{\kappa}{8\pi G}\,\d A + \Omega_H\,\d J.
 \label{eq:first-law}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Шварцшильдов предел \(\eqref{eq:surface-gravity}\).** При \(a = 0\): \(r_+ = 2GM\), \(r_- = 0\), \(\kappa = \frac{2GM}{2\cdot4G^2M^2} = \frac{1}{4GM}\).
+
+    **Шаг 2. \(M\) как функция \(A\) и \(J\).** Из \(\eqref{eq:irreducible}\) с \(M_{\rm irr}^2 = A/(16\pi G^2)\):
+    \(M^2 = M_{\rm irr}^2 + \frac{J^2}{4G^2M_{\rm irr}^2}\). Дифференцируем при постоянном \(M_{\rm irr}\):
+    \(2M\,\pd M/\pd J = \frac{2J}{4G^2M_{\rm irr}^2}\), т.е. с \(J = aM\) и \(4G^2M_{\rm irr}^2 = 2GMr_+\):
+
+    \[
+    \frac{\pd M}{\pd J} = \frac{a}{2GMr_+} = \frac{a}{r_+^2 + a^2} = \Omega_H .
+    \]
+
+    **Шаг 3. Производная по \(A\).** \(2M\,\frac{\pd M}{\pd M_{\rm irr}} = 2M_{\rm irr} - \frac{2J^2}{4G^2M_{\rm irr}^3}\) и \(\frac{\d M_{\rm irr}}{\d A} = \frac{1}{32\pi G^2M_{\rm irr}}\):
+
+    \[
+    \frac{\pd M}{\pd A} = \frac{1}{32\pi G^2M}\left(1 - \frac{J^2}{4G^2M_{\rm irr}^4}\right)
+    = \frac{1}{32\pi G^2M}\left(1 - \frac{a^2}{r_+^2}\right),
+    \]
+
+    где \(4G^2M_{\rm irr}^4 = M^2r_+^2\). Сравним с \(\kappa/(8\pi G)\): так как \(r_- = a^2/r_+\) и \(r_+^2 + a^2 = 2GMr_+\),
+
+    \[
+    \frac{\kappa}{8\pi G} = \frac{r_+ - a^2/r_+}{16\pi G\cdot2GMr_+} = \frac{1}{32\pi G^2M}\left(1 - \frac{a^2}{r_+^2}\right). \ \checkmark
+    \]
+
+    **Шаг 4.** Полный дифференциал \(\d M = \frac{\pd M}{\pd A}\d A + \frac{\pd M}{\pd J}\d J\) и есть \(\eqref{eq:first-law}\).
 
 Бардин, Картер и Хокинг (1973) сформулировали четыре закона механики чёрных дыр:
 
@@ -412,6 +600,23 @@ S_{BH} = \frac{k_B\,A}{4G\hbar} = \frac{k_B\,A}{4\ell_P^2}, \qquad \ell_P^2 = G\
 \label{eq:bh-entropy}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Температура Шварцшильда.** \(k_BT_H = \frac{\hbar\kappa}{2\pi} = \frac{\hbar}{2\pi\cdot4GM} = \frac{\hbar}{8\pi GM}\). С \(c\): \(T_H = \frac{\hbar c^3}{8\pi GMk_B}\);
+    для \(M_\odot\): \(\frac{1{,}055\cdot10^{-34}\cdot2{,}7\cdot10^{25}}{8\pi\cdot1{,}33\cdot10^{20}\cdot1{,}38\cdot10^{-23}} \approx 6{,}2\cdot10^{-8}\) К.
+
+    **Шаг 2. Сравнение с \(T\d S\).** Первое слагаемое \(\eqref{eq:first-law}\) должно равняться \(T_H\,\d S\):
+
+    \[
+    \frac{\kappa}{8\pi G}\d A = \frac{\hbar\kappa}{2\pi k_B}\,\d S
+    \quad\Longrightarrow\quad
+    \d S = \frac{2\pi k_B}{\hbar\kappa}\cdot\frac{\kappa}{8\pi G}\d A = \frac{k_B}{4G\hbar}\d A .
+    \]
+
+    \(\kappa\) сокращается; интегрируя (с \(S = 0\) при \(A = 0\)), получаем \(\eqref{eq:bh-entropy}\).
+
+    **Проверка.** Для \(M_\odot\): \(A = 16\pi G^2M^2/c^4 \approx 1{,}1\cdot10^8\) м², \(\ell_P^2 = 2{,}6\cdot10^{-70}\) м², \(S/k_B \approx 10^{77}\). ✓
+
 Для солнечной массы \(S_{BH} \approx 10^{77}k_B\) — на 20 порядков больше энтропии Солнца.
 Объяснение этой энтропии через микросостояния — одна из центральных задач квантовой
 гравитации.
@@ -428,6 +633,28 @@ S_{BH} = \frac{k_B\,A}{4G\hbar} = \frac{k_B\,A}{4\ell_P^2}, \qquad \ell_P^2 = G\
 t_{\rm evap} = \frac{5120\,\pi\,G^2M^3}{\hbar}.
 \label{eq:evaporation}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Закон Стефана–Больцмана.** Мощность \(= \sigma T_H^4\cdot A\), \(A = 4\pi(2GM)^2 = 16\pi G^2M^2\), \(T_H = \frac{\hbar}{8\pi GM}\) (\(k_B = 1\)).
+
+    **Шаг 2. Подстановка.**
+
+    \[
+    \sigma T_H^4 = \frac{\pi^2}{60\hbar^3}\cdot\frac{\hbar^4}{4096\,\pi^4G^4M^4} = \frac{\hbar}{245760\,\pi^2G^4M^4},
+    \qquad
+    \sigma T_H^4\cdot16\pi G^2M^2 = \frac{16\,\hbar}{245760\,\pi\,G^2M^2} = \frac{\hbar}{15360\,\pi\,G^2M^2}.
+    \]
+
+    **Шаг 3. Интегрирование.** \(M^2\,\d M = -\frac{\hbar}{15360\pi G^2}\d t\). От \(M\) до \(0\):
+
+    \[
+    \frac{M^3}{3} = \frac{\hbar\,t_{\rm evap}}{15360\,\pi\,G^2}
+    \quad\Longrightarrow\quad
+    t_{\rm evap} = \frac{15360\,\pi\,G^2M^3}{3\hbar} = \frac{5120\,\pi\,G^2M^3}{\hbar}.
+    \]
+
+    **Проверка.** Размерность: \(G^2M^3/\hbar\) при \(c = 1\) — \([\text{длина}^2/\text{масса}^2]\cdot\text{масса}^3/[\text{масса}\cdot\text{длина}] = \) длина. С \(c\): \(G^2M^3/(\hbar c^4)\). ✓
 
 Для солнечной массы \(t_{\rm evap} \sim 10^{67}\) лет. Испарение актуально лишь для
 гипотетических первичных чёрных дыр малой массы. Вопрос о том, что происходит с

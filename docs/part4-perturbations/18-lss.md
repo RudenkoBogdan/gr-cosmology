@@ -39,6 +39,31 @@
 \label{eq:xi}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Корреляция через фурье-моды.** Подставляем \(\delta(\vb x) = \int\frac{\d^3k}{(2\pi)^3}e^{i\vb k\cdot\vb x}\delta_{\vb k}\) и используем \(\eqref{eq:pk-def}\) (для вещественного поля \(\delta^*_{\vb k} = \delta_{-\vb k}\)):
+
+    \[
+    \xi(r) = \int\frac{\d^3k}{(2\pi)^3}\int\frac{\d^3k'}{(2\pi)^3}\,e^{i\vb k\cdot\vb x - i\vb k'\cdot(\vb x + \vb r)}\langle\delta_{\vb k}\delta^*_{\vb k'}\rangle
+    = \int\frac{\d^3k}{(2\pi)^3}P(k)\,e^{-i\vb k\cdot\vb r},
+    \]
+
+    что совпадает с \(\eqref{eq:xi}\) после замены \(\vb k \to -\vb k\) (\(P\) зависит только от \(k\)).
+
+    **Шаг 2. Угловой интеграл.** Сферические координаты с осью вдоль \(\vb r\), \(\mu = \cos\vartheta\):
+
+    \[
+    \int\d\Omega\,e^{ikr\mu} = 2\pi\int_{-1}^1e^{ikr\mu}\d\mu = 2\pi\,\frac{e^{ikr} - e^{-ikr}}{ikr} = 4\pi\,\frac{\sin kr}{kr}.
+    \]
+
+    **Шаг 3. Радиальная часть.**
+
+    \[
+    \xi(r) = \int_0^\infty\frac{4\pi k^2\,\d k}{(2\pi)^3}P(k)\frac{\sin kr}{kr} = \int_0^\infty\frac{\d k}{k}\,\frac{k^3P(k)}{2\pi^2}\frac{\sin kr}{kr}.
+    \]
+
+    **Проверка.** \(r = 0\): \(\xi(0) = \langle\delta^2\rangle = \int\Delta^2\,\d\ln k\) — соответствует определению \(\Delta^2\).
+
 Если инфляция дала гауссово поле (а наблюдения CMB это подтверждают с точностью
 \(f_{\rm NL} \lesssim 10\)), то \(P(k)\) содержит **всю** статистическую информацию
 в линейном режиме. Физическую интерпретацию даёт дисперсия поля, сглаженного по шару
@@ -53,6 +78,27 @@
 Здесь \(W\) — фурье-образ сферического фильтра «top-hat». Шару радиуса \(R\) соответствует
 масса \(M = \tfrac{4\pi}{3}\bar\rho_m R^3 \approx 1.16\times10^{12}\,\Omega_m (R/h^{-1}\text{Мпк})^3\,h^{-1}M_\odot\),
 поэтому \(\sigma(R)\) и \(\sigma(M)\) — одно и то же.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Фурье-образ шара.** Нормированный фильтр \(W_R(\vb x) = \dfrac{3}{4\pi R^3}\Theta(R - |\vb x|)\). Угловой интеграл как в \(\eqref{eq:xi}\):
+
+    \[
+    W(kR) = \frac{3}{4\pi R^3}\int_0^R4\pi x^2\,\frac{\sin kx}{kx}\,\d x = \frac{3}{R^3k^3}\int_0^{kR}u\sin u\,\d u.
+    \]
+
+    **Шаг 2. Интегрирование по частям.** \(\int_0^Xu\sin u\,\d u = \left[-u\cos u\right]_0^X + \int_0^X\cos u\,\d u = \sin X - X\cos X\). С \(X = kR\): \(W = 3(\sin X - X\cos X)/X^3\).
+
+    **Шаг 3. Дисперсия.** Сглаженное поле в фурье-пространстве — \(\delta_{\vb k}W(kR)\); повторяя шаги вывода \(\eqref{eq:xi}\) при \(r = 0\) с \(P(k)W^2\) вместо \(P(k)\), получаем \(\eqref{eq:sigmaR}\).
+
+    **Шаг 4. Масса.** \(\rho_{\rm cr,0} = 3H_0^2/(8\pi G) = 2.775\times10^{11}\,h^2M_\odot\,\text{Мпк}^{-3}\), \(\bar\rho_m = \Omega_m\rho_{\rm cr,0}\):
+
+    \[
+    M = \frac{4\pi}{3}\cdot2.775\times10^{11}\,\Omega_mh^2\left(\frac{R}{h^{-1}\text{Мпк}}\right)^3h^{-3}M_\odot
+    \approx 1.16\times10^{12}\,\Omega_m\left(\frac{R}{h^{-1}\text{Мпк}}\right)^3h^{-1}M_\odot.
+    \]
+
+    **Проверка.** \(X \to 0\): \(\sin X - X\cos X = X^3/3 + O(X^5)\), \(W \to 1\) — на больших масштабах фильтр не действует.
 
 ## 18.2. Линейный спектр: первичный спектр, передаточная функция, рост
 
@@ -75,6 +121,33 @@ P(k, a) = \frac{8\pi^2}{25}\,\frac{A_s}{\Omega_m^2 H_0^4}\,
 \label{eq:pk-lin}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Пуассон в поздней эпохе.** На подгоризонтных масштабах \(k^2\Phi = -4\pi Ga^2\bar\rho_m\delta\), а \(4\pi G\bar\rho_m = \tfrac32H_0^2\Omega_ma^{-3}\):
+
+    \[
+    k^2\Phi = -\frac32\,\frac{\Omega_mH_0^2}{a}\,\delta
+    \quad\Longrightarrow\quad
+    \delta = -\frac23\,\frac{k^2a}{\Omega_mH_0^2}\,\Phi.
+    \]
+
+    **Шаг 2. Потенциал.** В эпоху вещества сверхгоризонтный \(\Phi = \tfrac35\mathcal R\); с учётом передаточной функции и роста (\(\Phi \propto D/a\), § 16.7) \(\Phi_{\vb k}(a) = \tfrac35\mathcal R_{\vb k}T(k)D(a)/a\).
+
+    **Шаг 3. Подстановка.**
+
+    \[
+    \delta_{\vb k} = -\frac23\,\frac{k^2a}{\Omega_mH_0^2}\cdot\frac35\,\mathcal R_{\vb k}T(k)\frac{D}{a} = -\frac25\,\frac{k^2}{\Omega_mH_0^2}\,\mathcal R_{\vb k}T(k)D(a).
+    \]
+
+    **Шаг 4. Спектр.** Возводим в квадрат по \(\eqref{eq:pk-def}\): \(P(k) = \tfrac{4}{25}\tfrac{k^4}{\Omega_m^2H_0^4}P_{\mathcal R}(k)T^2D^2\), и \(P_{\mathcal R} = \tfrac{2\pi^2}{k^3}A_s(k/k_*)^{n_s-1}\):
+
+    \[
+    P(k) = \frac{4}{25}\cdot2\pi^2\,\frac{A_s}{\Omega_m^2H_0^4}\,k^{4-3}\,\frac{k^{n_s-1}}{k_*^{n_s-1}}\,T^2D^2
+    = \frac{8\pi^2}{25}\,\frac{A_s}{\Omega_m^2H_0^4}\,\frac{k^{n_s}}{k_*^{n_s-1}}\,T^2(k)D^2(a).
+    \]
+
+    **Проверка.** Размерность: \(A_s\) безразмерно, \(k^{n_s}/k_*^{n_s-1} \sim k\), \(H_0^{-4} \sim\) длина\(^4\) (\(c = 1\)): \(P \sim\) длина\(^3\), как и должно.
+
 !!! definition "Определение: передаточная функция"
     \(T(k)\) — отношение амплитуды моды \(k\) в поздней эпохе материи к той, что она имела бы,
     если бы ни разу не входила под горизонт до равенства излучения и материи:
@@ -93,6 +166,26 @@ k_{\rm eq} = a_{\rm eq}H(a_{\rm eq}) = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}},
 
 для Planck 2018 даёт \(z_{\rm eq} \approx 3400\) и \(k_{\rm eq} \approx 0.0104\) Мпк\(^{-1}\)
 \(= 0.0155\,h\,\)Мпк\(^{-1}\).
+
+??? calc "Вычисления"
+
+    **Шаг 1. Хаббл в момент равенства.** \(H^2 = H_0^2(\Omega_ma^{-3} + \Omega_ra^{-4})\); при \(a_{\rm eq} = \Omega_r/\Omega_m\) оба слагаемых равны: \(H^2(a_{\rm eq}) = 2H_0^2\Omega_ma_{\rm eq}^{-3}\).
+
+    **Шаг 2. Волновое число.**
+
+    \[
+    k_{\rm eq}^2 = a_{\rm eq}^2H^2(a_{\rm eq}) = \frac{2\Omega_mH_0^2}{a_{\rm eq}}
+    \quad\Longrightarrow\quad
+    k_{\rm eq} = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}}.
+    \]
+
+    **Шаг 3. Числа.** \(\Omega_rh^2 = 4.15\times10^{-5}\), \(\Omega_mh^2 = 0.1424\): \(a_{\rm eq} = 2.91\times10^{-4}\), \(z_{\rm eq} \approx 3430\). \(\Omega_m = 0.1424/0.674^2 = 0.313\); \(H_0/c = 3.336\times10^{-4}\,h\,\text{Мпк}^{-1}\);
+
+    \[
+    k_{\rm eq} = 3.336\times10^{-4}\sqrt{\frac{2\cdot0.313}{2.91\times10^{-4}}}\ h\,\text{Мпк}^{-1} = 3.336\times10^{-4}\cdot46.4 \approx 0.0155\ h\,\text{Мпк}^{-1},
+    \]
+
+    т. е. \(0.0155\cdot0.674 \approx 0.0104\ \text{Мпк}^{-1}\).
 
 !!! theorem "Асимптотики передаточной функции"
 
@@ -116,6 +209,18 @@ k_{\rm eq} = a_{\rm eq}H(a_{\rm eq}) = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}},
 Множитель \(k^{-2}\) — это \(k^2\) из уравнения Пуассона в \(\eqref{eq:delta-lin}\), скомпенсированный
 затуханием \(\Phi \propto (k\eta_{\rm eq})^{-2}\) после входа под горизонт; логарифм —
 рост Мезароша.
+
+??? calc "Вычисления"
+
+    **Шаг 1. Множители в \(T\).** Для \(k \gg k_{\rm eq}\) потенциал после входа под горизонт в радиационную эпоху падает как \((k\tau_{\rm eq})^{-2} \propto (k_{\rm eq}/k)^2\), а \(\delta_c\) за время от входа до равенства растёт как \(\ln y\) с \(y_{\rm enter}^{-1} \propto k/k_{\rm eq}\) (так как \(\tau \propto a\) в эпоху излучения), т. е. \(\propto\ln(k/k_{\rm eq})\):
+
+    \[
+    T(k) \propto \left(\frac{k_{\rm eq}}{k}\right)^2\ln\frac{k}{k_{\rm eq}}.
+    \]
+
+    **Шаг 2. Спектр.** \(P \propto k^{n_s}T^2 \propto k^{n_s}\cdot k^{-4}\ln^2(k/k_{\rm eq}) = k^{n_s-4}\ln^2(k/k_{\rm eq})\).
+
+    **Проверка.** \(\Delta^2 = k^3P/(2\pi^2) \propto k^{n_s-1}\ln^2k\) — почти не зависит от \(k\) на малых масштабах.
 
 ### Аппроксимация BBKS
 
@@ -329,6 +434,24 @@ r = A(1 - \cos\theta),\qquad t = B(\theta - \sin\theta),\qquad A^3 = GMB^2.
 \label{eq:collapse}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Скорость.** \(\d r/\d\theta = A\sin\theta\), \(\d t/\d\theta = B(1 - \cos\theta)\):
+
+    \[
+    \dot r = \frac{\d r/\d\theta}{\d t/\d\theta} = \frac{A}{B}\,\frac{\sin\theta}{1 - \cos\theta}.
+    \]
+
+    **Шаг 2. Ускорение.** \(\dfrac{\d}{\d\theta}\dfrac{\sin\theta}{1-\cos\theta} = \dfrac{\cos\theta(1-\cos\theta) - \sin^2\theta}{(1-\cos\theta)^2} = \dfrac{\cos\theta - 1}{(1-\cos\theta)^2} = -\dfrac{1}{1-\cos\theta}\), поэтому
+
+    \[
+    \ddot r = \frac{A}{B}\cdot\frac{-1/(1-\cos\theta)}{B(1-\cos\theta)} = -\frac{A}{B^2(1-\cos\theta)^2} = -\frac{A^3}{B^2r^2}.
+    \]
+
+    **Шаг 3. Условие.** \(\ddot r = -GM/r^2\) выполняется при \(A^3 = GMB^2\).
+
+    **Проверка.** \(\dot r = 0\) при \(\theta = \pi\) (поворот, \(r_{\rm ta} = 2A\), \(t_{\rm ta} = \pi B\)); \(r = 0\) при \(\theta = 2\pi\).
+
 Оболочка расширяется, достигает максимума при \(\theta = \pi\) (**поворот**, turnaround) и
 формально коллапсирует в точку при \(\theta = 2\pi\). Сравнивая с фоновой плотностью
 \(\bar\rho = 1/(6\pi G t^2)\), находим
@@ -337,6 +460,22 @@ r = A(1 - \cos\theta),\qquad t = B(\theta - \sin\theta),\qquad A^3 = GMB^2.
 1 + \delta = \frac{9}{2}\,\frac{(\theta - \sin\theta)^2}{(1-\cos\theta)^3}.
 \label{eq:delta-nl}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Плотность облака.** \(\rho = \dfrac{3M}{4\pi r^3}\). Фон ЭдС: \(\bar\rho = \dfrac{1}{6\pi Gt^2}\).
+
+    **Шаг 2. Отношение.**
+
+    \[
+    1 + \delta = \frac{\rho}{\bar\rho} = \frac{3M}{4\pi r^3}\cdot6\pi Gt^2 = \frac{9GMt^2}{2r^3}.
+    \]
+
+    **Шаг 3. Подстановка \(\eqref{eq:collapse}\).** \(t^2 = B^2(\theta - \sin\theta)^2\), \(r^3 = A^3(1-\cos\theta)^3\), \(GMB^2/A^3 = 1\):
+
+    \[
+    1 + \delta = \frac92\cdot\frac{GMB^2}{A^3}\cdot\frac{(\theta - \sin\theta)^2}{(1-\cos\theta)^3} = \frac92\,\frac{(\theta - \sin\theta)^2}{(1-\cos\theta)^3}.
+    \]
 
 При малых \(\theta\) разложение даёт **линейную** экстраполяцию
 \(\delta_{\rm lin} = \tfrac{3}{20}\left(6(\theta - \sin\theta)\right)^{2/3}\).
@@ -353,6 +492,29 @@ r = A(1 - \cos\theta),\qquad t = B(\theta - \sin\theta),\qquad A^3 = GMB^2.
 
     В ΛCDM \(\delta_c\) слабо зависит от \(\Omega_m\): \(\delta_c \approx 1.686\,\Omega_m(z)^{0.0055}\).
 
+??? calc "Вычисления"
+
+    **Шаг 1. Ряды.** \(1 - \cos\theta = \tfrac{\theta^2}{2}\left(1 - \tfrac{\theta^2}{12} + \ldots\right)\), \(\theta - \sin\theta = \tfrac{\theta^3}{6}\left(1 - \tfrac{\theta^2}{20} + \ldots\right)\).
+
+    **Шаг 2. Подстановка в \(\eqref{eq:delta-nl}\).**
+
+    \[
+    1 + \delta = \frac92\cdot\frac{\theta^6/36}{\theta^6/8}\cdot\frac{\left(1 - \theta^2/20\right)^2}{\left(1 - \theta^2/12\right)^3}
+    = \left(1 - \frac{\theta^2}{10}\right)\left(1 + \frac{\theta^2}{4}\right) + O(\theta^4) = 1 + \frac{3}{20}\theta^2.
+    \]
+
+    **Шаг 3. Как функция времени.** В главном порядке \(t = B\theta^3/6\) ⇒ \(\theta^2 = (6t/B)^{2/3}\); линейный контраст растёт \(\propto t^{2/3} \propto a\), и его экстраполяция
+
+    \[
+    \delta_{\rm lin}(t) = \frac{3}{20}\left(\frac{6t}{B}\right)^{2/3} = \frac{3}{20}\left(6(\theta - \sin\theta)\right)^{2/3}.
+    \]
+
+    **Шаг 4. Поворот, \(\theta = \pi\).** \(1+\delta = \tfrac92\cdot\tfrac{\pi^2}{2^3} = \tfrac{9\pi^2}{16} = 5.55\); \(\delta_{\rm lin} = \tfrac{3}{20}(6\pi)^{2/3} = 0.15\cdot7.08 = 1.062\).
+
+    **Шаг 5. Коллапс, \(\theta = 2\pi\).** \(\theta - \sin\theta = 2\pi\): \(\delta_c = \tfrac{3}{20}(12\pi)^{2/3} = 0.15\cdot11.24 = 1.686\).
+
+    **Проверка.** \(\delta_c/\delta_{\rm lin,ta} = 2^{2/3} = 1.587\) — во столько раз выросло \(a \propto t^{2/3}\) за время от \(t_{\rm ta}\) до \(2t_{\rm ta}\).
+
 Реальное облако не схлопывается в точку: обмен энергией между частицами
 («бурная релаксация») приводит его к вириальному равновесию. Из теоремы вириала
 \(2K + U = 0\) и сохранения энергии \(E = U_{\rm ta}\) следует \(r_{\rm vir} = r_{\rm ta}/2\).
@@ -364,6 +526,22 @@ r = A(1 - \cos\theta),\qquad t = B(\theta - \sin\theta),\qquad A^3 = GMB^2.
 = \frac{9\pi^2}{16}\cdot 2^3\cdot \left(2^{2/3}\right)^3 = 18\pi^2 \approx 178.
 \label{eq:dvir}
 \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Энергия.** В момент поворота \(\dot r = 0\), \(K = 0\): \(E = U_{\rm ta} = -\alpha GM^2/r_{\rm ta}\) (\(\alpha = 3/5\) для однородного шара).
+
+    **Шаг 2. Вириал.** \(2K + U = 0\) ⇒ \(E = K + U = U/2 = -\alpha GM^2/(2r_{\rm vir})\).
+
+    **Шаг 3. Радиус.** \(-\alpha GM^2/r_{\rm ta} = -\alpha GM^2/(2r_{\rm vir})\) ⇒ \(r_{\rm vir} = r_{\rm ta}/2\), плотность выросла в \(2^3 = 8\) раз: \(\rho_{\rm vir} = 8\rho_{\rm ta}\).
+
+    **Шаг 4. Фон.** \(\bar\rho \propto a^{-3}\), \(a \propto t^{2/3}\): за время \(t_{\rm ta} \to 2t_{\rm ta}\) \(a\) растёт в \(2^{2/3}\), \(\bar\rho\) падает в \((2^{2/3})^3 = 4\) раза.
+
+    **Шаг 5. Итог.**
+
+    \[
+    \frac{\rho_{\rm vir}}{\bar\rho(t_{\rm coll})} = \frac{\rho_{\rm ta}}{\bar\rho(t_{\rm ta})}\cdot8\cdot4 = \frac{9\pi^2}{16}\cdot32 = 18\pi^2 \approx 177.7.
+    \]
 
 Отсюда популярные определения масс гало \(M_{200}\) (средняя плотность внутри \(r_{200}\)
 в 200 раз выше критической или средней). В ΛCDM при \(z=0\)
@@ -391,6 +569,16 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
 \label{eq:ps-frac}
 \end{equation}
 
+??? calc "Вычисления"
+
+    **Шаг 1. Замена переменной.** \(u = \delta/(\sqrt2\,\sigma)\), \(\d\delta = \sqrt2\,\sigma\,\d u\); нижний предел \(u_0 = \delta_c/(\sqrt2\sigma) = \nu/\sqrt2\) (здесь \(\sigma \equiv \sigma(M)D(z)\)):
+
+    \[
+    F(>M) = 2\int_{\nu/\sqrt2}^\infty\frac{\sqrt2\,\sigma\,\d u}{\sqrt{2\pi}\,\sigma}\,e^{-u^2} = \frac{2}{\sqrt\pi}\int_{\nu/\sqrt2}^\infty e^{-u^2}\d u = \operatorname{erfc}\frac{\nu}{\sqrt2}.
+    \]
+
+    **Проверка.** \(M \to 0\): \(\sigma \to\infty\), \(\nu \to 0\), \(\operatorname{erfc}0 = 1\) — вся масса в гало (благодаря множителю 2).
+
 Множитель 2 Пресс и Шехтер ввели «вручную», чтобы при \(M \to 0\) вся масса оказалась в гало;
 строгое обоснование даёт формализм случайных блужданий (excursion set; Бонд, Коул,
 Эфстатиу, Кайзер 1991). Дифференцируя, получаем число гало в единице объёма на единицу массы.
@@ -402,6 +590,31 @@ F(>M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta
     \left|\frac{\d\ln\sigma}{\d\ln M}\right|.
     \label{eq:ps}
     \end{equation}
+
+??? calc "Вычисления"
+
+    **Шаг 1. Плотность числа гало.** Масса в гало с массами из \([M, M + \d M]\) в единице объёма равна \(\bar\rho_m|\d F/\d M|\,\d M\); делим на массу гало \(M\):
+
+    \[
+    \frac{\d n}{\d M} = \frac{\bar\rho_m}{M}\left|\frac{\d F}{\d M}\right|.
+    \]
+
+    **Шаг 2. Производная по \(\nu\).** \(\dfrac{\d}{\d x}\operatorname{erfc}x = -\dfrac{2}{\sqrt\pi}e^{-x^2}\); с \(x = \nu/\sqrt2\):
+
+    \[
+    \frac{\d F}{\d\nu} = -\frac{2}{\sqrt\pi}e^{-\nu^2/2}\cdot\frac{1}{\sqrt2} = -\sqrt{\frac2\pi}\,e^{-\nu^2/2}.
+    \]
+
+    **Шаг 3. Производная \(\nu\) по \(M\).** \(\nu = \delta_c/(\sigma D)\) ⇒ \(\dfrac{\d\nu}{\d M} = -\nu\,\dfrac{\d\ln\sigma}{\d M} = -\dfrac{\nu}{M}\,\dfrac{\d\ln\sigma}{\d\ln M}\).
+
+    **Шаг 4. Сборка.**
+
+    \[
+    \frac{\d n}{\d M} = \frac{\bar\rho_m}{M}\cdot\sqrt{\frac2\pi}\,e^{-\nu^2/2}\cdot\frac{\nu}{M}\left|\frac{\d\ln\sigma}{\d\ln M}\right|
+    = \sqrt{\frac2\pi}\,\frac{\bar\rho_m}{M^2}\,\nu\,e^{-\nu^2/2}\left|\frac{\d\ln\sigma}{\d\ln M}\right|.
+    \]
+
+    **Проверка.** Размерность: \([\bar\rho_m/M^2]\) = 1/(объём·масса), как и у \(\d n/\d M\).
 
 Структура формулы прозрачна. При \(\nu \ll 1\) (малые массы) \(\d n/\d M \propto M^{-2}\sigma^{-1}\)
 — почти степенной закон \(\propto M^{-1.9}\); при \(\nu \gg 1\) — экспоненциальное обрезание.
