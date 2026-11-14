@@ -75,10 +75,14 @@
 }
 .md-typeset details.calc > summary:hover { color: var(--md-accent-fg-color); }
 .md-typeset details.calc > summary::before {
-  background-color: var(--md-accent-fg-color);
-  -webkit-mask-image: var(--md-admonition-icon--calc);
-          mask-image: var(--md-admonition-icon--calc);
-  width: .9rem; height: .9rem; left: .5em; top: .38em;
+  content: "📝";
+  background: none;
+  -webkit-mask-image: none;
+          mask-image: none;
+  width: auto; height: auto;
+  left: .45em; top: .2em;
+  font-size: .85rem;
+  line-height: 1.2;
 }
 .md-typeset details.calc > summary::after { width: .9rem; height: .9rem; top: .38em; }
 .md-typeset details.calc[open] > summary { border-bottom: 1px dashed var(--md-default-fg-color--lightest); }
