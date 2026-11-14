@@ -2,6 +2,16 @@
   --md-primary-fg-color: #1f2a44;
   --md-accent-fg-color: #e0a526;
 }
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1a2236;
+  --md-default-bg-color: #161b26;
+  --md-typeset-a-color: #8fb4ff;
+  --md-accent-fg-color: #f2c14e;
+  --md-default-fg-color: rgba(235, 238, 245, .9);
+  --md-default-fg-color--light: rgba(235, 238, 245, .65);
+  --md-code-bg-color: #1e2533;
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover { color: #f2c14e; }
 .md-typeset .admonition.definition,
 .md-typeset details.definition { border-color: #3f6ad8; }
 .md-typeset .definition > .admonition-title,
