@@ -9,18 +9,18 @@
 }
 [data-md-color-scheme="slate"] {
   --md-hue: 40;
-  --md-primary-fg-color: #2a3550;
+  --md-primary-fg-color: #283044;
   --md-primary-bg-color: #ece6da;
-  --md-default-bg-color: #1f2840;
+  --md-default-bg-color: #1e2433;
   --md-default-fg-color: rgba(236, 230, 218, .9);
   --md-default-fg-color--light: rgba(236, 230, 218, .68);
   --md-default-fg-color--lighter: rgba(236, 230, 218, .4);
   --md-default-fg-color--lightest: rgba(236, 230, 218, .14);
   --md-typeset-a-color: #e3b46c;
   --md-accent-fg-color: #f0cd8f;
-  --md-code-bg-color: #273250;
-  --md-footer-bg-color: #1a2236;
-  --md-footer-bg-color--dark: #161d2f;
+  --md-code-bg-color: #262d3f;
+  --md-footer-bg-color: #191e2b;
+  --md-footer-bg-color--dark: #151925;
 }
 [data-md-color-scheme="slate"] .md-typeset a:hover { color: #f0cd8f; }
 .md-typeset .admonition.definition,
