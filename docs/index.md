@@ -33,3 +33,9 @@
 
 **Автор:** Богдан Руденко, ГАИШ МГУ (SAI MSU).
 Замечания, найденные ошибки и предложения: [rudenko.sci@gmail.com](mailto:rudenko.sci@gmail.com).
+
+**Лицензия:** текст учебника распространяется по лицензии
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ru), то есть его можно
+свободно использовать и переделывать с указанием автора и на тех же условиях.
+Код (интерактивы, примеры на Python) распространяется по лицензии
+[MIT](https://github.com/RudenkoBogdan/gr-cosmology/blob/main/LICENSE).
