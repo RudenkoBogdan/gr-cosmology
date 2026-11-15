@@ -8,8 +8,6 @@ theme:
   name: material
   language: ru
   features:
-    - navigation.tabs
-    - navigation.sections
     - navigation.indexes
     - navigation.top
     - navigation.footer
@@ -46,6 +44,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
@@ -62,6 +61,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/calc.js
+  - javascripts/toc-progress.js
   - javascripts/minkowski.js
   - javascripts/sphere-transport.js
   - javascripts/tidal.js
