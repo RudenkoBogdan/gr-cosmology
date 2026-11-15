@@ -1,4 +1,7 @@
 site_name: ОТО и космология
+site_url: https://rudenkobogdan.github.io/gr-cosmology/
+repo_url: https://github.com/RudenkoBogdan/gr-cosmology
+repo_name: gr-cosmology
 site_description: Учебник-хендбук по общей теории относительности и космологии
 site_author: Bogdan Rudenko
 docs_dir: docs
