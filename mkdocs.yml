@@ -2,7 +2,7 @@ site_name: ОТО и космология
 site_description: Учебник-хендбук по общей теории относительности и космологии
 site_author: Bogdan Rudenko
 docs_dir: docs
-copyright: © 2026 Bogdan Rudenko
+copyright: '© 2026 Bogdan Rudenko, SAI MSU · Обратная связь: <a href="mailto:rudenko.sci@gmail.com">rudenko.sci@gmail.com</a>'
 
 theme:
   name: material
