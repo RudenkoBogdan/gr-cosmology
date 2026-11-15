@@ -1,0 +1,2352 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Учебник-хендбук по общей теории относительности и космологии">
+      
+      
+        <meta name="author" content="Bogdan Rudenko">
+      
+      
+        <link rel="canonical" href="https://rudenkobogdan.github.io/gr-cosmology/part2-gr/06-einstein-equations/">
+      
+      
+        <link rel="prev" href="../05-equivalence/">
+      
+      
+        <link rel="next" href="../07-schwarzschild/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>6. Уравнения Эйнштейна - ОТО и космология</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="ОТО и космология" class="md-header__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ОТО и космология
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Уравнения Эйнштейна
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ОТО и космология" class="md-nav__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    ОТО и космология
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Главная
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обозначения и соглашения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part1-math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Математический аппарат
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    I. Математический аппарат
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/01-special-relativity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. СТО на четырёхмерном языке
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/02-manifolds-tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Многообразия и тензоры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/03-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Связность и ковариантная производная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/04-curvature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Кривизна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. ОТО
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    II. ОТО
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Принцип эквивалентности и геодезические
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Уравнения Эйнштейна
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Уравнения Эйнштейна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Тензор энергии-импульса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Эвристический вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Действие Гильберта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Космологическая постоянная
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. Ньютоновский предел
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6. Энергетические условия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6. Энергетические условия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: энергетические условия
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7. Символьная проверка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-schwarzschild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Решение Шварцшильда и классические тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-black-holes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Чёрные дыры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-gravitational-waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Гравитационные волны
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part3-cosmology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Космология FRW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    III. Космология FRW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/10-frw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Однородная изотропная Вселенная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/11-friedmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Уравнения Фридмана и модели
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/12-distances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Расстояния и наблюдения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/13-thermal-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Термическая история
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/14-bbn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Первичный нуклеосинтез
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part4-perturbations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/15-inflation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Инфляция
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/16-perturbations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Линейная теория возмущений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/17-cmb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Реликтовое излучение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/18-lss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Крупномасштабная структура
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Приложения
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Приложения
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Глоссарий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/bibliography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Литература
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Тензор энергии-импульса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Эвристический вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Действие Гильберта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Космологическая постоянная
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. Ньютоновский предел
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6. Энергетические условия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6. Энергетические условия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: энергетические условия
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7. Символьная проверка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="6">6. Уравнения Эйнштейна<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<p>В <a href="../05-equivalence/">главе 5</a> мы узнали, как пробные тела движутся в заданной
+метрике. Теперь — вторая половина <abbr title="Общая теория относительности">ОТО</abbr>: как материя определяет метрику. Ньютоновская
+теория даёт подсказку — уравнение Пуассона <span class="arithmatex">\(\nabla^2\Phi = 4\pi G\rho\)</span>, — и наша задача
+найти его тензорное обобщение. Мы проделаем это двумя путями: эвристически, следуя
+Эйнштейну, и из принципа наименьшего действия, следуя Гильберту. Затем обсудим
+космологическую постоянную, проверим ньютоновский предел и сформулируем энергетические
+условия — ограничения на «разумную» материю, которые понадобятся в теоремах о чёрных
+дырах и в космологии.</p>
+<h2 id="61-">6.1. Тензор энергии-импульса<a class="headerlink" href="#61-" title="Permanent link">&para;</a></h2>
+<p>Источником гравитации в <abbr title="Общая теория относительности">ОТО</abbr> является не масса, а тензор энергии-импульса (ТЭИ)
+<span class="arithmatex">\(T_{\mu\nu}\)</span>, введённый в главе 1. Напомним его смысл: <span class="arithmatex">\(T^{\mu\nu}\)</span> — поток
+<span class="arithmatex">\(\mu\)</span>-й компоненты 4-импульса через поверхность <span class="arithmatex">\(x^\nu = \text{const}\)</span>. В частности,
+<span class="arithmatex">\(T^{00}\)</span> — плотность энергии, <span class="arithmatex">\(T^{0i}\)</span> — плотность импульса, <span class="arithmatex">\(T^{ij}\)</span> — тензор
+напряжений. ТЭИ симметричен.</p>
+<div class="admonition definition">
+<p class="admonition-title">Идеальная жидкость</p>
+<p>Идеальная жидкость с плотностью энергии <span class="arithmatex">\(\rho\)</span> и давлением <span class="arithmatex">\(p\)</span> в собственной системе
+отсчёта, движущаяся с 4-скоростью <span class="arithmatex">\(U^\mu\)</span>, имеет</p>
+<div class="arithmatex">\[\begin{equation}
+T_{\mu\nu} = (\rho + p)\,U_\mu U_\nu + p\, g_{\mu\nu} .
+\label{eq:perfect-fluid}
+\end{equation}\]</div>
+<p>В системе покоя (в локально инерциальных координатах) <span class="arithmatex">\(T_{\mu\nu} = \mathrm{diag}(\rho, p, p, p)\)</span>.</p>
+</div>
+<p>Частные случаи: <strong>пыль</strong> (<span class="arithmatex">\(p = 0\)</span>), <strong>излучение</strong> (<span class="arithmatex">\(p = \rho/3\)</span>, след <span class="arithmatex">\(T = 0\)</span>),
+<strong>энергия вакуума</strong> (<span class="arithmatex">\(p = -\rho\)</span>, <span class="arithmatex">\(T_{\mu\nu} = -\rho\,g_{\mu\nu}\)</span>). В космологии удобно
+уравнение состояния <span class="arithmatex">\(p = w\rho\)</span>.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Система покоя.</strong> <span class="arithmatex">\(U^\mu = (1,0,0,0)\)</span>, <span class="arithmatex">\(U_\mu = \eta_{\mu\nu}U^\nu = (-1,0,0,0)\)</span>. Из <span class="arithmatex">\(\eqref{eq:perfect-fluid}\)</span>:</p>
+<div class="arithmatex">\[
+T_{00} = (\rho+p)(-1)^2 + p\,\eta_{00} = \rho + p - p = \rho, \qquad
+T_{0i} = 0, \qquad T_{ij} = p\,\delta_{ij} .
+\]</div>
+<p><strong>Шаг 2. След.</strong> <span class="arithmatex">\(T = g^{\mu\nu}T_{\mu\nu} = (\rho+p)U^\mu U_\mu + p\,\delta^\mu_\mu = -(\rho+p) + 4p = 3p - \rho\)</span>.</p>
+<p><strong>Шаг 3. Частные случаи.</strong> Излучение: <span class="arithmatex">\(T = 3\cdot\tfrac\rho3 - \rho = 0\)</span>. Вакуум: <span class="arithmatex">\(p = -\rho\)</span> убивает первый член,
+<span class="arithmatex">\(T_{\mu\nu} = -\rho\,g_{\mu\nu}\)</span> — одинаково в любой системе отсчёта.</p>
+</details>
+<p>Другие важные примеры:</p>
+<div class="arithmatex">\[\begin{equation}
+T_{\mu\nu}^{\rm (EM)} = F_{\mu\lambda}F_\nu{}^\lambda - \frac14 g_{\mu\nu}F_{\lambda\sigma}F^{\lambda\sigma},
+\qquad
+T_{\mu\nu}^{(\phi)} = \nabla_\mu\phi\nabla_\nu\phi - g_{\mu\nu}\left(\frac12 g^{\lambda\sigma}\nabla_\lambda\phi\nabla_\sigma\phi + V(\phi)\right).
+\label{eq:tei-fields}
+\end{equation}\]</div>
+<p>По принципу минимальной связи <a href="../05-equivalence/"><span class="arithmatex">\(\S\)</span>5.4</a> закон сохранения имеет вид</p>
+<div class="arithmatex">\[\begin{equation}
+\nabla_\mu T^{\mu\nu} = 0 .
+\label{eq:conservation}
+\end{equation}\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Это не глобальный закон сохранения</p>
+<p>В искривлённом пространстве <span class="arithmatex">\(\eqref{eq:conservation}\)</span> не превращается в интегральный
+закон: <span class="arithmatex">\(\nabla_\mu T^{\mu\nu} = \frac{1}{\sqrt{-g}}\pd_\mu(\sqrt{-g}T^{\mu\nu}) + \Gamma^\nu_{\mu\lambda}T^{\mu\lambda}\)</span>,
+и второе слагаемое описывает обмен энергией-импульсом с гравитационным полем.
+Глобальная энергия определена только при наличии вектора Киллинга или на асимптотике
+плоского пространства.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Определение.</strong> <span class="arithmatex">\(\nabla_\mu T^{\mu\nu} = \pd_\mu T^{\mu\nu} + \Gamma^\mu_{\mu\lambda}T^{\lambda\nu} + \Gamma^\nu_{\mu\lambda}T^{\mu\lambda}\)</span>
+(по <span class="arithmatex">\(+\Gamma\)</span> на каждый верхний индекс).</p>
+<p><strong>Шаг 2. Свёртка символов.</strong>
+<span class="arithmatex">\(\Gamma^\mu_{\mu\lambda} = \tfrac12 g^{\mu\sigma}(\pd_\mu g_{\lambda\sigma} + \pd_\lambda g_{\mu\sigma} - \pd_\sigma g_{\mu\lambda})\)</span>.
+Первый и третий члены сокращаются: после переименования <span class="arithmatex">\(\mu\leftrightarrow\sigma\)</span> в третьем
+<span class="arithmatex">\(g^{\mu\sigma}\pd_\sigma g_{\mu\lambda} = g^{\sigma\mu}\pd_\mu g_{\sigma\lambda}\)</span> — то же, что первый. Остаётся</p>
+<div class="arithmatex">\[
+\Gamma^\mu_{\mu\lambda} = \tfrac12 g^{\mu\sigma}\pd_\lambda g_{\mu\sigma} = \tfrac12\pd_\lambda\ln|g| = \pd_\lambda\ln\sqrt{-g},
+\]</div>
+<p>по формуле Якоби <span class="arithmatex">\(\pd\ln\det M = \mathrm{tr}(M^{-1}\pd M)\)</span>.</p>
+<p><strong>Шаг 3. Сборка.</strong></p>
+<div class="arithmatex">\[
+\pd_\mu T^{\mu\nu} + \frac{\pd_\lambda\sqrt{-g}}{\sqrt{-g}}T^{\lambda\nu} = \frac{1}{\sqrt{-g}}\pd_\mu\bigl(\sqrt{-g}\,T^{\mu\nu}\bigr),
+\]</div>
+<p>откуда формула в тексте. Первый член — дивергенция, интегрируемая по теореме Гаусса; член
+<span class="arithmatex">\(\Gamma^\nu_{\mu\lambda}T^{\mu\lambda}\)</span> — нет (у <span class="arithmatex">\(T\)</span> два индекса, а не один).</p>
+</details>
+</div>
+<p>Для пыли <span class="arithmatex">\(\eqref{eq:conservation}\)</span> даёт сохранение числа частиц и уравнение геодезической
+<span class="arithmatex">\(U^\mu\nabla_\mu U^\nu = 0\)</span>: <strong>движение материи следует из уравнений поля</strong>. Для
+идеальной жидкости проекция на <span class="arithmatex">\(U_\nu\)</span> даёт закон сохранения энергии
+<span class="arithmatex">\(U^\mu\nabla_\mu\rho + (\rho + p)\nabla_\mu U^\mu = 0\)</span>, а проекция на ортогональное
+к <span class="arithmatex">\(U\)</span> подпространство — релятивистское уравнение Эйлера.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Дивергенция.</strong> Из <span class="arithmatex">\(T^{\mu\nu} = (\rho+p)U^\mu U^\nu + p\,g^{\mu\nu}\)</span> и <span class="arithmatex">\(\nabla g = 0\)</span>:</p>
+<div class="arithmatex">\[
+\nabla_\mu T^{\mu\nu} = U^\nu\nabla_\mu\bigl((\rho+p)U^\mu\bigr) + (\rho+p)\,U^\mu\nabla_\mu U^\nu + g^{\mu\nu}\nabla_\mu p .
+\]</div>
+<p><strong>Шаг 2. Полезное тождество.</strong> <span class="arithmatex">\(U_\nu U^\nu = -1\)</span> ⇒ <span class="arithmatex">\(0 = \nabla_\mu(U_\nu U^\nu) = 2U_\nu\nabla_\mu U^\nu\)</span>.</p>
+<p><strong>Шаг 3. Проекция на <span class="arithmatex">\(U_\nu\)</span>.</strong> <span class="arithmatex">\(U_\nu U^\nu = -1\)</span>, второй член зануляется по Шагу 2:</p>
+<div class="arithmatex">\[
+-\nabla_\mu\bigl((\rho+p)U^\mu\bigr) + U^\mu\nabla_\mu p = -U^\mu\nabla_\mu\rho - U^\mu\nabla_\mu p - (\rho+p)\nabla_\mu U^\mu + U^\mu\nabla_\mu p = 0,
+\]</div>
+<p>т. е. <span class="arithmatex">\(U^\mu\nabla_\mu\rho + (\rho+p)\nabla_\mu U^\mu = 0\)</span>.</p>
+<p><strong>Шаг 4. Ортогональная проекция.</strong> <span class="arithmatex">\(h^\sigma{}_\nu = \delta^\sigma_\nu + U^\sigma U_\nu\)</span> (<span class="arithmatex">\(h^\sigma{}_\nu U^\nu = 0\)</span>). Первый член
+уничтожается, второй не меняется (он уже ортогонален <span class="arithmatex">\(U\)</span> по Шагу 2):</p>
+<div class="arithmatex">\[
+(\rho+p)\,U^\mu\nabla_\mu U^\sigma = -\left(g^{\sigma\mu} + U^\sigma U^\mu\right)\nabla_\mu p .
+\]</div>
+<p><strong>Шаг 5. Пыль</strong> (<span class="arithmatex">\(p = 0\)</span>): Шаг 4 даёт <span class="arithmatex">\(U^\mu\nabla_\mu U^\sigma = 0\)</span> — геодезическая; Шаг 3 —
+<span class="arithmatex">\(\nabla_\mu(\rho U^\mu) = 0\)</span>, сохранение числа частиц (<span class="arithmatex">\(\rho = mn\)</span>).</p>
+</details>
+<h2 id="62">6.2. Эвристический вывод<a class="headerlink" href="#62" title="Permanent link">&para;</a></h2>
+<p>Ищем уравнение вида <span class="arithmatex">\(\mathcal{G}_{\mu\nu}[g] = \kappa\,T_{\mu\nu}\)</span>, обобщающее
+<span class="arithmatex">\(\nabla^2\Phi = 4\pi G\rho\)</span>. Поскольку <span class="arithmatex">\(\rho \approx T_{00}\)</span>, а <span class="arithmatex">\(\Phi\)</span> связан с
+<span class="arithmatex">\(g_{00}\)</span> соотношением <span class="arithmatex">\(g_{00} = -(1 + 2\Phi)\)</span> <a href="../05-equivalence/">(гл. 5)</a>, левая часть
+должна быть:</p>
+<ol>
+<li>симметричным тензором ранга (0,2);</li>
+<li>построенным из метрики и её производных не выше второго порядка, линейно по вторым;</li>
+<li>бездивергентным, <span class="arithmatex">\(\nabla^\mu \mathcal{G}_{\mu\nu} = 0\)</span>, — иначе противоречие с
+   <span class="arithmatex">\(\eqref{eq:conservation}\)</span>.</li>
+</ol>
+<p>Из вторых производных метрики тензорно строится только тензор Римана
+(<a href="../../part1-math/04-curvature/">глава 4</a>). Свёртки дают <span class="arithmatex">\(R_{\mu\nu}\)</span> и <span class="arithmatex">\(R g_{\mu\nu}\)</span>.
+Первой попыткой Эйнштейна было <span class="arithmatex">\(R_{\mu\nu} = \kappa T_{\mu\nu}\)</span>, но из свёрнутого
+тождества Бьянки</p>
+<div class="arithmatex">\[\begin{equation}
+\nabla^\mu R_{\mu\nu} = \frac12\nabla_\nu R
+\label{eq:bianchi}
+\end{equation}\]</div>
+<p>следует <span class="arithmatex">\(\nabla_\nu T = 0\)</span>, т.е. постоянство следа <span class="arithmatex">\(T\)</span> во всём пространстве-времени —
+физически недопустимо. Комбинация, у которой дивергенция тождественно равна нулю, — это
+<strong>тензор Эйнштейна</strong></p>
+<div class="arithmatex">\[\begin{equation}
+G_{\mu\nu} = R_{\mu\nu} - \frac12 R\, g_{\mu\nu}, \qquad \nabla^\mu G_{\mu\nu} = 0 .
+\label{eq:einstein-tensor}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Почему <span class="arithmatex">\(R_{\mu\nu} = \kappa T_{\mu\nu}\)</span> не годится.</strong> Берём дивергенцию и применяем <span class="arithmatex">\(\eqref{eq:conservation}\)</span> и <span class="arithmatex">\(\eqref{eq:bianchi}\)</span>:
+<span class="arithmatex">\(\kappa\nabla^\mu T_{\mu\nu} = \nabla^\mu R_{\mu\nu} = \tfrac12\nabla_\nu R\)</span>, т. е. <span class="arithmatex">\(\nabla_\nu R = 0\)</span>.
+След уравнения: <span class="arithmatex">\(R = g^{\mu\nu}R_{\mu\nu} = \kappa T\)</span>. Значит, <span class="arithmatex">\(\nabla_\nu T = 0\)</span>.</p>
+<p><strong>Шаг 2. Дивергенция <span class="arithmatex">\(G_{\mu\nu}\)</span>.</strong> Метрика выносится из-под <span class="arithmatex">\(\nabla\)</span>:</p>
+<div class="arithmatex">\[
+\nabla^\mu G_{\mu\nu} = \nabla^\mu R_{\mu\nu} - \tfrac12 g_{\mu\nu}\nabla^\mu R = \tfrac12\nabla_\nu R - \tfrac12\nabla_\nu R = 0 .
+\]</div>
+</details>
+<p>Теорема Лавлока (1971) утверждает, что в четырёх измерениях <span class="arithmatex">\(G_{\mu\nu}\)</span> и <span class="arithmatex">\(g_{\mu\nu}\)</span> —
+единственные тензоры, удовлетворяющие условиям 1–3 (без требования линейности по вторым
+производным). Итак, <span class="arithmatex">\(G_{\mu\nu} = \kappa T_{\mu\nu}\)</span>, а в 6.5 мы найдём <span class="arithmatex">\(\kappa = 8\pi G\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Уравнения Эйнштейна</p>
+<div class="arithmatex">\[\begin{equation}
+R_{\mu\nu} - \frac12 R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu}
+\qquad \left(\text{с } c:\ \frac{8\pi G}{c^4}\,T_{\mu\nu}\right).
+\label{eq:efe}
+\end{equation}\]</div>
+</div>
+<p>Это 10 нелинейных уравнений в частных производных второго порядка для 10 компонент
+<span class="arithmatex">\(g_{\mu\nu}\)</span>. Однако четыре тождества Бьянки <span class="arithmatex">\(\eqref{eq:einstein-tensor}\)</span> делают
+независимыми лишь 6 из них — ровно столько, сколько нужно: четыре компоненты метрики
+отражают свободу выбора координат (калибровочная инвариантность <abbr title="Общая теория относительности">ОТО</abbr>).</p>
+<p>Свернув <span class="arithmatex">\(\eqref{eq:efe}\)</span> с <span class="arithmatex">\(g^{\mu\nu}\)</span> (в четырёх измерениях <span class="arithmatex">\(g^{\mu\nu}g_{\mu\nu} = 4\)</span>),
+получаем <span class="arithmatex">\(-R = 8\pi G\,T\)</span>. Подставляя обратно, приходим к эквивалентной форме
+<strong>с обращённым следом</strong>:</p>
+<div class="arithmatex">\[\begin{equation}
+R_{\mu\nu} = 8\pi G\left(T_{\mu\nu} - \frac12 T\,g_{\mu\nu}\right).
+\label{eq:efe-trace-reversed}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. След.</strong> Умножаем <span class="arithmatex">\(\eqref{eq:efe}\)</span> на <span class="arithmatex">\(g^{\mu\nu}\)</span>: <span class="arithmatex">\(g^{\mu\nu}R_{\mu\nu} = R\)</span>, <span class="arithmatex">\(g^{\mu\nu}g_{\mu\nu} = 4\)</span>, <span class="arithmatex">\(g^{\mu\nu}T_{\mu\nu} = T\)</span>:</p>
+<div class="arithmatex">\[
+R - \tfrac12 R\cdot 4 = -R = 8\pi G\,T \quad\Longrightarrow\quad R = -8\pi G\,T .
+\]</div>
+<p><strong>Шаг 2. Подстановка.</strong> <span class="arithmatex">\(R_{\mu\nu} = 8\pi G\,T_{\mu\nu} + \tfrac12 R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu} - 4\pi G\,T g_{\mu\nu}\)</span> — это <span class="arithmatex">\(\eqref{eq:efe-trace-reversed}\)</span>.</p>
+<p><strong>Проверка.</strong> След правой части: <span class="arithmatex">\(8\pi G(T - \tfrac12 T\cdot4) = -8\pi G T = R\)</span>. В вакууме <span class="arithmatex">\(T_{\mu\nu} = 0\)</span> ⇒ <span class="arithmatex">\(T = 0\)</span> ⇒ <span class="arithmatex">\(R_{\mu\nu} = 0\)</span>.</p>
+</details>
+<p>В вакууме <span class="arithmatex">\(T_{\mu\nu} = 0\)</span>, и уравнения сводятся к</p>
+<div class="arithmatex">\[\begin{equation}
+R_{\mu\nu} = 0 .
+\label{eq:vacuum}
+\end{equation}\]</div>
+<p>Это не означает плоского пространства: тензор Вейля (бесследовая часть Римана) может
+быть отличен от нуля. Именно он описывает поле вне звёзд (<a href="../07-schwarzschild/">глава 7</a>)
+и гравитационные волны (<a href="../09-gravitational-waves/">глава 9</a>).</p>
+<h2 id="63">6.3. Действие Гильберта<a class="headerlink" href="#63" title="Permanent link">&para;</a></h2>
+<p>Более систематический путь — принцип наименьшего действия. Единственный скаляр,
+содержащий не выше вторых производных метрики, — скаляр Риччи <span class="arithmatex">\(R\)</span>. Инвариантный
+элемент объёма — <span class="arithmatex">\(\sqrt{-g}\,\d^4x\)</span>, <span class="arithmatex">\(g = \det g_{\mu\nu}\)</span>. Действие Эйнштейна — Гильберта:</p>
+<div class="arithmatex">\[\begin{equation}
+S = \frac{1}{16\pi G}\int \sqrt{-g}\,R\;\d^4x \;+\; S_M[g, \psi] .
+\label{eq:hilbert-action}
+\end{equation}\]</div>
+<p>Варьировать удобно по обратной метрике <span class="arithmatex">\(g^{\mu\nu}\)</span>. Запишем
+<span class="arithmatex">\(\sqrt{-g}R = \sqrt{-g}\,g^{\mu\nu}R_{\mu\nu}\)</span>; тогда</p>
+<div class="arithmatex">\[
+\delta(\sqrt{-g}\,R) = \sqrt{-g}\,R_{\mu\nu}\,\delta g^{\mu\nu}
++ R\,\delta\sqrt{-g} + \sqrt{-g}\,g^{\mu\nu}\delta R_{\mu\nu} .
+\]</div>
+<p>Нужны три факта.</p>
+<ol>
+<li>
+<p><strong>Вариация детерминанта.</strong> Из <span class="arithmatex">\(\delta\ln\det M = \mathrm{tr}(M^{-1}\delta M)\)</span> и
+    <span class="arithmatex">\(g^{\mu\nu}\delta g_{\mu\nu} = -g_{\mu\nu}\delta g^{\mu\nu}\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+\delta\sqrt{-g} = -\frac12\sqrt{-g}\,g_{\mu\nu}\,\delta g^{\mu\nu} .
+\label{eq:delta-det}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Вариация логарифма детерминанта.</strong> <span class="arithmatex">\(\delta\ln|g| = \mathrm{tr}(g^{-1}\delta g) = g^{\mu\nu}\delta g_{\mu\nu}\)</span>,
+т. е. <span class="arithmatex">\(\delta g = g\,g^{\mu\nu}\delta g_{\mu\nu}\)</span>.</p>
+<p><strong>Шаг 2. Связь <span class="arithmatex">\(\delta g_{\mu\nu}\)</span> и <span class="arithmatex">\(\delta g^{\mu\nu}\)</span>.</strong> Варьируем <span class="arithmatex">\(g^{\mu\lambda}g_{\lambda\nu} = \delta^\mu_\nu\)</span>:
+<span class="arithmatex">\(\delta g^{\mu\lambda}g_{\lambda\nu} + g^{\mu\lambda}\delta g_{\lambda\nu} = 0\)</span>. Свёртка по <span class="arithmatex">\(\mu = \nu\)</span>:
+<span class="arithmatex">\(g^{\mu\nu}\delta g_{\mu\nu} = -g_{\mu\nu}\delta g^{\mu\nu}\)</span>.</p>
+<p><strong>Шаг 3. Корень.</strong> <span class="arithmatex">\(-g = (\sqrt{-g})^2 &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+\delta\sqrt{-g} = \frac{-\delta g}{2\sqrt{-g}} = \frac{-g}{2\sqrt{-g}}\,g^{\mu\nu}\delta g_{\mu\nu}
+= \frac12\sqrt{-g}\,g^{\mu\nu}\delta g_{\mu\nu} = -\frac12\sqrt{-g}\,g_{\mu\nu}\delta g^{\mu\nu} .
+\]</div>
+<p><strong>Проверка.</strong> Масштабирование <span class="arithmatex">\(g_{\mu\nu}\to(1+\epsilon)g_{\mu\nu}\)</span> в 4D: <span class="arithmatex">\(\sqrt{-g}\to(1+\epsilon)^2\sqrt{-g}\approx(1+2\epsilon)\sqrt{-g}\)</span>;
+формула: <span class="arithmatex">\(\tfrac12\sqrt{-g}\,g^{\mu\nu}\epsilon g_{\mu\nu} = 2\epsilon\sqrt{-g}\)</span>. Совпадает.</p>
+</details>
+</li>
+<li>
+<p><strong>Тождество Палатини.</strong> Разность связностей — тензор, и в локально инерциальной
+    системе легко проверить, что</p>
+<div class="arithmatex">\[\begin{equation}
+\delta R_{\mu\nu} = \nabla_\lambda\,\delta\Gamma^\lambda_{\mu\nu} - \nabla_\nu\,\delta\Gamma^\lambda_{\mu\lambda} .
+\label{eq:palatini}
+\end{equation}\]</div>
+<p>Поэтому <span class="arithmatex">\(\sqrt{-g}\,g^{\mu\nu}\delta R_{\mu\nu} = \sqrt{-g}\,\nabla_\lambda V^\lambda\)</span> — полная
+производная, не дающая вклада в уравнения (при надлежащем граничном члене
+Гиббонса — Хокинга).</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Риччи через <span class="arithmatex">\(\Gamma\)</span>.</strong> Сворачиваем формулу Римана из conventions по <span class="arithmatex">\(R_{\mu\nu} = R^\lambda{}_{\mu\lambda\nu}\)</span>:</p>
+<div class="arithmatex">\[
+R_{\mu\nu} = \pd_\lambda\Gamma^\lambda_{\nu\mu} - \pd_\nu\Gamma^\lambda_{\lambda\mu} + \Gamma^\lambda_{\lambda\sigma}\Gamma^\sigma_{\nu\mu} - \Gamma^\lambda_{\nu\sigma}\Gamma^\sigma_{\lambda\mu} .
+\]</div>
+<p><strong>Шаг 2. Варьируем в точке <span class="arithmatex">\(p\)</span>, где <span class="arithmatex">\(\Gamma(p) = 0\)</span>.</strong> Члены <span class="arithmatex">\(\Gamma\,\delta\Gamma\)</span> в <span class="arithmatex">\(p\)</span> исчезают:
+<span class="arithmatex">\(\delta R_{\mu\nu} = \pd_\lambda\delta\Gamma^\lambda_{\nu\mu} - \pd_\nu\delta\Gamma^\lambda_{\lambda\mu}\)</span>.</p>
+<p><strong>Шаг 3. Ковариантизация.</strong> <span class="arithmatex">\(\delta\Gamma\)</span> — разность двух связностей, т. е. тензор; в <span class="arithmatex">\(p\)</span> <span class="arithmatex">\(\nabla = \pd\)</span>,
+поэтому <span class="arithmatex">\(\delta R_{\mu\nu} = \nabla_\lambda\delta\Gamma^\lambda_{\mu\nu} - \nabla_\nu\delta\Gamma^\lambda_{\mu\lambda}\)</span> (<span class="arithmatex">\(\Gamma\)</span> симметричны по нижним индексам).
+Обе стороны — тензоры, равные в одной системе координат, значит, и во всех.</p>
+<p><strong>Шаг 4. Полная дивергенция.</strong> Метрика проходит через <span class="arithmatex">\(\nabla\)</span>:</p>
+<div class="arithmatex">\[
+g^{\mu\nu}\delta R_{\mu\nu} = \nabla_\lambda\bigl(g^{\mu\nu}\delta\Gamma^\lambda_{\mu\nu}\bigr) - \nabla_\nu\bigl(g^{\mu\nu}\delta\Gamma^\lambda_{\mu\lambda}\bigr)
+= \nabla_\lambda V^\lambda,\qquad V^\lambda = g^{\mu\nu}\delta\Gamma^\lambda_{\mu\nu} - g^{\mu\lambda}\delta\Gamma^\sigma_{\mu\sigma} .
+\]</div>
+<p>С формулой <span class="arithmatex">\(\Gamma^\mu_{\mu\lambda} = \pd_\lambda\ln\sqrt{-g}\)</span>: <span class="arithmatex">\(\sqrt{-g}\,\nabla_\lambda V^\lambda = \pd_\lambda(\sqrt{-g}\,V^\lambda)\)</span> — по теореме Гаусса уходит на границу.</p>
+</details>
+</li>
+<li>
+<p><strong>Определение ТЭИ.</strong> Для материи</p>
+<div class="arithmatex">\[\begin{equation}
+T_{\mu\nu} = -\frac{2}{\sqrt{-g}}\,\frac{\delta S_M}{\delta g^{\mu\nu}} .
+\label{eq:tei-def}
+\end{equation}\]</div>
+<p>Для скалярного поля с <span class="arithmatex">\(S_M = -\int\sqrt{-g}\,\bigl(\tfrac12 g^{\mu\nu}\pd_\mu\phi\pd_\nu\phi + V\bigr)\d^4x\)</span>
+это даёт <span class="arithmatex">\(\eqref{eq:tei-fields}\)</span>; в плоском пространстве определение совпадает с
+каноническим (симметризованным) ТЭИ.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Зависимость от <span class="arithmatex">\(g^{\mu\nu}\)</span>.</strong> Лагранжиан <span class="arithmatex">\(-\sqrt{-g}\bigl(\tfrac12 g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi + V\bigr)\)</span>
+зависит от <span class="arithmatex">\(g^{\mu\nu}\)</span> явно (через <span class="arithmatex">\(g^{\alpha\beta}\)</span>) и через <span class="arithmatex">\(\sqrt{-g}\)</span>; производных метрики нет.</p>
+<p><strong>Шаг 2. Вариация.</strong> С <span class="arithmatex">\(\eqref{eq:delta-det}\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\delta S_M}{\delta g^{\mu\nu}} = -\sqrt{-g}\,\frac12\pd_\mu\phi\pd_\nu\phi
++ \frac12\sqrt{-g}\,g_{\mu\nu}\left(\tfrac12 g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi + V\right).
+\]</div>
+<p><strong>Шаг 3. Умножаем на <span class="arithmatex">\(-2/\sqrt{-g}\)</span>.</strong></p>
+<div class="arithmatex">\[
+T_{\mu\nu} = \pd_\mu\phi\pd_\nu\phi - g_{\mu\nu}\left(\tfrac12 g^{\alpha\beta}\pd_\alpha\phi\pd_\beta\phi + V\right),
+\]</div>
+<p>что совпадает с <span class="arithmatex">\(\eqref{eq:tei-fields}\)</span> (для скаляра <span class="arithmatex">\(\nabla_\mu\phi = \pd_\mu\phi\)</span>).</p>
+<p><strong>Проверка.</strong> Однородное поле в покое: <span class="arithmatex">\(T_{00} = \tfrac12\dot\phi^2 + V\)</span> — положительная энергия при <span class="arithmatex">\(V\ge0\)</span>.</p>
+</details>
+</li>
+</ol>
+<p>Собирая всё, получаем</p>
+<div class="arithmatex">\[
+\delta S = \int \sqrt{-g}\,\delta g^{\mu\nu}\left[\frac{1}{16\pi G}\left(R_{\mu\nu} - \frac12 R\, g_{\mu\nu}\right) - \frac12 T_{\mu\nu}\right]\d^4x = 0,
+\]</div>
+<p>то есть в точности <span class="arithmatex">\(\eqref{eq:efe}\)</span>. Нормировка <span class="arithmatex">\(1/(16\pi G)\)</span> выбрана так, чтобы
+воспроизвести ньютоновский предел. Бездивергентность <span class="arithmatex">\(G_{\mu\nu}\)</span> теперь следует из
+диффеоморфной инвариантности действия, а <span class="arithmatex">\(\eqref{eq:conservation}\)</span> — из уравнений движения
+материи: тождество Бьянки и закон сохранения — проявления одной и той же симметрии.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Гравитационная часть.</strong> Подставляем <span class="arithmatex">\(\eqref{eq:delta-det}\)</span> и <span class="arithmatex">\(\eqref{eq:palatini}\)</span> в разложение <span class="arithmatex">\(\delta(\sqrt{-g}R)\)</span>:</p>
+<div class="arithmatex">\[
+\delta(\sqrt{-g}R) = \sqrt{-g}\,R_{\mu\nu}\delta g^{\mu\nu} - \frac12\sqrt{-g}\,R\,g_{\mu\nu}\delta g^{\mu\nu} + \pd_\lambda(\sqrt{-g}V^\lambda)
+= \sqrt{-g}\,G_{\mu\nu}\delta g^{\mu\nu} + \text{(граница)} .
+\]</div>
+<p><strong>Шаг 2. Материя.</strong> Обращая <span class="arithmatex">\(\eqref{eq:tei-def}\)</span>: <span class="arithmatex">\(\delta S_M = \int\frac{\delta S_M}{\delta g^{\mu\nu}}\delta g^{\mu\nu}\d^4x = -\frac12\int\sqrt{-g}\,T_{\mu\nu}\delta g^{\mu\nu}\d^4x\)</span>.</p>
+<p><strong>Шаг 3. Сумма</strong> даёт выражение в тексте; так как <span class="arithmatex">\(\delta g^{\mu\nu}\)</span> произвольна, скобка равна нулю:
+<span class="arithmatex">\(\frac{1}{16\pi G}G_{\mu\nu} = \frac12 T_{\mu\nu}\)</span>, т. е. <span class="arithmatex">\(G_{\mu\nu} = 8\pi G\,T_{\mu\nu}\)</span>.</p>
+</details>
+<h2 id="64">6.4. Космологическая постоянная<a class="headerlink" href="#64" title="Permanent link">&para;</a></h2>
+<p>Условиям 1–3 из 6.2 удовлетворяет и сама метрика: <span class="arithmatex">\(\nabla^\mu g_{\mu\nu} = 0\)</span>. Поэтому
+самое общее уравнение имеет вид</p>
+<div class="arithmatex">\[\begin{equation}
+G_{\mu\nu} + \Lambda\, g_{\mu\nu} = 8\pi G\,T_{\mu\nu} ,
+\label{eq:efe-lambda}
+\end{equation}\]</div>
+<p>что соответствует замене <span class="arithmatex">\(R \to R - 2\Lambda\)</span> в <span class="arithmatex">\(\eqref{eq:hilbert-action}\)</span>. Эйнштейн ввёл
+<span class="arithmatex">\(\Lambda &gt; 0\)</span> в 1917 г., чтобы получить статическую Вселенную, а после открытия
+расширения назвал это «величайшей ошибкой». В 1998 г. по наблюдениям сверхновых Ia
+было обнаружено ускоренное расширение, и <span class="arithmatex">\(\Lambda\)</span> (или нечто её имитирующее)
+вернулась — см. <a href="../../part3-cosmology/11-friedmann/">главу 11</a>.</p>
+<p>Перенеся <span class="arithmatex">\(\Lambda g_{\mu\nu}\)</span> направо, видим, что космологическая постоянная
+эквивалентна идеальной жидкости с <span class="arithmatex">\(p = -\rho\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+T^{\rm (vac)}_{\mu\nu} = -\rho_{\rm vac}\,g_{\mu\nu}, \qquad \rho_{\rm vac} = \frac{\Lambda}{8\pi G}.
+\label{eq:vacuum-energy}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Перенос.</strong> <span class="arithmatex">\(G_{\mu\nu} = 8\pi G\,T_{\mu\nu} - \Lambda g_{\mu\nu} = 8\pi G\left(T_{\mu\nu} + T^{\rm (vac)}_{\mu\nu}\right)\)</span>,
+где <span class="arithmatex">\(T^{\rm (vac)}_{\mu\nu} = -\frac{\Lambda}{8\pi G}g_{\mu\nu}\)</span>.</p>
+<p><strong>Шаг 2. Сравнение с жидкостью.</strong> <span class="arithmatex">\(\eqref{eq:perfect-fluid}\)</span> при <span class="arithmatex">\(p = -\rho\)</span>: <span class="arithmatex">\((\rho - \rho)U_\mu U_\nu - \rho\,g_{\mu\nu} = -\rho\,g_{\mu\nu}\)</span>,
+откуда <span class="arithmatex">\(\rho_{\rm vac} = \Lambda/(8\pi G)\)</span>, <span class="arithmatex">\(p_{\rm vac} = -\rho_{\rm vac}\)</span>.</p>
+<p><strong>Шаг 3. Действие.</strong> Добавка <span class="arithmatex">\(-2\Lambda\sqrt{-g}\)</span> варьируется по <span class="arithmatex">\(\eqref{eq:delta-det}\)</span>:
+<span class="arithmatex">\(\delta(-2\Lambda\sqrt{-g}) = \Lambda\sqrt{-g}\,g_{\mu\nu}\delta g^{\mu\nu}\)</span>, и в скобке <span class="arithmatex">\(\delta S\)</span> появляется
+<span class="arithmatex">\(\frac{1}{16\pi G}(G_{\mu\nu} + \Lambda g_{\mu\nu})\)</span> — это <span class="arithmatex">\(\eqref{eq:efe-lambda}\)</span>.</p>
+</details>
+<p>Лоренц-инвариантность требует, чтобы ТЭИ вакуума был пропорционален <span class="arithmatex">\(\eta_{\mu\nu}\)</span>,
+так что любая энергия нулевых колебаний квантовых полей гравитирует как <span class="arithmatex">\(\Lambda\)</span>.
+Наблюдаемое значение <span class="arithmatex">\(\rho_{\rm vac} \approx 6\cdot10^{-27}\)</span> кг/м³ <span class="arithmatex">\(\sim (2{,}2~\text{мэВ})^4\)</span>
+на <span class="arithmatex">\(\sim120\)</span> порядков меньше наивной оценки <span class="arithmatex">\(M_{\rm Pl}^4\)</span> — <strong>проблема
+космологической постоянной</strong>.</p>
+<h2 id="65">6.5. Ньютоновский предел<a class="headerlink" href="#65" title="Permanent link">&para;</a></h2>
+<p>Найдём <span class="arithmatex">\(\kappa\)</span> в <span class="arithmatex">\(G_{\mu\nu} = \kappa T_{\mu\nu}\)</span>. Используем форму с обращённым
+следом: <span class="arithmatex">\(R_{\mu\nu} = \kappa(T_{\mu\nu} - \tfrac12 T g_{\mu\nu})\)</span>. Рассмотрим
+статическую пыль <span class="arithmatex">\(T_{\mu\nu} = \rho U_\mu U_\nu\)</span> в слабом поле; в главном порядке
+<span class="arithmatex">\(U^\mu = (1, 0, 0, 0)\)</span>, <span class="arithmatex">\(U_0 = -1\)</span>, <span class="arithmatex">\(T_{00} = \rho\)</span>, <span class="arithmatex">\(T = g^{00}T_{00} = -\rho\)</span>. Тогда</p>
+<div class="arithmatex">\[
+R_{00} = \kappa\left(\rho - \frac12(-\rho)(-1)\right) = \frac{\kappa}{2}\,\rho .
+\]</div>
+<p>Левую часть вычислим, используя <span class="arithmatex">\(R_{00} = R^\lambda{}_{0\lambda0}\)</span>. Для статического поля
+временные производные равны нулю, а произведения <span class="arithmatex">\(\Gamma\Gamma\)</span> — второго порядка по
+<span class="arithmatex">\(h\)</span>, так что</p>
+<div class="arithmatex">\[\begin{equation}
+R_{00} \approx \pd_i\Gamma^i_{00} = \pd_i\left(-\frac12\pd_i h_{00}\right) = \nabla^2\Phi ,
+\label{eq:r00}
+\end{equation}\]</div>
+<p>где использованы <span class="arithmatex">\(\Gamma^i_{00} = -\frac12\pd_i h_{00}\)</span> и <span class="arithmatex">\(h_{00} = -2\Phi\)</span> из главы 5.
+Сравнивая, <span class="arithmatex">\(\nabla^2\Phi = \frac{\kappa}{2}\rho\)</span>, и уравнение Пуассона требует</p>
+<div class="arithmatex">\[\begin{equation}
+\kappa = 8\pi G .
+\label{eq:kappa}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Правая часть.</strong> <span class="arithmatex">\(g_{00} \approx -1\)</span>, <span class="arithmatex">\(g^{00}\approx-1\)</span>; у пыли в покое отлична от нуля только <span class="arithmatex">\(T_{00} = \rho\)</span>:
+<span class="arithmatex">\(T = g^{00}T_{00} = -\rho\)</span>, и</p>
+<div class="arithmatex">\[
+T_{00} - \tfrac12 T g_{00} = \rho - \tfrac12(-\rho)(-1) = \tfrac12\rho .
+\]</div>
+<p><strong>Шаг 2. Левая часть.</strong> По формуле Римана с <span class="arithmatex">\(\sigma = \nu = 0\)</span>:
+<span class="arithmatex">\(R_{00} = R^\lambda{}_{0\lambda0} = \pd_\lambda\Gamma^\lambda_{00} - \pd_0\Gamma^\lambda_{\lambda0} + O(h^2)\)</span>.
+Второй член и <span class="arithmatex">\(\lambda = 0\)</span> в первом содержат <span class="arithmatex">\(\pd_0\)</span> — нуль. Остаётся <span class="arithmatex">\(\pd_i\Gamma^i_{00}\)</span>.</p>
+<p><strong>Шаг 3. Подстановка.</strong> <span class="arithmatex">\(\Gamma^i_{00} = -\tfrac12\pd_i h_{00} = -\tfrac12\pd_i(-2\Phi) = \pd_i\Phi\)</span>, откуда
+<span class="arithmatex">\(R_{00} = \pd_i\pd_i\Phi = \nabla^2\Phi\)</span>.</p>
+<p><strong>Шаг 4. Сравнение.</strong> <span class="arithmatex">\(\nabla^2\Phi = \tfrac\kappa2\rho\)</span> и <span class="arithmatex">\(\nabla^2\Phi = 4\pi G\rho\)</span> ⇒ <span class="arithmatex">\(\kappa = 8\pi G\)</span>.</p>
+<p><strong>Проверка (размерность).</strong> С <span class="arithmatex">\(c\)</span>: <span class="arithmatex">\(\kappa = 8\pi G/c^4\)</span>; <span class="arithmatex">\([G_{\mu\nu}] = \text{м}^{-2}\)</span>, <span class="arithmatex">\([T_{\mu\nu}] = \text{Дж/м}^3\)</span>,
+<span class="arithmatex">\([G/c^4] = \text{м}/\text{Дж}\)</span> — сходится.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Активная гравитационная масса и давление</p>
+<p>Для статической идеальной жидкости с давлением аналогичный расчёт даёт
+<span class="arithmatex">\(R_{00} = 4\pi G(\rho + 3p)\)</span>: в <abbr title="Общая теория относительности">ОТО</abbr> гравитирует не только энергия, но и давление.
+Для излучения <span class="arithmatex">\(\rho + 3p = 2\rho\)</span>, для вакуумной энергии <span class="arithmatex">\(\rho + 3p = -2\rho &lt; 0\)</span> —
+космологическая постоянная <strong>отталкивает</strong>. Это и есть причина ускоренного расширения.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1.</strong> В покое <span class="arithmatex">\(T_{00} = \rho\)</span>, <span class="arithmatex">\(T = 3p - \rho\)</span>, <span class="arithmatex">\(g_{00}\approx -1\)</span>:</p>
+<div class="arithmatex">\[
+T_{00} - \tfrac12 T g_{00} = \rho + \tfrac12(3p - \rho) = \tfrac12(\rho + 3p) .
+\]</div>
+<p><strong>Шаг 2.</strong> По <span class="arithmatex">\(\eqref{eq:efe-trace-reversed}\)</span> <span class="arithmatex">\(R_{00} = 8\pi G\cdot\tfrac12(\rho+3p) = 4\pi G(\rho+3p)\)</span>, т. е. <span class="arithmatex">\(\nabla^2\Phi = 4\pi G(\rho + 3p)\)</span>.</p>
+<p><strong>Шаг 3.</strong> Излучение <span class="arithmatex">\(p = \rho/3\)</span>: <span class="arithmatex">\(\rho + \rho = 2\rho\)</span>. Вакуум <span class="arithmatex">\(p = -\rho\)</span>: <span class="arithmatex">\(\rho - 3\rho = -2\rho\)</span>.</p>
+</details>
+</div>
+<p>Полный слабополевой анализ (с <span class="arithmatex">\(g_{ij}\)</span>) даёт метрику вне медленно движущихся источников</p>
+<div class="arithmatex">\[\begin{equation}
+\d s^2 = -(1 + 2\Phi)\,\d t^2 + (1 - 2\Phi)\,\d\vb x^2 ,
+\label{eq:weak-field}
+\end{equation}\]</div>
+<p>причём пространственная часть, несущественная для медленных тел, удваивает
+отклонение света (<a href="../07-schwarzschild/">глава 7</a>).</p>
+<h2 id="66">6.6. Энергетические условия<a class="headerlink" href="#66" title="Permanent link">&para;</a></h2>
+<p>Уравнения Эйнштейна без ограничений на <span class="arithmatex">\(T_{\mu\nu}\)</span> пусты: любую метрику можно
+«решить», объявив <span class="arithmatex">\(T_{\mu\nu} \equiv G_{\mu\nu}/(8\pi G)\)</span>. Нужны физически мотивированные
+условия, не привязанные к конкретной материи.</p>
+<div class="admonition definition">
+<p class="admonition-title">Энергетические условия</p>
+<p>Пусть <span class="arithmatex">\(t^\mu\)</span> — произвольный времениподобный, <span class="arithmatex">\(\ell^\mu\)</span> — произвольный изотропный вектор.</p>
+<ul>
+<li><strong>Слабое (WEC):</strong> <span class="arithmatex">\(T_{\mu\nu}t^\mu t^\nu \ge 0\)</span> — любой наблюдатель видит неотрицательную плотность энергии.</li>
+<li><strong>Изотропное (NEC):</strong> <span class="arithmatex">\(T_{\mu\nu}\ell^\mu\ell^\nu \ge 0\)</span>.</li>
+<li><strong>Доминантное (DEC):</strong> WEC и вектор <span class="arithmatex">\(-T^\mu{}_\nu t^\nu\)</span> непространственноподобен — энергия не течёт быстрее света.</li>
+<li><strong>Сильное (SEC):</strong> <span class="arithmatex">\(\left(T_{\mu\nu} - \frac12 T g_{\mu\nu}\right)t^\mu t^\nu \ge 0\)</span>.</li>
+</ul>
+</div>
+<p>Для идеальной жидкости <span class="arithmatex">\(\eqref{eq:perfect-fluid}\)</span> условия принимают вид</p>
+<table>
+<thead>
+<tr>
+<th>Условие</th>
+<th>Ограничение на <span class="arithmatex">\(\rho,\ p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NEC</td>
+<td><span class="arithmatex">\(\rho + p \ge 0\)</span></td>
+</tr>
+<tr>
+<td>WEC</td>
+<td><span class="arithmatex">\(\rho \ge 0,\ \rho + p \ge 0\)</span></td>
+</tr>
+<tr>
+<td>DEC</td>
+<td><span class="arithmatex">\(\rho \ge \lvert p\rvert\)</span></td>
+</tr>
+<tr>
+<td>SEC</td>
+<td><span class="arithmatex">\(\rho + p \ge 0,\ \rho + 3p \ge 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>По <span class="arithmatex">\(\eqref{eq:efe-trace-reversed}\)</span> SEC эквивалентно <span class="arithmatex">\(R_{\mu\nu}t^\mu t^\nu \ge 0\)</span>, т.е.
+притяжению близких времениподобных геодезических (уравнение Райчаудхури). Именно SEC
+используется в теоремах Хокинга — Пенроуза о сингулярностях, а NEC — в теореме о
+неубывании площади горизонта (<a href="../08-black-holes/">глава 8</a>).</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Параметризация.</strong> В системе покоя жидкости любой единичный времениподобный вектор —
+<span class="arithmatex">\(t^\mu = \gamma(1, v\vb n)\)</span>, <span class="arithmatex">\(\gamma = (1-v^2)^{-1/2}\ge1\)</span>; тогда <span class="arithmatex">\(U\cdot t = -\gamma\)</span>, <span class="arithmatex">\(t\cdot t = -1\)</span>. Изотропный: <span class="arithmatex">\(\ell^\mu = (1,\vb n)\)</span>, <span class="arithmatex">\(U\cdot\ell = -1\)</span>, <span class="arithmatex">\(\ell\cdot\ell = 0\)</span>.</p>
+<p><strong>Шаг 2. WEC и NEC.</strong></p>
+<div class="arithmatex">\[
+T_{\mu\nu}t^\mu t^\nu = (\rho+p)\gamma^2 - p, \qquad T_{\mu\nu}\ell^\mu\ell^\nu = \rho + p .
+\]</div>
+<p>Неотрицательность при всех <span class="arithmatex">\(\gamma\)</span>: <span class="arithmatex">\(\gamma = 1\)</span> даёт <span class="arithmatex">\(\rho\ge0\)</span>, <span class="arithmatex">\(\gamma\to\infty\)</span> — <span class="arithmatex">\(\rho+p\ge0\)</span> (при этих двух условиях
+выражение возрастает по <span class="arithmatex">\(\gamma^2\)</span> и всегда <span class="arithmatex">\(\ge\rho\)</span>).</p>
+<p><strong>Шаг 3. SEC.</strong> <span class="arithmatex">\(T = 3p - \rho\)</span>, <span class="arithmatex">\(g_{\mu\nu}t^\mu t^\nu = -1\)</span>:</p>
+<div class="arithmatex">\[
+\left(T_{\mu\nu} - \tfrac12 T g_{\mu\nu}\right)t^\mu t^\nu = (\rho+p)\gamma^2 - p + \tfrac12(3p-\rho) = (\rho+p)\gamma^2 + \tfrac12(p - \rho) .
+\]</div>
+<p><span class="arithmatex">\(\gamma = 1\)</span>: <span class="arithmatex">\(\tfrac12(\rho + 3p)\ge0\)</span>; <span class="arithmatex">\(\gamma\to\infty\)</span>: <span class="arithmatex">\(\rho + p\ge0\)</span>.</p>
+<p><strong>Шаг 4. DEC.</strong> <span class="arithmatex">\(T^\mu{}_\nu = \mathrm{diag}(-\rho, p, p, p)\)</span>, <span class="arithmatex">\(-T^\mu{}_\nu t^\nu = \gamma(\rho,\,-p\,v\vb n)\)</span>. Непространственноподобие:
+<span class="arithmatex">\(-\rho^2 + p^2v^2 \le 0\)</span> для всех <span class="arithmatex">\(v&lt;1\)</span> ⇔ <span class="arithmatex">\(|p|\le|\rho|\)</span>; вместе с <span class="arithmatex">\(\rho\ge0\)</span> (WEC): <span class="arithmatex">\(\rho\ge|p|\)</span>.</p>
+<p><strong>Шаг 5. SEC и Риччи.</strong> По <span class="arithmatex">\(\eqref{eq:efe-trace-reversed}\)</span> <span class="arithmatex">\(R_{\mu\nu}t^\mu t^\nu = 8\pi G(T_{\mu\nu} - \tfrac12 T g_{\mu\nu})t^\mu t^\nu\)</span>, так что знаки совпадают.</p>
+</details>
+<p>Обратите внимание: SEC не следует из WEC, и наоборот. Космологическая постоянная
+(<span class="arithmatex">\(w = -1\)</span>) удовлетворяет NEC, WEC и DEC, но <strong>нарушает</strong> SEC; так же ведёт себя
+инфлатон (<a href="../../part4-perturbations/15-inflation/">глава 15</a>). Нарушение SEC — необходимое
+условие ускоренного расширения. Квантовые поля могут нарушать и NEC локально (эффект
+Казимира), но, по-видимому, не в среднем вдоль геодезических.</p>
+<h3 id="_1">Интерактив: энергетические условия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Выберите плотность <span class="arithmatex">\(\rho\)</span> и давление <span class="arithmatex">\(p\)</span> идеальной жидкости. Цветом показаны
+области, где выполнено каждое условие (наложение цветов — несколько условий сразу).
+Отмечены точки пыли, излучения, вакуумной энергии и граничного <span class="arithmatex">\(w = -1/3\)</span>
+(предел SEC при <span class="arithmatex">\(\rho &gt; 0\)</span>).</p>
+<div class="interactive" id="ec-demo">
+  <canvas id="ec-canvas" width="480" height="480"></canvas>
+  <div class="controls">
+    <label for="ec-rho"><span class="arithmatex">\(\rho\)</span> = <span id="ec-rho-val">1.00</span></label>
+    <input type="range" id="ec-rho" min="-1.4" max="1.4" step="0.02" value="1">
+    <label for="ec-p"><span class="arithmatex">\(p\)</span> = <span id="ec-p-val">-0.50</span></label>
+    <input type="range" id="ec-p" min="-1.4" max="1.4" step="0.02" value="-0.5">
+  </div>
+  <div class="controls"><span id="ec-status"></span></div>
+</div>
+
+<h2 id="67">6.7. Символьная проверка<a class="headerlink" href="#67" title="Permanent link">&para;</a></h2>
+<p>Проверим с помощью <code>sympy</code>, что метрика Шварцшильда (глава 7) — решение вакуумных
+уравнений, и выпишем компоненту <span class="arithmatex">\(G_{tt}\)</span> общей статической сферически-симметричной
+метрики. Код реализует формулы из <a href="../../conventions/">conventions</a> буквально.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">ph</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t r theta phi'</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">M</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'M'</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">ph</span><span class="p">]</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">einstein</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">gi</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">inv</span><span class="p">()</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">Gam</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">gi</span><span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="n">s</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">n_</span><span class="p">,</span> <span class="n">s</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">m</span><span class="p">])</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">n_</span><span class="p">])</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>             <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">n_</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">s</span><span class="p">]))</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>             <span class="k">for</span> <span class="n">n_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="c1"># R_{μν} = ∂_λ Γ^λ_{μν} − ∂_ν Γ^λ_{μλ} + Γ^λ_{λσ}Γ^σ_{μν} − Γ^λ_{νσ}Γ^σ_{μλ}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">Ric</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="k">for</span> <span class="n">n_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            <span class="n">Ric</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">n_</span><span class="p">]</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">Gam</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">m</span><span class="p">][</span><span class="n">n_</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">l</span><span class="p">])</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">Gam</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">m</span><span class="p">][</span><span class="n">l</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">n_</span><span class="p">])</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Gam</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">l</span><span class="p">][</span><span class="n">s</span><span class="p">]</span> <span class="o">*</span> <span class="n">Gam</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">m</span><span class="p">][</span><span class="n">n_</span><span class="p">]</span> <span class="o">-</span> <span class="n">Gam</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">n_</span><span class="p">][</span><span class="n">s</span><span class="p">]</span> <span class="o">*</span> <span class="n">Gam</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">m</span><span class="p">][</span><span class="n">l</span><span class="p">]</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                      <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">Rs</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">gi</span><span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span> <span class="o">*</span> <span class="n">Ric</span><span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">Ric</span> <span class="o">-</span> <span class="n">Rs</span> <span class="o">*</span> <span class="n">g</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">Rs</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># 1) Шварцшильд (G = 1) — вакуумное решение</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">f</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">M</span> <span class="o">/</span> <span class="n">r</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">g</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">f</span><span class="p">,</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">Gt</span><span class="p">,</span> <span class="n">Rs</span> <span class="o">=</span> <span class="n">einstein</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">Gt</span> <span class="o">==</span> <span class="n">sp</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">Rs</span><span class="p">)</span>          <span class="c1"># True 0</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1"># 2) Статическое сферически-симметричное поле общего вида: G_tt</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)(</span><span class="n">r</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">'B'</span><span class="p">)(</span><span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">g2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="o">-</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">A</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">B</span><span class="p">),</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">Gt2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">einstein</span><span class="p">(</span><span class="n">g2</span><span class="p">)</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nb">print</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">Gt2</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">A</span><span class="p">)))</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1"># (2*r*Derivative(B(r), r) + exp(2*B(r)) - 1)*exp(-2*B(r))/r**2</span>
+</code></pre></div>
+<p>Второй результат можно переписать как
+<span class="arithmatex">\(e^{-2A}G_{tt} = \frac{1}{r^2}\frac{\d}{\d r}\bigl[r(1 - e^{-2B})\bigr]\)</span>. Положив
+<span class="arithmatex">\(e^{-2B} = 1 - 2Gm(r)/r\)</span>, из <span class="arithmatex">\(G_{tt} = 8\pi G\,\rho\,e^{2A}\)</span> получаем
+<span class="arithmatex">\(\d m/\d r = 4\pi r^2\rho\)</span> — «массовую функцию» звезды, первое из уравнений
+Толмена — Оппенгеймера — Волкова.</p>
+<h2 id="_2">Задачи<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>6.1. След уравнений Эйнштейна</summary>
+<p>Найдите скаляр Риччи для пространства, заполненного (а) излучением, (б) пылью
+плотности <span class="arithmatex">\(\rho\)</span>, (в) только космологической постоянной (<span class="arithmatex">\(T_{\mu\nu} = 0\)</span>).
+Чему равен <span class="arithmatex">\(R\)</span> в <span class="arithmatex">\(n\)</span> измерениях для вакуума с <span class="arithmatex">\(\Lambda\)</span>?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Из <span class="arithmatex">\(\eqref{eq:efe-lambda}\)</span>: <span class="arithmatex">\(-R + 4\Lambda = 8\pi G T\)</span>. (а) <span class="arithmatex">\(T = -\rho + 3p = 0\)</span>, <span class="arithmatex">\(R = 0\)</span>.
+(б) <span class="arithmatex">\(T = -\rho\)</span>, <span class="arithmatex">\(R = 8\pi G\rho\)</span>. (в) <span class="arithmatex">\(R = 4\Lambda\)</span>.
+В <span class="arithmatex">\(n\)</span> измерениях <span class="arithmatex">\(g^{\mu\nu}g_{\mu\nu} = n\)</span>: <span class="arithmatex">\((1 - n/2)R + n\Lambda = 0\)</span>, <span class="arithmatex">\(R = \frac{2n}{n-2}\Lambda\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>6.2. Бесследовость поля Максвелла</summary>
+<p>Покажите, что <span class="arithmatex">\(T^{\rm (EM)}_{\mu\nu}\)</span> из <span class="arithmatex">\(\eqref{eq:tei-fields}\)</span> бесследов в четырёх
+измерениях, и найдите <span class="arithmatex">\(T_{00}\)</span> в локально инерциальной системе.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(g^{\mu\nu}T_{\mu\nu} = F_{\mu\lambda}F^{\mu\lambda} - \frac{4}{4}F^2 = 0\)</span>.
+С <span class="arithmatex">\(F_{0i} = -E_i\)</span>, <span class="arithmatex">\(F_{ij} = \epsilon_{ijk}B_k\)</span>: <span class="arithmatex">\(F_{\lambda\sigma}F^{\lambda\sigma} = 2(B^2 - E^2)\)</span>,
+<span class="arithmatex">\(F_{0\lambda}F_0{}^\lambda = E^2\)</span>, откуда <span class="arithmatex">\(T_{00} = E^2 + \tfrac12(B^2 - E^2) = \tfrac12(E^2 + B^2)\)</span>
+(единицы Хевисайда — Лоренца).</p>
+</details>
+</details>
+<details class="question">
+<summary>6.3. Пыль движется по геодезическим</summary>
+<p>Из <span class="arithmatex">\(\nabla_\mu(\rho U^\mu U^\nu) = 0\)</span> выведите (а) уравнение непрерывности
+<span class="arithmatex">\(\nabla_\mu(\rho U^\mu) = 0\)</span> и (б) <span class="arithmatex">\(U^\mu\nabla_\mu U^\nu = 0\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(\nabla_\mu(\rho U^\mu U^\nu) = U^\nu\nabla_\mu(\rho U^\mu) + \rho U^\mu\nabla_\mu U^\nu\)</span>.
+Свернём с <span class="arithmatex">\(U_\nu\)</span>: <span class="arithmatex">\(U_\nu U^\nu = -1\)</span>, а <span class="arithmatex">\(U_\nu U^\mu\nabla_\mu U^\nu = \tfrac12 U^\mu\nabla_\mu(U_\nu U^\nu) = 0\)</span>.
+Отсюда (а); подставляя (а) обратно, получаем (б) при <span class="arithmatex">\(\rho \ne 0\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>6.4. Энергия вакуума</summary>
+<p>Наблюдаемое значение <span class="arithmatex">\(\Omega_\Lambda \approx 0{,}69\)</span> при <span class="arithmatex">\(H_0 = 67{,}7\)</span> км/с/Мпк.
+Найдите <span class="arithmatex">\(\rho_{\rm vac}\)</span> в кг/м³, <span class="arithmatex">\(\Lambda\)</span> в м<span class="arithmatex">\(^{-2}\)</span> и энергетический масштаб
+<span class="arithmatex">\(\rho_{\rm vac}^{1/4}\)</span> в эВ.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(H_0 = 2{,}19\cdot10^{-18}\)</span> с<span class="arithmatex">\(^{-1}\)</span>, <span class="arithmatex">\(\rho_{\rm cr} = 3H_0^2/(8\pi G) = 8{,}6\cdot10^{-27}\)</span> кг/м³,
+<span class="arithmatex">\(\rho_{\rm vac} = 5{,}9\cdot10^{-27}\)</span> кг/м³. <span class="arithmatex">\(\Lambda = 8\pi G\rho_{\rm vac}/c^2 = 3\Omega_\Lambda H_0^2/c^2 = 1{,}1\cdot10^{-52}\)</span> м<span class="arithmatex">\(^{-2}\)</span>.
+Плотность энергии <span class="arithmatex">\(\rho c^2 = 5{,}3\cdot10^{-10}\)</span> Дж/м³ <span class="arithmatex">\(= 3{,}3\cdot10^{9}\)</span> эВ/м³; умножая на
+<span class="arithmatex">\((\hbar c)^3 = (1{,}97\cdot10^{-7}\text{ эВ·м})^3\)</span>, получаем <span class="arithmatex">\(2{,}5\cdot10^{-11}\)</span> эВ<span class="arithmatex">\(^4\)</span>,
+т.е. <span class="arithmatex">\(\rho_{\rm vac}^{1/4} \approx 2{,}2\)</span> мэВ.</p>
+</details>
+</details>
+<details class="question">
+<summary>6.5. Скалярное поле и SEC</summary>
+<p>Для однородного скалярного поля <span class="arithmatex">\(\phi(t)\)</span> в локально инерциальной системе найдите
+<span class="arithmatex">\(\rho\)</span> и <span class="arithmatex">\(p\)</span> из <span class="arithmatex">\(\eqref{eq:tei-fields}\)</span>. При каком условии нарушается SEC?</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(\nabla_\mu\phi = (\dot\phi, 0,0,0)\)</span>, <span class="arithmatex">\(g^{\lambda\sigma}\pd_\lambda\phi\pd_\sigma\phi = -\dot\phi^2\)</span>.
+<span class="arithmatex">\(T_{00} = \dot\phi^2 - (-1)(-\tfrac12\dot\phi^2 + V) = \tfrac12\dot\phi^2 + V = \rho\)</span>,
+<span class="arithmatex">\(T_{ii} = -(-\tfrac12\dot\phi^2 + V) = \tfrac12\dot\phi^2 - V = p\)</span>.
+<span class="arithmatex">\(\rho + 3p = 2(\dot\phi^2 - V) &lt; 0\)</span> при <span class="arithmatex">\(V &gt; \dot\phi^2\)</span> — режим медленного скатывания
+в инфляции.</p>
+</details>
+</details>
+<details class="question">
+<summary>6.6. Тождество Бьянки</summary>
+<p>Выведите <span class="arithmatex">\(\eqref{eq:bianchi}\)</span> из тождества Бьянки
+<span class="arithmatex">\(\nabla_{[\lambda}R_{\rho\sigma]\mu\nu} = 0\)</span> и проверьте <span class="arithmatex">\(\nabla^\mu G_{\mu\nu} = 0\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Тождество: <span class="arithmatex">\(\nabla_\lambda R_{\rho\sigma\mu\nu} + \nabla_\rho R_{\sigma\lambda\mu\nu} + \nabla_\sigma R_{\lambda\rho\mu\nu} = 0\)</span>.
+Свернём по <span class="arithmatex">\(g^{\nu\sigma}\)</span>: <span class="arithmatex">\(\nabla_\lambda R_{\rho\mu} - \nabla_\rho R_{\lambda\mu} + \nabla^\nu R_{\lambda\rho\mu\nu} = 0\)</span>.
+Свернём ещё по <span class="arithmatex">\(g^{\mu\lambda}\)</span>: <span class="arithmatex">\(\nabla^\mu R_{\rho\mu} - \nabla_\rho R + \nabla^\nu R_{\rho\nu} = 0\)</span>,
+т.е. <span class="arithmatex">\(2\nabla^\mu R_{\mu\rho} = \nabla_\rho R\)</span>. Тогда <span class="arithmatex">\(\nabla^\mu G_{\mu\nu} = \tfrac12\nabla_\nu R - \tfrac12\nabla_\nu R = 0\)</span>.</p>
+</details>
+</details>
+<h2 id="_3">Что дальше<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Уравнения Эйнштейна нелинейны, и точных решений немного. Самое важное из них —
+поле вне сферически-симметричного тела — мы найдём в <a href="../07-schwarzschild/">главе 7</a>
+и проверим на нём классические предсказания <abbr title="Общая теория относительности">ОТО</abbr>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../05-equivalence/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 5. Принцип эквивалентности и геодезические">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                5. Принцип эквивалентности и геодезические
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07-schwarzschild/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 7. Решение Шварцшильда и классические тесты">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                7. Решение Шварцшильда и классические тесты
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Bogdan Rudenko, SAI MSU · Текст — <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">CC BY-SA 4.0</a>, код — MIT · Обратная связь: <a href="mailto:rudenko.sci@gmail.com">rudenko.sci@gmail.com</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/calc.js"></script>
+      
+        <script src="../../javascripts/toc-progress.js"></script>
+      
+        <script src="../../javascripts/minkowski.js"></script>
+      
+        <script src="../../javascripts/sphere-transport.js"></script>
+      
+        <script src="../../javascripts/tidal.js"></script>
+      
+        <script src="../../javascripts/energy-conditions.js"></script>
+      
+        <script src="../../javascripts/effective-potential.js"></script>
+      
+        <script src="../../javascripts/bh-cones.js"></script>
+      
+        <script src="../../javascripts/gw-ring.js"></script>
+      
+        <script src="../../javascripts/friedmann.js"></script>
+      
+        <script src="../../javascripts/distances.js"></script>
+      
+        <script src="../../javascripts/saha.js"></script>
+      
+        <script src="../../javascripts/inflation.js"></script>
+      
+        <script src="../../javascripts/cmb.js"></script>
+      
+        <script src="../../javascripts/power-spectrum.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

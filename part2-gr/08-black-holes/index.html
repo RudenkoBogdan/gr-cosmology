@@ -1,0 +1,2609 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Учебник-хендбук по общей теории относительности и космологии">
+      
+      
+        <meta name="author" content="Bogdan Rudenko">
+      
+      
+        <link rel="canonical" href="https://rudenkobogdan.github.io/gr-cosmology/part2-gr/08-black-holes/">
+      
+      
+        <link rel="prev" href="../07-schwarzschild/">
+      
+      
+        <link rel="next" href="../09-gravitational-waves/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>8. Чёрные дыры - ОТО и космология</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="ОТО и космология" class="md-header__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ОТО и космология
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8. Чёрные дыры
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ОТО и космология" class="md-nav__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    ОТО и космология
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Главная
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обозначения и соглашения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part1-math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Математический аппарат
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    I. Математический аппарат
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/01-special-relativity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. СТО на четырёхмерном языке
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/02-manifolds-tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Многообразия и тензоры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/03-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Связность и ковариантная производная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/04-curvature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Кривизна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. ОТО
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    II. ОТО
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Принцип эквивалентности и геодезические
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-einstein-equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Уравнения Эйнштейна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-schwarzschild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Решение Шварцшильда и классические тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Чёрные дыры
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Чёрные дыры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Координатная и истинная особенности
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Координаты Эддингтона–Финкельштейна
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2. Координаты Эддингтона–Финкельштейна">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: световые конусы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Координаты Крускала–Секереша
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. Диаграммы Пенроуза
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5. Решение Керра
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5. Решение Керра">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Горизонты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эргосфера и увлечение инерциальных систем
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Процесс Пенроуза
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теорема об отсутствии волос
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6. Термодинамика чёрных дыр
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.6. Термодинамика чёрных дыр">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Излучение Хокинга
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Испарение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7. Численный пример
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-gravitational-waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Гравитационные волны
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part3-cosmology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Космология FRW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    III. Космология FRW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/10-frw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Однородная изотропная Вселенная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/11-friedmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Уравнения Фридмана и модели
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/12-distances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Расстояния и наблюдения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/13-thermal-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Термическая история
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/14-bbn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Первичный нуклеосинтез
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part4-perturbations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/15-inflation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Инфляция
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/16-perturbations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Линейная теория возмущений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/17-cmb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Реликтовое излучение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/18-lss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Крупномасштабная структура
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Приложения
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Приложения
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Глоссарий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/bibliography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Литература
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Координатная и истинная особенности
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Координаты Эддингтона–Финкельштейна
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2. Координаты Эддингтона–Финкельштейна">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: световые конусы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Координаты Крускала–Секереша
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. Диаграммы Пенроуза
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5. Решение Керра
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5. Решение Керра">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Горизонты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эргосфера и увлечение инерциальных систем
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Процесс Пенроуза
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теорема об отсутствии волос
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6. Термодинамика чёрных дыр
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.6. Термодинамика чёрных дыр">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Излучение Хокинга
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Испарение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.7. Численный пример
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="8">8. Чёрные дыры<a class="headerlink" href="#8" title="Permanent link">&para;</a></h1>
+<p>В <a href="../07-schwarzschild/">главе 7</a> мы нашли решение Шварцшильда и изучили движение
+пробных частиц вне тяготеющего тела. Там же метрика вела себя подозрительно при
+<span class="arithmatex">\(r = 2GM\)</span>: коэффициент <span class="arithmatex">\(g_{tt}\)</span> обращается в нуль, а <span class="arithmatex">\(g_{rr}\)</span> — в бесконечность.
+Если тело компактнее своего гравитационного радиуса, эта поверхность оказывается
+вне вещества, и вопрос «что происходит при <span class="arithmatex">\(r = 2GM\)</span>?» становится физическим.
+Ответ — <strong>горизонт событий</strong>: регулярная поверхность, которую можно пересечь только внутрь.
+В этой главе мы построим координаты, покрывающие горизонт, разберём глобальную
+причинную структуру (диаграммы Крускала и Пенроуза), познакомимся с вращающимися
+чёрными дырами Керра и закончим термодинамикой чёрных дыр и излучением Хокинга.</p>
+<h2 id="81">8.1. Координатная и истинная особенности<a class="headerlink" href="#81" title="Permanent link">&para;</a></h2>
+<p>Напомним метрику Шварцшильда:</p>
+<div class="arithmatex">\[\begin{equation}
+\d s^2 = -\left(1 - \frac{2GM}{r}\right)\d t^2 + \left(1 - \frac{2GM}{r}\right)^{-1}\d r^2
++ r^2\,\d\Omega^2, \qquad \d\Omega^2 = \d\theta^2 + \sin^2\theta\,\d\phi^2.
+\label{eq:schw}
+\end{equation}\]</div>
+<p>Компоненты метрики зависят от выбора координат, поэтому их сингулярность ещё ничего не
+говорит о геометрии. Чтобы отличить особенность координат от особенности кривизны,
+вычисляют <strong>скалярные инварианты</strong> кривизны. Для вакуумного решения <span class="arithmatex">\(R_{\mu\nu} = 0\)</span>,
+и первый нетривиальный инвариант — скаляр Кречмана:</p>
+<div class="arithmatex">\[\begin{equation}
+K \equiv R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma} = \frac{48\,G^2M^2}{r^6}.
+\label{eq:kretschmann}
+\end{equation}\]</div>
+<p>При <span class="arithmatex">\(r = 2GM\)</span> он конечен, <span class="arithmatex">\(K = 3/(4G^4M^4)\)</span>, а при <span class="arithmatex">\(r \to 0\)</span> расходится. Итак,
+<span class="arithmatex">\(r = 0\)</span> — <strong>истинная (кривизнная) сингулярность</strong>, а <span class="arithmatex">\(r = 2GM\)</span> — лишь
+<strong>координатная</strong> особенность. Заметим, что <span class="arithmatex">\(K\)</span> на горизонте убывает с массой: на
+горизонте сверхмассивной чёрной дыры приливные силы ничтожны.</p>
+<p>Ещё один признак того, что <span class="arithmatex">\(r = 2GM\)</span> не является «стенкой»: собственное время
+свободного падения с покоя на бесконечности до горизонта конечно. Для радиальной
+геодезической с <span class="arithmatex">\(E = 1\)</span> из уравнений главы 7 имеем <span class="arithmatex">\(\d r/\d\tau = -\sqrt{2GM/r}\)</span>, откуда</p>
+<div class="arithmatex">\[\begin{equation}
+\tau(r_0 \to r) = \frac{2}{3\sqrt{2GM}}\left(r_0^{3/2} - r^{3/2}\right),
+\label{eq:infall-tau}
+\end{equation}\]</div>
+<p>что гладко продолжается через <span class="arithmatex">\(r = 2GM\)</span> до <span class="arithmatex">\(r = 0\)</span>. В то же время координатное время
+<span class="arithmatex">\(t\)</span> того же падения расходится логарифмически: <span class="arithmatex">\(t\)</span> — время удалённого наблюдателя,
+и он никогда не «видит» пересечения горизонта.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Радиальное уравнение.</strong> Из главы 7: <span class="arithmatex">\(\left(\frac{\d r}{\d\tau}\right)^2 = E^2 - \left(1 - \frac{2GM}{r}\right)\left(1 + \frac{L^2}{r^2}\right)\)</span>.
+Для радиального падения <span class="arithmatex">\(L = 0\)</span>, с покоя на бесконечности <span class="arithmatex">\(E = 1\)</span>:</p>
+<div class="arithmatex">\[
+\left(\frac{\d r}{\d\tau}\right)^2 = 1 - 1 + \frac{2GM}{r} = \frac{2GM}{r},
+\qquad \frac{\d r}{\d\tau} = -\sqrt{\frac{2GM}{r}}
+\]</div>
+<p>(знак минус — падение).</p>
+<p><strong>Шаг 2. Разделяем переменные и интегрируем</strong> от <span class="arithmatex">\(r_0\)</span> до <span class="arithmatex">\(r &lt; r_0\)</span>:</p>
+<div class="arithmatex">\[
+\tau = -\int_{r_0}^{r}\sqrt{\frac{r'}{2GM}}\,\d r' = \frac{1}{\sqrt{2GM}}\cdot\frac23\left(r_0^{3/2} - r^{3/2}\right).
+\]</div>
+<p><strong>Шаг 3. Координатное время.</strong> Для сравнения: <span class="arithmatex">\(\frac{\d t}{\d r} = \frac{\dot t}{\dot r} = -\frac{1}{1 - 2GM/r}\sqrt{\frac{r}{2GM}}\)</span>. Вблизи <span class="arithmatex">\(r = 2GM\)</span>
+подынтегральное выражение <span class="arithmatex">\(\approx -\frac{2GM}{r - 2GM}\)</span>, и <span class="arithmatex">\(t \approx -2GM\ln(r - 2GM) \to \infty\)</span> — логарифмическая расходимость.</p>
+<p><strong>Проверка.</strong> Подынтегральное выражение в шаге 2 конечно при <span class="arithmatex">\(r = 2GM\)</span>; время от горизонта до <span class="arithmatex">\(r = 0\)</span>:
+<span class="arithmatex">\(\tau = \frac{2}{3\sqrt{2GM}}(2GM)^{3/2} = \frac43GM\)</span>. Размерность: длина (= время при <span class="arithmatex">\(c = 1\)</span>). ✓</p>
+</details>
+<h2 id="82">8.2. Координаты Эддингтона–Финкельштейна<a class="headerlink" href="#82" title="Permanent link">&para;</a></h2>
+<p>Рассмотрим радиальные изотропные кривые (<span class="arithmatex">\(\d s^2 = 0\)</span>, <span class="arithmatex">\(\d\theta = \d\phi = 0\)</span>):</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\d t}{\d r} = \pm\left(1 - \frac{2GM}{r}\right)^{-1}.
+\label{eq:null-schw}
+\end{equation}\]</div>
+<p>Вблизи горизонта наклон <span class="arithmatex">\(\d t/\d r \to \pm\infty\)</span>: в координатах <span class="arithmatex">\((t,r)\)</span> световые конусы
+«схлопываются», и луч, казалось бы, никогда не достигает <span class="arithmatex">\(r = 2GM\)</span>. Это артефакт
+координаты <span class="arithmatex">\(t\)</span>. Введём <strong>черепашью координату</strong></p>
+<div class="arithmatex">\[\begin{equation}
+r_* = r + 2GM\ln\left|\frac{r}{2GM} - 1\right|, \qquad
+\frac{\d r_*}{\d r} = \left(1 - \frac{2GM}{r}\right)^{-1},
+\label{eq:tortoise}
+\end{equation}\]</div>
+<p>в которой радиальные лучи — прямые <span class="arithmatex">\(t = \pm r_* + \mathrm{const}\)</span>. Определим
+<strong>опережающее время</strong> <span class="arithmatex">\(v = t + r_*\)</span> (постоянное вдоль входящих лучей) и
+<strong>запаздывающее</strong> <span class="arithmatex">\(u = t - r_*\)</span> (постоянное вдоль выходящих). Заменив <span class="arithmatex">\(t\)</span> на <span class="arithmatex">\(v\)</span>,
+получаем метрику в <strong>входящих координатах Эддингтона–Финкельштейна</strong>:</p>
+<div class="arithmatex">\[\begin{equation}
+\d s^2 = -\left(1 - \frac{2GM}{r}\right)\d v^2 + 2\,\d v\,\d r + r^2\,\d\Omega^2.
+\label{eq:ief}
+\end{equation}\]</div>
+<p>Определитель метрики <span class="arithmatex">\(\det g = -r^4\sin^2\theta\)</span> нигде, кроме <span class="arithmatex">\(r = 0\)</span>, не обращается в нуль:
+метрика регулярна на горизонте, и координаты <span class="arithmatex">\((v, r, \theta, \phi)\)</span> продолжают
+пространство-время в область <span class="arithmatex">\(0 &lt; r &lt; 2GM\)</span>.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Производная черепашьей координаты.</strong> <span class="arithmatex">\(\frac{\d}{\d r}\left[2GM\ln\left|\frac{r}{2GM} - 1\right|\right] = \frac{2GM}{r - 2GM}\)</span>, поэтому</p>
+<div class="arithmatex">\[
+\frac{\d r_*}{\d r} = 1 + \frac{2GM}{r - 2GM} = \frac{r}{r - 2GM} = \left(1 - \frac{2GM}{r}\right)^{-1}.
+\]</div>
+<p>Тогда <span class="arithmatex">\(\eqref{eq:null-schw}\)</span> принимает вид <span class="arithmatex">\(\d t = \pm\d r_*\)</span>, т.е. <span class="arithmatex">\(t = \pm r_* + \text{const}\)</span>.</p>
+<p><strong>Шаг 2. Замена <span class="arithmatex">\(t = v - r_*\)</span>.</strong> Обозначим <span class="arithmatex">\(f = 1 - 2GM/r\)</span>. Тогда <span class="arithmatex">\(\d t = \d v - \d r/f\)</span> и</p>
+<div class="arithmatex">\[
+\begin{aligned}
+-f\,\d t^2 + \frac{\d r^2}{f}
+&amp;= -f\left(\d v^2 - \frac{2\,\d v\,\d r}{f} + \frac{\d r^2}{f^2}\right) + \frac{\d r^2}{f}\\
+&amp;= -f\,\d v^2 + 2\,\d v\,\d r - \frac{\d r^2}{f} + \frac{\d r^2}{f} = -f\,\d v^2 + 2\,\d v\,\d r .
+\end{aligned}
+\]</div>
+<p>Сингулярный член <span class="arithmatex">\(\d r^2/f\)</span> сократился — это и есть <span class="arithmatex">\(\eqref{eq:ief}\)</span>.</p>
+<p><strong>Шаг 3. Определитель.</strong> Метрика блочно-диагональна: блок <span class="arithmatex">\((v,r)\)</span> равен <span class="arithmatex">\(\begin{pmatrix}-f &amp; 1\\ 1 &amp; 0\end{pmatrix}\)</span> с определителем <span class="arithmatex">\(-1\)</span>,
+угловой блок — <span class="arithmatex">\(\mathrm{diag}(r^2, r^2\sin^2\theta)\)</span>. Итого <span class="arithmatex">\(\det g = -1\cdot r^4\sin^2\theta\)</span>.</p>
+<p><strong>Проверка.</strong> При <span class="arithmatex">\(M = 0\)</span>: <span class="arithmatex">\(\d s^2 = -\d v^2 + 2\,\d v\,\d r + \ldots\)</span> с <span class="arithmatex">\(v = t + r\)</span> — это <span class="arithmatex">\(-\d t^2 + \d r^2\)</span>. ✓</p>
+</details>
+<p>Радиальные изотропные кривые в <span class="arithmatex">\(\eqref{eq:ief}\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+\d v = 0 \quad\text{(входящие)}, \qquad
+\frac{\d r}{\d v} = \frac12\left(1 - \frac{2GM}{r}\right) \quad\text{(«выходящие»)}.
+\label{eq:null-ief}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1.</strong> При <span class="arithmatex">\(\d\theta = \d\phi = 0\)</span> условие <span class="arithmatex">\(\d s^2 = 0\)</span> для <span class="arithmatex">\(\eqref{eq:ief}\)</span>:
+<span class="arithmatex">\(-\left(1 - \frac{2GM}{r}\right)\d v^2 + 2\,\d v\,\d r = \d v\left[-\left(1 - \frac{2GM}{r}\right)\d v + 2\,\d r\right] = 0\)</span>.</p>
+<p><strong>Шаг 2.</strong> Произведение нуль, если обращается в нуль один из множителей: либо <span class="arithmatex">\(\d v = 0\)</span> (входящий луч), либо
+<span class="arithmatex">\(2\,\d r = \left(1 - \frac{2GM}{r}\right)\d v\)</span>, т.е. <span class="arithmatex">\(\frac{\d r}{\d v} = \frac12\left(1 - \frac{2GM}{r}\right)\)</span>.</p>
+<p><strong>Проверка.</strong> При <span class="arithmatex">\(r \to \infty\)</span> <span class="arithmatex">\(\d r/\d v \to 1/2\)</span>: с <span class="arithmatex">\(v = t + r\)</span> имеем <span class="arithmatex">\(\d v = 2\,\d t\)</span> для выходящего луча <span class="arithmatex">\(r = t\)</span>, т.е. <span class="arithmatex">\(\d r/\d t = 1\)</span>. ✓</p>
+</details>
+<p>При <span class="arithmatex">\(r &gt; 2GM\)</span> «выходящие» лучи действительно уходят на бесконечность; при <span class="arithmatex">\(r = 2GM\)</span>
+они стоят на месте; при <span class="arithmatex">\(r &lt; 2GM\)</span> имеем <span class="arithmatex">\(\d r/\d v &lt; 0\)</span> — <strong>оба</strong> луча светового конуса
+движутся к меньшим <span class="arithmatex">\(r\)</span>. Любая времениподобная кривая лежит внутри конуса и потому
+неизбежно достигает <span class="arithmatex">\(r = 0\)</span> за конечное собственное время. Внутри горизонта <span class="arithmatex">\(r\)</span>
+играет роль времени: уменьшение <span class="arithmatex">\(r\)</span> так же неизбежно, как наступление завтрашнего дня.</p>
+<div class="admonition definition">
+<p class="admonition-title">Определение: горизонт событий</p>
+<p>Пусть <span class="arithmatex">\(\mathscr I^+\)</span> — будущая изотропная бесконечность (место, куда уходят
+выходящие световые лучи). <strong>Чёрная дыра</strong> — область пространства-времени, не
+принадлежащая причинному прошлому <span class="arithmatex">\(J^-(\mathscr I^+)\)</span>; её граница
+<span class="arithmatex">\(\mathcal H = \pd J^-(\mathscr I^+)\)</span> называется <strong>горизонтом событий</strong>.
+Горизонт — изотропная гиперповерхность; для Шварцшильда это <span class="arithmatex">\(r = 2GM\)</span>.</p>
+</div>
+<p>Горизонт — глобальное понятие: чтобы его найти, нужно знать всю будущую историю
+пространства-времени. Локально наблюдатель, пересекающий горизонт, ничего особенного не
+замечает.</p>
+<h3 id="_1">Интерактив: световые конусы<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>На диаграмме по горизонтали отложено <span class="arithmatex">\(r/GM\)</span>, по вертикали — <span class="arithmatex">\(\tilde t = v - r\)</span>
+(в этих координатах входящие лучи идут под <span class="arithmatex">\(45^\circ\)</span>). Жёлтые линии — входящие лучи,
+синие кривые — «выходящие» <span class="arithmatex">\(\eqref{eq:null-ief}\)</span>; красная вертикаль — горизонт
+<span class="arithmatex">\(r = 2GM\)</span>, заштрихована сингулярность <span class="arithmatex">\(r = 0\)</span>. Двигайте ползунок, чтобы перемещать
+выделенный световой конус. Переключатель показывает те же конусы в координатах
+Шварцшильда <span class="arithmatex">\((t, r)\)</span>, где они схлопываются у горизонта.</p>
+<div class="interactive" id="bh-cones-demo">
+  <canvas id="bh-cones-canvas" width="520" height="520"></canvas>
+  <div class="controls">
+    <label for="bh-cones-r"><span class="arithmatex">\(r_0/GM\)</span> = <span id="bh-cones-r-val">4.00</span></label>
+    <input type="range" id="bh-cones-r" min="0.3" max="7.5" step="0.05" value="4">
+    <label><input type="checkbox" id="bh-cones-schw"> координаты Шварцшильда</label>
+  </div>
+</div>
+
+<p>Конус наклоняется к сингулярности по мере уменьшения <span class="arithmatex">\(r_0\)</span>; на горизонте его правая
+образующая вертикальна, а внутри горизонта весь конус направлен к <span class="arithmatex">\(r = 0\)</span>.</p>
+<p>Аналогично, используя <span class="arithmatex">\(u\)</span> вместо <span class="arithmatex">\(t\)</span>, получаем <strong>выходящие</strong> координаты
+Эддингтона–Финкельштейна <span class="arithmatex">\(\d s^2 = -(1 - 2GM/r)\d u^2 - 2\,\d u\,\d r + r^2\d\Omega^2\)</span>.
+Они покрывают другую область — <strong>белую дыру</strong>, из которой всё вылетает и куда ничто не
+может попасть. Это наводит на мысль, что полное продолжение решения Шварцшильда
+содержит больше, чем видно в одной системе координат.</p>
+<h2 id="83">8.3. Координаты Крускала–Секереша<a class="headerlink" href="#83" title="Permanent link">&para;</a></h2>
+<p>Чтобы покрыть сразу обе области, используем одновременно <span class="arithmatex">\(u\)</span> и <span class="arithmatex">\(v\)</span>. В области
+<span class="arithmatex">\(r &gt; 2GM\)</span> определим</p>
+<div class="arithmatex">\[\begin{equation}
+\begin{aligned}
+T &amp;= \left(\frac{r}{2GM} - 1\right)^{1/2} e^{r/4GM}\,\sinh\frac{t}{4GM}, \\
+R &amp;= \left(\frac{r}{2GM} - 1\right)^{1/2} e^{r/4GM}\,\cosh\frac{t}{4GM}.
+\end{aligned}
+\label{eq:kruskal-def}
+\end{equation}\]</div>
+<p>Прямая подстановка даёт метрику Крускала:</p>
+<div class="arithmatex">\[\begin{equation}
+\d s^2 = \frac{32\,G^3M^3}{r}\,e^{-r/2GM}\left(-\d T^2 + \d R^2\right) + r^2\,\d\Omega^2,
+\label{eq:kruskal}
+\end{equation}\]</div>
+<p>где <span class="arithmatex">\(r(T,R)\)</span> неявно задаётся соотношением</p>
+<div class="arithmatex">\[\begin{equation}
+T^2 - R^2 = \left(1 - \frac{r}{2GM}\right)e^{r/2GM}.
+\label{eq:kruskal-r}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Связь с <span class="arithmatex">\(u, v\)</span>.</strong> Из <span class="arithmatex">\(\eqref{eq:tortoise}\)</span> при <span class="arithmatex">\(r &gt; 2GM\)</span>: <span class="arithmatex">\(e^{r_*/2GM} = e^{r/2GM}\left(\frac{r}{2GM} - 1\right)\)</span>.
+Складывая и вычитая строки <span class="arithmatex">\(\eqref{eq:kruskal-def}\)</span> (<span class="arithmatex">\(\cosh x \pm \sinh x = e^{\pm x}\)</span>):</p>
+<div class="arithmatex">\[
+R + T = \left(\tfrac{r}{2GM} - 1\right)^{1/2}e^{r/4GM}e^{t/4GM} = e^{(r_* + t)/4GM} = e^{v/4GM},
+\qquad
+R - T = e^{(r_* - t)/4GM} = e^{-u/4GM}.
+\]</div>
+<p><strong>Шаг 2. Соотношение <span class="arithmatex">\(\eqref{eq:kruskal-r}\)</span>.</strong> <span class="arithmatex">\(R^2 - T^2 = (R+T)(R-T) = e^{r_*/2GM} = \left(\frac{r}{2GM} - 1\right)e^{r/2GM}\)</span>, т.е.
+<span class="arithmatex">\(T^2 - R^2 = \left(1 - \frac{r}{2GM}\right)e^{r/2GM}\)</span>.</p>
+<p><strong>Шаг 3. Дифференциалы.</strong> <span class="arithmatex">\(\d(R+T) = \frac{R+T}{4GM}\d v\)</span>, <span class="arithmatex">\(\d(R-T) = -\frac{R-T}{4GM}\d u\)</span>. Поэтому</p>
+<div class="arithmatex">\[
+-\d T^2 + \d R^2 = \d(R+T)\,\d(R-T) = -\frac{R^2 - T^2}{16G^2M^2}\,\d u\,\d v .
+\]</div>
+<p><strong>Шаг 4. Метрика Шварцшильда в <span class="arithmatex">\(u, v\)</span>.</strong> Так как <span class="arithmatex">\(\d t^2 - \d r_*^2 = \d u\,\d v\)</span> и <span class="arithmatex">\(\d r = f\,\d r_*\)</span> (<span class="arithmatex">\(f = 1 - 2GM/r\)</span>):
+<span class="arithmatex">\(-f\,\d t^2 + f^{-1}\d r^2 = -f(\d t^2 - \d r_*^2) = -f\,\d u\,\d v\)</span>.</p>
+<p><strong>Шаг 5. Выражаем <span class="arithmatex">\(\d u\,\d v\)</span> через <span class="arithmatex">\(\d T, \d R\)</span></strong> из шага 3 и подставляем <span class="arithmatex">\(R^2 - T^2 = \frac{r - 2GM}{2GM}e^{r/2GM}\)</span>:</p>
+<div class="arithmatex">\[
+-f\,\d u\,\d v = \frac{r - 2GM}{r}\cdot\frac{16G^2M^2}{R^2 - T^2}\left(-\d T^2 + \d R^2\right)
+= \frac{r - 2GM}{r}\cdot\frac{32G^3M^3\,e^{-r/2GM}}{r - 2GM}\left(-\d T^2 + \d R^2\right).
+\]</div>
+<p>Множитель <span class="arithmatex">\(r - 2GM\)</span> сокращается, остаётся <span class="arithmatex">\(\frac{32G^3M^3}{r}e^{-r/2GM}\)</span> — регулярный при <span class="arithmatex">\(r = 2GM\)</span>. Это <span class="arithmatex">\(\eqref{eq:kruskal}\)</span>.</p>
+<p><strong>Проверка.</strong> Размерность: <span class="arithmatex">\(G^3M^3/r\)</span> — длина<span class="arithmatex">\(^2\)</span>, <span class="arithmatex">\(T, R\)</span> безразмерны; <span class="arithmatex">\(\d s^2\)</span> имеет размерность длины<span class="arithmatex">\(^2\)</span>. ✓</p>
+</details>
+<p>Метрика <span class="arithmatex">\(\eqref{eq:kruskal}\)</span> конформно плоская в плоскости <span class="arithmatex">\((T,R)\)</span>: радиальные лучи — это
+прямые <span class="arithmatex">\(T = \pm R + \mathrm{const}\)</span> под <span class="arithmatex">\(45^\circ\)</span>, как в <abbr title="Специальная теория относительности">СТО</abbr>. Свойства:</p>
+<ul>
+<li>кривые <span class="arithmatex">\(r = \mathrm{const}\)</span> — гиперболы <span class="arithmatex">\(T^2 - R^2 = \mathrm{const}\)</span>; горизонт
+  <span class="arithmatex">\(r = 2GM\)</span> — пара прямых <span class="arithmatex">\(T = \pm R\)</span>;</li>
+<li>кривые <span class="arithmatex">\(t = \mathrm{const}\)</span> — прямые через начало координат, <span class="arithmatex">\(T/R = \tanh(t/4GM)\)</span>;</li>
+<li>сингулярность <span class="arithmatex">\(r = 0\)</span> — гипербола <span class="arithmatex">\(T^2 - R^2 = 1\)</span> (две ветви: <span class="arithmatex">\(T &gt; 0\)</span> и <span class="arithmatex">\(T &lt; 0\)</span>);</li>
+<li>допустимая область: <span class="arithmatex">\(T^2 - R^2 &lt; 1\)</span>.</li>
+</ul>
+<p>Получаются четыре области: <strong>I</strong> — наша внешняя вселенная (<span class="arithmatex">\(R &gt; |T|\)</span>); <strong>II</strong> — внутренность
+чёрной дыры (<span class="arithmatex">\(T &gt; |R|\)</span>); <strong>III</strong> — ещё одна асимптотически плоская вселенная (<span class="arithmatex">\(R &lt; -|T|\)</span>);
+<strong>IV</strong> — белая дыра (<span class="arithmatex">\(T &lt; -|R|\)</span>). Это <strong>максимальное аналитическое продолжение</strong>
+решения Шварцшильда. Сечение <span class="arithmatex">\(T = 0\)</span> — «мост Эйнштейна–Розена», горловина, соединяющая
+области I и III; она непроходима: любой путь из I в III был бы пространственноподобным.</p>
+<div class="admonition example">
+<p class="admonition-title">Пример: никакой «замёрзшей» звезды</p>
+<p>Наблюдатель, падающий в чёрную дыру, в координатах Крускала пересекает прямую
+<span class="arithmatex">\(T = R\)</span> за конечное собственное время. Удалённый наблюдатель видит, как сигналы
+падающего приходят всё реже и всё сильнее покрасневшими: частота убывает как
+<span class="arithmatex">\(e^{-t/4GM}\)</span>. Изображение экспоненциально быстро тускнеет, но сам падающий
+«застывшим» себя не ощущает.</p>
+</div>
+<p>Реальная чёрная дыра, образовавшаяся при коллапсе звезды, содержит лишь часть этой
+диаграммы: области III и IV заменены внутренностью звезды. Вечная чёрная дыра Крускала —
+идеализация, но очень полезная.</p>
+<h2 id="84">8.4. Диаграммы Пенроуза<a class="headerlink" href="#84" title="Permanent link">&para;</a></h2>
+<p>Бесконечности удобно «приблизить», сделав конформное преобразование, сжимающее всё
+пространство-время в конечную область и сохраняющее световые конусы. Для пространства
+Минковского в <span class="arithmatex">\((t, r)\)</span> введём <span class="arithmatex">\(u = t - r\)</span>, <span class="arithmatex">\(v = t + r\)</span> и</p>
+<div class="arithmatex">\[\begin{equation}
+U = \arctan u, \quad V = \arctan v, \qquad -\frac{\pi}{2} &lt; U \le V &lt; \frac{\pi}{2}.
+\label{eq:penrose-mink}
+\end{equation}\]</div>
+<p>Так как <span class="arithmatex">\(\d u = \d U/\cos^2 U\)</span> и <span class="arithmatex">\(r = \tfrac12\tan V - \tfrac12\tan U\)</span>, метрика
+<span class="arithmatex">\(\d s^2 = -\d u\,\d v + r^2\d\Omega^2\)</span> принимает вид</p>
+<div class="arithmatex">\[\begin{equation}
+\d s^2 = \frac{1}{4\cos^2U\cos^2V}\left[-4\,\d U\,\d V + \sin^2(V - U)\,\d\Omega^2\right].
+\label{eq:penrose-metric}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Метрика Минковского в <span class="arithmatex">\(u, v\)</span>.</strong> <span class="arithmatex">\(u = t - r\)</span>, <span class="arithmatex">\(v = t + r\)</span>: <span class="arithmatex">\(\d u\,\d v = \d t^2 - \d r^2\)</span>, так что <span class="arithmatex">\(-\d t^2 + \d r^2 = -\d u\,\d v\)</span>.</p>
+<p><strong>Шаг 2. Дифференциалы.</strong> Из <span class="arithmatex">\(u = \tan U\)</span>, <span class="arithmatex">\(v = \tan V\)</span>: <span class="arithmatex">\(\d u = \frac{\d U}{\cos^2U}\)</span>, <span class="arithmatex">\(\d v = \frac{\d V}{\cos^2V}\)</span>, и
+<span class="arithmatex">\(-\d u\,\d v = \frac{-4\,\d U\,\d V}{4\cos^2U\cos^2V}\)</span>.</p>
+<p><strong>Шаг 3. Радиус.</strong> <span class="arithmatex">\(r = \frac{v - u}{2} = \frac12(\tan V - \tan U) = \frac{\sin V\cos U - \cos V\sin U}{2\cos U\cos V} = \frac{\sin(V - U)}{2\cos U\cos V}\)</span>, откуда</p>
+<div class="arithmatex">\[
+r^2\,\d\Omega^2 = \frac{\sin^2(V - U)}{4\cos^2U\cos^2V}\,\d\Omega^2 .
+\]</div>
+<p><strong>Шаг 4.</strong> Складывая шаги 2 и 3 и вынося общий множитель <span class="arithmatex">\(\frac{1}{4\cos^2U\cos^2V}\)</span>, получаем <span class="arithmatex">\(\eqref{eq:penrose-metric}\)</span>.</p>
+<p><strong>Проверка.</strong> Условие <span class="arithmatex">\(r \ge 0\)</span> ⇔ <span class="arithmatex">\(v \ge u\)</span> ⇔ <span class="arithmatex">\(V \ge U\)</span>, а <span class="arithmatex">\(\arctan\)</span> отображает <span class="arithmatex">\((-\infty, \infty)\)</span> в <span class="arithmatex">\((-\pi/2, \pi/2)\)</span> — отсюда пределы в <span class="arithmatex">\(\eqref{eq:penrose-mink}\)</span>. ✓</p>
+</details>
+<p>С точностью до конформного множителя в квадратных скобках стоит метрика, в которой
+радиальные изотропные лучи по-прежнему идут под <span class="arithmatex">\(45^\circ\)</span> в плоскости
+<span class="arithmatex">\((U - V,\,U + V)\)</span>, а бесконечности <span class="arithmatex">\(u, v \to \pm\infty\)</span> оказываются на конечном расстоянии. Пространство Минковского превращается в треугольник с границами:</p>
+<table>
+<thead>
+<tr>
+<th>Обозначение</th>
+<th>Смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(i^+\)</span>, <span class="arithmatex">\(i^-\)</span></td>
+<td>будущая и прошлая времениподобные бесконечности (<span class="arithmatex">\(t \to \pm\infty\)</span> при конечном <span class="arithmatex">\(r\)</span>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(i^0\)</span></td>
+<td>пространственная бесконечность (<span class="arithmatex">\(r \to \infty\)</span> при конечном <span class="arithmatex">\(t\)</span>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathscr I^+\)</span>, <span class="arithmatex">\(\mathscr I^-\)</span></td>
+<td>будущая и прошлая изотропные бесконечности («скрай»)</td>
+</tr>
+</tbody>
+</table>
+<p>Для пространства Крускала то же делают с координатами <span class="arithmatex">\(T \pm R\)</span>:
+<span class="arithmatex">\(\tilde U = \arctan(T - R)\)</span>, <span class="arithmatex">\(\tilde V = \arctan(T + R)\)</span>. Получается «ромб» из двух
+треугольников Минковского (области I и III), соединённых областями II и IV, причём
+сингулярности <span class="arithmatex">\(r = 0\)</span> превращаются в <strong>горизонтальные</strong> отрезки сверху и снизу. Их
+горизонтальность наглядно выражает то, что <span class="arithmatex">\(r = 0\)</span> — пространственноподобная
+поверхность: это не место, а момент времени в будущем любого наблюдателя в области II.</p>
+<p>Диаграммы Пенроуза — основной инструмент анализа причинной структуры: из любой точки
+области II световой конус целиком упирается в сингулярность и не пересекает <span class="arithmatex">\(\mathscr I^+\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Теорема Пенроуза о сингулярностях (1965), неформально</p>
+<p>Если в пространстве-времени, удовлетворяющем уравнениям Эйнштейна с материей,
+подчиняющейся изотропному энергетическому условию <span class="arithmatex">\(T_{\mu\nu}k^\mu k^\nu \ge 0\)</span>,
+существует замкнутая <strong>захваченная поверхность</strong> (обе изотропные нормали которой
+сходятся), и пространство глобально гиперболично с некомпактной коши-поверхностью,
+то оно геодезически неполно.</p>
+</div>
+<p>Внутри горизонта Шварцшильда каждая сфера <span class="arithmatex">\(r = \mathrm{const}\)</span> — захваченная поверхность.
+Теорема говорит, что сингулярность не является следствием сферической симметрии:
+она устойчива к малым возмущениям коллапса.</p>
+<h2 id="85">8.5. Решение Керра<a class="headerlink" href="#85" title="Permanent link">&para;</a></h2>
+<p>Астрофизические чёрные дыры вращаются. Стационарное аксиально-симметричное вакуумное
+решение, описывающее вращающуюся чёрную дыру, нашёл Р. Керр (1963). В координатах
+Бойера–Линдквиста</p>
+<div class="arithmatex">\[\begin{equation}
+\begin{aligned}
+\d s^2 = &amp;-\left(1 - \frac{2GMr}{\rho^2}\right)\d t^2
+- \frac{4GMar\sin^2\theta}{\rho^2}\,\d t\,\d\phi
++ \frac{\rho^2}{\Delta}\,\d r^2 + \rho^2\,\d\theta^2 \\
+&amp;+ \frac{\sin^2\theta}{\rho^2}\left[(r^2 + a^2)^2 - a^2\Delta\sin^2\theta\right]\d\phi^2,
+\end{aligned}
+\label{eq:kerr}
+\end{equation}\]</div>
+<p>где</p>
+<div class="arithmatex">\[\begin{equation}
+\Delta = r^2 - 2GMr + a^2, \qquad \rho^2 = r^2 + a^2\cos^2\theta, \qquad a = \frac{J}{M}.
+\label{eq:kerr-defs}
+\end{equation}\]</div>
+<p>При <span class="arithmatex">\(a = 0\)</span> получаем <span class="arithmatex">\(\eqref{eq:schw}\)</span>. При <span class="arithmatex">\(M \to 0\)</span> — плоское пространство в
+сплюснутых сфероидальных координатах. Метрика не зависит от <span class="arithmatex">\(t\)</span> и <span class="arithmatex">\(\phi\)</span>, поэтому
+<span class="arithmatex">\(\pd_t\)</span> и <span class="arithmatex">\(\pd_\phi\)</span> — векторы Киллинга, а у геодезических сохраняются
+<span class="arithmatex">\(E = -p_t\)</span> и <span class="arithmatex">\(L = p_\phi\)</span>. (Есть и скрытая симметрия — тензор Киллинга, дающий третий
+интеграл, постоянную Картера.)</p>
+<h3 id="_2">Горизонты<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Метрика вырождается при <span class="arithmatex">\(\Delta = 0\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+r_\pm = GM \pm \sqrt{G^2M^2 - a^2}.
+\label{eq:kerr-horizons}
+\end{equation}\]</div>
+<p>Внешний горизонт событий — <span class="arithmatex">\(r_+\)</span>, внутренний (горизонт Коши) — <span class="arithmatex">\(r_-\)</span>. Решение описывает
+чёрную дыру лишь при <span class="arithmatex">\(a \le GM\)</span>; при <span class="arithmatex">\(a &gt; GM\)</span> горизонтов нет и сингулярность была бы
+«голой». <strong>Гипотеза космической цензуры</strong> утверждает, что в реальном коллапсе голые
+сингулярности не возникают. Случай <span class="arithmatex">\(a = GM\)</span> называется <strong>экстремальным</strong>. Удобно
+вводить безразмерный спин <span class="arithmatex">\(\chi = a/(GM) \in [0, 1]\)</span>.</p>
+<p>Сингулярность Керра — не точка, а <strong>кольцо</strong> <span class="arithmatex">\(\rho^2 = 0\)</span>, т. е. <span class="arithmatex">\(r = 0\)</span>, <span class="arithmatex">\(\theta = \pi/2\)</span>.</p>
+<h3 id="_3">Эргосфера и увлечение инерциальных систем<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Вектор Киллинга <span class="arithmatex">\(\pd_t\)</span> становится пространственноподобным там, где <span class="arithmatex">\(g_{tt} &gt; 0\)</span>,
+т. е. при <span class="arithmatex">\(r^2 - 2GMr + a^2\cos^2\theta &lt; 0\)</span>. Граница этой области — <strong>предел
+стационарности</strong></p>
+<div class="arithmatex">\[\begin{equation}
+r_E(\theta) = GM + \sqrt{G^2M^2 - a^2\cos^2\theta} \;\ge\; r_+.
+\label{eq:ergosphere}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Горизонты.</strong> <span class="arithmatex">\(g_{rr} = \rho^2/\Delta\)</span> расходится при <span class="arithmatex">\(\Delta = r^2 - 2GMr + a^2 = 0\)</span>; корни квадратного уравнения
+<span class="arithmatex">\(r_\pm = GM \pm \sqrt{G^2M^2 - a^2}\)</span> вещественны лишь при <span class="arithmatex">\(a \le GM\)</span>.</p>
+<p><strong>Шаг 2. Знак <span class="arithmatex">\(g_{tt}\)</span>.</strong> <span class="arithmatex">\(g_{tt} = -\left(1 - \frac{2GMr}{\rho^2}\right) &gt; 0\)</span> ⇔ <span class="arithmatex">\(\rho^2 &lt; 2GMr\)</span> ⇔ <span class="arithmatex">\(r^2 - 2GMr + a^2\cos^2\theta &lt; 0\)</span>.
+Корни: <span class="arithmatex">\(r = GM \pm \sqrt{G^2M^2 - a^2\cos^2\theta}\)</span>; внешний — <span class="arithmatex">\(r_E(\theta)\)</span>.</p>
+<p><strong>Шаг 3. Сравнение с <span class="arithmatex">\(r_+\)</span>.</strong> Так как <span class="arithmatex">\(a^2\cos^2\theta \le a^2\)</span>, то <span class="arithmatex">\(\sqrt{G^2M^2 - a^2\cos^2\theta} \ge \sqrt{G^2M^2 - a^2}\)</span> и <span class="arithmatex">\(r_E \ge r_+\)</span>.
+Равенство при <span class="arithmatex">\(\cos^2\theta = 1\)</span> (полюса); на экваторе <span class="arithmatex">\(\cos\theta = 0\)</span> и <span class="arithmatex">\(r_E = 2GM\)</span>.</p>
+</details>
+<p>Область <span class="arithmatex">\(r_+ &lt; r &lt; r_E\)</span> называется <strong>эргосферой</strong>. Она касается горизонта на полюсах и
+максимально выступает на экваторе, где <span class="arithmatex">\(r_E = 2GM\)</span>. Внутри эргосферы ни один наблюдатель
+не может покоиться относительно далёких звёзд: условие <span class="arithmatex">\(u^\mu \propto \pd_t\)</span> требует
+<span class="arithmatex">\(g_{tt} &lt; 0\)</span>. Все наблюдатели вынуждены вращаться в сторону вращения дыры. Угловая
+скорость наблюдателя с нулевым моментом импульса (ZAMO)</p>
+<div class="arithmatex">\[\begin{equation}
+\omega = \frac{\d\phi}{\d t} = -\frac{g_{t\phi}}{g_{\phi\phi}}
+= \frac{2GMar}{(r^2 + a^2)^2 - a^2\Delta\sin^2\theta},
+\label{eq:zamo}
+\end{equation}\]</div>
+<p>а на горизонте она принимает постоянное значение — <strong>угловую скорость горизонта</strong></p>
+<div class="arithmatex">\[\begin{equation}
+\Omega_H = \frac{a}{r_+^2 + a^2}.
+\label{eq:omega-h}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Нулевой момент.</strong> ZAMO имеет <span class="arithmatex">\(L = p_\phi = g_{\phi\mu}u^\mu = g_{t\phi}u^t + g_{\phi\phi}u^\phi = 0\)</span>. Отсюда
+<span class="arithmatex">\(\omega = \frac{u^\phi}{u^t} = -\frac{g_{t\phi}}{g_{\phi\phi}}\)</span>.</p>
+<p><strong>Шаг 2. Компоненты из <span class="arithmatex">\(\eqref{eq:kerr}\)</span>.</strong> Перекрёстный член <span class="arithmatex">\(-\frac{4GMar\sin^2\theta}{\rho^2}\d t\,\d\phi = 2g_{t\phi}\,\d t\,\d\phi\)</span>, т.е.
+<span class="arithmatex">\(g_{t\phi} = -\frac{2GMar\sin^2\theta}{\rho^2}\)</span>; <span class="arithmatex">\(g_{\phi\phi} = \frac{\sin^2\theta}{\rho^2}\left[(r^2+a^2)^2 - a^2\Delta\sin^2\theta\right]\)</span>. Множители <span class="arithmatex">\(\sin^2\theta/\rho^2\)</span> сокращаются:</p>
+<div class="arithmatex">\[
+\omega = \frac{2GMar}{(r^2 + a^2)^2 - a^2\Delta\sin^2\theta}.
+\]</div>
+<p><strong>Шаг 3. На горизонте</strong> <span class="arithmatex">\(\Delta = 0\)</span>, зависимость от <span class="arithmatex">\(\theta\)</span> пропадает: <span class="arithmatex">\(\Omega_H = \frac{2GMar_+}{(r_+^2 + a^2)^2}\)</span>. Из <span class="arithmatex">\(\Delta(r_+) = 0\)</span> следует
+<span class="arithmatex">\(r_+^2 + a^2 = 2GMr_+\)</span>; заменяя один множитель в знаменателе:</p>
+<div class="arithmatex">\[
+\Omega_H = \frac{2GMar_+}{2GMr_+\,(r_+^2 + a^2)} = \frac{a}{r_+^2 + a^2}.
+\]</div>
+<p><strong>Проверка.</strong> При <span class="arithmatex">\(a = 0\)</span> <span class="arithmatex">\(\Omega_H = 0\)</span>; при <span class="arithmatex">\(r \to \infty\)</span> <span class="arithmatex">\(\omega \approx 2GMa/r^3 = 2GJ/r^3\)</span> — эффект Лензе–Тирринга. ✓</p>
+</details>
+<h3 id="_4">Процесс Пенроуза<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Поскольку <span class="arithmatex">\(\pd_t\)</span> внутри эргосферы пространственноподобен, сохраняющаяся «энергия»
+<span class="arithmatex">\(E = -p_\mu (\pd_t)^\mu\)</span> частицы там может быть <strong>отрицательной</strong>. Пусть частица с энергией
+<span class="arithmatex">\(E_0 &gt; 0\)</span> влетает в эргосферу и распадается на две: <span class="arithmatex">\(E_0 = E_1 + E_2\)</span>, причём <span class="arithmatex">\(E_2 &lt; 0\)</span>.
+Осколок 2 падает в дыру, а осколок 1 вылетает с энергией <span class="arithmatex">\(E_1 = E_0 - E_2 &gt; E_0\)</span>.
+Энергия извлечена из вращения: масса и момент импульса дыры уменьшаются. Извлечь можно не
+всё: есть величина, которая никогда не убывает.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Теорема Хокинга о площади (1971)</p>
+<p>Если выполнено изотропное энергетическое условие и нет голых сингулярностей, то площадь
+горизонта событий не убывает:</p>
+<div class="arithmatex">\[\begin{equation}
+\delta A \ge 0.
+\label{eq:area-theorem}
+\end{equation}\]</div>
+</div>
+<p>Площадь горизонта Керра <span class="arithmatex">\(A = 4\pi(r_+^2 + a^2)\)</span>. Определим <strong>неприводимую массу</strong>
+<span class="arithmatex">\(M_{\rm irr} = \sqrt{A/(16\pi G^2)}\)</span>; для Шварцшильда <span class="arithmatex">\(M_{\rm irr} = M\)</span>. Тогда</p>
+<div class="arithmatex">\[\begin{equation}
+M^2 = M_{\rm irr}^2 + \frac{J^2}{4G^2M_{\rm irr}^2},
+\label{eq:irreducible}
+\end{equation}\]</div>
+<p>и максимальная энергия, извлекаемая из вращения, равна <span class="arithmatex">\(M - M_{\rm irr}\)</span>; для
+экстремальной дыры это <span class="arithmatex">\(1 - 1/\sqrt2 \approx 29\%\)</span> массы.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Площадь через <span class="arithmatex">\(r_+\)</span>.</strong> <span class="arithmatex">\(A = 4\pi(r_+^2 + a^2) = 4\pi\cdot2GMr_+ = 8\pi GMr_+\)</span> (так как <span class="arithmatex">\(\Delta(r_+) = 0\)</span>). Отсюда</p>
+<div class="arithmatex">\[
+M_{\rm irr}^2 = \frac{A}{16\pi G^2} = \frac{Mr_+}{2G}.
+\]</div>
+<p><strong>Шаг 2. Разность квадратов.</strong> <span class="arithmatex">\(M^2 - M_{\rm irr}^2 = \frac{M(2GM - r_+)}{2G} = \frac{Mr_-}{2G}\)</span>, поскольку <span class="arithmatex">\(r_+ + r_- = 2GM\)</span>.</p>
+<p><strong>Шаг 3. Произведение.</strong> <span class="arithmatex">\(4G^2M_{\rm irr}^2\left(M^2 - M_{\rm irr}^2\right) = 4G^2\cdot\frac{Mr_+}{2G}\cdot\frac{Mr_-}{2G} = M^2r_+r_- = M^2a^2 = J^2\)</span>
+(по Виету <span class="arithmatex">\(r_+r_- = a^2\)</span>). Делим на <span class="arithmatex">\(4G^2M_{\rm irr}^2\)</span> — получаем <span class="arithmatex">\(\eqref{eq:irreducible}\)</span>.</p>
+<p><strong>Шаг 4. Экстремальная дыра.</strong> <span class="arithmatex">\(a = GM\)</span>, <span class="arithmatex">\(r_+ = GM\)</span>: <span class="arithmatex">\(M_{\rm irr}^2 = M^2/2\)</span>, <span class="arithmatex">\(M_{\rm irr} = M/\sqrt2\)</span>, извлекаемая доля <span class="arithmatex">\(1 - 1/\sqrt2 \approx 0{,}293\)</span>.</p>
+<p><strong>Проверка.</strong> При <span class="arithmatex">\(a = 0\)</span>: <span class="arithmatex">\(r_+ = 2GM\)</span>, <span class="arithmatex">\(M_{\rm irr}^2 = M^2\)</span>. ✓</p>
+</details>
+<h3 id="_5">Теорема об отсутствии волос<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition theorem">
+<p class="admonition-title">Теорема единственности («у чёрной дыры нет волос»)</p>
+<p>Стационарная асимптотически плоская чёрная дыра в электровакууме полностью описывается
+тремя параметрами: массой <span class="arithmatex">\(M\)</span>, моментом импульса <span class="arithmatex">\(J\)</span> и электрическим зарядом <span class="arithmatex">\(Q\)</span>
+(решение Керра–Ньюмена).</p>
+</div>
+<p>Все остальные «детали» коллапсирующего тела — мультипольные моменты, барионное число,
+состав — излучаются гравитационными волнами (см. <a href="../09-gravitational-waves/">главу 9</a>) или
+уходят под горизонт. Астрофизические дыры практически нейтральны, так что их описывает
+метрика Керра.</p>
+<h2 id="86">8.6. Термодинамика чёрных дыр<a class="headerlink" href="#86" title="Permanent link">&para;</a></h2>
+<p>Для стационарного горизонта с вектором Киллинга <span class="arithmatex">\(\xi = \pd_t + \Omega_H\pd_\phi\)</span>, изотропным
+на горизонте, определим <strong>поверхностную гравитацию</strong> <span class="arithmatex">\(\kappa\)</span> соотношением
+<span class="arithmatex">\(\xi^\mu\nabla_\mu\xi^\nu = \kappa\,\xi^\nu\)</span> на <span class="arithmatex">\(\mathcal H\)</span>. Физически <span class="arithmatex">\(\kappa\)</span> — ускорение,
+необходимое, чтобы удержать частицу у горизонта, измеренное с бесконечности. Для Керра</p>
+<div class="arithmatex">\[\begin{equation}
+\kappa = \frac{r_+ - r_-}{2(r_+^2 + a^2)}, \qquad
+\kappa_{\rm Schw} = \frac{1}{4GM}.
+\label{eq:surface-gravity}
+\end{equation}\]</div>
+<p>Варьируя <span class="arithmatex">\(A(M,J)\)</span>, получаем тождество, связывающее соседние стационарные дыры:</p>
+<div class="arithmatex">\[\begin{equation}
+\d M = \frac{\kappa}{8\pi G}\,\d A + \Omega_H\,\d J.
+\label{eq:first-law}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Шварцшильдов предел <span class="arithmatex">\(\eqref{eq:surface-gravity}\)</span>.</strong> При <span class="arithmatex">\(a = 0\)</span>: <span class="arithmatex">\(r_+ = 2GM\)</span>, <span class="arithmatex">\(r_- = 0\)</span>, <span class="arithmatex">\(\kappa = \frac{2GM}{2\cdot4G^2M^2} = \frac{1}{4GM}\)</span>.</p>
+<p><strong>Шаг 2. <span class="arithmatex">\(M\)</span> как функция <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(J\)</span>.</strong> Из <span class="arithmatex">\(\eqref{eq:irreducible}\)</span> с <span class="arithmatex">\(M_{\rm irr}^2 = A/(16\pi G^2)\)</span>:
+<span class="arithmatex">\(M^2 = M_{\rm irr}^2 + \frac{J^2}{4G^2M_{\rm irr}^2}\)</span>. Дифференцируем при постоянном <span class="arithmatex">\(M_{\rm irr}\)</span>:
+<span class="arithmatex">\(2M\,\pd M/\pd J = \frac{2J}{4G^2M_{\rm irr}^2}\)</span>, т.е. с <span class="arithmatex">\(J = aM\)</span> и <span class="arithmatex">\(4G^2M_{\rm irr}^2 = 2GMr_+\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\pd M}{\pd J} = \frac{a}{2GMr_+} = \frac{a}{r_+^2 + a^2} = \Omega_H .
+\]</div>
+<p><strong>Шаг 3. Производная по <span class="arithmatex">\(A\)</span>.</strong> <span class="arithmatex">\(2M\,\frac{\pd M}{\pd M_{\rm irr}} = 2M_{\rm irr} - \frac{2J^2}{4G^2M_{\rm irr}^3}\)</span> и <span class="arithmatex">\(\frac{\d M_{\rm irr}}{\d A} = \frac{1}{32\pi G^2M_{\rm irr}}\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\pd M}{\pd A} = \frac{1}{32\pi G^2M}\left(1 - \frac{J^2}{4G^2M_{\rm irr}^4}\right)
+= \frac{1}{32\pi G^2M}\left(1 - \frac{a^2}{r_+^2}\right),
+\]</div>
+<p>где <span class="arithmatex">\(4G^2M_{\rm irr}^4 = M^2r_+^2\)</span>. Сравним с <span class="arithmatex">\(\kappa/(8\pi G)\)</span>: так как <span class="arithmatex">\(r_- = a^2/r_+\)</span> и <span class="arithmatex">\(r_+^2 + a^2 = 2GMr_+\)</span>,</p>
+<div class="arithmatex">\[
+\frac{\kappa}{8\pi G} = \frac{r_+ - a^2/r_+}{16\pi G\cdot2GMr_+} = \frac{1}{32\pi G^2M}\left(1 - \frac{a^2}{r_+^2}\right). \ \checkmark
+\]</div>
+<p><strong>Шаг 4.</strong> Полный дифференциал <span class="arithmatex">\(\d M = \frac{\pd M}{\pd A}\d A + \frac{\pd M}{\pd J}\d J\)</span> и есть <span class="arithmatex">\(\eqref{eq:first-law}\)</span>.</p>
+</details>
+<p>Бардин, Картер и Хокинг (1973) сформулировали четыре закона механики чёрных дыр:</p>
+<table>
+<thead>
+<tr>
+<th>Закон</th>
+<th>Чёрные дыры</th>
+<th>Термодинамика</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>нулевой</td>
+<td><span class="arithmatex">\(\kappa\)</span> постоянна на горизонте</td>
+<td><span class="arithmatex">\(T\)</span> постоянна в равновесии</td>
+</tr>
+<tr>
+<td>первый</td>
+<td><span class="arithmatex">\(\d M = \frac{\kappa}{8\pi G}\d A + \Omega_H \d J\)</span></td>
+<td><span class="arithmatex">\(\d E = T\d S + \Omega\,\d J\)</span></td>
+</tr>
+<tr>
+<td>второй</td>
+<td><span class="arithmatex">\(\d A \ge 0\)</span></td>
+<td><span class="arithmatex">\(\d S \ge 0\)</span></td>
+</tr>
+<tr>
+<td>третий</td>
+<td><span class="arithmatex">\(\kappa = 0\)</span> недостижима</td>
+<td><span class="arithmatex">\(T = 0\)</span> недостижима</td>
+</tr>
+</tbody>
+</table>
+<p>Классически аналогия формальна: чёрная дыра ничего не излучает, и её температура равна
+нулю. Бекенштейн тем не менее предположил, что площадь — настоящая энтропия; иначе,
+бросив в дыру горячий газ, мы уменьшили бы энтропию Вселенной.</p>
+<h3 id="_6">Излучение Хокинга<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Хокинг (1974) показал, что квантовые поля на фоне коллапсирующей звезды приводят к
+тепловому потоку частиц на <span class="arithmatex">\(\mathscr I^+\)</span> с температурой</p>
+<div class="arithmatex">\[\begin{equation}
+k_B T_H = \frac{\hbar\kappa}{2\pi}, \qquad
+T_H^{\rm Schw} = \frac{\hbar}{8\pi G M k_B}
+\approx 6.2\times10^{-8}\,\text{К}\;\frac{M_\odot}{M}.
+\label{eq:hawking-T}
+\end{equation}\]</div>
+<p>Эвристически: вблизи горизонта рождаются виртуальные пары, и частица с отрицательной
+энергией (что возможно под горизонтом, где <span class="arithmatex">\(\pd_t\)</span> пространственноподобен) падает в дыру,
+а партнёр уходит на бесконечность. Более строгий вывод — через преобразование Боголюбова
+между модами, определёнными относительно <span class="arithmatex">\(u\)</span> и аффинного параметра на <span class="arithmatex">\(\mathscr I^-\)</span>;
+экспоненциальная связь <span class="arithmatex">\(U = -e^{-\kappa u}\)</span> между крускаловским и запаздывающим временем
+и даёт планковский спектр.</p>
+<p>Сравнив <span class="arithmatex">\(\eqref{eq:first-law}\)</span> с <span class="arithmatex">\(\d E = T\d S\)</span>, находим <strong>энтропию Бекенштейна–Хокинга</strong></p>
+<div class="arithmatex">\[\begin{equation}
+S_{BH} = \frac{k_B\,A}{4G\hbar} = \frac{k_B\,A}{4\ell_P^2}, \qquad \ell_P^2 = G\hbar.
+\label{eq:bh-entropy}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Температура Шварцшильда.</strong> <span class="arithmatex">\(k_BT_H = \frac{\hbar\kappa}{2\pi} = \frac{\hbar}{2\pi\cdot4GM} = \frac{\hbar}{8\pi GM}\)</span>. С <span class="arithmatex">\(c\)</span>: <span class="arithmatex">\(T_H = \frac{\hbar c^3}{8\pi GMk_B}\)</span>;
+для <span class="arithmatex">\(M_\odot\)</span>: <span class="arithmatex">\(\frac{1{,}055\cdot10^{-34}\cdot2{,}7\cdot10^{25}}{8\pi\cdot1{,}33\cdot10^{20}\cdot1{,}38\cdot10^{-23}} \approx 6{,}2\cdot10^{-8}\)</span> К.</p>
+<p><strong>Шаг 2. Сравнение с <span class="arithmatex">\(T\d S\)</span>.</strong> Первое слагаемое <span class="arithmatex">\(\eqref{eq:first-law}\)</span> должно равняться <span class="arithmatex">\(T_H\,\d S\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\kappa}{8\pi G}\d A = \frac{\hbar\kappa}{2\pi k_B}\,\d S
+\quad\Longrightarrow\quad
+\d S = \frac{2\pi k_B}{\hbar\kappa}\cdot\frac{\kappa}{8\pi G}\d A = \frac{k_B}{4G\hbar}\d A .
+\]</div>
+<p><span class="arithmatex">\(\kappa\)</span> сокращается; интегрируя (с <span class="arithmatex">\(S = 0\)</span> при <span class="arithmatex">\(A = 0\)</span>), получаем <span class="arithmatex">\(\eqref{eq:bh-entropy}\)</span>.</p>
+<p><strong>Проверка.</strong> Для <span class="arithmatex">\(M_\odot\)</span>: <span class="arithmatex">\(A = 16\pi G^2M^2/c^4 \approx 1{,}1\cdot10^8\)</span> м², <span class="arithmatex">\(\ell_P^2 = 2{,}6\cdot10^{-70}\)</span> м², <span class="arithmatex">\(S/k_B \approx 10^{77}\)</span>. ✓</p>
+</details>
+<p>Для солнечной массы <span class="arithmatex">\(S_{BH} \approx 10^{77}k_B\)</span> — на 20 порядков больше энтропии Солнца.
+Объяснение этой энтропии через микросостояния — одна из центральных задач квантовой
+гравитации.</p>
+<h3 id="_7">Испарение<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>Теплоёмкость шварцшильдовской дыры отрицательна: <span class="arithmatex">\(\d M/\d T_H &lt; 0\)</span> — теряя массу, дыра
+нагревается. Оценим время жизни, считая излучение чёрнотельным (только фотоны,
+<span class="arithmatex">\(\sigma = \pi^2k_B^4/(60\hbar^3)\)</span> при <span class="arithmatex">\(c = 1\)</span>):</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\d M}{\d t} = -\sigma T_H^4 \cdot 4\pi(2GM)^2 = -\frac{\hbar}{15360\,\pi\,G^2M^2}
+\quad\Longrightarrow\quad
+t_{\rm evap} = \frac{5120\,\pi\,G^2M^3}{\hbar}.
+\label{eq:evaporation}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Закон Стефана–Больцмана.</strong> Мощность <span class="arithmatex">\(= \sigma T_H^4\cdot A\)</span>, <span class="arithmatex">\(A = 4\pi(2GM)^2 = 16\pi G^2M^2\)</span>, <span class="arithmatex">\(T_H = \frac{\hbar}{8\pi GM}\)</span> (<span class="arithmatex">\(k_B = 1\)</span>).</p>
+<p><strong>Шаг 2. Подстановка.</strong></p>
+<div class="arithmatex">\[
+\sigma T_H^4 = \frac{\pi^2}{60\hbar^3}\cdot\frac{\hbar^4}{4096\,\pi^4G^4M^4} = \frac{\hbar}{245760\,\pi^2G^4M^4},
+\qquad
+\sigma T_H^4\cdot16\pi G^2M^2 = \frac{16\,\hbar}{245760\,\pi\,G^2M^2} = \frac{\hbar}{15360\,\pi\,G^2M^2}.
+\]</div>
+<p><strong>Шаг 3. Интегрирование.</strong> <span class="arithmatex">\(M^2\,\d M = -\frac{\hbar}{15360\pi G^2}\d t\)</span>. От <span class="arithmatex">\(M\)</span> до <span class="arithmatex">\(0\)</span>:</p>
+<div class="arithmatex">\[
+\frac{M^3}{3} = \frac{\hbar\,t_{\rm evap}}{15360\,\pi\,G^2}
+\quad\Longrightarrow\quad
+t_{\rm evap} = \frac{15360\,\pi\,G^2M^3}{3\hbar} = \frac{5120\,\pi\,G^2M^3}{\hbar}.
+\]</div>
+<p><strong>Проверка.</strong> Размерность: <span class="arithmatex">\(G^2M^3/\hbar\)</span> при <span class="arithmatex">\(c = 1\)</span> — <span class="arithmatex">\([\text{длина}^2/\text{масса}^2]\cdot\text{масса}^3/[\text{масса}\cdot\text{длина}] = \)</span> длина. С <span class="arithmatex">\(c\)</span>: <span class="arithmatex">\(G^2M^3/(\hbar c^4)\)</span>. ✓</p>
+</details>
+<p>Для солнечной массы <span class="arithmatex">\(t_{\rm evap} \sim 10^{67}\)</span> лет. Испарение актуально лишь для
+гипотетических первичных чёрных дыр малой массы. Вопрос о том, что происходит с
+информацией, упавшей в испарившуюся дыру (<strong>информационный парадокс</strong>), до сих пор
+обсуждается.</p>
+<h2 id="87">8.7. Численный пример<a class="headerlink" href="#87" title="Permanent link">&para;</a></h2>
+<p>Оценим характерные масштабы: гравитационный радиус, температуру Хокинга, время испарения
+и горизонты Керра (здесь <span class="arithmatex">\(c\)</span> восстановлена).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">G</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">hbar</span><span class="p">,</span> <span class="n">k</span> <span class="k">as</span> <span class="n">k_B</span><span class="p">,</span> <span class="n">year</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.98892e30</span>   <span class="c1"># кг</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">r_s</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="sd">"""Радиус Шварцшильда 2GM/c^2, м."""</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">G</span> <span class="o">*</span> <span class="n">M</span> <span class="o">/</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">T_hawking</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="sd">"""Температура Хокинга, К."""</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">hbar</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">G</span> <span class="o">*</span> <span class="n">M</span> <span class="o">*</span> <span class="n">k_B</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">t_evap</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="sd">"""Время испарения (только фотоны), лет."""</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">return</span> <span class="mi">5120</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">G</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">M</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="n">hbar</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="n">year</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">def</span><span class="w"> </span><span class="nf">kerr_horizons</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">chi</span><span class="p">):</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="sd">"""r_± в единицах GM/c^2 для χ = a/(GM/c^2)."""</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">chi</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">chi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">M</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">"Солнце"</span><span class="p">,</span> <span class="n">M_sun</span><span class="p">),</span> <span class="p">(</span><span class="s2">"Sgr A*"</span><span class="p">,</span> <span class="mf">4.3e6</span> <span class="o">*</span> <span class="n">M_sun</span><span class="p">)]:</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> r_s = </span><span class="si">{</span><span class="n">r_s</span><span class="p">(</span><span class="n">M</span><span class="p">)</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2"> м,  T_H = </span><span class="si">{</span><span class="n">T_hawking</span><span class="p">(</span><span class="n">M</span><span class="p">)</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> К"</span><span class="p">)</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># Солнце  r_s = 2.954e+03 м,  T_H = 6.17e-08 К</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># Sgr A*  r_s = 1.270e+10 м,  T_H = 1.43e-14 К</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"t_evap(M_sun) = </span><span class="si">{</span><span class="n">t_evap</span><span class="p">(</span><span class="n">M_sun</span><span class="p">)</span><span class="si">:</span><span class="s2">.1e</span><span class="si">}</span><span class="s2"> лет"</span><span class="p">)</span>      <span class="c1"># t_evap(M_sun) = 2.1e+67 лет</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1"># Масса, при которой T_H = 2.725 К (равновесие с реликтовым излучением)</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">M_eq</span> <span class="o">=</span> <span class="n">hbar</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">G</span> <span class="o">*</span> <span class="mf">2.725</span> <span class="o">*</span> <span class="n">k_B</span><span class="p">)</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"M_eq = </span><span class="si">{</span><span class="n">M_eq</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> кг = </span><span class="si">{</span><span class="n">M_eq</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">7.35e22</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> M_Луны"</span><span class="p">)</span>  <span class="c1"># M_eq = 4.50e+22 кг = 0.61 M_Луны</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c1"># Масса, испаряющаяся за возраст Вселенной 13.8 млрд лет</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">M_pbh</span> <span class="o">=</span> <span class="p">(</span><span class="mf">13.8e9</span> <span class="o">*</span> <span class="n">year</span> <span class="o">*</span> <span class="n">hbar</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">4</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5120</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">G</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"M_pbh = </span><span class="si">{</span><span class="n">M_pbh</span><span class="si">:</span><span class="s2">.1e</span><span class="si">}</span><span class="s2"> кг"</span><span class="p">)</span>                       <span class="c1"># M_pbh = 1.7e+11 кг</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="k">for</span> <span class="n">chi</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.998</span><span class="p">]:</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="n">rp</span><span class="p">,</span> <span class="n">rm</span> <span class="o">=</span> <span class="n">kerr_horizons</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">chi</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"chi = </span><span class="si">{</span><span class="n">chi</span><span class="si">}</span><span class="s2">: r+ = </span><span class="si">{</span><span class="n">rp</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> M, r- = </span><span class="si">{</span><span class="n">rm</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> M"</span><span class="p">)</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="c1"># chi = 0.0: r+ = 2.000 M, r- = 0.000 M</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c1"># chi = 0.7: r+ = 1.714 M, r- = 0.286 M</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c1"># chi = 0.998: r+ = 1.063 M, r- = 0.937 M</span>
+</code></pre></div>
+<p>Любая астрофизическая чёрная дыра холоднее реликтового излучения и сейчас не испаряется,
+а растёт, поглощая его. Первичные дыры с <span class="arithmatex">\(M \sim 10^{11}\)</span> кг должны были бы
+испаряться в наши дни, давая вспышки гамма-излучения, — их пока не наблюдали.</p>
+<h2 id="_8">Задачи<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>8.1. Падение с горизонта</summary>
+<p>Покажите, что собственное время, за которое частица проходит от <span class="arithmatex">\(r = 2GM\)</span> до <span class="arithmatex">\(r = 0\)</span>,
+не превосходит <span class="arithmatex">\(\pi GM\)</span>, как бы она ни двигалась. Сколько это для дыры <span class="arithmatex">\(10\,M_\odot\)</span>?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Внутри горизонта <span class="arithmatex">\(r\)</span> — временная координата. Для радиальной времениподобной кривой
+<span class="arithmatex">\(-\d\tau^2 = -(2GM/r - 1)^{-1}\d r^2 + (2GM/r - 1)\d t^2\)</span>, откуда
+<span class="arithmatex">\(\d\tau^2 \le \d r^2/(2GM/r - 1)\)</span>; угловое движение даёт лишь положительные
+вклады в <span class="arithmatex">\(\d s^2\)</span> и уменьшает <span class="arithmatex">\(\d\tau\)</span>. Значит</p>
+<div class="arithmatex">\[
+\tau \le \int_0^{2GM}\frac{\d r}{\sqrt{2GM/r - 1}} = \pi GM,
+\]</div>
+<p>(подстановка <span class="arithmatex">\(r = 2GM\sin^2\eta\)</span>). Максимум достигается при <span class="arithmatex">\(\d t = 0\)</span>, т. е. на геодезической с
+<span class="arithmatex">\(E = (1 - 2GM/r)\,\d t/\d\tau = 0\)</span>; любое ускорение лишь сокращает оставшееся время. Для
+<span class="arithmatex">\(10\,M_\odot\)</span>: <span class="arithmatex">\(\pi GM/c^3 \approx 1.5\times10^{-4}\)</span> с.</p>
+</details>
+</details>
+<details class="question">
+<summary>8.2. Приливы на горизонте</summary>
+<p>Радиальное приливное ускорение на расстоянии <span class="arithmatex">\(\ell\)</span> равно примерно <span class="arithmatex">\(2GM\ell/r^3\)</span>.
+Оцените его на горизонте для человека (<span class="arithmatex">\(\ell = 2\)</span> м) у дыр с <span class="arithmatex">\(M = 10\,M_\odot\)</span> и
+<span class="arithmatex">\(M = 4\times10^6 M_\odot\)</span>. Выживет ли наблюдатель при пересечении горизонта?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>На горизонте <span class="arithmatex">\(r = 2GM/c^2\)</span>: <span class="arithmatex">\(a \approx 2GM\ell/r^3 = c^6\ell/(4G^2M^2)\)</span>.
+Для <span class="arithmatex">\(10M_\odot\)</span>: <span class="arithmatex">\(r \approx 30\)</span> км, <span class="arithmatex">\(a \approx 2\times10^8\)</span> м/с² — смертельно («спагеттификация»). Для <span class="arithmatex">\(4\times10^6M_\odot\)</span>
+ускорение меньше в <span class="arithmatex">\((4\times10^5)^2\)</span> раз, <span class="arithmatex">\(\sim 10^{-3}\)</span> м/с² — незаметно.</p>
+</details>
+</details>
+<details class="question">
+<summary>8.3. Кривые <span class="arithmatex">\(t = \mathrm{const}\)</span> на диаграмме Крускала</summary>
+<p>Используя <span class="arithmatex">\(\eqref{eq:kruskal-def}\)</span>, покажите, что в области I кривые <span class="arithmatex">\(t = \mathrm{const}\)</span>
+— прямые <span class="arithmatex">\(T = R\tanh(t/4GM)\)</span>, а <span class="arithmatex">\(T^2 - R^2\)</span> зависит только от <span class="arithmatex">\(r\)</span> по
+<span class="arithmatex">\(\eqref{eq:kruskal-r}\)</span>. Что происходит с этими прямыми при <span class="arithmatex">\(t \to \infty\)</span>?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Делим: <span class="arithmatex">\(T/R = \tanh(t/4GM)\)</span>. Вычитаем квадраты:
+<span class="arithmatex">\(T^2 - R^2 = (r/2GM - 1)e^{r/2GM}(\sinh^2 - \cosh^2) = (1 - r/2GM)e^{r/2GM}\)</span>.
+При <span class="arithmatex">\(t \to \infty\)</span> наклон стремится к <span class="arithmatex">\(1\)</span>: прямые прижимаются к горизонту будущего
+<span class="arithmatex">\(T = R\)</span>. Это и есть причина бесконечного <span class="arithmatex">\(t\)</span> при конечном собственном времени
+падения.</p>
+</details>
+</details>
+<details class="question">
+<summary>8.4. Эргосфера на экваторе</summary>
+<p>Найдите <span class="arithmatex">\(r_E\)</span> на экваторе и на полюсе, а также толщину эргосферы
+<span class="arithmatex">\(r_E - r_+\)</span> на экваторе для <span class="arithmatex">\(\chi = 0.7\)</span> и <span class="arithmatex">\(\chi = 1\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Из <span class="arithmatex">\(\eqref{eq:ergosphere}\)</span>: на экваторе <span class="arithmatex">\(r_E = 2GM\)</span> при любом <span class="arithmatex">\(a\)</span>; на полюсе
+<span class="arithmatex">\(r_E = r_+\)</span>. Толщина на экваторе <span class="arithmatex">\(2GM - r_+ = GM(1 - \sqrt{1-\chi^2})\)</span>:
+<span class="arithmatex">\(0.29\,GM\)</span> при <span class="arithmatex">\(\chi = 0.7\)</span> и <span class="arithmatex">\(GM\)</span> при <span class="arithmatex">\(\chi = 1\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>8.5. Слияние двух чёрных дыр</summary>
+<p>Две невращающиеся чёрные дыры массы <span class="arithmatex">\(M\)</span> каждая сливаются в невращающуюся дыру.
+Используя теорему о площади, найдите верхнюю границу доли массы, излучённой в
+гравитационные волны.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(A \propto M^2\)</span>: начальная площадь <span class="arithmatex">\(\propto 2M^2\)</span>, конечная <span class="arithmatex">\(\propto M_f^2\)</span>.
+Из <span class="arithmatex">\(M_f^2 \ge 2M^2\)</span> имеем <span class="arithmatex">\(M_f \ge \sqrt2 M\)</span>, излучено не более
+<span class="arithmatex">\(2M - \sqrt2 M\)</span>, т. е. доля <span class="arithmatex">\(1 - 1/\sqrt2 \approx 29\%\)</span>. Реально (GW150914) —
+около <span class="arithmatex">\(5\%\)</span>, а конечная дыра вращается с <span class="arithmatex">\(\chi \approx 0.7\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>8.6. Энтропия и температура</summary>
+<p>Проверьте, что <span class="arithmatex">\(T_H\)</span> из <span class="arithmatex">\(\eqref{eq:hawking-T}\)</span> и <span class="arithmatex">\(S_{BH}\)</span> из <span class="arithmatex">\(\eqref{eq:bh-entropy}\)</span>
+для шварцшильдовской дыры удовлетворяют <span class="arithmatex">\(\d M = T_H\,\d S_{BH}\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(A = 16\pi G^2M^2\)</span>, <span class="arithmatex">\(S = 4\pi k_B G M^2/\hbar\)</span>, <span class="arithmatex">\(\d S = 8\pi k_B G M\,\d M/\hbar\)</span>.
+Тогда <span class="arithmatex">\(T_H\,\d S = \dfrac{\hbar}{8\pi GMk_B}\cdot\dfrac{8\pi k_BGM}{\hbar}\d M = \d M\)</span>.</p>
+</details>
+</details>
+<h2 id="_9">Что дальше<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Решения Шварцшильда и Керра стационарны. Но уравнения Эйнштейна допускают и
+распространяющиеся возмущения метрики — гравитационные волны, которые уносят энергию от
+двойных систем и в 2015 году были впервые зарегистрированы при слиянии двух чёрных дыр.
+Им посвящена <a href="../09-gravitational-waves/">глава 9</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../07-schwarzschild/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 7. Решение Шварцшильда и классические тесты">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                7. Решение Шварцшильда и классические тесты
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../09-gravitational-waves/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 9. Гравитационные волны">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                9. Гравитационные волны
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Bogdan Rudenko, SAI MSU · Текст — <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">CC BY-SA 4.0</a>, код — MIT · Обратная связь: <a href="mailto:rudenko.sci@gmail.com">rudenko.sci@gmail.com</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/calc.js"></script>
+      
+        <script src="../../javascripts/toc-progress.js"></script>
+      
+        <script src="../../javascripts/minkowski.js"></script>
+      
+        <script src="../../javascripts/sphere-transport.js"></script>
+      
+        <script src="../../javascripts/tidal.js"></script>
+      
+        <script src="../../javascripts/energy-conditions.js"></script>
+      
+        <script src="../../javascripts/effective-potential.js"></script>
+      
+        <script src="../../javascripts/bh-cones.js"></script>
+      
+        <script src="../../javascripts/gw-ring.js"></script>
+      
+        <script src="../../javascripts/friedmann.js"></script>
+      
+        <script src="../../javascripts/distances.js"></script>
+      
+        <script src="../../javascripts/saha.js"></script>
+      
+        <script src="../../javascripts/inflation.js"></script>
+      
+        <script src="../../javascripts/cmb.js"></script>
+      
+        <script src="../../javascripts/power-spectrum.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

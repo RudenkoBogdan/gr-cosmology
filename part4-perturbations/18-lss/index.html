@@ -1,0 +1,2428 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Учебник-хендбук по общей теории относительности и космологии">
+      
+      
+        <meta name="author" content="Bogdan Rudenko">
+      
+      
+        <link rel="canonical" href="https://rudenkobogdan.github.io/gr-cosmology/part4-perturbations/18-lss/">
+      
+      
+        <link rel="prev" href="../17-cmb/">
+      
+      
+        <link rel="next" href="../../appendix/glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>18. Крупномасштабная структура - ОТО и космология</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#18" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="ОТО и космология" class="md-header__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ОТО и космология
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              18. Крупномасштабная структура
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ОТО и космология" class="md-nav__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    ОТО и космология
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Главная
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обозначения и соглашения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part1-math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Математический аппарат
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    I. Математический аппарат
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/01-special-relativity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. СТО на четырёхмерном языке
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/02-manifolds-tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Многообразия и тензоры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/03-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Связность и ковариантная производная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/04-curvature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Кривизна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part2-gr/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. ОТО
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    II. ОТО
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/05-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Принцип эквивалентности и геодезические
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/06-einstein-equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Уравнения Эйнштейна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/07-schwarzschild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Решение Шварцшильда и классические тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/08-black-holes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Чёрные дыры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/09-gravitational-waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Гравитационные волны
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part3-cosmology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Космология FRW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    III. Космология FRW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/10-frw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Однородная изотропная Вселенная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/11-friedmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Уравнения Фридмана и модели
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/12-distances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Расстояния и наблюдения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/13-thermal-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Термическая история
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/14-bbn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Первичный нуклеосинтез
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-inflation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Инфляция
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-perturbations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Линейная теория возмущений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-cmb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Реликтовое излучение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Крупномасштабная структура
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Крупномасштабная структура
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1. Спектр мощности и корреляционная функция
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2. Линейный спектр: первичный спектр, передаточная функция, рост
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.2. Линейный спектр: первичный спектр, передаточная функция, рост">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bbks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аппроксимация BBKS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аппроксимация Эйзенштейна–Ху
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#183-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3. Нормировка: σ₈
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.3. Нормировка: σ₈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Численный пример
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: форма P(k)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#184" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4. Барионные акустические осцилляции
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#185" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5. Нелинейность: сферический коллапс
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#186" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.6. Функция масс Пресса–Шехтера
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Заключение
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Приложения
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Приложения
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Глоссарий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/bibliography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Литература
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1. Спектр мощности и корреляционная функция
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2. Линейный спектр: первичный спектр, передаточная функция, рост
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.2. Линейный спектр: первичный спектр, передаточная функция, рост">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bbks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аппроксимация BBKS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аппроксимация Эйзенштейна–Ху
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#183-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3. Нормировка: σ₈
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.3. Нормировка: σ₈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Численный пример
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: форма P(k)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#184" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4. Барионные акустические осцилляции
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#185" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5. Нелинейность: сферический коллапс
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#186" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.6. Функция масс Пресса–Шехтера
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Заключение
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="18">18. Крупномасштабная структура<a class="headerlink" href="#18" title="Permanent link">&para;</a></h1>
+<p>В главе 16 мы выяснили, как растут возмущения тёмной материи в линейном режиме, а в
+главе 17 разобрали, что видно в реликтовом излучении при <span class="arithmatex">\(z \approx 1090\)</span>. Здесь мы
+посмотрим на те же возмущения сегодня. Галактики, скопления и пустоты образуют «космическую
+паутину», и её статистику на больших масштабах описывает одна функция — <strong>спектр
+мощности материи</strong> <span class="arithmatex">\(P(k)\)</span>. Сначала мы построим линейный <span class="arithmatex">\(P(k)\)</span>: первичный спектр от
+инфляции, передаточная функция и фактор роста. Затем введём нормировку <span class="arithmatex">\(\sigma_8\)</span>,
+обсудим барионные акустические осцилляции и, наконец, выйдем за рамки линейной теории:
+сферический коллапс и функция масс гало Пресса–Шехтера.</p>
+<p>Всюду используются параметры Planck 2018 (см. <a href="../">введение к части</a>):
+<span class="arithmatex">\(h = 0.674\)</span>, <span class="arithmatex">\(\Omega_b h^2 = 0.0224\)</span>, <span class="arithmatex">\(\Omega_c h^2 = 0.120\)</span>, <span class="arithmatex">\(n_s = 0.965\)</span>,
+<span class="arithmatex">\(\sigma_8 = 0.811\)</span>. Волновые числа указываются в <span class="arithmatex">\(h\,\)</span>Мпк<span class="arithmatex">\(^{-1}\)</span>, длины — в <span class="arithmatex">\(h^{-1}\)</span>Мпк.</p>
+<h2 id="181">18.1. Спектр мощности и корреляционная функция<a class="headerlink" href="#181" title="Permanent link">&para;</a></h2>
+<p>Пусть <span class="arithmatex">\(\delta(\mathbf x) = \rho(\mathbf x)/\bar\rho - 1\)</span> — контраст плотности на
+сопутствующей координатной сетке и <span class="arithmatex">\(\delta_{\mathbf k} = \int \d^3x\, e^{-i\mathbf k\cdot\mathbf x}\delta(\mathbf x)\)</span>
+— его фурье-образ.</p>
+<div class="admonition definition">
+<p class="admonition-title">Определение: спектр мощности</p>
+<p>Для статистически однородного и изотропного случайного поля</p>
+<div class="arithmatex">\[\begin{equation}
+\langle \delta_{\mathbf k}\,\delta^*_{\mathbf k'} \rangle = (2\pi)^3\,\delta_D(\mathbf k - \mathbf k')\,P(k).
+\label{eq:pk-def}
+\end{equation}\]</div>
+<p>Безразмерный спектр <span class="arithmatex">\(\Delta^2(k) = k^3 P(k)/(2\pi^2)\)</span> — вклад в дисперсию <span class="arithmatex">\(\langle\delta^2\rangle\)</span>
+от единичного интервала <span class="arithmatex">\(\ln k\)</span>.</p>
+</div>
+<p>Двухточечная корреляционная функция <span class="arithmatex">\(\xi(r) = \langle \delta(\mathbf x)\delta(\mathbf x+\mathbf r)\rangle\)</span>
+связана с <span class="arithmatex">\(P(k)\)</span> преобразованием Фурье:</p>
+<div class="arithmatex">\[\begin{equation}
+\xi(r) = \int \frac{\d^3k}{(2\pi)^3}\,P(k)\,e^{i\mathbf k\cdot\mathbf r}
+= \int_0^\infty \frac{\d k}{k}\,\Delta^2(k)\,\frac{\sin kr}{kr}.
+\label{eq:xi}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Корреляция через фурье-моды.</strong> Подставляем <span class="arithmatex">\(\delta(\vb x) = \int\frac{\d^3k}{(2\pi)^3}e^{i\vb k\cdot\vb x}\delta_{\vb k}\)</span> и используем <span class="arithmatex">\(\eqref{eq:pk-def}\)</span> (для вещественного поля <span class="arithmatex">\(\delta^*_{\vb k} = \delta_{-\vb k}\)</span>):</p>
+<div class="arithmatex">\[
+\xi(r) = \int\frac{\d^3k}{(2\pi)^3}\int\frac{\d^3k'}{(2\pi)^3}\,e^{i\vb k\cdot\vb x - i\vb k'\cdot(\vb x + \vb r)}\langle\delta_{\vb k}\delta^*_{\vb k'}\rangle
+= \int\frac{\d^3k}{(2\pi)^3}P(k)\,e^{-i\vb k\cdot\vb r},
+\]</div>
+<p>что совпадает с <span class="arithmatex">\(\eqref{eq:xi}\)</span> после замены <span class="arithmatex">\(\vb k \to -\vb k\)</span> (<span class="arithmatex">\(P\)</span> зависит только от <span class="arithmatex">\(k\)</span>).</p>
+<p><strong>Шаг 2. Угловой интеграл.</strong> Сферические координаты с осью вдоль <span class="arithmatex">\(\vb r\)</span>, <span class="arithmatex">\(\mu = \cos\vartheta\)</span>:</p>
+<div class="arithmatex">\[
+\int\d\Omega\,e^{ikr\mu} = 2\pi\int_{-1}^1e^{ikr\mu}\d\mu = 2\pi\,\frac{e^{ikr} - e^{-ikr}}{ikr} = 4\pi\,\frac{\sin kr}{kr}.
+\]</div>
+<p><strong>Шаг 3. Радиальная часть.</strong></p>
+<div class="arithmatex">\[
+\xi(r) = \int_0^\infty\frac{4\pi k^2\,\d k}{(2\pi)^3}P(k)\frac{\sin kr}{kr} = \int_0^\infty\frac{\d k}{k}\,\frac{k^3P(k)}{2\pi^2}\frac{\sin kr}{kr}.
+\]</div>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(r = 0\)</span>: <span class="arithmatex">\(\xi(0) = \langle\delta^2\rangle = \int\Delta^2\,\d\ln k\)</span> — соответствует определению <span class="arithmatex">\(\Delta^2\)</span>.</p>
+</details>
+<p>Если инфляция дала гауссово поле (а наблюдения <abbr title="Cosmic Microwave Background — реликтовое излучение">CMB</abbr> это подтверждают с точностью
+<span class="arithmatex">\(f_{\rm NL} \lesssim 10\)</span>), то <span class="arithmatex">\(P(k)\)</span> содержит <strong>всю</strong> статистическую информацию
+в линейном режиме. Физическую интерпретацию даёт дисперсия поля, сглаженного по шару
+радиуса <span class="arithmatex">\(R\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+\sigma^2(R) = \int_0^\infty \frac{\d k}{k}\,\Delta^2(k)\,W^2(kR),
+\qquad W(x) = \frac{3(\sin x - x\cos x)}{x^3}.
+\label{eq:sigmaR}
+\end{equation}\]</div>
+<p>Здесь <span class="arithmatex">\(W\)</span> — фурье-образ сферического фильтра «top-hat». Шару радиуса <span class="arithmatex">\(R\)</span> соответствует
+масса <span class="arithmatex">\(M = \tfrac{4\pi}{3}\bar\rho_m R^3 \approx 1.16\times10^{12}\,\Omega_m (R/h^{-1}\text{Мпк})^3\,h^{-1}M_\odot\)</span>,
+поэтому <span class="arithmatex">\(\sigma(R)\)</span> и <span class="arithmatex">\(\sigma(M)\)</span> — одно и то же.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Фурье-образ шара.</strong> Нормированный фильтр <span class="arithmatex">\(W_R(\vb x) = \dfrac{3}{4\pi R^3}\Theta(R - |\vb x|)\)</span>. Угловой интеграл как в <span class="arithmatex">\(\eqref{eq:xi}\)</span>:</p>
+<div class="arithmatex">\[
+W(kR) = \frac{3}{4\pi R^3}\int_0^R4\pi x^2\,\frac{\sin kx}{kx}\,\d x = \frac{3}{R^3k^3}\int_0^{kR}u\sin u\,\d u.
+\]</div>
+<p><strong>Шаг 2. Интегрирование по частям.</strong> <span class="arithmatex">\(\int_0^Xu\sin u\,\d u = \left[-u\cos u\right]_0^X + \int_0^X\cos u\,\d u = \sin X - X\cos X\)</span>. С <span class="arithmatex">\(X = kR\)</span>: <span class="arithmatex">\(W = 3(\sin X - X\cos X)/X^3\)</span>.</p>
+<p><strong>Шаг 3. Дисперсия.</strong> Сглаженное поле в фурье-пространстве — <span class="arithmatex">\(\delta_{\vb k}W(kR)\)</span>; повторяя шаги вывода <span class="arithmatex">\(\eqref{eq:xi}\)</span> при <span class="arithmatex">\(r = 0\)</span> с <span class="arithmatex">\(P(k)W^2\)</span> вместо <span class="arithmatex">\(P(k)\)</span>, получаем <span class="arithmatex">\(\eqref{eq:sigmaR}\)</span>.</p>
+<p><strong>Шаг 4. Масса.</strong> <span class="arithmatex">\(\rho_{\rm cr,0} = 3H_0^2/(8\pi G) = 2.775\times10^{11}\,h^2M_\odot\,\text{Мпк}^{-3}\)</span>, <span class="arithmatex">\(\bar\rho_m = \Omega_m\rho_{\rm cr,0}\)</span>:</p>
+<div class="arithmatex">\[
+M = \frac{4\pi}{3}\cdot2.775\times10^{11}\,\Omega_mh^2\left(\frac{R}{h^{-1}\text{Мпк}}\right)^3h^{-3}M_\odot
+\approx 1.16\times10^{12}\,\Omega_m\left(\frac{R}{h^{-1}\text{Мпк}}\right)^3h^{-1}M_\odot.
+\]</div>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(X \to 0\)</span>: <span class="arithmatex">\(\sin X - X\cos X = X^3/3 + O(X^5)\)</span>, <span class="arithmatex">\(W \to 1\)</span> — на больших масштабах фильтр не действует.</p>
+</details>
+<h2 id="182">18.2. Линейный спектр: первичный спектр, передаточная функция, рост<a class="headerlink" href="#182" title="Permanent link">&para;</a></h2>
+<p>В линейной теории каждая фурье-мода эволюционирует независимо. Поэтому сегодняшний
+контраст плотности пропорционален первичному возмущению кривизны <span class="arithmatex">\(\mathcal R_{\mathbf k}\)</span>
+(глава 15) с множителем, зависящим только от <span class="arithmatex">\(k\)</span> и <span class="arithmatex">\(a\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+\delta_{\mathbf k}(a) = -\frac{2}{5}\,\frac{k^2}{\Omega_m H_0^2}\,\mathcal R_{\mathbf k}\,T(k)\,D(a),
+\label{eq:delta-lin}
+\end{equation}\]</div>
+<p>(минус — потому что избытку плотности соответствует яма <span class="arithmatex">\(\Phi &lt; 0\)</span>, а <span class="arithmatex">\(\Phi = \tfrac35\mathcal R\)</span>), где <span class="arithmatex">\(D(a)\)</span> — фактор роста из § 16.7 (нормированный как <span class="arithmatex">\(D = a\)</span> в эпоху материи), а
+<strong>передаточная функция</strong> <span class="arithmatex">\(T(k)\)</span> нормирована условием <span class="arithmatex">\(T \to 1\)</span> при <span class="arithmatex">\(k \to 0\)</span>. Отсюда</p>
+<div class="arithmatex">\[\begin{equation}
+P(k, a) = \frac{8\pi^2}{25}\,\frac{A_s}{\Omega_m^2 H_0^4}\,
+\frac{k^{n_s}}{k_*^{\,n_s-1}}\,T^2(k)\,D^2(a)
+\;\propto\; k^{n_s}\,T^2(k)\,D^2(a).
+\label{eq:pk-lin}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Пуассон в поздней эпохе.</strong> На подгоризонтных масштабах <span class="arithmatex">\(k^2\Phi = -4\pi Ga^2\bar\rho_m\delta\)</span>, а <span class="arithmatex">\(4\pi G\bar\rho_m = \tfrac32H_0^2\Omega_ma^{-3}\)</span>:</p>
+<div class="arithmatex">\[
+k^2\Phi = -\frac32\,\frac{\Omega_mH_0^2}{a}\,\delta
+\quad\Longrightarrow\quad
+\delta = -\frac23\,\frac{k^2a}{\Omega_mH_0^2}\,\Phi.
+\]</div>
+<p><strong>Шаг 2. Потенциал.</strong> В эпоху вещества сверхгоризонтный <span class="arithmatex">\(\Phi = \tfrac35\mathcal R\)</span>; с учётом передаточной функции и роста (<span class="arithmatex">\(\Phi \propto D/a\)</span>, § 16.7) <span class="arithmatex">\(\Phi_{\vb k}(a) = \tfrac35\mathcal R_{\vb k}T(k)D(a)/a\)</span>.</p>
+<p><strong>Шаг 3. Подстановка.</strong></p>
+<div class="arithmatex">\[
+\delta_{\vb k} = -\frac23\,\frac{k^2a}{\Omega_mH_0^2}\cdot\frac35\,\mathcal R_{\vb k}T(k)\frac{D}{a} = -\frac25\,\frac{k^2}{\Omega_mH_0^2}\,\mathcal R_{\vb k}T(k)D(a).
+\]</div>
+<p><strong>Шаг 4. Спектр.</strong> Возводим в квадрат по <span class="arithmatex">\(\eqref{eq:pk-def}\)</span>: <span class="arithmatex">\(P(k) = \tfrac{4}{25}\tfrac{k^4}{\Omega_m^2H_0^4}P_{\mathcal R}(k)T^2D^2\)</span>, и <span class="arithmatex">\(P_{\mathcal R} = \tfrac{2\pi^2}{k^3}A_s(k/k_*)^{n_s-1}\)</span>:</p>
+<div class="arithmatex">\[
+P(k) = \frac{4}{25}\cdot2\pi^2\,\frac{A_s}{\Omega_m^2H_0^4}\,k^{4-3}\,\frac{k^{n_s-1}}{k_*^{n_s-1}}\,T^2D^2
+= \frac{8\pi^2}{25}\,\frac{A_s}{\Omega_m^2H_0^4}\,\frac{k^{n_s}}{k_*^{n_s-1}}\,T^2(k)D^2(a).
+\]</div>
+<p><strong>Проверка.</strong> Размерность: <span class="arithmatex">\(A_s\)</span> безразмерно, <span class="arithmatex">\(k^{n_s}/k_*^{n_s-1} \sim k\)</span>, <span class="arithmatex">\(H_0^{-4} \sim\)</span> длина<span class="arithmatex">\(^4\)</span> (<span class="arithmatex">\(c = 1\)</span>): <span class="arithmatex">\(P \sim\)</span> длина<span class="arithmatex">\(^3\)</span>, как и должно.</p>
+</details>
+<div class="admonition definition">
+<p class="admonition-title">Определение: передаточная функция</p>
+<p><span class="arithmatex">\(T(k)\)</span> — отношение амплитуды моды <span class="arithmatex">\(k\)</span> в поздней эпохе материи к той, что она имела бы,
+если бы ни разу не входила под горизонт до равенства излучения и материи:
+<span class="arithmatex">\(T(k) = \Phi_k(a_{\rm late})/\Phi_k^{\rm (large\ scale)}(a_{\rm late})\)</span>.</p>
+</div>
+<p>Физика <span class="arithmatex">\(T(k)\)</span> определяется масштабом <strong>равенства</strong>. Моды, вошедшие под горизонт до
+<span class="arithmatex">\(a_{\rm eq}\)</span>, попали в эпоху излучения: потенциал <span class="arithmatex">\(\Phi\)</span> там затухает, а контраст тёмной
+материи растёт лишь логарифмически (эффект Мезароша, § 16.6). Моды с <span class="arithmatex">\(k &lt; k_{\rm eq}\)</span> вошли
+под горизонт уже в эпоху материи и выросли без подавления. Масштаб равенства</p>
+<div class="arithmatex">\[\begin{equation}
+k_{\rm eq} = a_{\rm eq}H(a_{\rm eq}) = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}},
+\qquad a_{\rm eq} = \frac{\Omega_r}{\Omega_m},
+\label{eq:keq}
+\end{equation}\]</div>
+<p>для Planck 2018 даёт <span class="arithmatex">\(z_{\rm eq} \approx 3400\)</span> и <span class="arithmatex">\(k_{\rm eq} \approx 0.0104\)</span> Мпк<span class="arithmatex">\(^{-1}\)</span>
+<span class="arithmatex">\(= 0.0155\,h\,\)</span>Мпк<span class="arithmatex">\(^{-1}\)</span>.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Хаббл в момент равенства.</strong> <span class="arithmatex">\(H^2 = H_0^2(\Omega_ma^{-3} + \Omega_ra^{-4})\)</span>; при <span class="arithmatex">\(a_{\rm eq} = \Omega_r/\Omega_m\)</span> оба слагаемых равны: <span class="arithmatex">\(H^2(a_{\rm eq}) = 2H_0^2\Omega_ma_{\rm eq}^{-3}\)</span>.</p>
+<p><strong>Шаг 2. Волновое число.</strong></p>
+<div class="arithmatex">\[
+k_{\rm eq}^2 = a_{\rm eq}^2H^2(a_{\rm eq}) = \frac{2\Omega_mH_0^2}{a_{\rm eq}}
+\quad\Longrightarrow\quad
+k_{\rm eq} = H_0\sqrt{\frac{2\Omega_m}{a_{\rm eq}}}.
+\]</div>
+<p><strong>Шаг 3. Числа.</strong> <span class="arithmatex">\(\Omega_rh^2 = 4.15\times10^{-5}\)</span>, <span class="arithmatex">\(\Omega_mh^2 = 0.1424\)</span>: <span class="arithmatex">\(a_{\rm eq} = 2.91\times10^{-4}\)</span>, <span class="arithmatex">\(z_{\rm eq} \approx 3430\)</span>. <span class="arithmatex">\(\Omega_m = 0.1424/0.674^2 = 0.313\)</span>; <span class="arithmatex">\(H_0/c = 3.336\times10^{-4}\,h\,\text{Мпк}^{-1}\)</span>;</p>
+<div class="arithmatex">\[
+k_{\rm eq} = 3.336\times10^{-4}\sqrt{\frac{2\cdot0.313}{2.91\times10^{-4}}}\ h\,\text{Мпк}^{-1} = 3.336\times10^{-4}\cdot46.4 \approx 0.0155\ h\,\text{Мпк}^{-1},
+\]</div>
+<p>т. е. <span class="arithmatex">\(0.0155\cdot0.674 \approx 0.0104\ \text{Мпк}^{-1}\)</span>.</p>
+</details>
+<div class="admonition theorem">
+<p class="admonition-title">Асимптотики передаточной функции</p>
+<div class="arithmatex">\[\begin{equation}
+T(k) \simeq
+\begin{cases}
+1, &amp; k \ll k_{\rm eq},\\[2pt]
+\dfrac{k_{\rm eq}^2}{k^2}\,\ln\!\dfrac{k}{k_{\rm eq}}, &amp; k \gg k_{\rm eq}
+\end{cases}
+\quad\Longrightarrow\quad
+P(k) \propto
+\begin{cases}
+k^{n_s}, &amp; k \ll k_{\rm eq},\\
+k^{n_s-4}\ln^2(k/k_{\rm eq}), &amp; k \gg k_{\rm eq}.
+\end{cases}
+\label{eq:T-asympt}
+\end{equation}\]</div>
+<p>Спектр имеет максимум вблизи <span class="arithmatex">\(k \sim k_{\rm eq}\)</span>: положение пика измеряет <span class="arithmatex">\(\Omega_m h\)</span>.</p>
+</div>
+<p>Множитель <span class="arithmatex">\(k^{-2}\)</span> — это <span class="arithmatex">\(k^2\)</span> из уравнения Пуассона в <span class="arithmatex">\(\eqref{eq:delta-lin}\)</span>, скомпенсированный
+затуханием <span class="arithmatex">\(\Phi \propto (k\eta_{\rm eq})^{-2}\)</span> после входа под горизонт; логарифм —
+рост Мезароша.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Множители в <span class="arithmatex">\(T\)</span>.</strong> Для <span class="arithmatex">\(k \gg k_{\rm eq}\)</span> потенциал после входа под горизонт в радиационную эпоху падает как <span class="arithmatex">\((k\tau_{\rm eq})^{-2} \propto (k_{\rm eq}/k)^2\)</span>, а <span class="arithmatex">\(\delta_c\)</span> за время от входа до равенства растёт как <span class="arithmatex">\(\ln y\)</span> с <span class="arithmatex">\(y_{\rm enter}^{-1} \propto k/k_{\rm eq}\)</span> (так как <span class="arithmatex">\(\tau \propto a\)</span> в эпоху излучения), т. е. <span class="arithmatex">\(\propto\ln(k/k_{\rm eq})\)</span>:</p>
+<div class="arithmatex">\[
+T(k) \propto \left(\frac{k_{\rm eq}}{k}\right)^2\ln\frac{k}{k_{\rm eq}}.
+\]</div>
+<p><strong>Шаг 2. Спектр.</strong> <span class="arithmatex">\(P \propto k^{n_s}T^2 \propto k^{n_s}\cdot k^{-4}\ln^2(k/k_{\rm eq}) = k^{n_s-4}\ln^2(k/k_{\rm eq})\)</span>.</p>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(\Delta^2 = k^3P/(2\pi^2) \propto k^{n_s-1}\ln^2k\)</span> — почти не зависит от <span class="arithmatex">\(k\)</span> на малых масштабах.</p>
+</details>
+<h3 id="bbks">Аппроксимация BBKS<a class="headerlink" href="#bbks" title="Permanent link">&para;</a></h3>
+<p>Точное <span class="arithmatex">\(T(k)\)</span> получается численным решением системы Больцмана–Эйнштейна (CAMB, CLASS).
+Для бесбарионной CDM хорошую (<span class="arithmatex">\(\sim\)</span>5–10%) аппроксимацию дают Бардин, Бонд, Кайзер и
+Шалай (BBKS, 1986):</p>
+<div class="arithmatex">\[\begin{equation}
+T(q) = \frac{\ln(1+2.34q)}{2.34q}\left[1 + 3.89q + (16.1q)^2 + (5.46q)^3 + (6.71q)^4\right]^{-1/4},
+\qquad q = \frac{k}{\Gamma\,h\,\text{Мпк}^{-1}}.
+\label{eq:bbks}
+\end{equation}\]</div>
+<p><strong>Параметр формы</strong> <span class="arithmatex">\(\Gamma = \Omega_m h\)</span> задаёт единственный масштаб — <span class="arithmatex">\(k_{\rm eq} \propto \Omega_m h^2\)</span>
+в Мпк<span class="arithmatex">\(^{-1}\)</span>, т. е. <span class="arithmatex">\(\propto \Omega_m h\)</span> в <span class="arithmatex">\(h\,\)</span>Мпк<span class="arithmatex">\(^{-1}\)</span>. Барионы до рекомбинации не
+кластеризуются и дополнительно подавляют рост на малых масштабах; грубо это учитывает
+поправка Сугиямы (1995):</p>
+<div class="arithmatex">\[\begin{equation}
+\Gamma = \Omega_m h\,\exp\!\left[-\Omega_b\left(1 + \frac{\sqrt{2h}}{\Omega_m}\right)\right].
+\label{eq:sugiyama}
+\end{equation}\]</div>
+<h3 id="_1">Аппроксимация Эйзенштейна–Ху<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Более точная форма без осцилляций (Eisenstein &amp; Hu 1998, «zero-baryon / no-wiggle»)
+использует <span class="arithmatex">\(q = k\,\Theta_{2.7}^2/(\Omega_m h^2\,\text{Мпк}^{-1})\)</span>, <span class="arithmatex">\(k\)</span> в Мпк<span class="arithmatex">\(^{-1}\)</span>,
+<span class="arithmatex">\(\Theta_{2.7} = T_{\rm CMB}/2.7\,\)</span>K:</p>
+<div class="arithmatex">\[\begin{equation}
+T_0(q) = \frac{L_0}{L_0 + C_0 q^2},\qquad
+L_0 = \ln(2e + 1.8q),\qquad C_0 = 14.2 + \frac{731}{1 + 62.5q}.
+\label{eq:eh}
+\end{equation}\]</div>
+<p>Эта форма точно воспроизводит логарифмическую асимптотику <span class="arithmatex">\(\eqref{eq:T-asympt}\)</span>. В полной версии
+Эйзенштейна–Ху добавляется барионный осциллирующий член (§ 18.4).</p>
+<div class="admonition example">
+<p class="admonition-title">Где максимум спектра?</p>
+<p>Для <span class="arithmatex">\(\Gamma = 0.17\)</span> BBKS-спектр <span class="arithmatex">\(k^{0.965}T^2\)</span> достигает максимума при
+<span class="arithmatex">\(k_{\rm peak} \approx 0.016\,h\,\)</span>Мпк<span class="arithmatex">\(^{-1}\)</span>, то есть на длине волны
+<span class="arithmatex">\(2\pi/k_{\rm peak} \approx 400\,h^{-1}\)</span>Мпк. Это и есть «размер горизонта в момент равенства»,
+отпечатанный в распределении галактик. Измерение формы <span class="arithmatex">\(P(k)\)</span> в обзоре APM и 2dF в 1990-х
+дало <span class="arithmatex">\(\Gamma \approx 0.2\)</span> — одно из первых указаний на <span class="arithmatex">\(\Omega_m \approx 0.3\)</span>, задолго
+до сверхновых.</p>
+</div>
+<h2 id="183-8">18.3. Нормировка: σ₈<a class="headerlink" href="#183-8" title="Permanent link">&para;</a></h2>
+<p>Амплитуду <span class="arithmatex">\(\eqref{eq:pk-lin}\)</span> можно взять из <abbr title="Cosmic Microwave Background — реликтовое излучение">CMB</abbr> (<span class="arithmatex">\(A_s\)</span>) или из наблюдений поздней
+Вселенной. Исторически принята нормировка</p>
+<div class="arithmatex">\[\begin{equation}
+\sigma_8 \equiv \sigma(R = 8\,h^{-1}\text{Мпк},\; z = 0).
+\label{eq:sigma8}
+\end{equation}\]</div>
+<p>Масштаб <span class="arithmatex">\(8\,h^{-1}\)</span>Мпк выбран потому, что дисперсия числа ярких галактик в таких шарах
+близка к единице (Дэвис и Пиблс, 1983). Planck 2018 даёт <span class="arithmatex">\(\sigma_8 = 0.811 \pm 0.006\)</span>
+(как производный параметр <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr>). Слабое линзирование (KiDS, DES) предпочитает
+<span class="arithmatex">\(S_8 \equiv \sigma_8(\Omega_m/0.3)^{1/2} \approx 0.76\text{–}0.78\)</span> против <span class="arithmatex">\(0.83\)</span> у Planck —
+так называемое «<span class="arithmatex">\(S_8\)</span>-напряжение» на уровне <span class="arithmatex">\(2\text{–}3\sigma\)</span>.</p>
+<p>Поскольку в линейной теории все моды растут одинаково,</p>
+<div class="arithmatex">\[\begin{equation}
+\sigma_8(z) = \sigma_8\,\frac{D(z)}{D(0)}.
+\label{eq:sigma8z}
+\end{equation}\]</div>
+<p>Наблюдаемые смещения в красном смещении измеряют комбинацию <span class="arithmatex">\(f\sigma_8(z)\)</span>, где
+<span class="arithmatex">\(f = \d\ln D/\d\ln a \approx \Omega_m(a)^{0.55}\)</span> (§ 16.7).</p>
+<h3 id="_2">Численный пример<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Построим линейный <span class="arithmatex">\(P(k)\)</span> по BBKS с поправкой Сугиямы, нормируем на <span class="arithmatex">\(\sigma_8 = 0.811\)</span>
+и найдём <span class="arithmatex">\(k_{\rm eq}\)</span> и максимум спектра.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">simpson</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Planck 2018</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">h</span><span class="p">,</span> <span class="n">obh2</span><span class="p">,</span> <span class="n">och2</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">sigma8</span> <span class="o">=</span> <span class="mf">0.674</span><span class="p">,</span> <span class="mf">0.0224</span><span class="p">,</span> <span class="mf">0.120</span><span class="p">,</span> <span class="mf">0.965</span><span class="p">,</span> <span class="mf">0.811</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">Om</span><span class="p">,</span> <span class="n">Ob</span> <span class="o">=</span> <span class="p">(</span><span class="n">obh2</span> <span class="o">+</span> <span class="n">och2</span><span class="p">)</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">obh2</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">orh2</span> <span class="o">=</span> <span class="mf">4.15e-5</span>                                  <span class="c1"># фотоны + 3 безмассовых нейтрино</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># масштаб равенства: k_eq = a_eq H(a_eq) = H0 sqrt(2 Om / a_eq)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">a_eq</span> <span class="o">=</span> <span class="n">orh2</span><span class="o">/</span><span class="p">(</span><span class="n">Om</span><span class="o">*</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">k_eq</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="o">/</span><span class="mf">299792.458</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">Om</span><span class="o">/</span><span class="n">a_eq</span><span class="p">)</span>      <span class="c1"># h/Мпк</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># BBKS с поправкой Сугиямы на барионы</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">Gamma</span> <span class="o">=</span> <span class="n">Om</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">Ob</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">/</span><span class="n">Om</span><span class="p">))</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">T_bbks</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>                                  <span class="c1"># k в h/Мпк</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">q</span> <span class="o">=</span> <span class="n">k</span><span class="o">/</span><span class="n">Gamma</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">2.34</span><span class="o">*</span><span class="n">q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">2.34</span><span class="o">*</span><span class="n">q</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>            <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.89</span><span class="o">*</span><span class="n">q</span> <span class="o">+</span> <span class="p">(</span><span class="mf">16.1</span><span class="o">*</span><span class="n">q</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="mf">5.46</span><span class="o">*</span><span class="n">q</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="p">(</span><span class="mf">6.71</span><span class="o">*</span><span class="n">q</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span><span class="o">**-</span><span class="mf">0.25</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">def</span><span class="w"> </span><span class="nf">W</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                       <span class="c1"># фурье-образ сферического top-hat</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">lnk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1e3</span><span class="p">),</span> <span class="mi">20000</span><span class="p">)</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">lnk</span><span class="p">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">P0</span> <span class="o">=</span> <span class="n">k</span><span class="o">**</span><span class="n">ns</span> <span class="o">*</span> <span class="n">T_bbks</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>                       <span class="c1"># ненормированный P(k)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">def</span><span class="w"> </span><span class="nf">sigma</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>                            <span class="c1"># R в Мпк/h</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">simpson</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">P0</span><span class="o">*</span><span class="n">k</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">W</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">R</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">lnk</span><span class="p">))</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">sigma8</span><span class="o">/</span><span class="n">sigma</span><span class="p">(</span><span class="mf">8.0</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="n">P</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">P0</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Om = </span><span class="si">{</span><span class="n">Om</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Gamma = </span><span class="si">{</span><span class="n">Gamma</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, z_eq = </span><span class="si">{</span><span class="mi">1</span><span class="o">/</span><span class="n">a_eq</span><span class="o">-</span><span class="mi">1</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"k_eq = </span><span class="si">{</span><span class="n">k_eq</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> h/Мпк, максимум P(k) при k = </span><span class="si">{</span><span class="n">k</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">P</span><span class="p">)]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> h/Мпк"</span><span class="p">)</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"P(k_max) = </span><span class="si">{</span><span class="n">P</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2"> (Мпк/h)^3"</span><span class="p">)</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">for</span> <span class="n">R</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">]:</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"sigma(R=</span><span class="si">{</span><span class="n">R</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> Мпк/h) = </span><span class="si">{</span><span class="n">sigma</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="c1"># Om = 0.3135, Gamma = 0.1675, z_eq = 3430</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c1"># k_eq = 0.0155 h/Мпк, максимум P(k) при k = 0.0162 h/Мпк</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="c1"># P(k_max) = 2.031e+04 (Мпк/h)^3</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c1"># sigma(R= 1 Мпк/h) = 2.375</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c1"># sigma(R= 8 Мпк/h) = 0.811</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="c1"># sigma(R=20 Мпк/h) = 0.395</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="c1"># sigma(R=50 Мпк/h) = 0.152</span>
+</code></pre></div>
+<p>Видно, что на масштабах <span class="arithmatex">\(\lesssim 8\,h^{-1}\)</span>Мпк линейная дисперсия превышает единицу:
+линейная теория там неприменима (§ 18.5). Максимум <span class="arithmatex">\(P(k)\)</span> лежит очень близко к <span class="arithmatex">\(k_{\rm eq}\)</span>,
+а его высота <span class="arithmatex">\(\approx 2\times10^4\,(h^{-1}\text{Мпк})^3\)</span> согласуется с CAMB с точностью
+<span class="arithmatex">\(\sim\)</span>10% (BBKS не содержит барионных осцилляций).</p>
+<h3 id="pk">Интерактив: форма P(k)<a class="headerlink" href="#pk" title="Permanent link">&para;</a></h3>
+<p>Ползунок <span class="arithmatex">\(\Omega_m h\)</span> меняет параметр формы <span class="arithmatex">\(\Gamma\)</span> (здесь без барионной поправки), ползунок
+<span class="arithmatex">\(n_s\)</span> — наклон первичного спектра. Кривая всякий раз перенормируется на <span class="arithmatex">\(\sigma_8 = 0.811\)</span>;
+пунктир — Planck 2018 (<span class="arithmatex">\(\Gamma = 0.212\)</span>, <span class="arithmatex">\(n_s = 0.965\)</span>), золотая точка — максимум.</p>
+<div class="interactive" id="pk-demo">
+  <canvas id="pk-canvas" width="560" height="360"></canvas>
+  <div class="controls">
+    <label for="pk-omh"><span class="arithmatex">\(\Omega_m h\)</span> = <span id="pk-omh-val">0.212</span></label>
+    <input type="range" id="pk-omh" min="0.08" max="0.50" step="0.002" value="0.212">
+    <label for="pk-ns"><span class="arithmatex">\(n_s\)</span> = <span id="pk-ns-val">0.965</span></label>
+    <input type="range" id="pk-ns" min="0.85" max="1.10" step="0.005" value="0.965">
+  </div>
+  <div class="controls">
+    <span><span class="arithmatex">\(k_{\rm peak}\)</span> = <span id="pk-kpeak">–</span> <span class="arithmatex">\(h\,\text{Мпк}^{-1}\)</span></span>
+    <span><span class="arithmatex">\(P_{\max}\)</span> = <span id="pk-pmax">–</span> <span class="arithmatex">\((h^{-1}\text{Мпк})^3\)</span></span>
+  </div>
+</div>
+
+<p>Уменьшение <span class="arithmatex">\(\Omega_m h\)</span> сдвигает пик влево: равенство наступает позже, и больше мод
+успевает подавиться в эпоху излучения. При фиксированном <span class="arithmatex">\(\sigma_8\)</span> это поднимает спектр
+на больших масштабах — так форма <span class="arithmatex">\(P(k)\)</span> в обзорах галактик измеряет <span class="arithmatex">\(\Omega_m h\)</span>.</p>
+<h2 id="184">18.4. Барионные акустические осцилляции<a class="headerlink" href="#184" title="Permanent link">&para;</a></h2>
+<p>До рекомбинации барионы связаны с фотонами и участвуют в звуковых колебаниях (§ 17.4).
+Каждое начальное точечное возмущение порождает сферическую звуковую волну, которая
+«замерзает» при отрыве барионов от фотонов (эпоха drag, <span class="arithmatex">\(z_d \approx 1060\)</span>) на
+сопутствующем радиусе</p>
+<div class="arithmatex">\[\begin{equation}
+r_d = \int_{z_d}^\infty \frac{c_s(z)\,\d z}{H(z)},\qquad c_s = \frac{1}{\sqrt{3(1+R)}},
+\label{eq:rd}
+\end{equation}\]</div>
+<p>для Planck 2018 <span class="arithmatex">\(r_d = 147.1 \pm 0.3\)</span> Мпк <span class="arithmatex">\(\approx 99\,h^{-1}\)</span>Мпк. После этого барионы
+падают в ямы тёмной материи, а тёмная материя — частично в барионную оболочку. В итоге
+в распределении вещества остаётся избыток пар на расстоянии <span class="arithmatex">\(r_d\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">BAO в P(k) и ξ(r)</p>
+<p>Барионная компонента передаточной функции приблизительно равна</p>
+<div class="arithmatex">\[\begin{equation}
+T_b(k) \propto \frac{\sin(k r_d)}{k r_d}\;e^{-(k/k_{\rm Silk})^{1.4}},
+\label{eq:bao-T}
+\end{equation}\]</div>
+<p>поэтому <span class="arithmatex">\(P(k)\)</span> содержит затухающие осцилляции с периодом <span class="arithmatex">\(\Delta k = 2\pi/r_d \approx 0.06\,h\,\)</span>Мпк<span class="arithmatex">\(^{-1}\)</span>
+и амплитудой <span class="arithmatex">\(\sim\Omega_b/\Omega_m\)</span> (около 5–10%). В корреляционной функции
+<span class="arithmatex">\(\eqref{eq:xi}\)</span> они собираются в один <strong>акустический пик</strong> при <span class="arithmatex">\(r \approx r_d\)</span>.</p>
+</div>
+<p>BAO — <strong>стандартная линейка</strong>. Измеряя пик вдоль луча зрения и поперёк него, получаем</p>
+<div class="arithmatex">\[\begin{equation}
+\theta_{\rm BAO}(z) = \frac{r_d}{D_M(z)},\qquad
+\Delta z_{\rm BAO}(z) = \frac{r_d\,H(z)}{c},
+\label{eq:bao-ruler}
+\end{equation}\]</div>
+<p>т. е. одновременно <span class="arithmatex">\(D_M(z)\)</span> и <span class="arithmatex">\(H(z)\)</span> (глава 12). Пик впервые обнаружен в 2005 г. в SDSS
+(Эйзенштейн и др.) и 2dFGRS (Коул и др.); сегодня DESI измеряет <span class="arithmatex">\(D_M/r_d\)</span> с точностью
+<span class="arithmatex">\(\sim\)</span>1% в нескольких бинах до <span class="arithmatex">\(z \approx 2.3\)</span>. Важное свойство: шкала <span class="arithmatex">\(\sim 100\,h^{-1}\)</span>Мпк
+очень мало искажается нелинейной эволюцией — пик лишь уширяется на <span class="arithmatex">\(\sim 10\,h^{-1}\)</span>Мпк
+из-за пекулярных смещений, и это уширение можно частично «откатить» (реконструкция).</p>
+<div class="admonition example">
+<p class="admonition-title">Угловой размер BAO при z = 0.5</p>
+<p>Для Planck-<abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> <span class="arithmatex">\(D_M(0.5) \approx 1950\)</span> Мпк, откуда
+<span class="arithmatex">\(\theta_{\rm BAO} \approx 147/1950 \approx 0.075\)</span> рад <span class="arithmatex">\(\approx 4.3^\circ\)</span> — в восемь раз
+больше Луны. Поэтому для BAO нужны обзоры, покрывающие тысячи квадратных градусов.</p>
+</div>
+<h2 id="185">18.5. Нелинейность: сферический коллапс<a class="headerlink" href="#185" title="Permanent link">&para;</a></h2>
+<p>Когда <span class="arithmatex">\(\sigma(R) \gtrsim 1\)</span>, уравнение <span class="arithmatex">\(\ddot\delta + 2H\dot\delta = 4\pi G\bar\rho\delta\)</span>
+неприменимо. Простейшая точно решаемая нелинейная модель — <strong>сферический коллапс</strong>
+(Ганн и Готт, 1972). Рассмотрим сферу массы <span class="arithmatex">\(M\)</span> с чуть большей плотностью в эпоху материи
+(<span class="arithmatex">\(\Omega_m = 1\)</span>, эффект Λ при <span class="arithmatex">\(z \gtrsim 1\)</span> мал). По теореме Биркгофа её радиус
+подчиняется ньютоновскому уравнению <span class="arithmatex">\(\ddot r = -GM/r^2\)</span> с параметрическим решением</p>
+<div class="arithmatex">\[\begin{equation}
+r = A(1 - \cos\theta),\qquad t = B(\theta - \sin\theta),\qquad A^3 = GMB^2.
+\label{eq:collapse}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Скорость.</strong> <span class="arithmatex">\(\d r/\d\theta = A\sin\theta\)</span>, <span class="arithmatex">\(\d t/\d\theta = B(1 - \cos\theta)\)</span>:</p>
+<div class="arithmatex">\[
+\dot r = \frac{\d r/\d\theta}{\d t/\d\theta} = \frac{A}{B}\,\frac{\sin\theta}{1 - \cos\theta}.
+\]</div>
+<p><strong>Шаг 2. Ускорение.</strong> <span class="arithmatex">\(\dfrac{\d}{\d\theta}\dfrac{\sin\theta}{1-\cos\theta} = \dfrac{\cos\theta(1-\cos\theta) - \sin^2\theta}{(1-\cos\theta)^2} = \dfrac{\cos\theta - 1}{(1-\cos\theta)^2} = -\dfrac{1}{1-\cos\theta}\)</span>, поэтому</p>
+<div class="arithmatex">\[
+\ddot r = \frac{A}{B}\cdot\frac{-1/(1-\cos\theta)}{B(1-\cos\theta)} = -\frac{A}{B^2(1-\cos\theta)^2} = -\frac{A^3}{B^2r^2}.
+\]</div>
+<p><strong>Шаг 3. Условие.</strong> <span class="arithmatex">\(\ddot r = -GM/r^2\)</span> выполняется при <span class="arithmatex">\(A^3 = GMB^2\)</span>.</p>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(\dot r = 0\)</span> при <span class="arithmatex">\(\theta = \pi\)</span> (поворот, <span class="arithmatex">\(r_{\rm ta} = 2A\)</span>, <span class="arithmatex">\(t_{\rm ta} = \pi B\)</span>); <span class="arithmatex">\(r = 0\)</span> при <span class="arithmatex">\(\theta = 2\pi\)</span>.</p>
+</details>
+<p>Оболочка расширяется, достигает максимума при <span class="arithmatex">\(\theta = \pi\)</span> (<strong>поворот</strong>, turnaround) и
+формально коллапсирует в точку при <span class="arithmatex">\(\theta = 2\pi\)</span>. Сравнивая с фоновой плотностью
+<span class="arithmatex">\(\bar\rho = 1/(6\pi G t^2)\)</span>, находим</p>
+<div class="arithmatex">\[\begin{equation}
+1 + \delta = \frac{9}{2}\,\frac{(\theta - \sin\theta)^2}{(1-\cos\theta)^3}.
+\label{eq:delta-nl}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Плотность облака.</strong> <span class="arithmatex">\(\rho = \dfrac{3M}{4\pi r^3}\)</span>. Фон ЭдС: <span class="arithmatex">\(\bar\rho = \dfrac{1}{6\pi Gt^2}\)</span>.</p>
+<p><strong>Шаг 2. Отношение.</strong></p>
+<div class="arithmatex">\[
+1 + \delta = \frac{\rho}{\bar\rho} = \frac{3M}{4\pi r^3}\cdot6\pi Gt^2 = \frac{9GMt^2}{2r^3}.
+\]</div>
+<p><strong>Шаг 3. Подстановка <span class="arithmatex">\(\eqref{eq:collapse}\)</span>.</strong> <span class="arithmatex">\(t^2 = B^2(\theta - \sin\theta)^2\)</span>, <span class="arithmatex">\(r^3 = A^3(1-\cos\theta)^3\)</span>, <span class="arithmatex">\(GMB^2/A^3 = 1\)</span>:</p>
+<div class="arithmatex">\[
+1 + \delta = \frac92\cdot\frac{GMB^2}{A^3}\cdot\frac{(\theta - \sin\theta)^2}{(1-\cos\theta)^3} = \frac92\,\frac{(\theta - \sin\theta)^2}{(1-\cos\theta)^3}.
+\]</div>
+</details>
+<p>При малых <span class="arithmatex">\(\theta\)</span> разложение даёт <strong>линейную</strong> экстраполяцию
+<span class="arithmatex">\(\delta_{\rm lin} = \tfrac{3}{20}\left(6(\theta - \sin\theta)\right)^{2/3}\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Критические плотности сферического коллапса</p>
+<ul>
+<li>в момент поворота (<span class="arithmatex">\(\theta = \pi\)</span>): <span class="arithmatex">\(1 + \delta = 9\pi^2/16 \approx 5.55\)</span>,
+  <span class="arithmatex">\(\delta_{\rm lin} = \tfrac{3}{20}(6\pi)^{2/3} \approx 1.062\)</span>;</li>
+<li>в момент коллапса (<span class="arithmatex">\(\theta = 2\pi\)</span>):</li>
+</ul>
+<div class="arithmatex">\[\begin{equation}
+\delta_c \equiv \delta_{\rm lin}(\theta = 2\pi) = \frac{3}{20}\,(12\pi)^{2/3} \approx 1.686.
+\label{eq:deltac}
+\end{equation}\]</div>
+<p>В <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> <span class="arithmatex">\(\delta_c\)</span> слабо зависит от <span class="arithmatex">\(\Omega_m\)</span>: <span class="arithmatex">\(\delta_c \approx 1.686\,\Omega_m(z)^{0.0055}\)</span>.</p>
+</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Ряды.</strong> <span class="arithmatex">\(1 - \cos\theta = \tfrac{\theta^2}{2}\left(1 - \tfrac{\theta^2}{12} + \ldots\right)\)</span>, <span class="arithmatex">\(\theta - \sin\theta = \tfrac{\theta^3}{6}\left(1 - \tfrac{\theta^2}{20} + \ldots\right)\)</span>.</p>
+<p><strong>Шаг 2. Подстановка в <span class="arithmatex">\(\eqref{eq:delta-nl}\)</span>.</strong></p>
+<div class="arithmatex">\[
+1 + \delta = \frac92\cdot\frac{\theta^6/36}{\theta^6/8}\cdot\frac{\left(1 - \theta^2/20\right)^2}{\left(1 - \theta^2/12\right)^3}
+= \left(1 - \frac{\theta^2}{10}\right)\left(1 + \frac{\theta^2}{4}\right) + O(\theta^4) = 1 + \frac{3}{20}\theta^2.
+\]</div>
+<p><strong>Шаг 3. Как функция времени.</strong> В главном порядке <span class="arithmatex">\(t = B\theta^3/6\)</span> ⇒ <span class="arithmatex">\(\theta^2 = (6t/B)^{2/3}\)</span>; линейный контраст растёт <span class="arithmatex">\(\propto t^{2/3} \propto a\)</span>, и его экстраполяция</p>
+<div class="arithmatex">\[
+\delta_{\rm lin}(t) = \frac{3}{20}\left(\frac{6t}{B}\right)^{2/3} = \frac{3}{20}\left(6(\theta - \sin\theta)\right)^{2/3}.
+\]</div>
+<p><strong>Шаг 4. Поворот, <span class="arithmatex">\(\theta = \pi\)</span>.</strong> <span class="arithmatex">\(1+\delta = \tfrac92\cdot\tfrac{\pi^2}{2^3} = \tfrac{9\pi^2}{16} = 5.55\)</span>; <span class="arithmatex">\(\delta_{\rm lin} = \tfrac{3}{20}(6\pi)^{2/3} = 0.15\cdot7.08 = 1.062\)</span>.</p>
+<p><strong>Шаг 5. Коллапс, <span class="arithmatex">\(\theta = 2\pi\)</span>.</strong> <span class="arithmatex">\(\theta - \sin\theta = 2\pi\)</span>: <span class="arithmatex">\(\delta_c = \tfrac{3}{20}(12\pi)^{2/3} = 0.15\cdot11.24 = 1.686\)</span>.</p>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(\delta_c/\delta_{\rm lin,ta} = 2^{2/3} = 1.587\)</span> — во столько раз выросло <span class="arithmatex">\(a \propto t^{2/3}\)</span> за время от <span class="arithmatex">\(t_{\rm ta}\)</span> до <span class="arithmatex">\(2t_{\rm ta}\)</span>.</p>
+</details>
+<p>Реальное облако не схлопывается в точку: обмен энергией между частицами
+(«бурная релаксация») приводит его к вириальному равновесию. Из теоремы вириала
+<span class="arithmatex">\(2K + U = 0\)</span> и сохранения энергии <span class="arithmatex">\(E = U_{\rm ta}\)</span> следует <span class="arithmatex">\(r_{\rm vir} = r_{\rm ta}/2\)</span>.
+Если вириализация завершается к <span class="arithmatex">\(t_{\rm coll} = 2t_{\rm ta}\)</span>, когда фон расширился
+ещё в <span class="arithmatex">\(2^{2/3}\)</span> раза,</p>
+<div class="arithmatex">\[\begin{equation}
+\Delta_{\rm vir} \equiv \frac{\rho_{\rm vir}}{\bar\rho(t_{\rm coll})}
+= \frac{9\pi^2}{16}\cdot 2^3\cdot \left(2^{2/3}\right)^3 = 18\pi^2 \approx 178.
+\label{eq:dvir}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Энергия.</strong> В момент поворота <span class="arithmatex">\(\dot r = 0\)</span>, <span class="arithmatex">\(K = 0\)</span>: <span class="arithmatex">\(E = U_{\rm ta} = -\alpha GM^2/r_{\rm ta}\)</span> (<span class="arithmatex">\(\alpha = 3/5\)</span> для однородного шара).</p>
+<p><strong>Шаг 2. Вириал.</strong> <span class="arithmatex">\(2K + U = 0\)</span> ⇒ <span class="arithmatex">\(E = K + U = U/2 = -\alpha GM^2/(2r_{\rm vir})\)</span>.</p>
+<p><strong>Шаг 3. Радиус.</strong> <span class="arithmatex">\(-\alpha GM^2/r_{\rm ta} = -\alpha GM^2/(2r_{\rm vir})\)</span> ⇒ <span class="arithmatex">\(r_{\rm vir} = r_{\rm ta}/2\)</span>, плотность выросла в <span class="arithmatex">\(2^3 = 8\)</span> раз: <span class="arithmatex">\(\rho_{\rm vir} = 8\rho_{\rm ta}\)</span>.</p>
+<p><strong>Шаг 4. Фон.</strong> <span class="arithmatex">\(\bar\rho \propto a^{-3}\)</span>, <span class="arithmatex">\(a \propto t^{2/3}\)</span>: за время <span class="arithmatex">\(t_{\rm ta} \to 2t_{\rm ta}\)</span> <span class="arithmatex">\(a\)</span> растёт в <span class="arithmatex">\(2^{2/3}\)</span>, <span class="arithmatex">\(\bar\rho\)</span> падает в <span class="arithmatex">\((2^{2/3})^3 = 4\)</span> раза.</p>
+<p><strong>Шаг 5. Итог.</strong></p>
+<div class="arithmatex">\[
+\frac{\rho_{\rm vir}}{\bar\rho(t_{\rm coll})} = \frac{\rho_{\rm ta}}{\bar\rho(t_{\rm ta})}\cdot8\cdot4 = \frac{9\pi^2}{16}\cdot32 = 18\pi^2 \approx 177.7.
+\]</div>
+</details>
+<p>Отсюда популярные определения масс гало <span class="arithmatex">\(M_{200}\)</span> (средняя плотность внутри <span class="arithmatex">\(r_{200}\)</span>
+в 200 раз выше критической или средней). В <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> при <span class="arithmatex">\(z=0\)</span>
+<span class="arithmatex">\(\Delta_{\rm vir} \approx 18\pi^2 + 82x - 39x^2\)</span> относительно критической плотности,
+<span class="arithmatex">\(x = \Omega_m(z) - 1\)</span> (Брайан и Норман, 1998), т. е. <span class="arithmatex">\(\approx 100\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Парадокс: δ_lin = 1.686 при δ = ∞</p>
+<p>Линейная теория говорит «контраст 1.686», а настоящий контраст в этот момент бесконечен
+(или 178 после вириализации). Противоречия нет: <span class="arithmatex">\(\delta_{\rm lin}\)</span> — это вспомогательная
+величина, удобная потому, что её эволюция тривиальна (<span class="arithmatex">\(\propto D\)</span>). Критерий
+«область коллапсировала к моменту <span class="arithmatex">\(t\)</span>, если её линейно экстраполированный контраст
+достиг <span class="arithmatex">\(\delta_c\)</span>» позволяет предсказывать нелинейные объекты по линейному <span class="arithmatex">\(P(k)\)</span>.</p>
+</div>
+<h2 id="186">18.6. Функция масс Пресса–Шехтера<a class="headerlink" href="#186" title="Permanent link">&para;</a></h2>
+<p>Пресс и Шехтер (1974) соединили сферический коллапс с гауссовой статистикой. Сгладим
+линейное поле на масштабе <span class="arithmatex">\(M\)</span>; оно гауссово с дисперсией <span class="arithmatex">\(\sigma^2(M)\,D^2(z)\)</span>. Постулат:
+доля массы в гало массой больше <span class="arithmatex">\(M\)</span> равна (удвоенной) вероятности того, что
+сглаженный контраст превышает <span class="arithmatex">\(\delta_c\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+F(&gt;M) = 2\int_{\delta_c}^\infty \frac{\d\delta}{\sqrt{2\pi}\,\sigma}\,e^{-\delta^2/2\sigma^2}
+= \operatorname{erfc}\!\left(\frac{\nu}{\sqrt2}\right),
+\qquad \nu \equiv \frac{\delta_c}{\sigma(M)D(z)}.
+\label{eq:ps-frac}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Замена переменной.</strong> <span class="arithmatex">\(u = \delta/(\sqrt2\,\sigma)\)</span>, <span class="arithmatex">\(\d\delta = \sqrt2\,\sigma\,\d u\)</span>; нижний предел <span class="arithmatex">\(u_0 = \delta_c/(\sqrt2\sigma) = \nu/\sqrt2\)</span> (здесь <span class="arithmatex">\(\sigma \equiv \sigma(M)D(z)\)</span>):</p>
+<div class="arithmatex">\[
+F(&gt;M) = 2\int_{\nu/\sqrt2}^\infty\frac{\sqrt2\,\sigma\,\d u}{\sqrt{2\pi}\,\sigma}\,e^{-u^2} = \frac{2}{\sqrt\pi}\int_{\nu/\sqrt2}^\infty e^{-u^2}\d u = \operatorname{erfc}\frac{\nu}{\sqrt2}.
+\]</div>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(M \to 0\)</span>: <span class="arithmatex">\(\sigma \to\infty\)</span>, <span class="arithmatex">\(\nu \to 0\)</span>, <span class="arithmatex">\(\operatorname{erfc}0 = 1\)</span> — вся масса в гало (благодаря множителю 2).</p>
+</details>
+<p>Множитель 2 Пресс и Шехтер ввели «вручную», чтобы при <span class="arithmatex">\(M \to 0\)</span> вся масса оказалась в гало;
+строгое обоснование даёт формализм случайных блужданий (excursion set; Бонд, Коул,
+Эфстатиу, Кайзер 1991). Дифференцируя, получаем число гало в единице объёма на единицу массы.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Функция масс Пресса–Шехтера</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\d n}{\d M} = \sqrt{\frac{2}{\pi}}\;\frac{\bar\rho_m}{M^2}\;\nu\,e^{-\nu^2/2}\;
+\left|\frac{\d\ln\sigma}{\d\ln M}\right|.
+\label{eq:ps}
+\end{equation}\]</div>
+</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Плотность числа гало.</strong> Масса в гало с массами из <span class="arithmatex">\([M, M + \d M]\)</span> в единице объёма равна <span class="arithmatex">\(\bar\rho_m|\d F/\d M|\,\d M\)</span>; делим на массу гало <span class="arithmatex">\(M\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\d n}{\d M} = \frac{\bar\rho_m}{M}\left|\frac{\d F}{\d M}\right|.
+\]</div>
+<p><strong>Шаг 2. Производная по <span class="arithmatex">\(\nu\)</span>.</strong> <span class="arithmatex">\(\dfrac{\d}{\d x}\operatorname{erfc}x = -\dfrac{2}{\sqrt\pi}e^{-x^2}\)</span>; с <span class="arithmatex">\(x = \nu/\sqrt2\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\d F}{\d\nu} = -\frac{2}{\sqrt\pi}e^{-\nu^2/2}\cdot\frac{1}{\sqrt2} = -\sqrt{\frac2\pi}\,e^{-\nu^2/2}.
+\]</div>
+<p><strong>Шаг 3. Производная <span class="arithmatex">\(\nu\)</span> по <span class="arithmatex">\(M\)</span>.</strong> <span class="arithmatex">\(\nu = \delta_c/(\sigma D)\)</span> ⇒ <span class="arithmatex">\(\dfrac{\d\nu}{\d M} = -\nu\,\dfrac{\d\ln\sigma}{\d M} = -\dfrac{\nu}{M}\,\dfrac{\d\ln\sigma}{\d\ln M}\)</span>.</p>
+<p><strong>Шаг 4. Сборка.</strong></p>
+<div class="arithmatex">\[
+\frac{\d n}{\d M} = \frac{\bar\rho_m}{M}\cdot\sqrt{\frac2\pi}\,e^{-\nu^2/2}\cdot\frac{\nu}{M}\left|\frac{\d\ln\sigma}{\d\ln M}\right|
+= \sqrt{\frac2\pi}\,\frac{\bar\rho_m}{M^2}\,\nu\,e^{-\nu^2/2}\left|\frac{\d\ln\sigma}{\d\ln M}\right|.
+\]</div>
+<p><strong>Проверка.</strong> Размерность: <span class="arithmatex">\([\bar\rho_m/M^2]\)</span> = 1/(объём·масса), как и у <span class="arithmatex">\(\d n/\d M\)</span>.</p>
+</details>
+<p>Структура формулы прозрачна. При <span class="arithmatex">\(\nu \ll 1\)</span> (малые массы) <span class="arithmatex">\(\d n/\d M \propto M^{-2}\sigma^{-1}\)</span>
+— почти степенной закон <span class="arithmatex">\(\propto M^{-1.9}\)</span>; при <span class="arithmatex">\(\nu \gg 1\)</span> — экспоненциальное обрезание.
+<strong>Характерная масса</strong> <span class="arithmatex">\(M_*(z)\)</span>, определяемая условием <span class="arithmatex">\(\sigma(M_*)D(z) = \delta_c\)</span>, — это
+масса типичного гало, коллапсирующего в эпоху <span class="arithmatex">\(z\)</span>. Для Planck 2018 при <span class="arithmatex">\(z = 0\)</span>
+<span class="arithmatex">\(\sigma(R_*) = 1.686\)</span> при <span class="arithmatex">\(R_* \approx 2.2\,h^{-1}\)</span>Мпк, т. е. <span class="arithmatex">\(M_* \approx 4\times10^{12}\,h^{-1}M_\odot\)</span> —
+масса гало Млечного Пути. Это иерархическое (<strong>«снизу вверх»</strong>) формирование: сначала
+мелкие гало, позже — группы и скопления. Массивные скопления <span class="arithmatex">\(M \gtrsim 10^{15}\,h^{-1}M_\odot\)</span>
+находятся в экспоненциальном хвосте, поэтому их численность экстремально чувствительна к
+<span class="arithmatex">\(\sigma_8\)</span> и <span class="arithmatex">\(\Omega_m\)</span> и служит одним из космологических тестов.</p>
+<p>Количественно формула <span class="arithmatex">\(\eqref{eq:ps}\)</span> занижает число массивных гало примерно вдвое и
+завышает число мелких по сравнению с N-body-моделированием. Улучшенные варианты —
+эллипсоидальный коллапс Шета–Тормена (1999) и подгоночные функции Тинкера (2008), —
+но вся их структура (зависимость только от <span class="arithmatex">\(\nu\)</span>) унаследована от Пресса–Шехтера.</p>
+<h2 id="_3">Задачи<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>18.1. Асимптотики спектра</summary>
+<p>Покажите, что для BBKS-аппроксимации <span class="arithmatex">\(\eqref{eq:bbks}\)</span> <span class="arithmatex">\(T \to 1\)</span> при <span class="arithmatex">\(q \to 0\)</span> и
+<span class="arithmatex">\(T \propto q^{-2}\ln q\)</span> при <span class="arithmatex">\(q \to \infty\)</span>. Чему равен наклон <span class="arithmatex">\(\d\ln P/\d\ln k\)</span> при
+<span class="arithmatex">\(k \gg k_{\rm eq}\)</span> без учёта логарифма?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>При <span class="arithmatex">\(q \to 0\)</span>: <span class="arithmatex">\(\ln(1+2.34q)/(2.34q) \to 1\)</span>, скобка <span class="arithmatex">\(\to 1\)</span>, значит <span class="arithmatex">\(T \to 1\)</span>.
+При <span class="arithmatex">\(q \to \infty\)</span> скобка <span class="arithmatex">\(\approx (6.71q)^4\)</span>, её степень <span class="arithmatex">\(-1/4\)</span> даёт <span class="arithmatex">\(1/(6.71q)\)</span>;
+вместе с <span class="arithmatex">\(\ln(2.34q)/(2.34q)\)</span> получаем <span class="arithmatex">\(T \approx \ln(2.34q)/(15.7\,q^2)\)</span>.
+Тогда <span class="arithmatex">\(P \propto k^{n_s}T^2 \propto k^{n_s - 4}\ln^2 k\)</span>, наклон <span class="arithmatex">\(\approx n_s - 4 \approx -3\)</span>.
+Соответственно <span class="arithmatex">\(\Delta^2 = k^3P/2\pi^2 \propto \ln^2 k\)</span> — дисперсия растёт к малым
+масштабам лишь логарифмически, поэтому все масштабы CDM коллапсируют почти одновременно.</p>
+</details>
+</details>
+<details class="question">
+<summary>18.2. Рост σ₈ с красным смещением</summary>
+<p>Используя значения фактора роста из § 16.7 (<span class="arithmatex">\(D = 0.7879\)</span> при <span class="arithmatex">\(z = 0\)</span>, <span class="arithmatex">\(0.4780\)</span> при
+<span class="arithmatex">\(z = 1\)</span>, <span class="arithmatex">\(0.3286\)</span> при <span class="arithmatex">\(z = 2\)</span>), найдите <span class="arithmatex">\(\sigma_8(z=1)\)</span> и <span class="arithmatex">\(\sigma_8(z=2)\)</span>.
+Сколько раз меньше <span class="arithmatex">\(M_*\)</span> при <span class="arithmatex">\(z = 2\)</span>, если локально <span class="arithmatex">\(\sigma \propto M^{-0.25}\)</span>?</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(\sigma_8(1) = 0.811\cdot0.4780/0.7879 = 0.492\)</span>, <span class="arithmatex">\(\sigma_8(2) = 0.811\cdot0.3286/0.7879 = 0.338\)</span>.
+Условие <span class="arithmatex">\(\sigma(M_*)D = \delta_c\)</span> при <span class="arithmatex">\(\sigma \propto M^{-1/4}\)</span> даёт
+<span class="arithmatex">\(M_* \propto D^4\)</span>: <span class="arithmatex">\(M_*(2)/M_*(0) = (0.3286/0.7879)^4 \approx 0.030\)</span>, т. е. в
+<span class="arithmatex">\(\approx 30\)</span> раз меньше. (Реальный наклон на этих масштабах круче, так что
+уменьшение ещё сильнее.)</p>
+</details>
+</details>
+<details class="question">
+<summary>18.3. Критическая плотность коллапса</summary>
+<p>Разложите <span class="arithmatex">\(\eqref{eq:collapse}\)</span> до второго порядка по <span class="arithmatex">\(\theta\)</span> и покажите, что
+<span class="arithmatex">\(\delta \approx \tfrac{3}{20}\theta^2\)</span>, а как функция времени <span class="arithmatex">\(\delta_{\rm lin} = \tfrac{3}{20}(6t/B)^{2/3}\)</span>.
+Получите <span class="arithmatex">\(\delta_c = 1.686\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(1-\cos\theta = \tfrac{\theta^2}{2}\left(1 - \tfrac{\theta^2}{12}\right)\)</span>,
+<span class="arithmatex">\(\theta - \sin\theta = \tfrac{\theta^3}{6}\left(1 - \tfrac{\theta^2}{20}\right)\)</span>.
+Подставляя в <span class="arithmatex">\(\eqref{eq:delta-nl}\)</span>:
+<span class="arithmatex">\(1+\delta = \tfrac92\cdot\tfrac{\theta^6/36}{\theta^6/8}\cdot\left(1-\tfrac{\theta^2}{10}+\tfrac{\theta^2}{4}\right)
+= 1 + \tfrac{3}{20}\theta^2\)</span>. В главном порядке <span class="arithmatex">\(t \approx B\theta^3/6\)</span>, т. е.
+<span class="arithmatex">\(\theta^2 = (6t/B)^{2/3}\)</span>, и линейная мода растёт <span class="arithmatex">\(\propto t^{2/3} \propto a\)</span>, как и должно.
+При коллапсе <span class="arithmatex">\(t = 2\pi B\)</span>: <span class="arithmatex">\(\delta_c = \tfrac{3}{20}(12\pi)^{2/3} = 1.6865\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>18.4. Вириальная перегрузка</summary>
+<p>Выведите <span class="arithmatex">\(\Delta_{\rm vir} = 18\pi^2\)</span>, явно проверив каждый множитель: плотность в
+момент поворота, сжатие при вириализации, расширение фона от <span class="arithmatex">\(t_{\rm ta}\)</span> до <span class="arithmatex">\(2t_{\rm ta}\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p>При <span class="arithmatex">\(\theta = \pi\)</span> из <span class="arithmatex">\(\eqref{eq:delta-nl}\)</span>: <span class="arithmatex">\(1+\delta = \tfrac92\pi^2/8 = 9\pi^2/16\)</span>.
+Вириализация: <span class="arithmatex">\(E = -GM^2\cdot\tfrac{3}{5}/r_{\rm ta}\)</span> (в покое), а для вириального
+состояния <span class="arithmatex">\(E = U/2\)</span>, откуда <span class="arithmatex">\(r_{\rm vir} = r_{\rm ta}/2\)</span>: плотность растёт в <span class="arithmatex">\(2^3 = 8\)</span> раз.
+Фон <span class="arithmatex">\(\bar\rho \propto t^{-2}\)</span> за время от <span class="arithmatex">\(t_{\rm ta}\)</span> до <span class="arithmatex">\(2t_{\rm ta}\)</span> падает в 4 раза.
+Итого <span class="arithmatex">\(\Delta_{\rm vir} = \tfrac{9\pi^2}{16}\cdot8\cdot4 = 18\pi^2 \approx 178\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>18.5. Нормировка Пресса–Шехтера</summary>
+<p>Покажите, что <span class="arithmatex">\(\int_0^\infty M\,\tfrac{\d n}{\d M}\,\d M = \bar\rho_m\)</span>, если <span class="arithmatex">\(\sigma(M) \to \infty\)</span>
+при <span class="arithmatex">\(M \to 0\)</span>. Что получится без множителя 2?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Перейдём к переменной <span class="arithmatex">\(\nu\)</span>: <span class="arithmatex">\(\d\nu = -\nu\,\d\ln\sigma\)</span>, так что
+<span class="arithmatex">\(M\,\tfrac{\d n}{\d M}\d M = \bar\rho_m\sqrt{2/\pi}\,e^{-\nu^2/2}\,\d\nu\)</span>.
+При <span class="arithmatex">\(M\)</span> от 0 до <span class="arithmatex">\(\infty\)</span> <span class="arithmatex">\(\nu\)</span> пробегает от 0 до <span class="arithmatex">\(\infty\)</span>, а
+<span class="arithmatex">\(\sqrt{2/\pi}\int_0^\infty e^{-\nu^2/2}\d\nu = 1\)</span>. Без множителя 2 в гало оказалась бы
+лишь половина массы: «недосчёт» отвечает областям с <span class="arithmatex">\(\delta &lt; \delta_c\)</span> на масштабе
+<span class="arithmatex">\(M\)</span>, которые, однако, входят в коллапсировавшие области большего масштаба
+(проблема «cloud-in-cloud»).</p>
+</details>
+</details>
+<details class="question">
+<summary>18.6. BAO как линейка</summary>
+<p>Обзор измеряет акустический пик в корреляционной функции галактик при <span class="arithmatex">\(z = 0.5\)</span> на
+угле <span class="arithmatex">\(4.3^\circ\)</span> поперёк луча зрения и на <span class="arithmatex">\(\Delta z = 0.043\)</span> вдоль. Принимая <span class="arithmatex">\(r_d = 147\)</span> Мпк,
+найдите <span class="arithmatex">\(D_M(0.5)\)</span> и <span class="arithmatex">\(H(0.5)\)</span>. Совпадает ли <span class="arithmatex">\(H(0.5)\)</span> с Planck-<abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> (<span class="arithmatex">\(\Omega_m = 0.315\)</span>, <span class="arithmatex">\(h = 0.674\)</span>)?</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(D_M = r_d/\theta = 147/0.0750 \approx 1960\)</span> Мпк. <span class="arithmatex">\(H = c\,\Delta z/r_d =
+299792\cdot0.043/147 \approx 88\)</span> км/с/Мпк. В <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr>
+<span class="arithmatex">\(H(0.5) = 67.4\sqrt{0.315\cdot3.375 + 0.685} \approx 67.4\cdot1.32 \approx 89\)</span> км/с/Мпк,
+а <span class="arithmatex">\(D_M(0.5) \approx 1950\)</span> Мпк (§ 18.4) — согласие в пределах точности данных. Так BAO
+по отдельности фиксирует <span class="arithmatex">\(D_M\)</span> и <span class="arithmatex">\(H\)</span> и тестирует модель.</p>
+</details>
+</details>
+<h2 id="_4">Заключение<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Пройденный путь замкнут. Из геометрии пространства-времени (часть I) мы получили уравнения
+Эйнштейна и их точные решения (часть II), из симметрии — модель Фридмана и тепловую историю
+Вселенной (часть III). Инфляция задала начальные возмущения с почти плоским спектром
+(глава 15); линейная теория (глава 16) провела их через эпоху излучения; в реликтовом излучении
+(глава 17) мы видим их моментальный снимок при <span class="arithmatex">\(z \approx 1090\)</span>, а в распределении галактик —
+результат 13.8 млрд лет гравитационного роста. Шесть параметров <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> описывают и то, и другое:
+<span class="arithmatex">\(C_\ell\)</span>, <span class="arithmatex">\(P(k)\)</span>, BAO, <span class="arithmatex">\(\sigma_8\)</span> и функцию масс скоплений.</p>
+<p>Остаются открытыми вопросы, которые и составляют передний край: природа тёмной материи и тёмной
+энергии, напряжения <span class="arithmatex">\(H_0\)</span> и <span class="arithmatex">\(S_8\)</span>, механизм инфляции (поиск <span class="arithmatex">\(r\)</span> и негауссовости), сумма масс
+нейтрино, которую обзоры DESI, Euclid и LSST измеряют по подавлению <span class="arithmatex">\(P(k)\)</span> на малых масштабах.
+Для дальнейшего чтения — Бауманн «Cosmology», Додельсон и Шмидт «Modern Cosmology», Муханов
+«Physical Foundations of Cosmology», Горбунов и Рубаков; полный список — в разделе
+<a href="../../appendix/bibliography/">Литература</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../17-cmb/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 17. Реликтовое излучение">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                17. Реликтовое излучение
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../appendix/glossary/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Глоссарий">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                Глоссарий
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Bogdan Rudenko, SAI MSU · Текст — <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">CC BY-SA 4.0</a>, код — MIT · Обратная связь: <a href="mailto:rudenko.sci@gmail.com">rudenko.sci@gmail.com</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/calc.js"></script>
+      
+        <script src="../../javascripts/toc-progress.js"></script>
+      
+        <script src="../../javascripts/minkowski.js"></script>
+      
+        <script src="../../javascripts/sphere-transport.js"></script>
+      
+        <script src="../../javascripts/tidal.js"></script>
+      
+        <script src="../../javascripts/energy-conditions.js"></script>
+      
+        <script src="../../javascripts/effective-potential.js"></script>
+      
+        <script src="../../javascripts/bh-cones.js"></script>
+      
+        <script src="../../javascripts/gw-ring.js"></script>
+      
+        <script src="../../javascripts/friedmann.js"></script>
+      
+        <script src="../../javascripts/distances.js"></script>
+      
+        <script src="../../javascripts/saha.js"></script>
+      
+        <script src="../../javascripts/inflation.js"></script>
+      
+        <script src="../../javascripts/cmb.js"></script>
+      
+        <script src="../../javascripts/power-spectrum.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2226 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Учебник-хендбук по общей теории относительности и космологии">
+      
+      
+        <meta name="author" content="Bogdan Rudenko">
+      
+      
+        <link rel="canonical" href="https://rudenkobogdan.github.io/gr-cosmology/part4-perturbations/17-cmb/">
+      
+      
+        <link rel="prev" href="../16-perturbations/">
+      
+      
+        <link rel="next" href="../18-lss/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>17. Реликтовое излучение - ОТО и космология</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#17" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="ОТО и космология" class="md-header__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ОТО и космология
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17. Реликтовое излучение
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ОТО и космология" class="md-nav__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    ОТО и космология
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Главная
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обозначения и соглашения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part1-math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Математический аппарат
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    I. Математический аппарат
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/01-special-relativity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. СТО на четырёхмерном языке
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/02-manifolds-tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Многообразия и тензоры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/03-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Связность и ковариантная производная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part1-math/04-curvature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Кривизна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part2-gr/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. ОТО
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    II. ОТО
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/05-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Принцип эквивалентности и геодезические
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/06-einstein-equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Уравнения Эйнштейна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/07-schwarzschild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Решение Шварцшильда и классические тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/08-black-holes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Чёрные дыры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/09-gravitational-waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Гравитационные волны
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part3-cosmology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Космология FRW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    III. Космология FRW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/10-frw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Однородная изотропная Вселенная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/11-friedmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Уравнения Фридмана и модели
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/12-distances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Расстояния и наблюдения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/13-thermal-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Термическая история
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/14-bbn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Первичный нуклеосинтез
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-inflation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Инфляция
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-perturbations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Линейная теория возмущений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Реликтовое излучение
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Реликтовое излучение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#171" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.1. Спектр чёрного тела
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#172" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.2. Мультипольное разложение и статистика
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#173" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.3. Эффект Сакса–Вольфа
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.4. Акустические колебания
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17.4. Акустические колебания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Затухание Силка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Численный пример
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#175" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.5. Зависимость спектра от параметров
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17.5. Зависимость спектра от параметров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_l" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: игрушечный спектр C_ℓ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#176" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.6. Поляризация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-lss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Крупномасштабная структура
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Приложения
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Приложения
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Глоссарий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/bibliography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Литература
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#171" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.1. Спектр чёрного тела
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#172" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.2. Мультипольное разложение и статистика
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#173" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.3. Эффект Сакса–Вольфа
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.4. Акустические колебания
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17.4. Акустические колебания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Затухание Силка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Численный пример
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#175" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.5. Зависимость спектра от параметров
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17.5. Зависимость спектра от параметров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_l" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерактив: игрушечный спектр C_ℓ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#176" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.6. Поляризация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="17">17. Реликтовое излучение<a class="headerlink" href="#17" title="Permanent link">&para;</a></h1>
+<p>Реликтовое излучение (cosmic microwave background, <abbr title="Cosmic Microwave Background — реликтовое излучение">CMB</abbr>) — фотоны, последний раз
+рассеявшиеся на свободных электронах при рекомбинации, <span class="arithmatex">\(z_* \approx 1090\)</span>
+(<a href="../../part3-cosmology/13-thermal-history/">глава 13</a>). Его спектр — самое точное
+чёрнотельное излучение, известное в природе, а малые анизотропии температуры
+<span class="arithmatex">\(\Delta T/T \sim 10^{-5}\)</span> — моментальный снимок возмущений в возрасте Вселенной около
+380 тыс. лет. По угловому спектру анизотропии параметры <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> измерены с процентной
+точностью. В этой главе мы опишем статистику анизотропии, выведем эффект Сакса–Вольфа и
+уравнение акустических колебаний барион-фотонной жидкости, объясним положения и высоты
+акустических пиков и затухание Силка, а в конце кратко обсудим поляризацию.</p>
+<h2 id="171">17.1. Спектр чёрного тела<a class="headerlink" href="#171" title="Permanent link">&para;</a></h2>
+<p>В отсутствие процессов, рождающих или уничтожающих фотоны, планковское распределение
+сохраняется при расширении: частоты красно смещаются как <span class="arithmatex">\(1/a\)</span>, так что
+<span class="arithmatex">\(T \propto 1/a\)</span>. Измерения COBE/FIRAS (1990–1996) дали</p>
+<div class="arithmatex">\[\begin{equation}
+T_0 = 2.7255 \pm 0.0006\ \text{К}, \qquad
+n_\gamma = \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT_0}{\hbar}\right)^3 \approx 411\ \text{см}^{-3},
+\label{eq:T0}
+\end{equation}\]</div>
+<p>а отклонения от чёрного тела не превышают <span class="arithmatex">\(5\times10^{-5}\)</span> от пика интенсивности.
+Химпотенциал <span class="arithmatex">\(|\mu| &lt; 9\times10^{-5}\)</span> и <span class="arithmatex">\(y\)</span>-параметр комптонизации <span class="arithmatex">\(|y| &lt; 1.5\times10^{-5}\)</span>
+ограничивают энерговыделение при <span class="arithmatex">\(z \lesssim 2\times10^6\)</span> — после этого фотоны не успевают
+термализоваться.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Плотность числа фотонов.</strong> Для бозонов с двумя поляризациями</p>
+<div class="arithmatex">\[
+n_\gamma = 2\int\frac{\d^3p}{(2\pi\hbar)^3}\frac{1}{e^{pc/k_BT}-1}
+= \frac{1}{\pi^2}\left(\frac{k_BT}{\hbar c}\right)^3\int_0^\infty\frac{x^2\,\d x}{e^x-1}
+= \frac{2\zeta(3)}{\pi^2}\left(\frac{k_BT}{\hbar c}\right)^3,
+\]</div>
+<p>где <span class="arithmatex">\(\d^3p = 4\pi p^2\d p\)</span>, <span class="arithmatex">\(x = pc/k_BT\)</span> и <span class="arithmatex">\(\int_0^\infty x^2\d x/(e^x-1) = \Gamma(3)\zeta(3) = 2\zeta(3)\)</span>.</p>
+<p><strong>Шаг 2. Числа.</strong> <span class="arithmatex">\(k_BT_0 = 8.617\times10^{-5}\ \text{эВ/К}\cdot2.7255\ \text{К} = 2.349\times10^{-4}\)</span> эВ; <span class="arithmatex">\(\hbar c = 1.9733\times10^{-5}\)</span> эВ·см; отношение <span class="arithmatex">\(11.90\ \text{см}^{-1}\)</span>, его куб <span class="arithmatex">\(1686\ \text{см}^{-3}\)</span>.</p>
+<p><strong>Шаг 3. Итог.</strong> <span class="arithmatex">\(2\zeta(3)/\pi^2 = 2\cdot1.2021/9.8696 = 0.2436\)</span>, <span class="arithmatex">\(n_\gamma = 0.2436\cdot1686 \approx 411\ \text{см}^{-3}\)</span>.</p>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(n_\gamma \propto T^3 \propto a^{-3}\)</span> — число фотонов в сопутствующем объёме сохраняется.</p>
+</details>
+<h2 id="172">17.2. Мультипольное разложение и статистика<a class="headerlink" href="#172" title="Permanent link">&para;</a></h2>
+<p>Флуктуацию температуры в направлении <span class="arithmatex">\(\hat{\vb n}\)</span> разложим по сферическим функциям:</p>
+<div class="arithmatex">\[\begin{equation}
+\Theta(\hat{\vb n}) \equiv \frac{\Delta T(\hat{\vb n})}{T_0} = \sum_{\ell=1}^{\infty}\sum_{m=-\ell}^{\ell}a_{\ell m}Y_{\ell m}(\hat{\vb n}).
+\label{eq:alm}
+\end{equation}\]</div>
+<p>Мультиполь <span class="arithmatex">\(\ell\)</span> соответствует угловому масштабу <span class="arithmatex">\(\theta \sim \pi/\ell\)</span>. Диполь
+<span class="arithmatex">\(\ell = 1\)</span> с амплитудой <span class="arithmatex">\(3.36\)</span> мК вызван нашим движением относительно системы покоя <abbr title="Cosmic Microwave Background — реликтовое излучение">CMB</abbr>
+(<span class="arithmatex">\(v \approx 370\)</span> км/с) и обычно вычитается.</p>
+<div class="admonition definition">
+<p class="admonition-title">Определение: угловой спектр мощности</p>
+<p>Если флуктуации статистически изотропны,</p>
+<div class="arithmatex">\[\begin{equation}
+\langle a_{\ell m}a^*_{\ell' m'}\rangle = C_\ell\,\delta_{\ell\ell'}\delta_{mm'}.
+\label{eq:Cl}
+\end{equation}\]</div>
+<p>Принято изображать <span class="arithmatex">\(\mathcal D_\ell \equiv \ell(\ell+1)C_\ell T_0^2/(2\pi)\)</span> в мкК²; тогда
+дисперсия температуры <span class="arithmatex">\(\langle\Delta T^2\rangle = \sum_\ell (2\ell+1)C_\ell T_0^2/(4\pi) \approx \int \mathcal D_\ell\,\d\ln\ell\)</span>.</p>
+</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Дисперсия в точке.</strong> Из <span class="arithmatex">\(\eqref{eq:alm}\)</span> и <span class="arithmatex">\(\eqref{eq:Cl}\)</span>:</p>
+<div class="arithmatex">\[
+\langle\Theta^2(\hat{\vb n})\rangle = \sum_{\ell m}\sum_{\ell'm'}\langle a_{\ell m}a^*_{\ell'm'}\rangle Y_{\ell m}(\hat{\vb n})Y^*_{\ell'm'}(\hat{\vb n})
+= \sum_\ell C_\ell\sum_{m=-\ell}^{\ell}|Y_{\ell m}(\hat{\vb n})|^2.
+\]</div>
+<p><strong>Шаг 2. Теорема сложения.</strong> <span class="arithmatex">\(\sum_m|Y_{\ell m}(\hat{\vb n})|^2 = \dfrac{2\ell+1}{4\pi}\)</span>, поэтому <span class="arithmatex">\(\langle\Delta T^2\rangle = T_0^2\langle\Theta^2\rangle = \sum_\ell(2\ell+1)C_\ell T_0^2/(4\pi)\)</span>.</p>
+<p><strong>Шаг 3. Через <span class="arithmatex">\(\mathcal D_\ell\)</span>.</strong> <span class="arithmatex">\(C_\ell T_0^2 = 2\pi\mathcal D_\ell/[\ell(\ell+1)]\)</span>:</p>
+<div class="arithmatex">\[
+\frac{(2\ell+1)C_\ell T_0^2}{4\pi} = \frac{2\ell+1}{2\ell(\ell+1)}\,\mathcal D_\ell \approx \frac{\mathcal D_\ell}{\ell}\quad(\ell\gg1),
+\qquad \sum_\ell\frac{\mathcal D_\ell}{\ell} \approx \int\mathcal D_\ell\,\frac{\d\ell}{\ell} = \int\mathcal D_\ell\,\d\ln\ell.
+\]</div>
+</details>
+<p>У нас одно небо, и на каждый <span class="arithmatex">\(\ell\)</span> приходится лишь <span class="arithmatex">\(2\ell+1\)</span> независимых <span class="arithmatex">\(a_{\ell m}\)</span>.
+Для гауссовых флуктуаций это даёт неустранимую <strong>космическую дисперсию</strong></p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\Delta C_\ell}{C_\ell} = \sqrt{\frac{2}{2\ell+1}}.
+\label{eq:cosmic-variance}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Независимые вещественные величины.</strong> Из вещественности <span class="arithmatex">\(\Theta\)</span>: <span class="arithmatex">\(a_{\ell,-m} = (-1)^ma^*_{\ell m}\)</span>. Независимы <span class="arithmatex">\(a_{\ell0}\)</span> (вещественное, дисперсия <span class="arithmatex">\(C_\ell\)</span>) и <span class="arithmatex">\(\mathrm{Re}\,a_{\ell m}\)</span>, <span class="arithmatex">\(\mathrm{Im}\,a_{\ell m}\)</span> при <span class="arithmatex">\(m &gt; 0\)</span> (дисперсия <span class="arithmatex">\(C_\ell/2\)</span> каждая): всего <span class="arithmatex">\(1 + 2\ell\)</span> гауссовых величин.</p>
+<p><strong>Шаг 2. Оценка.</strong></p>
+<div class="arithmatex">\[
+\hat C_\ell = \frac{1}{2\ell+1}\sum_m|a_{\ell m}|^2 = \frac{1}{2\ell+1}\left[a_{\ell0}^2 + 2\sum_{m&gt;0}\left((\mathrm{Re}\,a_{\ell m})^2 + (\mathrm{Im}\,a_{\ell m})^2\right)\right].
+\]</div>
+<p><strong>Шаг 3. Дисперсии слагаемых.</strong> Для гауссовой <span class="arithmatex">\(x\)</span> с дисперсией <span class="arithmatex">\(s^2\)</span>: <span class="arithmatex">\(\mathrm{Var}(x^2) = 3s^4 - s^4 = 2s^4\)</span>. Отсюда <span class="arithmatex">\(\mathrm{Var}(a_{\ell0}^2) = 2C_\ell^2\)</span>, <span class="arithmatex">\(\mathrm{Var}(2(\mathrm{Re}\,a)^2) = 4\cdot2(C_\ell/2)^2 = 2C_\ell^2\)</span> — каждое из <span class="arithmatex">\(2\ell+1\)</span> слагаемых даёт <span class="arithmatex">\(2C_\ell^2\)</span>.</p>
+<p><strong>Шаг 4. Сумма.</strong></p>
+<div class="arithmatex">\[
+\mathrm{Var}\,\hat C_\ell = \frac{(2\ell+1)\cdot2C_\ell^2}{(2\ell+1)^2} = \frac{2C_\ell^2}{2\ell+1}
+\quad\Longrightarrow\quad
+\frac{\Delta C_\ell}{C_\ell} = \sqrt{\frac{2}{2\ell+1}}.
+\]</div>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(\langle\hat C_\ell\rangle = [C_\ell + 2\ell\cdot2\cdot C_\ell/2]/(2\ell+1) = C_\ell\)</span> — оценка несмещённая.</p>
+</details>
+<h2 id="173">17.3. Эффект Сакса–Вольфа<a class="headerlink" href="#173" title="Permanent link">&para;</a></h2>
+<p>Пусть <span class="arithmatex">\(\Theta_0\)</span> — монополь температуры фотонов в данной точке поверхности последнего
+рассеяния (<span class="arithmatex">\(\delta_\gamma = 4\Theta_0\)</span>). Фотон, вылезая из потенциальной ямы <span class="arithmatex">\(\Psi &lt; 0\)</span>,
+теряет энергию; если потенциалы меняются во времени, по пути он дополнительно её
+получает. Интегрируя уравнение геодезической для фотона в метрике ньютоновской
+калибровки (<a href="../16-perturbations/">§ 16.2</a>), получаем</p>
+<div class="arithmatex">\[\begin{equation}
+\Theta(\hat{\vb n}) = \underbrace{\left[\Theta_0 + \Psi\right]_*}_{\text{СВ}}
+- \underbrace{\hat{\vb n}\cdot\vb v_{b*}}_{\text{Доплер}}
++ \underbrace{\int_{\tau_*}^{\tau_0}\left(\Psi' + \Phi'\right)\d\tau}_{\text{ИСВ}}.
+\label{eq:los}
+\end{equation}\]</div>
+<p>На масштабах больше горизонта при рекомбинации <span class="arithmatex">\(\Theta_0\)</span> не успевает измениться.
+Адиабатические начальные условия (<a href="../16-perturbations/">§ 16.4</a>) в эпоху вещества дают
+<span class="arithmatex">\(\Theta_0 = -\tfrac23\Psi\)</span>, откуда</p>
+<div class="admonition theorem">
+<p class="admonition-title">Теорема (Сакс, Вольф, 1967)</p>
+<p>На больших угловых масштабах</p>
+<div class="arithmatex">\[\begin{equation}
+\Theta(\hat{\vb n}) = \frac13\Psi_* = \frac15\,\mathcal R,
+\label{eq:sachs-wolfe}
+\end{equation}\]</div>
+<p>т. е. горячие пятна соответствуют потенциальным <strong>холмам</strong>, а холодные — ямам.
+Для степенного спектра с <span class="arithmatex">\(n_s = 1\)</span> угловой спектр плоский:</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\ell(\ell+1)C_\ell}{2\pi} = \frac{A_s}{25}.
+\label{eq:sw-plateau}
+\end{equation}\]</div>
+</div>
+<p>Это <strong>плато Сакса–Вольфа</strong>. Численно <span class="arithmatex">\(T_0^2A_s/25 \approx 620\)</span> мкК²; наблюдаемое
+<span class="arithmatex">\(\mathcal D_\ell \approx 1000\)</span> мкК² при <span class="arithmatex">\(\ell \sim 10\text{–}30\)</span> выше за счёт позднего ИСВ
+(распад потенциалов в эпоху Λ) и начала подъёма к первому пику. Измерение плато COBE/DMR
+(1992) впервые зафиксировало амплитуду первичных возмущений.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Контраст вещества на сверхгоризонтных масштабах.</strong> Из <span class="arithmatex">\(00\)</span>-уравнения при <span class="arithmatex">\(k \to 0\)</span>, <span class="arithmatex">\(\Phi' = 0\)</span> (см. § 16.4): <span class="arithmatex">\(3\mathcal H^2\Psi = -\tfrac32\mathcal H^2\delta\)</span>, т. е. в эпоху вещества <span class="arithmatex">\(\delta_m = -2\Psi\)</span>.</p>
+<p><strong>Шаг 2. Адиабатичность.</strong> <span class="arithmatex">\(\delta_\gamma/(1+\tfrac13) = \delta_m\)</span> ⇒ <span class="arithmatex">\(\delta_\gamma = \tfrac43\delta_m = -\tfrac83\Psi\)</span>; так как <span class="arithmatex">\(\delta_\gamma = 4\Theta_0\)</span> (<span class="arithmatex">\(\rho_\gamma \propto T^4\)</span>): <span class="arithmatex">\(\Theta_0 = -\tfrac23\Psi\)</span>.</p>
+<p><strong>Шаг 3. Эффект СВ.</strong> На больших масштабах доплеровский член мал, а ИСВ отбрасываем:</p>
+<div class="arithmatex">\[
+\Theta = \Theta_0 + \Psi = -\tfrac23\Psi + \Psi = \tfrac13\Psi_*,
+\qquad \Psi_* = \tfrac35\mathcal R \;\Rightarrow\; \Theta = \tfrac13\cdot\tfrac35\mathcal R = \tfrac15\mathcal R.
+\]</div>
+<p><strong>Шаг 4. Проекция на сферу.</strong> Используем <span class="arithmatex">\(e^{i\vb k\cdot\vb x} = 4\pi\sum_{\ell m}i^\ell j_\ell(kx)Y^*_{\ell m}(\hat{\vb k})Y_{\ell m}(\hat{\vb x})\)</span> с <span class="arithmatex">\(\vb x = D_M\hat{\vb n}\)</span>:</p>
+<div class="arithmatex">\[
+a_{\ell m} = 4\pi i^\ell\int\frac{\d^3k}{(2\pi)^3}\,\frac{\mathcal R_{\vb k}}{5}\,j_\ell(kD_M)\,Y^*_{\ell m}(\hat{\vb k}).
+\]</div>
+<p><strong>Шаг 5. Корреляция.</strong> <span class="arithmatex">\(\langle\mathcal R_{\vb k}\mathcal R^*_{\vb k'}\rangle = (2\pi)^3\delta_D(\vb k - \vb k')P_{\mathcal R}(k)\)</span>; интеграл по углам <span class="arithmatex">\(\int\d\Omega_k\,Y^*_{\ell m}Y_{\ell'm'} = \delta_{\ell\ell'}\delta_{mm'}\)</span>:</p>
+<div class="arithmatex">\[
+C_\ell = \frac{16\pi^2}{(2\pi)^3}\int k^2\d k\,\frac{P_{\mathcal R}}{25}\,j_\ell^2(kD_M)
+= 4\pi\int\frac{\d k}{k}\,\frac{\Delta^2_{\mathcal R}}{25}\,j_\ell^2(kD_M),
+\]</div>
+<p>где <span class="arithmatex">\(\Delta^2_{\mathcal R} = k^3P_{\mathcal R}/(2\pi^2)\)</span> (множитель <span class="arithmatex">\(16\pi^2\cdot2\pi^2/(8\pi^3) = 4\pi\)</span>).</p>
+<p><strong>Шаг 6. Плато.</strong> При <span class="arithmatex">\(n_s = 1\)</span> <span class="arithmatex">\(\Delta^2_{\mathcal R} = A_s\)</span>; с <span class="arithmatex">\(x = kD_M\)</span> и <span class="arithmatex">\(\int_0^\infty j_\ell^2(x)\,\d x/x = 1/[2\ell(\ell+1)]\)</span>:</p>
+<div class="arithmatex">\[
+C_\ell = \frac{4\pi A_s}{25}\cdot\frac{1}{2\ell(\ell+1)}
+\quad\Longrightarrow\quad
+\frac{\ell(\ell+1)C_\ell}{2\pi} = \frac{A_s}{25}.
+\]</div>
+<p><strong>Шаг 7. Число.</strong> <span class="arithmatex">\(T_0^2A_s/25 = (2.7255\times10^6\ \text{мкК})^2\cdot2.1\times10^{-9}/25 \approx 7.43\times10^{12}\cdot8.4\times10^{-11} \approx 620\)</span> мкК².</p>
+</details>
+<h2 id="174">17.4. Акустические колебания<a class="headerlink" href="#174" title="Permanent link">&para;</a></h2>
+<p>До рекомбинации фотоны и барионы связаны томсоновским рассеянием в одну жидкость с
+давлением фотонов и инерцией барионов. Её скорость звука</p>
+<div class="arithmatex">\[\begin{equation}
+c_s = \frac{1}{\sqrt{3(1+R)}}, \qquad R \equiv \frac{3\bar\rho_b}{4\bar\rho_\gamma}
+\approx 0.62\left(\frac{\Omega_bh^2}{0.0224}\right)\left(\frac{1091}{1+z}\right).
+\label{eq:sound-speed}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Определение.</strong> Для адиабатических возмущений <span class="arithmatex">\(c_s^2 = \delta p/\delta\rho\)</span>. Давление создают только фотоны: <span class="arithmatex">\(\delta p = \tfrac13\delta\rho_\gamma\)</span>; инерцию — фотоны и барионы: <span class="arithmatex">\(\delta\rho = \delta\rho_\gamma + \delta\rho_b\)</span>.</p>
+<p><strong>Шаг 2. Адиабатичность.</strong> <span class="arithmatex">\(\delta_b = \tfrac34\delta_\gamma\)</span> ⇒ <span class="arithmatex">\(\delta\rho_b = \tfrac34\dfrac{\bar\rho_b}{\bar\rho_\gamma}\delta\rho_\gamma = R\,\delta\rho_\gamma\)</span>.</p>
+<p><strong>Шаг 3. Итог.</strong></p>
+<div class="arithmatex">\[
+c_s^2 = \frac{\tfrac13\delta\rho_\gamma}{(1+R)\delta\rho_\gamma} = \frac{1}{3(1+R)}.
+\]</div>
+<p><strong>Шаг 4. Численное значение <span class="arithmatex">\(R\)</span>.</strong> <span class="arithmatex">\(\bar\rho_b/\bar\rho_\gamma = (\Omega_bh^2/\Omega_\gamma h^2)\,a\)</span>, <span class="arithmatex">\(a = 1/(1+z)\)</span>, <span class="arithmatex">\(\Omega_\gamma h^2 = 2.47\times10^{-5}\)</span>:</p>
+<div class="arithmatex">\[
+R = \frac{3\cdot0.0224}{4\cdot2.47\times10^{-5}\cdot1091} = \frac{0.0672}{0.1078} \approx 0.62.
+\]</div>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(R \to 0\)</span>: <span class="arithmatex">\(c_s = 1/\sqrt3\)</span> — чистый фотонный газ; <span class="arithmatex">\(R \to\infty\)</span>: <span class="arithmatex">\(c_s \to 0\)</span>.</p>
+</details>
+<p>В приближении сильной связи из уравнения Больцмана для фотонов и уравнения Эйлера для
+барионов получается уравнение вынужденного осциллятора:</p>
+<div class="arithmatex">\[\begin{equation}
+\left[(1+R)\Theta_0'\right]' + \frac{k^2}{3}\Theta_0 = -\frac{k^2}{3}(1+R)\Psi + \left[(1+R)\Phi'\right]'.
+\label{eq:acoustic}
+\end{equation}\]</div>
+<div class="admonition theorem">
+<p class="admonition-title">Решение при постоянных <span class="arithmatex">\(R\)</span> и <span class="arithmatex">\(\Psi = \Phi\)</span></p>
+<div class="arithmatex">\[\begin{equation}
+\Theta_0 + (1+R)\Psi = \left[\Theta_0 + (1+R)\Psi\right]_{\rm init}\cos(kr_s),
+\qquad r_s(\tau) = \int_0^\tau c_s\,\d\tau',
+\label{eq:acoustic-solution}
+\end{equation}\]</div>
+<p>где <span class="arithmatex">\(r_s\)</span> — <strong>звуковой горизонт</strong>. С начальным условием <span class="arithmatex">\(\Theta_0 = -\tfrac23\Psi\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+\left(\Theta_0 + \Psi\right)_* = \frac{\Psi}{3}\left[(1+3R)\cos(kr_{s*}) - 3R\right].
+\label{eq:effective-temp}
+\end{equation}\]</div>
+</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Упрощение уравнения.</strong> При <span class="arithmatex">\(R =\)</span> const и <span class="arithmatex">\(\Phi = \Psi =\)</span> const правая часть <span class="arithmatex">\(\eqref{eq:acoustic}\)</span> равна <span class="arithmatex">\(-\tfrac{k^2}{3}(1+R)\Psi\)</span> (производная <span class="arithmatex">\([(1+R)\Phi']'\)</span> исчезает); делим на <span class="arithmatex">\(1+R\)</span>:</p>
+<div class="arithmatex">\[
+\Theta_0'' + \frac{k^2}{3(1+R)}\Theta_0 = -\frac{k^2}{3}\Psi.
+\]</div>
+<p><strong>Шаг 2. Сдвиг равновесия.</strong> Для <span class="arithmatex">\(X = \Theta_0 + (1+R)\Psi\)</span> имеем <span class="arithmatex">\(X'' = \Theta_0''\)</span>, и <span class="arithmatex">\(\tfrac{k^2}{3(1+R)}X = \tfrac{k^2}{3(1+R)}\Theta_0 + \tfrac{k^2}{3}\Psi\)</span>:</p>
+<div class="arithmatex">\[
+X'' + k^2c_s^2X = 0,\qquad c_s^2 = \frac{1}{3(1+R)}.
+\]</div>
+<p><strong>Шаг 3. Решение.</strong> <span class="arithmatex">\(X = X_{\rm init}\cos(kc_s\tau) + \tfrac{X'_{\rm init}}{kc_s}\sin(kc_s\tau)\)</span>. Для адиабатической моды <span class="arithmatex">\(X'_{\rm init} = 0\)</span>; при постоянном <span class="arithmatex">\(c_s\)</span> <span class="arithmatex">\(kc_s\tau = kr_s\)</span> — это <span class="arithmatex">\(\eqref{eq:acoustic-solution}\)</span>.</p>
+<p><strong>Шаг 4. Начальное условие.</strong> <span class="arithmatex">\(\Theta_0 = -\tfrac23\Psi\)</span>: <span class="arithmatex">\(X_{\rm init} = \left(-\tfrac23 + 1 + R\right)\Psi = \tfrac{1+3R}{3}\Psi\)</span>.</p>
+<p><strong>Шаг 5. Эффективная температура.</strong></p>
+<div class="arithmatex">\[
+\Theta_0 + \Psi = X - R\Psi = \frac{1+3R}{3}\Psi\cos(kr_s) - R\Psi = \frac{\Psi}{3}\left[(1+3R)\cos(kr_s) - 3R\right].
+\]</div>
+<p><strong>Шаг 6. Экстремумы.</strong> <span class="arithmatex">\(\cos = -1\)</span> (сжатие): <span class="arithmatex">\(\tfrac{\Psi}{3}(-1-3R-3R) = -\tfrac{\Psi}{3}(1+6R)\)</span>. <span class="arithmatex">\(\cos = +1\)</span> (разрежение): <span class="arithmatex">\(\tfrac{\Psi}{3}(1 + 3R - 3R) = \tfrac{\Psi}{3}\)</span>. При <span class="arithmatex">\(R_* \approx 0.62\)</span>: <span class="arithmatex">\(1 + 6R \approx 4.7\)</span>.</p>
+<p><strong>Проверка.</strong> <span class="arithmatex">\(R = 0\)</span>, <span class="arithmatex">\(\cos = 1\)</span>: <span class="arithmatex">\(\Theta_0 + \Psi = \Psi/3\)</span> — совпадает с СВ <span class="arithmatex">\(\eqref{eq:sachs-wolfe}\)</span>.</p>
+</details>
+<p>Отсюда — вся феноменология пиков:</p>
+<ol>
+<li>
+<p><strong>Положения.</strong> Экстремумы <span class="arithmatex">\(|\Theta_0 + \Psi|\)</span> при <span class="arithmatex">\(k_n r_{s*} = n\pi\)</span>. Мода <span class="arithmatex">\(k\)</span> проецируется
+    на <span class="arithmatex">\(\ell \approx k D_M(z_*)\)</span>, где <span class="arithmatex">\(D_M\)</span> — сопутствующее расстояние до последнего рассеяния.
+    Пики стоят с шагом</p>
+<div class="arithmatex">\[\begin{equation}
+\ell_A = \pi\,\frac{D_M(z_*)}{r_{s*}} = \frac{\pi}{\theta_*},
+\qquad \ell_n \approx \ell_A\,(n - \varphi_n),\ \ \varphi_1 \approx 0.27,
+\label{eq:lA}
+\end{equation}\]</div>
+<p>где фазовый сдвиг <span class="arithmatex">\(\varphi_n\)</span> возникает из-за эволюции потенциалов и проекции.
+Угол <span class="arithmatex">\(\theta_*\)</span> — «стандартная линейка» на <span class="arithmatex">\(z \approx 1090\)</span>; Planck измерил
+<span class="arithmatex">\(100\theta_* = 1.0411 \pm 0.0003\)</span> — самое точное число в космологии.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Экстремумы по <span class="arithmatex">\(k\)</span>.</strong> <span class="arithmatex">\(|\cos(kr_{s*})| = 1\)</span> при <span class="arithmatex">\(k_nr_{s*} = n\pi\)</span>, т. е. <span class="arithmatex">\(k_n = n\pi/r_{s*}\)</span>.</p>
+<p><strong>Шаг 2. Проекция.</strong> Мода с волновым числом <span class="arithmatex">\(k\)</span> на расстоянии <span class="arithmatex">\(D_M\)</span> видна под углом <span class="arithmatex">\(\sim 1/(kD_M)\)</span>, т. е. <span class="arithmatex">\(\ell \approx kD_M\)</span>:</p>
+<div class="arithmatex">\[
+\ell_n \approx k_nD_M = n\pi\frac{D_M}{r_{s*}} = n\,\ell_A,\qquad \ell_A = \frac{\pi}{r_{s*}/D_M} = \frac{\pi}{\theta_*}.
+\]</div>
+<p><strong>Шаг 3. Числа.</strong> <span class="arithmatex">\(100\theta_* = 1.0411\)</span> ⇒ <span class="arithmatex">\(\ell_A = \pi/0.010411 \approx 302\)</span>; с <span class="arithmatex">\(\varphi_1 \approx 0.27\)</span>: <span class="arithmatex">\(\ell_1 \approx 302\cdot0.73 \approx 220\)</span>.</p>
+</details>
+</li>
+<li>
+<p><strong>Нечётные/чётные пики.</strong> Нечётные пики — сжатия в ямах (<span class="arithmatex">\(\cos = -1\)</span>), амплитуда
+    <span class="arithmatex">\(\propto 1 + 6R\)</span>; чётные — разрежения (<span class="arithmatex">\(\cos = +1\)</span>), амплитуда <span class="arithmatex">\(\propto 1\)</span>. Барионная
+    нагрузка сдвигает точку равновесия осциллятора и <strong>усиливает нечётные пики</strong> относительно
+    чётных. Отношение первого и второго пиков — чувствительная мера <span class="arithmatex">\(\Omega_bh^2\)</span>.</p>
+</li>
+<li>
+<p><strong>Радиационный разгон.</strong> Моды, вошедшие под горизонт в радиационную эпоху, видят
+    распадающиеся потенциалы (член <span class="arithmatex">\(\Phi''\)</span> в <span class="arithmatex">\(\eqref{eq:acoustic}\)</span>) и раскачиваются
+    резонансно. Чем меньше <span class="arithmatex">\(\Omega_mh^2\)</span>, тем позже равенство и тем сильнее подняты первые пики.
+    Третий пик относительно первых двух измеряет <span class="arithmatex">\(\Omega_mh^2\)</span>.</p>
+</li>
+<li>
+<p><strong>Доплеровский член</strong> <span class="arithmatex">\(\propto \sin(kr_s)\)</span> сдвинут по фазе на <span class="arithmatex">\(\pi/2\)</span> и заполняет
+    провалы между пиками.</p>
+</li>
+</ol>
+<h3 id="_1">Затухание Силка<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Фотоны диффундируют со средней длиной свободного пробега <span class="arithmatex">\(\lambda_{\rm C} = (n_e\sigma_Ta)^{-1}\)</span>
+(сопутствующей) и за время <span class="arithmatex">\(\tau\)</span> смещаются на <span class="arithmatex">\(\sim\sqrt{\lambda_{\rm C}\tau}\)</span>. Возмущения
+на меньших масштабах размываются:
+<span class="arithmatex">\(\Theta_0 \propto e^{-k^2/k_D^2}\)</span>,</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{1}{k_D^2} = \int_0^{\tau_*}\frac{\d\tau}{6(1+R)\,n_e\sigma_T a}\left[\frac{R^2}{1+R} + \frac{16}{15}\right].
+\label{eq:silk}
+\end{equation}\]</div>
+<p>Для Planck <span class="arithmatex">\(\ell_D = k_DD_M \approx 1300\text{–}1400\)</span>: начиная с <span class="arithmatex">\(\ell \sim 1000\)</span> спектр
+экспоненциально падает. Кроме того, поверхность последнего рассеяния имеет толщину
+<span class="arithmatex">\(\Delta z \approx 80\)</span>, что дополнительно усредняет мелкие масштабы.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Случайное блуждание.</strong> За время <span class="arithmatex">\(\d\tau\)</span> фотон делает <span class="arithmatex">\(\d N = \d\tau/\lambda_{\rm C}\)</span> шагов длины <span class="arithmatex">\(\lambda_{\rm C}\)</span>; квадраты смещений складываются:</p>
+<div class="arithmatex">\[
+\lambda_D^2 \sim \int\lambda_{\rm C}^2\,\d N = \int_0^{\tau_*}\lambda_{\rm C}\,\d\tau = \int_0^{\tau_*}\frac{\d\tau}{n_e\sigma_Ta}.
+\]</div>
+<p><strong>Шаг 2. Сравнение с <span class="arithmatex">\(\eqref{eq:silk}\)</span>.</strong> Точный расчёт (вязкость и теплопроводность в уравнениях для <span class="arithmatex">\(\Theta_0\)</span>, <span class="arithmatex">\(\Theta_1\)</span>, <span class="arithmatex">\(\Theta_2\)</span>) даёт тот же интеграл с множителем <span class="arithmatex">\(\tfrac{1}{6(1+R)}\left[\tfrac{R^2}{1+R} + \tfrac{16}{15}\right]\)</span>. При <span class="arithmatex">\(R \to 0\)</span>: <span class="arithmatex">\(\tfrac16\cdot\tfrac{16}{15} = \tfrac{8}{45}\)</span>, т. е. <span class="arithmatex">\(k_D^{-2} = \tfrac{8}{45}\int\lambda_{\rm C}\,\d\tau\)</span>.</p>
+<p><strong>Шаг 3. Оценка.</strong> <span class="arithmatex">\(\lambda_{\rm C} \propto a^2\)</span> растёт, и интеграл набирается к концу; тогда <span class="arithmatex">\(k_D^{-1} \sim \sqrt{\lambda_{\rm C}\tau_*}\)</span> — среднее геометрическое длины пробега и горизонта.</p>
+<p><strong>Проверка.</strong> Размерность: <span class="arithmatex">\([\d\tau/(n_e\sigma_Ta)] = \)</span> длина<span class="arithmatex">\(^2\)</span>, как и <span class="arithmatex">\(k_D^{-2}\)</span>.</p>
+</details>
+<h3 id="_2">Численный пример<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Вычислим звуковой горизонт и угловой масштаб для параметров Planck 2018.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Planck 2018 (TT,TE,EE+lowE+lensing)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">h</span><span class="p">,</span> <span class="n">obh2</span><span class="p">,</span> <span class="n">och2</span> <span class="o">=</span> <span class="mf">0.6736</span><span class="p">,</span> <span class="mf">0.02237</span><span class="p">,</span> <span class="mf">0.1200</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">c</span> <span class="o">=</span> <span class="mf">299792.458</span>                       <span class="c1"># км/с</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">H0</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">h</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">T0</span> <span class="o">=</span> <span class="mf">2.7255</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">ogh2</span> <span class="o">=</span> <span class="mf">2.47e-5</span><span class="o">*</span><span class="p">(</span><span class="n">T0</span><span class="o">/</span><span class="mf">2.725</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span>         <span class="c1"># фотоны</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">orh2</span> <span class="o">=</span> <span class="n">ogh2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">0.2271</span><span class="o">*</span><span class="mf">3.046</span><span class="p">)</span>       <span class="c1"># + нейтрино (безмассовые)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">omh2</span> <span class="o">=</span> <span class="n">obh2</span> <span class="o">+</span> <span class="n">och2</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">OL</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">omh2</span> <span class="o">+</span> <span class="n">orh2</span><span class="p">)</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">z_star</span> <span class="o">=</span> <span class="mf">1089.9</span>                      <span class="c1"># последнее рассеяние</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">E</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">omh2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">orh2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">OL</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">R</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="mi">3</span><span class="o">*</span><span class="n">obh2</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">ogh2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># R = 3 rho_b / (4 rho_gamma)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">cs</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">R</span><span class="p">(</span><span class="n">z</span><span class="p">)))</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">r_s</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">cs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">E</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">z_star</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">H0</span>   <span class="c1"># Мпк (сопутствующий)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">D_M</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="n">E</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">z_star</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">H0</span>            <span class="c1"># Мпк</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">theta</span> <span class="o">=</span> <span class="n">r_s</span><span class="o">/</span><span class="n">D_M</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"r_s = </span><span class="si">{</span><span class="n">r_s</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> Мпк,  D_M = </span><span class="si">{</span><span class="n">D_M</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> Мпк"</span><span class="p">)</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"100 theta_* = </span><span class="si">{</span><span class="mi">100</span><span class="o">*</span><span class="n">theta</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">,  l_A = pi/theta = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">theta</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"первый пик l_1 ~ l_A (1 - 0.267) = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">theta</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mf">0.267</span><span class="p">)</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># r_s = 144.5 Мпк,  D_M = 13894 Мпк</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1"># 100 theta_* = 1.0397,  l_A = pi/theta = 302</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1"># первый пик l_1 ~ l_A (1 - 0.267) = 221</span>
+</code></pre></div>
+<p>Отличие <span class="arithmatex">\(100\theta_*\)</span> от значения Planck (1.0411) на ~0.1 % связано с упрощённой
+моделью (фиксированный <span class="arithmatex">\(z_*\)</span>, безмассовые нейтрино) — это ровно тот уровень точности,
+на котором нужен полноценный больцмановский код (CAMB, CLASS).</p>
+<h2 id="175">17.5. Зависимость спектра от параметров<a class="headerlink" href="#175" title="Permanent link">&para;</a></h2>
+<h3 id="c_l">Интерактив: игрушечный спектр C_ℓ<a class="headerlink" href="#c_l" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Модель качественная</p>
+<p>Кривая ниже — <strong>не</strong> решение уравнений Больцмана. Положения пиков вычисляются честно
+по <span class="arithmatex">\(\eqref{eq:lA}\)</span> (интегралы для <span class="arithmatex">\(r_{s*}\)</span> и <span class="arithmatex">\(D_M\)</span> при фиксированных <span class="arithmatex">\(h = 0.674\)</span> и
+<span class="arithmatex">\(z_* = 1090\)</span>, плоская Вселенная), а форма — феноменологическая: квадрат
+<span class="arithmatex">\(\eqref{eq:effective-temp}\)</span> с ослабленной барионной модуляцией, доплеровский член,
+множитель «радиационного разгона», зависящий от <span class="arithmatex">\(\ell/\ell_{\rm eq}\)</span>, экспоненциальное
+затухание Силка и сшивка с плато Сакса–Вольфа. Абсолютные высоты пиков, ИСВ-эффект,
+толщина поверхности последнего рассеяния и линзирование учтены лишь грубо или не
+учтены. Модель передаёт <strong>направление</strong> изменений, а не числа.</p>
+</div>
+<p>Пунктир — спектр для параметров Planck 2018, сплошная линия — для выбранных значений.
+Попробуйте: увеличение <span class="arithmatex">\(\Omega_bh^2\)</span> поднимает нечётные пики и опускает чётные, а также
+сдвигает пики вправо (меньше <span class="arithmatex">\(r_s\)</span>); увеличение <span class="arithmatex">\(\Omega_mh^2\)</span> ослабляет радиационный
+разгон и понижает первые пики.</p>
+<div class="interactive" id="cmb-demo">
+  <canvas id="cmb-canvas" width="560" height="340"></canvas>
+  <div class="controls">
+    <label for="cmb-ob"><span class="arithmatex">\(\Omega_bh^2\)</span> = <span id="cmb-ob-val">0.0224</span></label>
+    <input type="range" id="cmb-ob" min="0.010" max="0.040" step="0.0005" value="0.02237">
+    <label for="cmb-om"><span class="arithmatex">\(\Omega_mh^2\)</span> = <span id="cmb-om-val">0.142</span></label>
+    <input type="range" id="cmb-om" min="0.08" max="0.25" step="0.002" value="0.1424">
+  </div>
+  <div class="controls">
+    <span><span class="arithmatex">\(r_{s*}\)</span> = <span id="cmb-rs">–</span> Мпк</span>
+    <span><span class="arithmatex">\(\ell_A\)</span> = <span id="cmb-la">–</span></span>
+    <span><span class="arithmatex">\(\ell_1\)</span> ≈ <span id="cmb-l1">–</span></span>
+    <span><span class="arithmatex">\(R_*\)</span> = <span id="cmb-R">–</span></span>
+  </div>
+</div>
+
+<p>Реальное вырождение тоньше: при фиксированном измеренном <span class="arithmatex">\(\theta_*\)</span> изменение <span class="arithmatex">\(\Omega_mh^2\)</span>
+компенсируется изменением <span class="arithmatex">\(h\)</span> (в интерактиве <span class="arithmatex">\(h\)</span> фиксировано). Поэтому <abbr title="Cosmic Microwave Background — реликтовое излучение">CMB</abbr> измеряет
+прежде всего <span class="arithmatex">\(\Omega_bh^2 = 0.0224 \pm 0.0001\)</span>, <span class="arithmatex">\(\Omega_ch^2 = 0.120 \pm 0.001\)</span> и <span class="arithmatex">\(\theta_*\)</span>,
+а <span class="arithmatex">\(H_0\)</span> получается лишь в рамках модели — отсюда «хаббловское напряжение» с локальными
+измерениями (<a href="../../part3-cosmology/12-distances/">глава 12</a>). Кривизна смещает все пики
+через <span class="arithmatex">\(D_M\)</span>: положение первого пика <span class="arithmatex">\(\ell_1 \approx 220\)</span> — классическое свидетельство
+плоскостности (BOOMERanG, MAXIMA, 2000).</p>
+<h2 id="176">17.6. Поляризация<a class="headerlink" href="#176" title="Permanent link">&para;</a></h2>
+<p>Томсоновское рассеяние <strong>квадрупольной</strong> анизотропии падающего излучения порождает
+линейную поляризацию. Квадруполь в системе покоя электрона создаётся градиентами скорости
+жидкости, поэтому поляризация следует за доплеровским членом и её пики сдвинуты по фазе
+относительно температурных. Поле поляризации на сфере раскладывается на</p>
+<ul>
+<li><strong>E-моды</strong> (градиентная, чётная часть) — генерируются скалярными возмущениями;</li>
+<li><strong>B-моды</strong> (вихревая, нечётная часть) — линейные скалярные возмущения их не создают;
+  первичные B-моды — сигнатура тензорных возмущений (гравитационных волн от инфляции,
+  <a href="../15-inflation/">§ 15.5</a>), амплитуда <span class="arithmatex">\(\propto r\)</span>.</li>
+</ul>
+<p>Измеряются спектры <span class="arithmatex">\(C_\ell^{TT}, C_\ell^{TE}, C_\ell^{EE}, C_\ell^{BB}\)</span>. Поляризация на
+<span class="arithmatex">\(\ell \lesssim 10\)</span> возникает при <strong>реионизации</strong> (<span class="arithmatex">\(z \approx 7\text{–}8\)</span>); её амплитуда
+измеряет оптическую толщу <span class="arithmatex">\(\tau = 0.054 \pm 0.007\)</span>, которая подавляет пики как
+<span class="arithmatex">\(e^{-2\tau}\)</span> и снимает вырождение с <span class="arithmatex">\(A_s\)</span>. Гравитационное <strong>линзирование</strong> крупномасштабной
+структурой превращает часть E-мод в B-моды на <span class="arithmatex">\(\ell \sim 1000\)</span> — этот сигнал уже надёжно
+измерен и мешает поиску первичных B-мод на <span class="arithmatex">\(\ell \sim 80\)</span>.</p>
+<h2 id="_3">Задачи<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>17.1. Диполь</summary>
+<p>Наблюдатель движется со скоростью <span class="arithmatex">\(v \ll 1\)</span> относительно изотропного чёрного тела с
+температурой <span class="arithmatex">\(T_0\)</span>. Покажите, что он видит <span class="arithmatex">\(T(\theta) \approx T_0(1 + v\cos\theta)\)</span>, и
+найдите <span class="arithmatex">\(v\)</span> по амплитуде диполя <span class="arithmatex">\(3.36\)</span> мК.</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Число заполнения <span class="arithmatex">\(f = 1/(e^{E/T}-1)\)</span> — инвариант, а наблюдаемая энергия фотона из направления
+<span class="arithmatex">\(\theta\)</span> равна <span class="arithmatex">\(E' = \gamma E(1+v\cos\theta)\)</span> (<a href="../../part1-math/01-special-relativity/">глава 1</a>).
+Значит спектр в каждом направлении — чернотельный с <span class="arithmatex">\(T(\theta) = \gamma T_0(1+v\cos\theta)\)</span>
+<span class="arithmatex">\(\approx T_0(1+v\cos\theta)\)</span> в первом порядке по <span class="arithmatex">\(v\)</span> (<span class="arithmatex">\(\theta\)</span> отсчитывается от направления движения). Отсюда <span class="arithmatex">\(v = 3.36\times10^{-3}/2.7255 \approx 1.23\times10^{-3}\)</span>, т. е. <span class="arithmatex">\(\approx 370\)</span> км/с.</p>
+</details>
+</details>
+<details class="question">
+<summary>17.2. Космическая дисперсия</summary>
+<p>Выведите <span class="arithmatex">\(\eqref{eq:cosmic-variance}\)</span> для гауссовых <span class="arithmatex">\(a_{\ell m}\)</span> и найдите неопределённость
+квадруполя. Почему низкий квадруполь в данных WMAP/Planck не считается аномалией?</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Оценка <span class="arithmatex">\(\hat C_\ell = \sum_m|a_{\ell m}|^2/(2\ell+1)\)</span> — сумма <span class="arithmatex">\(2\ell+1\)</span> квадратов гауссовых
+вещественных величин (с учётом <span class="arithmatex">\(a_{\ell,-m} = (-1)^m a^*_{\ell m}\)</span>), т. е. <span class="arithmatex">\(\chi^2\)</span> с <span class="arithmatex">\(2\ell+1\)</span>
+степенями свободы: <span class="arithmatex">\(\mathrm{Var}\hat C_\ell = 2C_\ell^2/(2\ell+1)\)</span>. Для <span class="arithmatex">\(\ell = 2\)</span>: <span class="arithmatex">\(\sqrt{2/5} \approx 63\%\)</span>.
+Низкое значение квадруполя отклоняется от <abbr title="Стандартная космологическая модель: Λ + холодная тёмная материя">ΛCDM</abbr> лишь на <span class="arithmatex">\(\sim 1\text{–}2\sigma\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>17.3. Плато Сакса–Вольфа</summary>
+<p>Используя <span class="arithmatex">\(\Theta = \mathcal R/5\)</span> и проекцию <span class="arithmatex">\(C_\ell = 4\pi\int\frac{\d k}{k}\,\frac{\Delta^2_{\mathcal R}}{25}\,j_\ell^2(kD_M)\)</span>,
+выведите <span class="arithmatex">\(\eqref{eq:sw-plateau}\)</span>. Указание: <span class="arithmatex">\(\int_0^\infty j_\ell^2(x)\,\d x/x = 1/[2\ell(\ell+1)]\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p>При <span class="arithmatex">\(\Delta^2_{\mathcal R} = A_s\)</span> = const: <span class="arithmatex">\(C_\ell = \dfrac{4\pi A_s}{25}\cdot\dfrac{1}{2\ell(\ell+1)}\)</span>,
+т. е. <span class="arithmatex">\(\ell(\ell+1)C_\ell/(2\pi) = A_s/25\)</span>. С <span class="arithmatex">\(A_s = 2.1\times10^{-9}\)</span> и <span class="arithmatex">\(T_0 = 2.7255\)</span> К это
+<span class="arithmatex">\(\approx 620\)</span> мкК², т. е. <span class="arithmatex">\(\Delta T_{\rm rms} \sim 25\)</span> мкК на логарифмический интервал по <span class="arithmatex">\(\ell\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>17.4. Барионная нагрузка</summary>
+<p>Найдите <span class="arithmatex">\(R_*\)</span> для <span class="arithmatex">\(\Omega_bh^2 = 0.0224\)</span> и отношение амплитуд <span class="arithmatex">\(|\Theta_0 + \Psi|\)</span> в
+первом сжатии и первом разрежении по <span class="arithmatex">\(\eqref{eq:effective-temp}\)</span>. Почему наблюдаемое
+отношение высот пиков (<span class="arithmatex">\(\approx 5700/2600\)</span>) меньше?</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(\Omega_\gamma h^2 = 2.47\times10^{-5}\)</span>: <span class="arithmatex">\(R_* = \dfrac{3\cdot0.0224}{4\cdot2.47\times10^{-5}\cdot1091} \approx 0.62\)</span>.
+Амплитуды <span class="arithmatex">\(\tfrac13(1+6R)|\Psi| \approx 1.57|\Psi|\)</span> и <span class="arithmatex">\(\tfrac13|\Psi|\)</span>; отношение мощностей <span class="arithmatex">\(\approx 22\)</span>.
+На деле оно гораздо меньше: доплеровский член заполняет провалы, <span class="arithmatex">\(R\)</span> и <span class="arithmatex">\(\Psi\)</span> меняются со временем
+(радиационный разгон сильнее действует на большие <span class="arithmatex">\(\ell\)</span>), а проекция <span class="arithmatex">\(j_\ell\)</span> и затухание Силка
+размывают пики. Качественно, однако, рост <span class="arithmatex">\(\Omega_bh^2\)</span> действительно увеличивает отношение
+первого пика ко второму.</p>
+</details>
+</details>
+<details class="question">
+<summary>17.5. Чувствительность к кривизне</summary>
+<p>Оцените, как сдвинется первый пик при <span class="arithmatex">\(\Omega_k = -0.05\)</span> (замкнутая Вселенная), если
+<span class="arithmatex">\(r_{s*}\)</span> не меняется, а сопутствующее угловое расстояние меняется как
+<span class="arithmatex">\(D_M = R_c\sin(\chi/R_c)\)</span>, <span class="arithmatex">\(R_c = (c/H_0)/\sqrt{|\Omega_k|}\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(\chi_* \approx 13\,900\)</span> Мпк, <span class="arithmatex">\(c/H_0 \approx 4450\)</span> Мпк, <span class="arithmatex">\(R_c \approx 19\,900\)</span> Мпк, <span class="arithmatex">\(\chi_*/R_c \approx 0.70\)</span>.
+<span class="arithmatex">\(D_M = R_c\sin0.70 \approx 0.92\chi_*\)</span> (без учёта изменения самого <span class="arithmatex">\(\chi_*\)</span>). Значит <span class="arithmatex">\(\ell_A\)</span> и <span class="arithmatex">\(\ell_1\)</span>
+уменьшаются на <span class="arithmatex">\(\approx 8\%\)</span>: <span class="arithmatex">\(\ell_1 \approx 200\)</span>. Замкнутая Вселенная сдвигает пики влево, открытая — вправо.</p>
+</details>
+</details>
+<h2 id="_4">Что дальше<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Звуковые волны, видимые в <abbr title="Cosmic Microwave Background — реликтовое излучение">CMB</abbr>, оставили отпечаток и в распределении вещества: барионная
+акустическая шкала <span class="arithmatex">\(r_s \approx 147\)</span> Мпк видна в корреляциях галактик сегодня. В
+<a href="../18-lss/">главе 18</a> мы проследим дальнейший рост возмущений тёмной материи, введём спектр
+мощности материи и передаточную функцию и обсудим, как структура становится нелинейной.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../16-perturbations/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 16. Линейная теория возмущений">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                16. Линейная теория возмущений
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../18-lss/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 18. Крупномасштабная структура">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                18. Крупномасштабная структура
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Bogdan Rudenko, SAI MSU · Текст — <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">CC BY-SA 4.0</a>, код — MIT · Обратная связь: <a href="mailto:rudenko.sci@gmail.com">rudenko.sci@gmail.com</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/calc.js"></script>
+      
+        <script src="../../javascripts/toc-progress.js"></script>
+      
+        <script src="../../javascripts/minkowski.js"></script>
+      
+        <script src="../../javascripts/sphere-transport.js"></script>
+      
+        <script src="../../javascripts/tidal.js"></script>
+      
+        <script src="../../javascripts/energy-conditions.js"></script>
+      
+        <script src="../../javascripts/effective-potential.js"></script>
+      
+        <script src="../../javascripts/bh-cones.js"></script>
+      
+        <script src="../../javascripts/gw-ring.js"></script>
+      
+        <script src="../../javascripts/friedmann.js"></script>
+      
+        <script src="../../javascripts/distances.js"></script>
+      
+        <script src="../../javascripts/saha.js"></script>
+      
+        <script src="../../javascripts/inflation.js"></script>
+      
+        <script src="../../javascripts/cmb.js"></script>
+      
+        <script src="../../javascripts/power-spectrum.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

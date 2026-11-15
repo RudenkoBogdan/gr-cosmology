@@ -1,0 +1,2319 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Учебник-хендбук по общей теории относительности и космологии">
+      
+      
+        <meta name="author" content="Bogdan Rudenko">
+      
+      
+        <link rel="canonical" href="https://rudenkobogdan.github.io/gr-cosmology/part1-math/02-manifolds-tensors/">
+      
+      
+        <link rel="prev" href="../01-special-relativity/">
+      
+      
+        <link rel="next" href="../03-connection/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>2. Многообразия и тензоры - ОТО и космология</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="ОТО и космология" class="md-header__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ОТО и космология
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Многообразия и тензоры
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ОТО и космология" class="md-nav__button md-logo" aria-label="ОТО и космология" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    ОТО и космология
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RudenkoBogdan/gr-cosmology" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gr-cosmology
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Главная
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обозначения и соглашения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Математический аппарат
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    I. Математический аппарат
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-special-relativity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. СТО на четырёхмерном языке
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Многообразия и тензоры
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Многообразия и тензоры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Гладкие многообразия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Касательные векторы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Касательные векторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Закон преобразования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Коммутатор векторных полей
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Кокасательное пространство и 1-формы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Тензоры
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Метрика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5. Метрика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример на Python: преобразование метрики
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Тензорные плотности и форма объёма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6. Тензорные плотности и форма объёма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дифференциальные формы (кратко)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Связность и ковариантная производная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-curvature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Кривизна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part2-gr/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. ОТО
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    II. ОТО
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/05-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Принцип эквивалентности и геодезические
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/06-einstein-equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Уравнения Эйнштейна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/07-schwarzschild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Решение Шварцшильда и классические тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/08-black-holes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Чёрные дыры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part2-gr/09-gravitational-waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Гравитационные волны
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part3-cosmology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Космология FRW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    III. Космология FRW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/10-frw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Однородная изотропная Вселенная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/11-friedmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Уравнения Фридмана и модели
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/12-distances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Расстояния и наблюдения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/13-thermal-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Термическая история
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3-cosmology/14-bbn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Первичный нуклеосинтез
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../part4-perturbations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IV. Возмущения, CMB, инфляция
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/15-inflation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Инфляция
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/16-perturbations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Линейная теория возмущений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/17-cmb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Реликтовое излучение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part4-perturbations/18-lss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Крупномасштабная структура
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Приложения
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Приложения
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Глоссарий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/bibliography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Литература
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Гладкие многообразия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Касательные векторы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Касательные векторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Закон преобразования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Коммутатор векторных полей
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Кокасательное пространство и 1-формы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Тензоры
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Метрика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5. Метрика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример на Python: преобразование метрики
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Тензорные плотности и форма объёма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6. Тензорные плотности и форма объёма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дифференциальные формы (кратко)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что дальше
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2">2. Многообразия и тензоры<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<p>В <abbr title="Специальная теория относительности">СТО</abbr> существуют глобальные инерциальные координаты, и векторы можно было мыслить как
+стрелки, соединяющие две точки. В искривлённом пространстве-времени так нельзя:
+на поверхности сферы «стрелка от Москвы до Сиднея» не является вектором, лежащим на сфере.
+Нужен язык, в котором векторы живут <strong>в точке</strong>, а координаты — лишь произвольные метки,
+не имеющие физического смысла. Этот язык — дифференциальная геометрия гладких многообразий.
+В этой главе мы построим касательные векторы, 1-формы, тензоры и метрику, не опираясь ни
+на какое объемлющее пространство. Принцип общей ковариантности <abbr title="Общая теория относительности">ОТО</abbr> будет сформулирован
+как простое требование: законы физики записываются тензорными уравнениями.</p>
+<h2 id="21">2.1. Гладкие многообразия<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<p>Интуитивно, многообразие — пространство, которое локально выглядит как <span class="arithmatex">\(\mathbb{R}^n\)</span>,
+но глобально может быть устроено сложнее (сфера, тор, пространство-время чёрной дыры).</p>
+<div class="admonition definition">
+<p class="admonition-title">Определение: карта и атлас</p>
+<p><strong>Картой</strong> на множестве <span class="arithmatex">\(M\)</span> называется пара <span class="arithmatex">\((U, \phi)\)</span>, где <span class="arithmatex">\(U \subset M\)</span>, а
+<span class="arithmatex">\(\phi: U \to \phi(U) \subset \mathbb{R}^n\)</span> — взаимно однозначное отображение на открытое
+множество. Компоненты <span class="arithmatex">\(\phi(p) = (x^1(p), \ldots, x^n(p))\)</span> — <strong>координаты</strong> точки <span class="arithmatex">\(p\)</span>.
+<strong>Гладкий атлас</strong> — набор карт <span class="arithmatex">\(\{(U_\alpha, \phi_\alpha)\}\)</span>, покрывающих <span class="arithmatex">\(M\)</span>, такой, что
+на пересечениях <span class="arithmatex">\(U_\alpha \cap U_\beta\)</span> функции перехода
+<span class="arithmatex">\(\phi_\beta \circ \phi_\alpha^{-1}\)</span> бесконечно дифференцируемы (класса <span class="arithmatex">\(C^\infty\)</span>).</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Определение: гладкое многообразие</p>
+<p><span class="arithmatex">\(n\)</span>-мерное <strong>гладкое многообразие</strong> — множество <span class="arithmatex">\(M\)</span> с максимальным гладким атласом
+(вместе с техническими условиями: хаусдорфовость и счётная база топологии).</p>
+</div>
+<p>Важно, что одной карты, как правило, не хватает.</p>
+<div class="admonition example">
+<p class="admonition-title">Пример: окружность и сфера</p>
+<p>Окружность <span class="arithmatex">\(S^1\)</span> нельзя покрыть одной картой угла <span class="arithmatex">\(\theta \in [0, 2\pi)\)</span>: образ должен
+быть открытым, а <span class="arithmatex">\([0,2\pi)\)</span> не открыто. Достаточно двух карт: <span class="arithmatex">\(\theta_1 \in (0, 2\pi)\)</span>
+и <span class="arithmatex">\(\theta_2 \in (-\pi, \pi)\)</span>. На двумерной сфере <span class="arithmatex">\(S^2\)</span> сферические координаты
+<span class="arithmatex">\((\theta,\phi)\)</span> вырождены на полюсах; минимальный атлас — две стереографические проекции
+из северного и южного полюсов:</p>
+<div class="arithmatex">\[
+X = \frac{x}{1 - z}, \quad Y = \frac{y}{1-z} \qquad\text{и}\qquad
+X' = \frac{x}{1+z}, \quad Y' = \frac{y}{1+z}.
+\]</div>
+<p>Функция перехода <span class="arithmatex">\((X', Y') = (X, Y)/(X^2+Y^2)\)</span> гладкая всюду вне полюсов.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Сумма квадратов в первой карте.</strong> Используем <span class="arithmatex">\(x^2 + y^2 = 1 - z^2\)</span> на сфере:</p>
+<div class="arithmatex">\[
+X^2 + Y^2 = \frac{x^2+y^2}{(1-z)^2} = \frac{(1-z)(1+z)}{(1-z)^2} = \frac{1+z}{1-z}.
+\]</div>
+<p><strong>Шаг 2. Деление.</strong> Делим <span class="arithmatex">\(X\)</span> на найденную сумму:</p>
+<div class="arithmatex">\[
+\frac{X}{X^2+Y^2} = \frac{x}{1-z}\cdot\frac{1-z}{1+z} = \frac{x}{1+z} = X',
+\]</div>
+<p>и точно так же <span class="arithmatex">\(Y/(X^2+Y^2) = Y'\)</span>.</p>
+<p><strong>Шаг 3. Гладкость.</strong> Функция <span class="arithmatex">\((X,Y)\mapsto (X,Y)/(X^2+Y^2)\)</span> — рациональная со знаменателем,
+обращающимся в нуль лишь при <span class="arithmatex">\(X = Y = 0\)</span>, т. е. в южном полюсе <span class="arithmatex">\(z = -1\)</span>, который не
+покрывается второй картой. На пересечении карт (сфера без обоих полюсов) переход <span class="arithmatex">\(C^\infty\)</span>.</p>
+</details>
+</div>
+<p>Отображение <span class="arithmatex">\(f: M \to N\)</span> называется гладким, если гладко его координатное представление
+<span class="arithmatex">\(\psi \circ f \circ \phi^{-1}\)</span>. Гладкие функции <span class="arithmatex">\(f: M \to \mathbb{R}\)</span> образуют
+алгебру <span class="arithmatex">\(C^\infty(M)\)</span> — она понадобится для определения векторов.</p>
+<p><strong>Замечание о координатах.</strong> Особенности метрики могут быть артефактом карты (как вырождение
+сферических координат на полюсе или горизонт Шварцшильда в координатах Шварцшильда,
+см. <a href="../../part2-gr/08-black-holes/">гл. 8</a>), а могут быть настоящими (сингулярность <span class="arithmatex">\(r=0\)</span>).
+Отличить одно от другого позволяют только инвариантные — тензорные — величины.</p>
+<h2 id="22">2.2. Касательные векторы<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<p>В <span class="arithmatex">\(\mathbb{R}^n\)</span> вектор <span class="arithmatex">\(\vb v\)</span> в точке однозначно задаёт производную по направлению
+<span class="arithmatex">\(\vb v \cdot \nabla f\)</span>. На многообразии эту связь используют как <strong>определение</strong>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Определение: касательный вектор</p>
+<p>Касательный вектор <span class="arithmatex">\(V\)</span> в точке <span class="arithmatex">\(p\)</span> — линейное отображение <span class="arithmatex">\(V: C^\infty(M) \to \mathbb{R}\)</span>,
+удовлетворяющее правилу Лейбница <span class="arithmatex">\(V(fg) = f(p)\,V(g) + g(p)\,V(f)\)</span>.
+Множество таких отображений — <strong>касательное пространство</strong> <span class="arithmatex">\(T_pM\)</span>, векторное пространство
+размерности <span class="arithmatex">\(n\)</span>.</p>
+</div>
+<p>Пусть <span class="arithmatex">\(x^\mu\)</span> — координаты в окрестности <span class="arithmatex">\(p\)</span>. Частные производные <span class="arithmatex">\(\pd_\mu \equiv \pd/\pd x^\mu\)</span>
+в точке <span class="arithmatex">\(p\)</span> — касательные векторы, и они образуют базис <span class="arithmatex">\(T_pM\)</span> (<strong>координатный базис</strong>).
+Любой вектор раскладывается как</p>
+<div class="arithmatex">\[\begin{equation}
+V = V^\mu \pd_\mu, \qquad V(f) = V^\mu \frac{\pd f}{\pd x^\mu}.
+\label{eq:vector-basis}
+\end{equation}\]</div>
+<p>Особенно естественно векторы возникают как касательные к кривым. Если <span class="arithmatex">\(x^\mu(\lambda)\)</span> —
+кривая, то производная функции вдоль неё</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\d f}{\d\lambda} = \frac{\d x^\mu}{\d\lambda}\,\pd_\mu f,
+\qquad\Longrightarrow\qquad V^\mu = \frac{\d x^\mu}{\d\lambda}.
+\label{eq:tangent-curve}
+\end{equation}\]</div>
+<h3 id="_1">Закон преобразования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Вектор как отображение не зависит от координат; меняются лишь базис и компоненты.
+При замене <span class="arithmatex">\(x^\mu \to x^{\mu'}\)</span> цепное правило даёт <span class="arithmatex">\(\pd_\mu = \frac{\pd x^{\mu'}}{\pd x^\mu}\pd_{\mu'}\)</span>,
+и из <span class="arithmatex">\(V = V^\mu\pd_\mu = V^{\mu'}\pd_{\mu'}\)</span> следует</p>
+<div class="arithmatex">\[\begin{equation}
+V^{\mu'} = \frac{\pd x^{\mu'}}{\pd x^\mu}\, V^\mu.
+\label{eq:vector-transform}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Цепное правило для базиса.</strong> Для любой функции <span class="arithmatex">\(f\)</span>, рассматриваемой как функция
+новых координат <span class="arithmatex">\(x^{\mu'}(x)\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\pd f}{\pd x^\mu} = \frac{\pd x^{\mu'}}{\pd x^\mu}\frac{\pd f}{\pd x^{\mu'}}
+\quad\Longrightarrow\quad
+\pd_\mu = \frac{\pd x^{\mu'}}{\pd x^\mu}\,\pd_{\mu'} .
+\]</div>
+<p><strong>Шаг 2. Подстановка в разложение вектора.</strong></p>
+<div class="arithmatex">\[
+V = V^\mu\pd_\mu = V^\mu\frac{\pd x^{\mu'}}{\pd x^\mu}\,\pd_{\mu'} .
+\]</div>
+<p><strong>Шаг 3. Сравнение коэффициентов.</strong> С другой стороны, <span class="arithmatex">\(V = V^{\mu'}\pd_{\mu'}\)</span>. Векторы
+<span class="arithmatex">\(\pd_{\mu'}\)</span> линейно независимы, поэтому коэффициенты при них совпадают:
+<span class="arithmatex">\(V^{\mu'} = \dfrac{\pd x^{\mu'}}{\pd x^\mu}V^\mu\)</span>.</p>
+<p><strong>Проверка.</strong> Для кривой <span class="arithmatex">\(V^\mu = \d x^\mu/\d\lambda\)</span>, и цепное правило
+<span class="arithmatex">\(\d x^{\mu'}/\d\lambda = (\pd x^{\mu'}/\pd x^\mu)\,\d x^\mu/\d\lambda\)</span> даёт тот же закон.</p>
+</details>
+<p>Матрица Якоби <span class="arithmatex">\(\pd x^{\mu'}/\pd x^\mu\)</span> заменяет здесь лоренцеву матрицу <span class="arithmatex">\(\Lambda^{\mu'}{}_\nu\)</span>
+из <a href="../01-special-relativity/">гл. 1</a>; в отличие от неё, она зависит от точки.
+Для линейного преобразования Лоренца <span class="arithmatex">\(x^{\mu'} = \Lambda^{\mu'}{}_\nu x^\nu\)</span> мы возвращаемся к <abbr title="Специальная теория относительности">СТО</abbr>.</p>
+<h3 id="_2">Коммутатор векторных полей<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Векторное поле — гладкое сопоставление вектора <span class="arithmatex">\(V_p \in T_pM\)</span> каждой точке. Композиция двух
+полей <span class="arithmatex">\(X(Y(f))\)</span> не является вектором (содержит вторые производные), но их <strong>коммутатор</strong> является:</p>
+<div class="arithmatex">\[\begin{equation}
+[X, Y](f) = X(Y(f)) - Y(X(f)), \qquad
+[X,Y]^\mu = X^\lambda \pd_\lambda Y^\mu - Y^\lambda \pd_\lambda X^\mu.
+\label{eq:commutator}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Действие <span class="arithmatex">\(X\)</span> на <span class="arithmatex">\(Y(f)\)</span>.</strong> <span class="arithmatex">\(Y(f) = Y^\nu\pd_\nu f\)</span>; по правилу Лейбница</p>
+<div class="arithmatex">\[
+X(Y(f)) = X^\lambda\pd_\lambda\big(Y^\nu\pd_\nu f\big)
+= X^\lambda(\pd_\lambda Y^\nu)\,\pd_\nu f + X^\lambda Y^\nu\,\pd_\lambda\pd_\nu f .
+\]</div>
+<p><strong>Шаг 2. То же с переставленными полями.</strong></p>
+<div class="arithmatex">\[
+Y(X(f)) = Y^\lambda(\pd_\lambda X^\nu)\,\pd_\nu f + Y^\lambda X^\nu\,\pd_\lambda\pd_\nu f .
+\]</div>
+<p><strong>Шаг 3. Сокращение вторых производных.</strong> Во втором члене шага 2 переименуем немые индексы
+<span class="arithmatex">\(\lambda\leftrightarrow\nu\)</span>: <span class="arithmatex">\(Y^\nu X^\lambda\pd_\nu\pd_\lambda f = X^\lambda Y^\nu\pd_\lambda\pd_\nu f\)</span>
+(частные производные коммутируют). Он совпадает со вторым членом шага 1 и сокращается при вычитании:</p>
+<div class="arithmatex">\[
+[X,Y](f) = \big(X^\lambda\pd_\lambda Y^\nu - Y^\lambda\pd_\lambda X^\nu\big)\pd_\nu f .
+\]</div>
+<p><strong>Шаг 4. Компоненты.</strong> Остался оператор первого порядка, т. е. вектор <span class="arithmatex">\([X,Y] = [X,Y]^\nu\pd_\nu\)</span>
+с компонентами из <span class="arithmatex">\(\eqref{eq:commutator}\)</span>.</p>
+</details>
+<p>Вторые производные сокращаются благодаря симметрии <span class="arithmatex">\(\pd_\mu\pd_\nu = \pd_\nu\pd_\mu\)</span>. Векторы
+координатного базиса коммутируют, <span class="arithmatex">\([\pd_\mu, \pd_\nu] = 0\)</span>; обратное (локально) тоже верно:
+набор <span class="arithmatex">\(n\)</span> линейно независимых коммутирующих полей можно сделать координатным базисом.
+Например, ортонормированные полярные векторы <span class="arithmatex">\(\hat e_r = \pd_r\)</span>, <span class="arithmatex">\(\hat e_\theta = r^{-1}\pd_\theta\)</span>
+не коммутируют: <span class="arithmatex">\([\hat e_r, \hat e_\theta] = -r^{-1}\hat e_\theta\)</span> — это <strong>неголономный</strong> базис.</p>
+<h2 id="23-1-">2.3. Кокасательное пространство и 1-формы<a class="headerlink" href="#23-1-" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Определение: 1-форма</p>
+<p><strong>1-форма</strong> (ковектор) в точке <span class="arithmatex">\(p\)</span> — линейное отображение <span class="arithmatex">\(\omega: T_pM \to \mathbb{R}\)</span>.
+Пространство 1-форм — <strong>кокасательное пространство</strong> <span class="arithmatex">\(T^*_pM\)</span>, двойственное к <span class="arithmatex">\(T_pM\)</span>.</p>
+</div>
+<p>Каноническая 1-форма — дифференциал функции, <span class="arithmatex">\(\d f(V) \equiv V(f)\)</span>. Дифференциалы координат
+<span class="arithmatex">\(\d x^\mu\)</span> образуют базис, двойственный к <span class="arithmatex">\(\pd_\mu\)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+\d x^\mu(\pd_\nu) = \frac{\pd x^\mu}{\pd x^\nu} = \delta^\mu_\nu.
+\label{eq:dual-basis}
+\end{equation}\]</div>
+<p>Раскладывая <span class="arithmatex">\(\omega = \omega_\mu \d x^\mu\)</span>, получаем <span class="arithmatex">\(\omega(V) = \omega_\mu V^\mu\)</span>, а для
+градиента <span class="arithmatex">\((\d f)_\mu = \pd_\mu f\)</span>. Компоненты 1-форм преобразуются обратной матрицей Якоби,</p>
+<div class="arithmatex">\[\begin{equation}
+\omega_{\mu'} = \frac{\pd x^\mu}{\pd x^{\mu'}}\,\omega_\mu,
+\label{eq:form-transform}
+\end{equation}\]</div>
+<p>так что свёртка <span class="arithmatex">\(\omega_\mu V^\mu\)</span> инвариантна. Геометрически 1-форму удобно представлять
+семейством поверхностей уровня; <span class="arithmatex">\(\omega(V)\)</span> — число поверхностей, «протыкаемых» вектором <span class="arithmatex">\(V\)</span>.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Компоненты 1-формы как её значения на базисе.</strong> <span class="arithmatex">\(\omega_\mu = \omega(\pd_\mu)\)</span>,
+поэтому в новых координатах <span class="arithmatex">\(\omega_{\mu'} = \omega(\pd_{\mu'})\)</span>.</p>
+<p><strong>Шаг 2. Разложение нового базиса по старому.</strong> По цепному правилу
+<span class="arithmatex">\(\pd_{\mu'} = \dfrac{\pd x^\mu}{\pd x^{\mu'}}\pd_\mu\)</span>, и по линейности <span class="arithmatex">\(\omega\)</span>:</p>
+<div class="arithmatex">\[
+\omega_{\mu'} = \frac{\pd x^\mu}{\pd x^{\mu'}}\,\omega(\pd_\mu) = \frac{\pd x^\mu}{\pd x^{\mu'}}\,\omega_\mu .
+\]</div>
+<p><strong>Шаг 3. Инвариантность свёртки.</strong> Подставляем <span class="arithmatex">\(\eqref{eq:form-transform}\)</span> и <span class="arithmatex">\(\eqref{eq:vector-transform}\)</span>:</p>
+<div class="arithmatex">\[
+\omega_{\mu'}V^{\mu'} = \frac{\pd x^\mu}{\pd x^{\mu'}}\frac{\pd x^{\mu'}}{\pd x^\nu}\,\omega_\mu V^\nu
+= \frac{\pd x^\mu}{\pd x^\nu}\,\omega_\mu V^\nu = \delta^\mu_\nu\,\omega_\mu V^\nu = \omega_\mu V^\mu .
+\]</div>
+<p>Во втором равенстве сумма по <span class="arithmatex">\(\mu'\)</span> — цепное правило для композиции <span class="arithmatex">\(x \to x' \to x\)</span>.</p>
+</details>
+<h2 id="24">2.4. Тензоры<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Определение: тензор типа <span class="arithmatex">\((k,l)\)</span></p>
+<p>Тензор <span class="arithmatex">\(T\)</span> типа <span class="arithmatex">\((k,l)\)</span> в точке <span class="arithmatex">\(p\)</span> — полилинейное отображение</p>
+<div class="arithmatex">\[
+T: \underbrace{T^*_pM \times\cdots\times T^*_pM}_{k} \times \underbrace{T_pM\times\cdots\times T_pM}_{l} \to \mathbb{R}.
+\]</div>
+<p>В координатном базисе
+<span class="arithmatex">\(T = T^{\mu_1\ldots\mu_k}{}_{\nu_1\ldots\nu_l}\;\pd_{\mu_1}\otimes\cdots\otimes\pd_{\mu_k}\otimes\d x^{\nu_1}\otimes\cdots\otimes\d x^{\nu_l}\)</span>.</p>
+</div>
+<p>Из <span class="arithmatex">\(\eqref{eq:vector-transform}\)</span> и <span class="arithmatex">\(\eqref{eq:form-transform}\)</span> следует общий закон преобразования:</p>
+<div class="arithmatex">\[\begin{equation}
+T^{\mu_1'\ldots\mu_k'}{}_{\nu_1'\ldots\nu_l'} =
+\frac{\pd x^{\mu_1'}}{\pd x^{\mu_1}}\cdots\frac{\pd x^{\mu_k'}}{\pd x^{\mu_k}}\;
+\frac{\pd x^{\nu_1}}{\pd x^{\nu_1'}}\cdots\frac{\pd x^{\nu_l}}{\pd x^{\nu_l'}}\;
+T^{\mu_1\ldots\mu_k}{}_{\nu_1\ldots\nu_l}.
+\label{eq:tensor-transform}
+\end{equation}\]</div>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Компоненты через значения на базисе.</strong> Возьмём для краткости тип <span class="arithmatex">\((1,1)\)</span>:
+<span class="arithmatex">\(T^\mu{}_\nu = T(\d x^\mu, \pd_\nu)\)</span>, и в новых координатах
+<span class="arithmatex">\(T^{\mu'}{}_{\nu'} = T(\d x^{\mu'}, \pd_{\nu'})\)</span>.</p>
+<p><strong>Шаг 2. Разложение нового базиса.</strong> Дифференциал функции <span class="arithmatex">\(x^{\mu'}(x)\)</span> и цепное правило дают</p>
+<div class="arithmatex">\[
+\d x^{\mu'} = \frac{\pd x^{\mu'}}{\pd x^\mu}\,\d x^\mu, \qquad
+\pd_{\nu'} = \frac{\pd x^\nu}{\pd x^{\nu'}}\,\pd_\nu .
+\]</div>
+<p><strong>Шаг 3. Полилинейность.</strong> Выносим коэффициенты из каждого слота:</p>
+<div class="arithmatex">\[
+T^{\mu'}{}_{\nu'} = \frac{\pd x^{\mu'}}{\pd x^\mu}\frac{\pd x^\nu}{\pd x^{\nu'}}\,T(\d x^\mu, \pd_\nu)
+= \frac{\pd x^{\mu'}}{\pd x^\mu}\frac{\pd x^\nu}{\pd x^{\nu'}}\,T^\mu{}_\nu .
+\]</div>
+<p><strong>Шаг 4. Общий случай.</strong> Для типа <span class="arithmatex">\((k,l)\)</span> то же делается в каждом из <span class="arithmatex">\(k+l\)</span> слотов:
+каждый верхний индекс даёт множитель <span class="arithmatex">\(\pd x^{\mu'}/\pd x^\mu\)</span>, каждый нижний —
+<span class="arithmatex">\(\pd x^\nu/\pd x^{\nu'}\)</span>, что и есть <span class="arithmatex">\(\eqref{eq:tensor-transform}\)</span>.</p>
+</details>
+<p>Операции с тензорами, дающие снова тензоры:</p>
+<ul>
+<li><strong>линейные комбинации</strong> тензоров одного типа;</li>
+<li><strong>тензорное произведение</strong> <span class="arithmatex">\((S\otimes T)\)</span> — тип <span class="arithmatex">\((k+k', l+l')\)</span>, компоненты перемножаются;</li>
+<li><strong>свёртка</strong> верхнего индекса с нижним, <span class="arithmatex">\(S^{\mu\rho}{}_{\rho\nu}\)</span> — тип <span class="arithmatex">\((k-1,l-1)\)</span>;</li>
+<li><strong>симметризация и антисимметризация</strong>:
+  <span class="arithmatex">\(T_{(\mu\nu)} = \tfrac12(T_{\mu\nu} + T_{\nu\mu})\)</span>, <span class="arithmatex">\(T_{[\mu\nu]} = \tfrac12(T_{\mu\nu}-T_{\nu\mu})\)</span>,
+  в общем случае <span class="arithmatex">\(T_{[\mu_1\ldots\mu_n]} = \frac{1}{n!}\sum_\sigma \mathrm{sgn}(\sigma)\,T_{\mu_{\sigma(1)}\ldots\mu_{\sigma(n)}}\)</span>.</li>
+</ul>
+<div class="admonition theorem">
+<p class="admonition-title">Принцип общей ковариантности</p>
+<p>Если тензорное уравнение <span class="arithmatex">\(A^{\mu\ldots}{}_{\nu\ldots} = B^{\mu\ldots}{}_{\nu\ldots}\)</span> выполнено
+в одной системе координат, оно выполнено в любой: разность <span class="arithmatex">\(A-B\)</span> — тензор, а тензор,
+равный нулю в одной системе, равен нулю во всех согласно <span class="arithmatex">\(\eqref{eq:tensor-transform}\)</span>.</p>
+</div>
+<p>Поэтому физические законы в <abbr title="Общая теория относительности">ОТО</abbr> записываются тензорными уравнениями. Обратите внимание,
+что набор чисел с индексами ещё не тензор: например, частные производные компонент вектора
+<span class="arithmatex">\(\pd_\mu V^\nu\)</span> <strong>не</strong> преобразуются по <span class="arithmatex">\(\eqref{eq:tensor-transform}\)</span> — эта проблема
+решается в <a href="../03-connection/">гл. 3</a>.</p>
+<h2 id="25">2.5. Метрика<a class="headerlink" href="#25" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Определение: метрический тензор</p>
+<p><strong>Метрика</strong> <span class="arithmatex">\(g\)</span> — симметричный невырожденный тензор типа <span class="arithmatex">\((0,2)\)</span>:
+<span class="arithmatex">\(g_{\mu\nu} = g_{\nu\mu}\)</span>, <span class="arithmatex">\(\det g_{\mu\nu} \ne 0\)</span>. Её обратная <span class="arithmatex">\(g^{\mu\nu}\)</span> определяется
+условием <span class="arithmatex">\(g^{\mu\lambda}g_{\lambda\nu} = \delta^\mu_\nu\)</span>.</p>
+</div>
+<p>Метрика задаёт скалярное произведение <span class="arithmatex">\(g(V,W) = g_{\mu\nu}V^\mu W^\nu\)</span>, длины кривых и
+интервал</p>
+<div class="arithmatex">\[\begin{equation}
+\d s^2 = g_{\mu\nu}\,\d x^\mu \d x^\nu .
+\label{eq:line-element}
+\end{equation}\]</div>
+<p>Она же даёт канонический изоморфизм <span class="arithmatex">\(T_pM \cong T^*_pM\)</span> — подъём и опускание индексов:
+<span class="arithmatex">\(V_\mu = g_{\mu\nu}V^\nu\)</span>, <span class="arithmatex">\(\omega^\mu = g^{\mu\nu}\omega_\nu\)</span>. Например, градиент
+<span class="arithmatex">\(\nabla^\mu f = g^{\mu\nu}\pd_\nu f\)</span> — уже вектор.</p>
+<p><strong>Сигнатура.</strong> В любой точке можно линейной заменой координат привести <span class="arithmatex">\(g_{\mu\nu}\)</span> к виду
+<span class="arithmatex">\(\mathrm{diag}(\pm1,\ldots,\pm1)\)</span>; число плюсов и минусов не зависит от замены (закон инерции
+Сильвестра). Метрика сигнатуры <span class="arithmatex">\((+,\ldots,+)\)</span> называется римановой, сигнатуры <span class="arithmatex">\((-,+,+,+)\)</span> —
+лоренцевой; пространство-время <abbr title="Общая теория относительности">ОТО</abbr> — четырёхмерное лоренцево многообразие.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Локально инерциальные координаты</p>
+<p>В окрестности любой точки <span class="arithmatex">\(p\)</span> лоренцева многообразия существуют координаты
+<span class="arithmatex">\(x^{\hat\mu}\)</span>, в которых</p>
+<div class="arithmatex">\[\begin{equation}
+g_{\hat\mu\hat\nu}(p) = \eta_{\hat\mu\hat\nu}, \qquad \pd_{\hat\sigma}g_{\hat\mu\hat\nu}(p) = 0 ,
+\label{eq:rnc}
+\end{equation}\]</div>
+<p>тогда как вторые производные в общем случае обратить в нуль нельзя.</p>
+</div>
+<details class="info">
+<summary>Подсчёт степеней свободы (доказательство теоремы)</summary>
+<p>Разложим <span class="arithmatex">\(x^\mu = x^\mu(x^{\hat\mu})\)</span> в ряд Тейлора около <span class="arithmatex">\(p\)</span>. Коэффициенты
+<span class="arithmatex">\(\pd x^\mu/\pd x^{\hat\mu}\)</span> — 16 чисел; с их помощью можно занулить 10 компонент
+<span class="arithmatex">\(g_{\hat\mu\hat\nu} - \eta_{\hat\mu\hat\nu}\)</span>, а 6 оставшихся — лоренцевы преобразования,
+сохраняющие <span class="arithmatex">\(\eta\)</span>. Вторые производные <span class="arithmatex">\(\pd^2 x^\mu/\pd x^{\hat\alpha}\pd x^{\hat\beta}\)</span> —
+<span class="arithmatex">\(4\times 10 = 40\)</span> чисел — ровно столько, сколько компонент у <span class="arithmatex">\(\pd_{\hat\sigma}g_{\hat\mu\hat\nu}\)</span>
+(<span class="arithmatex">\(4\times10\)</span>), их все можно занулить. Третьи производные дают <span class="arithmatex">\(4\times 20 = 80\)</span> чисел,
+а у <span class="arithmatex">\(\pd_{\hat\rho}\pd_{\hat\sigma}g_{\hat\mu\hat\nu}\)</span> их <span class="arithmatex">\(10\times10=100\)</span>. Остаются
+<span class="arithmatex">\(20\)</span> неустранимых комбинаций — ровно число независимых компонент тензора Римана в
+четырёх измерениях (см. <a href="../04-curvature/">гл. 4</a>).</p>
+</details>
+<p>Это математическое выражение <strong>принципа эквивалентности</strong>: в малой окрестности любого события
+пространство-время выглядит как пространство Минковского, а гравитация (кривизна) проявляется
+лишь во вторых производных метрики.</p>
+<div class="admonition example">
+<p class="admonition-title">Пример: метрики, которые встретятся в курсе</p>
+<ul>
+<li>Плоское пространство в сферических координатах:
+  <span class="arithmatex">\(\d s^2 = -\d t^2 + \d r^2 + r^2(\d\theta^2 + \sin^2\theta\,\d\phi^2)\)</span>.</li>
+<li>Двумерная сфера радиуса <span class="arithmatex">\(a\)</span>: <span class="arithmatex">\(\d s^2 = a^2(\d\theta^2 + \sin^2\theta\,\d\phi^2)\)</span>.</li>
+<li>Плоская вселенная Фридмана: <span class="arithmatex">\(\d s^2 = -\d t^2 + a^2(t)\,(\d x^2+\d y^2+\d z^2)\)</span>
+  (см. <a href="../../part3-cosmology/10-frw/">гл. 10</a>).</li>
+<li>Шварцшильд: <span class="arithmatex">\(\d s^2 = -\left(1-\frac{2GM}{r}\right)\d t^2 + \left(1-\frac{2GM}{r}\right)^{-1}\d r^2 + r^2\d\Omega^2\)</span>.</li>
+</ul>
+</div>
+<h3 id="python">Пример на Python: преобразование метрики<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<p>Закон <span class="arithmatex">\(\eqref{eq:tensor-transform}\)</span> для метрики, <span class="arithmatex">\(g_{\mu'\nu'} = J^\mu{}_{\mu'}J^\nu{}_{\nu'}g_{\mu\nu}\)</span>
+с <span class="arithmatex">\(J^\mu{}_{\mu'} = \pd x^\mu/\pd x^{\mu'}\)</span>, — это матричное равенство <span class="arithmatex">\(g' = J^{\mathsf T} g J\)</span>.
+Проверим с помощью <code>sympy</code>, что евклидова метрика в сферических координатах имеет знакомый вид,
+и найдём метрику сферы, индуцированную вложением в <span class="arithmatex">\(\mathbb{R}^3\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">r</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">ph</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'r theta phi a'</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># декартовы координаты как функции сферических</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">X</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">r</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ph</span><span class="p">),</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>               <span class="n">r</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ph</span><span class="p">),</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>               <span class="n">r</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">th</span><span class="p">)])</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">J</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">jacobian</span><span class="p">([</span><span class="n">r</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">ph</span><span class="p">])</span>          <span class="c1"># J^mu_{mu'} = dx^mu / dx^{mu'}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">g_cart</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>                   <span class="c1"># delta_ij</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">g_sph</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">J</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">g_cart</span> <span class="o">*</span> <span class="n">J</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">g_sph</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Matrix([[1, 0, 0], [0, r**2, 0], [0, 0, r**2*sin(theta)**2]])</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># индуцированная метрика на сфере r = a: оставляем только (theta, phi)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">Xs</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">Js</span> <span class="o">=</span> <span class="n">Xs</span><span class="o">.</span><span class="n">jacobian</span><span class="p">([</span><span class="n">th</span><span class="p">,</span> <span class="n">ph</span><span class="p">])</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">Js</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">Js</span><span class="p">))</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># Matrix([[a**2, 0], [0, a**2*sin(theta)**2]])</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># элемент объёма sqrt|g|</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">g_sph</span><span class="o">.</span><span class="n">det</span><span class="p">())))</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># r**2*Abs(sin(theta))   (= r^2 sin(theta) при 0&lt;theta&lt;pi)</span>
+</code></pre></div>
+<h2 id="26">2.6. Тензорные плотности и форма объёма<a class="headerlink" href="#26" title="Permanent link">&para;</a></h2>
+<p>Определитель метрики <span class="arithmatex">\(g \equiv \det g_{\mu\nu}\)</span> — не скаляр. Из <span class="arithmatex">\(g' = J^{\mathsf T}gJ\)</span></p>
+<div class="arithmatex">\[\begin{equation}
+g(x') = \left|\frac{\pd x}{\pd x'}\right|^{2} g(x),
+\label{eq:det-transform}
+\end{equation}\]</div>
+<p>где <span class="arithmatex">\(|\pd x/\pd x'|\)</span> — якобиан. Объекты, преобразующиеся как тензоры, умноженные на степень
+якобиана, называют <strong>тензорными плотностями</strong>; <span class="arithmatex">\(g\)</span> — плотность веса 2 (в соглашении, где
+множитель <span class="arithmatex">\(|\pd x/\pd x'|^{w}\)</span>). Так как <span class="arithmatex">\(\d^n x' = |\pd x'/\pd x|\,\d^n x\)</span>, комбинация</p>
+<div class="arithmatex">\[\begin{equation}
+\sqrt{|g|}\;\d^n x
+\label{eq:volume-element}
+\end{equation}\]</div>
+<p>инвариантна. Это <strong>инвариантный элемент объёма</strong>; интеграл скаляра <span class="arithmatex">\(\int f\sqrt{|g|}\,\d^nx\)</span>
+не зависит от координат. Им будет записано действие Эйнштейна–Гильберта
+<span class="arithmatex">\(S = \frac{1}{16\pi G}\int R\sqrt{-g}\,\d^4x\)</span> (в лоренцевой сигнатуре <span class="arithmatex">\(g&lt;0\)</span>).</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Закон для метрики в матричной форме.</strong> <span class="arithmatex">\(g_{\mu'\nu'} = J^\mu{}_{\mu'}J^\nu{}_{\nu'}g_{\mu\nu}\)</span>,
+<span class="arithmatex">\(J^\mu{}_{\mu'} = \pd x^\mu/\pd x^{\mu'}\)</span>, т. е. <span class="arithmatex">\(g' = J^{\mathsf T}gJ\)</span>.</p>
+<p><strong>Шаг 2. Определитель.</strong> Используем <span class="arithmatex">\(\det(AB) = \det A\det B\)</span> и <span class="arithmatex">\(\det J^{\mathsf T} = \det J\)</span>:</p>
+<div class="arithmatex">\[
+g' = \det(J^{\mathsf T})\,\det g\,\det J = (\det J)^2\,g = \left|\frac{\pd x}{\pd x'}\right|^2 g ,
+\]</div>
+<p>это <span class="arithmatex">\(\eqref{eq:det-transform}\)</span>.</p>
+<p><strong>Шаг 3. Корень из модуля.</strong> <span class="arithmatex">\(\sqrt{|g'|} = \left|\dfrac{\pd x}{\pd x'}\right|\sqrt{|g|}\)</span>.</p>
+<p><strong>Шаг 4. Элемент объёма.</strong> По формуле замены переменных в кратном интеграле
+<span class="arithmatex">\(\d^n x' = \left|\dfrac{\pd x'}{\pd x}\right|\d^n x\)</span>, а якобианы взаимно обратных отображений
+перемножаются в единицу:</p>
+<div class="arithmatex">\[
+\sqrt{|g'|}\,\d^nx' = \left|\frac{\pd x}{\pd x'}\right|\left|\frac{\pd x'}{\pd x}\right|\sqrt{|g|}\,\d^nx
+= \sqrt{|g|}\,\d^nx .
+\]</div>
+<p><strong>Проверка.</strong> Плоское пространство в сферических координатах: <span class="arithmatex">\(g = r^4\sin^2\theta\)</span>,
+<span class="arithmatex">\(\sqrt{g}\,\d r\,\d\theta\,\d\phi = r^2\sin\theta\,\d r\,\d\theta\,\d\phi\)</span> — знакомый элемент объёма.</p>
+</details>
+<p>Символ Леви-Чивиты <span class="arithmatex">\(\tilde\epsilon_{\mu_1\ldots\mu_n}\)</span> (<span class="arithmatex">\(+1\)</span> для чётной перестановки
+<span class="arithmatex">\(01\ldots(n-1)\)</span>, <span class="arithmatex">\(-1\)</span> для нечётной, <span class="arithmatex">\(0\)</span> иначе) по тем же причинам — плотность. Тензором
+является</p>
+<div class="arithmatex">\[\begin{equation}
+\epsilon_{\mu_1\ldots\mu_n} = \sqrt{|g|}\;\tilde\epsilon_{\mu_1\ldots\mu_n},
+\label{eq:levi-civita}
+\end{equation}\]</div>
+<p><strong>форма объёма</strong>. Она полностью антисимметрична, т. е. является <span class="arithmatex">\(n\)</span>-формой.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Определитель через символ Леви-Чивиты.</strong> Для любой матрицы <span class="arithmatex">\(M^\mu{}_{\mu'}\)</span></p>
+<div class="arithmatex">\[
+\tilde\epsilon_{\mu_1\ldots\mu_n}M^{\mu_1}{}_{\mu_1'}\cdots M^{\mu_n}{}_{\mu_n'} = \det M\;\tilde\epsilon_{\mu_1'\ldots\mu_n'} ,
+\]</div>
+<p>так как левая часть полностью антисимметрична по <span class="arithmatex">\(\mu_i'\)</span> и при <span class="arithmatex">\(\mu_i' = (0,1,\ldots,n-1)\)</span>
+совпадает с разложением определителя.</p>
+<p><strong>Шаг 2. Символ — не тензор.</strong> Возьмём <span class="arithmatex">\(M = J\)</span>, <span class="arithmatex">\(J^\mu{}_{\mu'} = \pd x^\mu/\pd x^{\mu'}\)</span>.
+Числа <span class="arithmatex">\(\tilde\epsilon\)</span> одинаковы во всех картах, поэтому тензорный закон
+<span class="arithmatex">\(\eqref{eq:tensor-transform}\)</span> дал бы <span class="arithmatex">\(\det J\,\tilde\epsilon_{\mu_1'\ldots\mu_n'}\)</span> вместо
+<span class="arithmatex">\(\tilde\epsilon_{\mu_1'\ldots\mu_n'}\)</span>: лишний множитель <span class="arithmatex">\(\det J = |\pd x/\pd x'|\)</span> (с учётом знака).</p>
+<p><strong>Шаг 3. Компенсация множителем <span class="arithmatex">\(\sqrt{|g|}\)</span>.</strong> Тензорный закон для <span class="arithmatex">\(\epsilon\)</span> требует</p>
+<div class="arithmatex">\[
+J^{\mu_1}{}_{\mu_1'}\cdots J^{\mu_n}{}_{\mu_n'}\sqrt{|g|}\,\tilde\epsilon_{\mu_1\ldots\mu_n}
+= \det J\,\sqrt{|g|}\;\tilde\epsilon_{\mu_1'\ldots\mu_n'} .
+\]</div>
+<p>По шагу 3 предыдущего блока <span class="arithmatex">\(\sqrt{|g'|} = |\det J|\sqrt{|g|}\)</span>, так что правая часть равна
+<span class="arithmatex">\(\mathrm{sgn}(\det J)\sqrt{|g'|}\,\tilde\epsilon_{\mu_1'\ldots\mu_n'} = \mathrm{sgn}(\det J)\,\epsilon_{\mu_1'\ldots\mu_n'}\)</span>.
+Для замен, сохраняющих ориентацию (<span class="arithmatex">\(\det J &gt; 0\)</span>), <span class="arithmatex">\(\epsilon\)</span> преобразуется как тензор.</p>
+</details>
+<h3 id="_3">Дифференциальные формы (кратко)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Полностью антисимметричные тензоры типа <span class="arithmatex">\((0,p)\)</span> называют <span class="arithmatex">\(p\)</span>-формами. Для них определены
+внешнее произведение <span class="arithmatex">\((A\wedge B)_{\mu_1\ldots\mu_{p+q}} = \frac{(p+q)!}{p!\,q!}A_{[\mu_1\ldots\mu_p}B_{\mu_{p+1}\ldots\mu_{p+q}]}\)</span>
+и <strong>внешняя производная</strong></p>
+<div class="arithmatex">\[\begin{equation}
+(\d A)_{\mu_1\ldots\mu_{p+1}} = (p+1)\,\pd_{[\mu_1}A_{\mu_2\ldots\mu_{p+1}]},
+\label{eq:exterior-derivative}
+\end{equation}\]</div>
+<p>которая, в отличие от <span class="arithmatex">\(\pd_\mu A_\nu\)</span>, тензорна (неоднородные члены в преобразовании
+сокращаются при антисимметризации) и удовлетворяет <span class="arithmatex">\(\d(\d A) = 0\)</span>. Пример: тензор
+электромагнитного поля <span class="arithmatex">\(F = \d A\)</span>, <span class="arithmatex">\(F_{\mu\nu} = \pd_\mu A_\nu - \pd_\nu A_\mu\)</span>; тождество
+<span class="arithmatex">\(\d F = 0\)</span> — это однородные уравнения Максвелла <span class="arithmatex">\(\pd_{[\lambda}F_{\mu\nu]} = 0\)</span>.</p>
+<details class="calc">
+<summary>Вычисления</summary>
+<p><strong>Шаг 1. Преобразование <span class="arithmatex">\(\pd_\mu A_\nu\)</span>.</strong> Из <span class="arithmatex">\(A_{\nu'} = \dfrac{\pd x^\nu}{\pd x^{\nu'}}A_\nu\)</span> по правилу Лейбница:</p>
+<div class="arithmatex">\[
+\pd_{\mu'}A_{\nu'} = \frac{\pd x^\mu}{\pd x^{\mu'}}\frac{\pd x^\nu}{\pd x^{\nu'}}\,\pd_\mu A_\nu
++ \frac{\pd^2 x^\nu}{\pd x^{\mu'}\pd x^{\nu'}}\,A_\nu .
+\]</div>
+<p><strong>Шаг 2. Антисимметризация.</strong> Неоднородный член симметричен по <span class="arithmatex">\(\mu'\nu'\)</span> (смешанные
+производные коммутируют), поэтому в <span class="arithmatex">\(\pd_{\mu'}A_{\nu'} - \pd_{\nu'}A_{\mu'}\)</span> он сокращается:</p>
+<div class="arithmatex">\[
+F_{\mu'\nu'} = \frac{\pd x^\mu}{\pd x^{\mu'}}\frac{\pd x^\nu}{\pd x^{\nu'}}\big(\pd_\mu A_\nu - \pd_\nu A_\mu\big)
+= \frac{\pd x^\mu}{\pd x^{\mu'}}\frac{\pd x^\nu}{\pd x^{\nu'}}F_{\mu\nu} .
+\]</div>
+<p>(Во втором слагаемом переименованы немые индексы <span class="arithmatex">\(\mu\leftrightarrow\nu\)</span>.) Совпадение с
+<span class="arithmatex">\(\eqref{eq:exterior-derivative}\)</span> при <span class="arithmatex">\(p = 1\)</span>: <span class="arithmatex">\(2\pd_{[\mu}A_{\nu]} = \pd_\mu A_\nu - \pd_\nu A_\mu\)</span>.</p>
+<p><strong>Шаг 3. <span class="arithmatex">\(\d F = 0\)</span>.</strong> Сумма по циклическим перестановкам (для антисимметричного <span class="arithmatex">\(F\)</span>
+она пропорциональна <span class="arithmatex">\(\pd_{[\lambda}F_{\mu\nu]}\)</span>):</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\pd_\lambda F_{\mu\nu} + \pd_\mu F_{\nu\lambda} + \pd_\nu F_{\lambda\mu}
+&amp;= \pd_\lambda\pd_\mu A_\nu - \pd_\lambda\pd_\nu A_\mu + \pd_\mu\pd_\nu A_\lambda - \pd_\mu\pd_\lambda A_\nu
++ \pd_\nu\pd_\lambda A_\mu - \pd_\nu\pd_\mu A_\lambda\\
+&amp;= 0 ,
+\end{aligned}
+\]</div>
+<p>так как члены попарно сокращаются: <span class="arithmatex">\(\pd_\lambda\pd_\mu A_\nu\)</span> с <span class="arithmatex">\(-\pd_\mu\pd_\lambda A_\nu\)</span>,
+<span class="arithmatex">\(-\pd_\lambda\pd_\nu A_\mu\)</span> с <span class="arithmatex">\(\pd_\nu\pd_\lambda A_\mu\)</span>, <span class="arithmatex">\(\pd_\mu\pd_\nu A_\lambda\)</span> с <span class="arithmatex">\(-\pd_\nu\pd_\mu A_\lambda\)</span>.</p>
+</details>
+<h2 id="_4">Задачи<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>2.1. Коммутатор полярного базиса</summary>
+<p>На плоскости <span class="arithmatex">\(\hat e_r = \pd_r\)</span>, <span class="arithmatex">\(\hat e_\theta = r^{-1}\pd_\theta\)</span>. Вычислите
+<span class="arithmatex">\([\hat e_r, \hat e_\theta]\)</span> и убедитесь, что этот ортонормированный базис не координатный.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\([\hat e_r, \hat e_\theta] f = \pd_r(r^{-1}\pd_\theta f) - r^{-1}\pd_\theta\pd_r f = -r^{-2}\pd_\theta f\)</span>,
+т. е. <span class="arithmatex">\([\hat e_r, \hat e_\theta] = -r^{-1}\hat e_\theta \ne 0\)</span>. Коммутирующими являются
+только поля координатного базиса, поэтому координат <span class="arithmatex">\(y^1, y^2\)</span> с <span class="arithmatex">\(\pd_{y^1}=\hat e_r\)</span>,
+<span class="arithmatex">\(\pd_{y^2}=\hat e_\theta\)</span> не существует.</p>
+</details>
+</details>
+<details class="question">
+<summary>2.2. Тензорность свёртки</summary>
+<p>Используя <span class="arithmatex">\(\eqref{eq:tensor-transform}\)</span>, докажите, что <span class="arithmatex">\(T^\mu{}_\mu\)</span> — скаляр, а
+<span class="arithmatex">\(T_{\mu\mu}\)</span> (сумма диагональных элементов с двумя нижними индексами) — нет.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(T^{\mu'}{}_{\mu'} = \frac{\pd x^{\mu'}}{\pd x^\alpha}\frac{\pd x^\beta}{\pd x^{\mu'}}T^\alpha{}_\beta = \delta^\beta_\alpha T^\alpha{}_\beta = T^\alpha{}_\alpha\)</span>.
+Для <span class="arithmatex">\(T_{\mu'\mu'}\)</span> получаем <span class="arithmatex">\(\sum_{\mu'}\frac{\pd x^\alpha}{\pd x^{\mu'}}\frac{\pd x^\beta}{\pd x^{\mu'}}T_{\alpha\beta}\)</span>,
+сумма произведений якобианов не равна <span class="arithmatex">\(\delta^{\alpha\beta}\)</span> в общем случае
+(например, при растяжении <span class="arithmatex">\(x' = 2x\)</span>).</p>
+</details>
+</details>
+<details class="question">
+<summary>2.3. Метрика Минковского в координатах Риндлера</summary>
+<p>Введите на области <span class="arithmatex">\(x &gt; |t|\)</span> координаты <span class="arithmatex">\(t = \xi\sinh\eta\)</span>, <span class="arithmatex">\(x = \xi\cosh\eta\)</span>.
+Найдите <span class="arithmatex">\(\d s^2\)</span> для <span class="arithmatex">\(\d s^2 = -\d t^2+\d x^2\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\(\d t = \sinh\eta\,\d\xi + \xi\cosh\eta\,\d\eta\)</span>, <span class="arithmatex">\(\d x = \cosh\eta\,\d\xi + \xi\sinh\eta\,\d\eta\)</span>.
+Подставляя: <span class="arithmatex">\(\d s^2 = -\xi^2\d\eta^2 + \d\xi^2\)</span>. Метрика зависит от <span class="arithmatex">\(\xi\)</span>, но
+пространство по-прежнему плоское — это метрика равномерно ускоренного наблюдателя.
+Отсюда урок: по виду <span class="arithmatex">\(g_{\mu\nu}\)</span> нельзя судить о кривизне.</p>
+</details>
+</details>
+<details class="question">
+<summary>2.4. Объём шара и площадь сферы</summary>
+<p>С помощью <span class="arithmatex">\(\eqref{eq:volume-element}\)</span> вычислите площадь сферы радиуса <span class="arithmatex">\(a\)</span> и объём
+трёхмерного шара в сферических координатах.</p>
+<details class="success">
+<summary>Решение</summary>
+<p>Для сферы <span class="arithmatex">\(\sqrt{g} = a^2\sin\theta\)</span>, <span class="arithmatex">\(A = \int_0^\pi\!\int_0^{2\pi}a^2\sin\theta\,\d\phi\,\d\theta = 4\pi a^2\)</span>.
+Для шара <span class="arithmatex">\(\sqrt g = r^2\sin\theta\)</span>, <span class="arithmatex">\(V = \int_0^a r^2\d r\cdot 4\pi = \tfrac43\pi a^3\)</span>.</p>
+</details>
+</details>
+<details class="question">
+<summary>2.5. Нильпотентность внешней производной</summary>
+<p>Докажите, что <span class="arithmatex">\(\d(\d f) = 0\)</span> для функции и что <span class="arithmatex">\(\pd_{[\lambda}F_{\mu\nu]} = 0\)</span> для
+<span class="arithmatex">\(F_{\mu\nu} = \pd_\mu A_\nu - \pd_\nu A_\mu\)</span>.</p>
+<details class="success">
+<summary>Решение</summary>
+<p><span class="arithmatex">\((\d\d f)_{\mu\nu} = 2\pd_{[\mu}\pd_{\nu]}f = \pd_\mu\pd_\nu f - \pd_\nu\pd_\mu f = 0\)</span>.
+Аналогично <span class="arithmatex">\(\pd_{[\lambda}F_{\mu\nu]} = 2\pd_{[\lambda}\pd_\mu A_{\nu]}\)</span>, а
+антисимметризация по <span class="arithmatex">\(\lambda\mu\)</span> симметричного <span class="arithmatex">\(\pd_\lambda\pd_\mu\)</span> даёт нуль.</p>
+</details>
+</details>
+<h2 id="_5">Что дальше<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Мы умеем строить тензоры в точке, но не умеем их дифференцировать: частная производная
+тензорного поля не тензорна. В <a href="../03-connection/">главе 3</a> мы введём связность и ковариантную
+производную, а с ними — параллельный перенос и геодезические.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../01-special-relativity/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 1. СТО на четырёхмерном языке">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                1. СТО на четырёхмерном языке
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-connection/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 3. Связность и ковариантная производная">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                3. Связность и ковариантная производная
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Bogdan Rudenko, SAI MSU · Текст — <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">CC BY-SA 4.0</a>, код — MIT · Обратная связь: <a href="mailto:rudenko.sci@gmail.com">rudenko.sci@gmail.com</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "navigation.instant", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/calc.js"></script>
+      
+        <script src="../../javascripts/toc-progress.js"></script>
+      
+        <script src="../../javascripts/minkowski.js"></script>
+      
+        <script src="../../javascripts/sphere-transport.js"></script>
+      
+        <script src="../../javascripts/tidal.js"></script>
+      
+        <script src="../../javascripts/energy-conditions.js"></script>
+      
+        <script src="../../javascripts/effective-potential.js"></script>
+      
+        <script src="../../javascripts/bh-cones.js"></script>
+      
+        <script src="../../javascripts/gw-ring.js"></script>
+      
+        <script src="../../javascripts/friedmann.js"></script>
+      
+        <script src="../../javascripts/distances.js"></script>
+      
+        <script src="../../javascripts/saha.js"></script>
+      
+        <script src="../../javascripts/inflation.js"></script>
+      
+        <script src="../../javascripts/cmb.js"></script>
+      
+        <script src="../../javascripts/power-spectrum.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
